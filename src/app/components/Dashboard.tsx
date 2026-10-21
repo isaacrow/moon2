@@ -48,7 +48,8 @@ import {
   Server,
   ChevronDown,
   ChevronUp,
-  Compass
+  Compass,
+  Box
 } from 'lucide-react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs';
 import moonLogoWhite from '../../assets/white.png';
