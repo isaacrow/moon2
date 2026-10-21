@@ -71,7 +71,7 @@ export default function Ambient3DBackground() {
       <div className="absolute -left-32 top-1/2 -translate-y-1/2 w-[700px] h-[900px] rounded-full bg-white/[0.015] blur-[180px] pointer-events-none" />
 
       {/* Dense, Subtle Ambient 3D Silhouette */}
-      <div className="relative w-full h-[100vh] max-w-[950px] -left-12 sm:-left-16 opacity-[0.07] filter blur-[3px] brightness-70 contrast-125 scale-100 lg:scale-110 transition-opacity duration-1000">
+      <div className="relative w-full h-[100vh] max-w-[950px] -left-12 sm:-left-16 opacity-[0.45] filter blur-[1px] brightness-110 contrast-115 scale-100 lg:scale-110 transition-opacity duration-1000">
         <model-viewer
           key={bgArtifact.id}
           ref={viewerRef}
@@ -82,8 +82,8 @@ export default function Ambient3DBackground() {
           loading="eager"
           reveal="auto"
           draco-decoder-location="./draco/"
-          exposure="0.7"
-          shadow-intensity="0"
+          exposure="1.2"
+          shadow-intensity="1.2"
           interaction-prompt="none"
           auto-rotate
           rotation-per-second="1.5deg"

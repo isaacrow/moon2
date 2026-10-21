@@ -925,7 +925,11 @@ export function Dashboard({ onNavigate, onLoadRecord }: DashboardProps) {
                         <div className="relative">
                           <div className="absolute inset-0 bg-white/20 rounded-[32px] blur-2xl scale-150 opacity-0 group-hover:opacity-60 transition-all duration-700" />
                           <div className="relative p-7 rounded-[28px] bg-white/20 backdrop-blur-md border border-white/40 shadow-2xl group-hover:scale-110 group-hover:rotate-2 transition-all duration-500">
-                            <Icon className="h-16 w-16 text-white drop-shadow-xl" />
+                            {action.logo ? (
+                              <img src={action.logo} alt={action.label} className="h-16 w-16 object-contain filter drop-shadow-2xl brightness-0 invert group-hover:scale-110 transition-transform duration-300" />
+                            ) : (
+                              <Icon className="h-16 w-16 text-white drop-shadow-xl" />
+                            )}
                           </div>
                         </div>
                       </div>

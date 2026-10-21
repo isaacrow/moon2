@@ -24,12 +24,12 @@ export default function LiquidGlassHeader({
         <div className="flex items-center gap-3.5 w-full lg:w-auto justify-between lg:justify-start">
           <div className="flex items-center gap-3.5">
             
-            {/* Moon Logo Box */}
+            {/* Alqami Logo Box */}
             <div className="relative h-11 px-3.5 py-1.5 rounded-2xl overflow-hidden flex items-center justify-center bg-white/10 border border-white/25 shadow-lg flex-shrink-0">
               <img 
-                src="/white.png" 
-                alt="Moon Logo" 
-                className="h-7 w-auto max-w-[100px] object-contain filter drop-shadow"
+                src="./alqami-logo.png" 
+                alt="علقمي | ALQAMI" 
+                className="h-7 w-auto max-w-[110px] object-contain filter drop-shadow brightness-110"
                 onError={(e) => {
                   e.target.src = './images/logo.png';
                 }}
@@ -41,7 +41,7 @@ export default function LiquidGlassHeader({
               <div className="flex items-center gap-2">
                 <h1 className="text-lg sm:text-xl font-bold tracking-tight text-white font-amiri flex items-center gap-1.5">
                   <span>🌕</span>
-                  <span>{isAr ? 'MOON 3D' : 'MOON 3D'}</span>
+                  <span>{isAr ? 'علقمي 3D' : 'ALQAMI 3D'}</span>
                 </h1>
               </div>
               <p className="text-[11px] text-slate-300 font-light flex items-center gap-1.5">
