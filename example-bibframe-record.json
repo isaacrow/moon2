@@ -1,0 +1,283 @@
+{
+  "@context": "https://id.loc.gov/ontologies/bibframe.jsonld",
+  "@graph": [
+    {
+      "@id": "https://moon.org/work/example-linked-data-book",
+      "@type": "bf:Work",
+      "bf:title": [
+        {
+          "@type": "bf:Title",
+          "bf:mainTitle": [
+            {
+              "@value": "Linked Data for Libraries, Archives and Museums"
+            }
+          ],
+          "bf:subtitle": [
+            {
+              "@value": "How to clean, link and publish your metadata"
+            }
+          ]
+        }
+      ],
+      "bf:contribution": [
+        {
+          "@type": "bf:Contribution",
+          "bf:agent": [
+            {
+              "@id": "https://viaf.org/viaf/305352846",
+              "@type": "bf:Person",
+              "rdfs:label": [
+                {
+                  "@value": "Mitchell, Erik T."
+                }
+              ]
+            }
+          ],
+          "bf:role": [
+            {
+              "@id": "http://id.loc.gov/vocabulary/relators/aut",
+              "rdfs:label": [
+                {
+                  "@value": "Author"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "bf:subject": [
+        {
+          "@id": "http://id.loc.gov/authorities/subjects/sh2013000109",
+          "@type": "bf:Topic",
+          "rdfs:label": [
+            {
+              "@value": "Linked data"
+            }
+          ]
+        },
+        {
+          "@id": "http://id.loc.gov/authorities/subjects/sh85076723",
+          "@type": "bf:Topic",
+          "rdfs:label": [
+            {
+              "@value": "Libraries"
+            }
+          ]
+        },
+        {
+          "@id": "http://id.loc.gov/authorities/subjects/sh85082053",
+          "@type": "bf:Topic",
+          "rdfs:label": [
+            {
+              "@value": "Metadata"
+            }
+          ]
+        }
+      ],
+      "bf:genreForm": [
+        {
+          "@id": "http://id.loc.gov/authorities/genreForms/gf2014026047",
+          "@type": "bf:GenreForm",
+          "rdfs:label": [
+            {
+              "@value": "Handbooks and manuals"
+            }
+          ]
+        }
+      ],
+      "bf:classification": [
+        {
+          "@type": "bf:ClassificationLcc",
+          "bf:classificationPortion": [
+            {
+              "@value": "Z666.7"
+            }
+          ],
+          "bf:itemPortion": [
+            {
+              "@value": ".M58 2013"
+            }
+          ]
+        }
+      ],
+      "bf:summary": [
+        {
+          "@type": "bf:Summary",
+          "rdfs:label": [
+            {
+              "@value": "This book demonstrates the practical value of linked data for creating, connecting, and sharing cultural heritage information. It introduces the concept of linked data, explains how it is represented using RDF and related standards, and describes data publishing and consumption strategies."
+            }
+          ]
+        }
+      ],
+      "bf:language": [
+        {
+          "@id": "http://id.loc.gov/vocabulary/languages/eng",
+          "@type": "bf:Language",
+          "rdfs:label": [
+            {
+              "@value": "English"
+            }
+          ]
+        }
+      ],
+      "bf:hasInstance": [
+        {
+          "@id": "https://moon.org/instance/example-linked-data-book"
+        }
+      ]
+    },
+    {
+      "@id": "https://moon.org/instance/example-linked-data-book",
+      "@type": "bf:Instance",
+      "bf:instanceOf": [
+        {
+          "@id": "https://moon.org/work/example-linked-data-book"
+        }
+      ],
+      "bf:title": [
+        {
+          "@type": "bf:Title",
+          "bf:mainTitle": [
+            {
+              "@value": "Linked Data for Libraries, Archives and Museums"
+            }
+          ],
+          "bf:subtitle": [
+            {
+              "@value": "How to clean, link and publish your metadata"
+            }
+          ]
+        }
+      ],
+      "bf:provisionActivity": [
+        {
+          "@type": "bf:Publication",
+          "bf:date": [
+            {
+              "@value": "2013"
+            }
+          ],
+          "bf:place": [
+            {
+              "@id": "http://id.loc.gov/vocabulary/countries/xxu",
+              "@type": "bf:Place",
+              "rdfs:label": [
+                {
+                  "@value": "United States"
+                }
+              ]
+            }
+          ],
+          "bf:agent": [
+            {
+              "@id": "http://id.loc.gov/authorities/names/n00005367",
+              "@type": "bf:Organization",
+              "rdfs:label": [
+                {
+                  "@value": "Neal-Schuman Publishers"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "bf:identifiedBy": [
+        {
+          "@type": "bf:Isbn",
+          "rdf:value": "9781555707460"
+        },
+        {
+          "@type": "bf:Isbn",
+          "rdf:value": "1555707467"
+        },
+        {
+          "@type": "bf:Lccn",
+          "rdf:value": "2013019286"
+        }
+      ],
+      "bf:extent": [
+        {
+          "@type": "bf:Extent",
+          "rdfs:label": [
+            {
+              "@value": "xvii, 134 pages"
+            }
+          ]
+        }
+      ],
+      "bf:dimensions": [
+        {
+          "@value": "23 cm"
+        }
+      ],
+      "bf:editionStatement": [
+        {
+          "@value": "First edition"
+        }
+      ],
+      "bf:media": [
+        {
+          "@id": "http://id.loc.gov/vocabulary/mediaTypes/n",
+          "@type": "bf:Media",
+          "rdfs:label": [
+            {
+              "@value": "unmediated"
+            }
+          ]
+        }
+      ],
+      "bf:carrier": [
+        {
+          "@id": "http://id.loc.gov/vocabulary/carriers/nc",
+          "@type": "bf:Carrier",
+          "rdfs:label": [
+            {
+              "@value": "volume"
+            }
+          ]
+        }
+      ],
+      "bf:hasItem": [
+        {
+          "@id": "https://moon.org/item/example-linked-data-book-copy1"
+        }
+      ]
+    },
+    {
+      "@id": "https://moon.org/item/example-linked-data-book-copy1",
+      "@type": "bf:Item",
+      "bf:itemOf": [
+        {
+          "@id": "https://moon.org/instance/example-linked-data-book"
+        }
+      ],
+      "bf:heldBy": [
+        {
+          "@id": "http://id.loc.gov/vocabulary/organizations/dlc",
+          "@type": "bf:Organization",
+          "rdfs:label": [
+            {
+              "@value": "Library of Congress"
+            }
+          ]
+        }
+      ],
+      "bf:shelfMark": [
+        {
+          "@type": "bf:ShelfMark",
+          "rdfs:label": [
+            {
+              "@value": "Z666.7 .M58 2013"
+            }
+          ]
+        }
+      ],
+      "bf:electronicLocator": [
+        {
+          "@id": "https://lccn.loc.gov/2013019286"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1370 @@
+/* ===================================
+   Apple-Inspired Theme System
+   iOS 26 & macOS Design Language
+   =================================== */
+
+/* iOS 26 Theme - Modern, Vibrant, Glassmorphic */
+.theme-ios26 {
+  /* Override base theme variables */
+  --radius: 1rem;
+  --transition-duration: 0.35s;
+  
+  /* Color Palette */
+  --ios-blue: #007AFF;
+  --ios-purple: #AF52DE;
+  --ios-pink: #FF2D55;
+  --ios-orange: #FF9500;
+  --ios-yellow: #FFCC00;
+  --ios-green: #34C759;
+  --ios-teal: #5AC8FA;
+  --ios-indigo: #5856D6;
+  
+  /* Gradients */
+  --ios-gradient-sunset: linear-gradient(135deg, #FF6B6B 0%, #FFB347 50%, #FFDB58 100%);
+  --ios-gradient-ocean: linear-gradient(135deg, #007AFF 0%, #5AC8FA 100%);
+  --ios-gradient-purple: linear-gradient(135deg, #AF52DE 0%, #5856D6 100%);
+  --ios-gradient-green: linear-gradient(135deg, #34C759 0%, #30D158 100%);
+  
+  /* Glassmorphism */
+  --ios-glass-bg: rgba(255, 255, 255, 0.72);
+  --ios-glass-border: rgba(255, 255, 255, 0.3);
+  --ios-blur: blur(20px);
+  
+  /* Shadows */
+  --ios-shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+  --ios-shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08);
+  --ios-shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.12);
+  --ios-shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.16);
+  
+  /* Border Radius */
+  --ios-radius-sm: 10px;
+  --ios-radius-md: 14px;
+  --ios-radius-lg: 20px;
+  --ios-radius-xl: 28px;
+  
+  /* Animations */
+  --ios-transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  --ios-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.theme-ios26.dark {
+  --ios-glass-bg: rgba(28, 28, 30, 0.72);
+  --ios-glass-border: rgba(255, 255, 255, 0.1);
+}
+
+/* macOS Theme - Clean, Spacious, Professional */
+.theme-macos {
+  /* Override base theme variables */
+  --radius: 0.75rem;
+  --transition-duration: 0.25s;
+  
+  /* Color Palette */
+  --macos-blue: #0071E3;
+  --macos-gray: #86868B;
+  --macos-light-gray: #F5F5F7;
+  --macos-dark-gray: #1D1D1F;
+  
+  /* Gradients */
+  --macos-gradient-silver: linear-gradient(135deg, #E8E8ED 0%, #F5F5F7 100%);
+  --macos-gradient-blue: linear-gradient(135deg, #0071E3 0%, #0077ED 100%);
+  
+  /* Glassmorphism */
+  --macos-glass-bg: rgba(245, 245, 247, 0.8);
+  --macos-glass-border: rgba(0, 0, 0, 0.1);
+  --macos-blur: blur(40px);
+  
+  /* Shadows */
+  --macos-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04);
+  --macos-shadow-md: 0 2px 8px rgba(0, 0, 0, 0.06);
+  --macos-shadow-lg: 0 4px 16px rgba(0, 0, 0, 0.08);
+  --macos-shadow-xl: 0 8px 32px rgba(0, 0, 0, 0.12);
+  
+  /* Border Radius */
+  --macos-radius-sm: 8px;
+  --macos-radius-md: 12px;
+  --macos-radius-lg: 16px;
+  --macos-radius-xl: 24px;
+  
+  /* Animations */
+  --macos-transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.theme-macos.dark {
+  --macos-glass-bg: rgba(29, 29, 31, 0.8);
+  --macos-glass-border: rgba(255, 255, 255, 0.1);
+}
+
+/* Classic Theme - Traditional, Familiar */
+.theme-classic {
+  --classic-transition: all 0.2s ease;
+}
+
+/* ===================================
+   Apple Store Theme - Official Website Design
+   Clean Product Showcase Style
+   =================================== */
+
+.theme-apple-store {
+  /* Apple Official Color Palette */
+  --apple-blue: #0071E3;
+  --apple-blue-hover: #0077ED;
+  --apple-gray: #86868B;
+  --apple-light-gray: #F5F5F7;
+  --apple-dark: #1D1D1F;
+  --apple-white: #FBFBFD;
+  
+  /* Gradient Backgrounds (like iPad Air section) */
+  --apple-gradient-sky: linear-gradient(180deg, #D2E9FF 0%, #F5F5F7 100%);
+  --apple-gradient-ocean: linear-gradient(180deg, #007AFF 0%, #5AC8FA 100%);
+  --apple-gradient-dark: linear-gradient(180deg, #000000 0%, #1D1D1F 100%);
+  --apple-gradient-glow: radial-gradient(circle at center, rgba(0, 113, 227, 0.15) 0%, transparent 70%);
+  
+  /* Product Card Shadows */
+  --apple-shadow-product: 0 4px 24px rgba(0, 0, 0, 0.08);
+  --apple-shadow-hero: 0 8px 48px rgba(0, 0, 0, 0.12);
+  --apple-shadow-glow: 0 0 60px rgba(0, 113, 227, 0.3);
+  
+  /* Border Radius - Minimal & Clean */
+  --apple-radius-sm: 8px;
+  --apple-radius-md: 12px;
+  --apple-radius-lg: 18px;
+  --apple-radius-xl: 24px;
+  
+  /* Spacing System */
+  --apple-spacing-xs: 8px;
+  --apple-spacing-sm: 16px;
+  --apple-spacing-md: 24px;
+  --apple-spacing-lg: 48px;
+  --apple-spacing-xl: 80px;
+  
+  /* Typography */
+  --apple-font-hero: 600;
+  --apple-font-headline: 700;
+  --apple-font-body: 400;
+  --apple-letter-spacing: -0.015em;
+  
+  /* Animations */
+  --apple-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --apple-transition-smooth: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.theme-apple-store.dark {
+  --apple-white: #1D1D1F;
+  --apple-light-gray: #2D2D2F;
+  --apple-dark: #F5F5F7;
+}
+
+/* ===================================
+   Apple Store Component Styles
+   =================================== */
+
+/* Hero Sections */
+.theme-apple-store .apple-hero {
+  background: var(--apple-white);
+  padding: var(--apple-spacing-xl) var(--apple-spacing-md);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.theme-apple-store .apple-hero-title {
+  font-size: clamp(32px, 5vw, 56px);
+  font-weight: var(--apple-font-headline);
+  letter-spacing: var(--apple-letter-spacing);
+  color: var(--apple-dark);
+  margin-bottom: 12px;
+}
+
+.theme-apple-store .apple-hero-subtitle {
+  font-size: clamp(18px, 2.5vw, 28px);
+  font-weight: var(--apple-font-body);
+  color: var(--apple-gray);
+  margin-bottom: var(--apple-spacing-md);
+}
+
+/* Blue CTA Buttons (Apple's signature) */
+.theme-apple-store .apple-cta {
+  background: var(--apple-blue);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 980px;
+  font-size: 17px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: var(--apple-transition);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 0 2px 8px rgba(0, 113, 227, 0.2);
+}
+
+.theme-apple-store .apple-cta:hover {
+  background: var(--apple-blue-hover);
+  transform: scale(1.02);
+  box-shadow: 0 4px 16px rgba(0, 113, 227, 0.3);
+}
+
+.theme-apple-store .apple-cta:active {
+  transform: scale(0.98);
+  box-shadow: 0 2px 8px rgba(0, 113, 227, 0.2);
+}
+
+/* Dark mode adjustments for CTA */
+.theme-apple-store.dark .apple-cta {
+  box-shadow: 0 2px 8px rgba(0, 113, 227, 0.4);
+}
+
+.theme-apple-store.dark .apple-cta:hover {
+  box-shadow: 0 4px 16px rgba(0, 113, 227, 0.5);
+}
+
+/* Product Cards */
+.theme-apple-store .apple-product-card {
+  background: var(--apple-white);
+  border-radius: var(--apple-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--apple-shadow-product);
+  transition: var(--apple-transition-smooth);
+  text-align: center;
+  padding: var(--apple-spacing-lg);
+}
+
+.theme-apple-store .apple-product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--apple-shadow-hero);
+}
+
+.theme-apple-store .apple-product-card img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: var(--apple-spacing-md);
+}
+
+.theme-apple-store .apple-product-title {
+  font-size: 28px;
+  font-weight: var(--apple-font-hero);
+  color: var(--apple-dark);
+  margin-bottom: 8px;
+  letter-spacing: var(--apple-letter-spacing);
+}
+
+.theme-apple-store .apple-product-description {
+  font-size: 17px;
+  color: var(--apple-gray);
+  margin-bottom: var(--apple-spacing-sm);
+}
+
+/* Dark Sections (like MacBook Pro, iPad Pro) */
+.theme-apple-store .apple-dark-section {
+  background: var(--apple-gradient-dark);
+  color: white;
+  padding: var(--apple-spacing-xl) var(--apple-spacing-md);
+  text-align: center;
+  position: relative;
+}
+
+.theme-apple-store .apple-dark-section .apple-product-title {
+  color: white;
+}
+
+.theme-apple-store .apple-dark-section .apple-product-description {
+  color: #A1A1A6;
+}
+
+/* Glow Effect for Dark Products */
+.theme-apple-store .apple-glow {
+  position: relative;
+}
+
+.theme-apple-store .apple-glow::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 500px;
+  background: var(--apple-gradient-glow);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.theme-apple-store .apple-glow > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Gradient Section (like iPad Air) */
+.theme-apple-store .apple-gradient-section {
+  background: var(--apple-gradient-sky);
+  padding: var(--apple-spacing-xl) var(--apple-spacing-md);
+  text-align: center;
+}
+
+/* Grid Layout for Multiple Products */
+.theme-apple-store .apple-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--apple-spacing-md);
+  padding: var(--apple-spacing-lg) var(--apple-spacing-md);
+}
+
+/* Navigation Bar (Apple.com style) */
+.theme-apple-store .apple-navbar {
+  background: rgba(251, 251, 253, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 12px var(--apple-spacing-md);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: var(--apple-transition);
+}
+
+.theme-apple-store.dark .apple-navbar {
+  background: rgba(29, 29, 31, 0.8);
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Card with Clean White Background */
+.theme-apple-store .apple-card {
+  background: white;
+  border-radius: var(--apple-radius-md);
+  padding: var(--apple-spacing-md);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+  transition: var(--apple-transition);
+}
+
+.theme-apple-store.dark .apple-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.theme-apple-store .apple-card:hover {
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+/* Input Fields (Apple Style) */
+.theme-apple-store input,
+.theme-apple-store textarea,
+.theme-apple-store select {
+  background: white;
+  border: 1px solid #D2D2D7;
+  border-radius: var(--apple-radius-sm);
+  padding: 12px 16px;
+  font-size: 17px;
+  transition: var(--apple-transition);
+}
+
+.theme-apple-store.dark input,
+.theme-apple-store.dark textarea,
+.theme-apple-store.dark select {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.theme-apple-store input:focus,
+.theme-apple-store textarea:focus,
+.theme-apple-store select:focus {
+  border-color: var(--apple-blue);
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(0, 113, 227, 0.1);
+}
+
+/* Secondary Button (Outline Style) */
+.theme-apple-store .apple-button-secondary {
+  background: transparent;
+  color: var(--apple-blue);
+  border: 2px solid var(--apple-blue);
+  padding: 10px 22px;
+  border-radius: 980px;
+  font-size: 17px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--apple-transition);
+}
+
+.theme-apple-store .apple-button-secondary:hover {
+  background: var(--apple-blue);
+  color: white;
+}
+
+/* Link Styling */
+.theme-apple-store a {
+  color: var(--apple-blue);
+  text-decoration: none;
+  transition: var(--apple-transition);
+}
+
+.theme-apple-store a:hover {
+  text-decoration: underline;
+}
+
+/* Typography System */
+.theme-apple-store h1 {
+  font-size: clamp(32px, 5vw, 56px);
+  font-weight: var(--apple-font-headline);
+  letter-spacing: var(--apple-letter-spacing);
+  line-height: 1.1;
+}
+
+.theme-apple-store h2 {
+  font-size: clamp(28px, 4vw, 48px);
+  font-weight: var(--apple-font-hero);
+  letter-spacing: var(--apple-letter-spacing);
+  line-height: 1.15;
+}
+
+.theme-apple-store h3 {
+  font-size: clamp(21px, 3vw, 32px);
+  font-weight: var(--apple-font-hero);
+  letter-spacing: var(--apple-letter-spacing);
+  line-height: 1.2;
+}
+
+.theme-apple-store p {
+  font-size: 17px;
+  line-height: 1.5;
+  color: var(--apple-gray);
+}
+
+.theme-apple-store.dark p {
+  color: #A1A1A6;
+}
+
+/* Badge/Tag */
+.theme-apple-store .apple-badge {
+  background: var(--apple-blue);
+  color: white;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: inline-block;
+}
+
+/* Divider */
+.theme-apple-store .apple-divider {
+  height: 1px;
+  background: rgba(0, 0, 0, 0.1);
+  margin: var(--apple-spacing-lg) 0;
+}
+
+.theme-apple-store.dark .apple-divider {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Footer (Apple.com style) */
+.theme-apple-store .apple-footer {
+  background: var(--apple-light-gray);
+  padding: var(--apple-spacing-lg) var(--apple-spacing-md);
+  color: var(--apple-gray);
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.theme-apple-store.dark .apple-footer {
+  background: #1D1D1F;
+}
+
+/* Smooth Scroll */
+.theme-apple-store {
+  scroll-behavior: smooth;
+}
+
+/* Selection Color */
+.theme-apple-store ::selection {
+  background: rgba(0, 113, 227, 0.2);
+  color: inherit;
+}
+
+/* Base Background & Text Colors */
+.theme-apple-store {
+  background: var(--apple-white);
+  color: var(--apple-dark);
+}
+
+.theme-apple-store.dark {
+  background: #000000;
+  color: #F5F5F7;
+}
+
+/* Apply Apple Store styling to all standard components */
+.theme-apple-store button:not(.no-theme) {
+  border-radius: var(--apple-radius-sm);
+  transition: var(--apple-transition);
+  font-weight: 500;
+}
+
+.theme-apple-store button:not(.no-theme):hover {
+  transform: translateY(-1px);
+}
+
+.theme-apple-store button:not(.no-theme):active {
+  transform: scale(0.98);
+}
+
+/* Cards get clean white background */
+.theme-apple-store [class*="Card"],
+.theme-apple-store [class*="card"]:not(.no-theme) {
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: var(--apple-radius-md);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+}
+
+.theme-apple-store.dark [class*="Card"],
+.theme-apple-store.dark [class*="card"]:not(.no-theme) {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Panel/Container styling */
+.theme-apple-store .panel,
+.theme-apple-store [class*="panel"] {
+  border-radius: var(--apple-radius-lg);
+}
+
+/* Dialog/Modal styling */
+.theme-apple-store [role="dialog"],
+.theme-apple-store .dialog {
+  border-radius: var(--apple-radius-xl);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+/* Scrollbar styling */
+.theme-apple-store ::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+.theme-apple-store ::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.theme-apple-store ::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  border: 3px solid transparent;
+  background-clip: content-box;
+}
+
+.theme-apple-store.dark ::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  background-clip: content-box;
+}
+
+.theme-apple-store ::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.3);
+  background-clip: content-box;
+}
+
+.theme-apple-store.dark ::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+  background-clip: content-box;
+}
+
+/* Apple Store Animations */
+@keyframes apple-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes apple-scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes apple-glow-pulse {
+  0%, 100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+.theme-apple-store .animate-fade-in {
+  animation: apple-fade-in 0.6s ease-out;
+}
+
+.theme-apple-store .animate-scale-in {
+  animation: apple-scale-in 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.theme-apple-store .animate-glow {
+  animation: apple-glow-pulse 3s ease-in-out infinite;
+}
+
+/* Apply smooth entrance animations to major sections */
+.theme-apple-store > div,
+.theme-apple-store section {
+  animation: apple-fade-in 0.6s ease-out;
+}
+
+/* Staggered animation for cards */
+.theme-apple-store .apple-grid > *:nth-child(1) { animation-delay: 0.1s; }
+.theme-apple-store .apple-grid > *:nth-child(2) { animation-delay: 0.2s; }
+.theme-apple-store .apple-grid > *:nth-child(3) { animation-delay: 0.3s; }
+.theme-apple-store .apple-grid > *:nth-child(4) { animation-delay: 0.4s; }
+.theme-apple-store .apple-grid > *:nth-child(5) { animation-delay: 0.5s; }
+.theme-apple-store .apple-grid > *:nth-child(6) { animation-delay: 0.6s; }
+
+/* ===================================
+   Apple Store Utility Classes
+   Easy-to-use helpers for Apple.com styling
+   =================================== */
+
+/* Quick Blue CTA */
+.apple-buy-button {
+  background: var(--apple-blue) !important;
+  color: white !important;
+  padding: 12px 24px !important;
+  border-radius: 980px !important;
+  font-weight: 500 !important;
+  border: none !important;
+  transition: var(--apple-transition) !important;
+}
+
+.apple-buy-button:hover {
+  background: var(--apple-blue-hover) !important;
+}
+
+/* Product Card Quick Style */
+.apple-product {
+  background: white;
+  padding: var(--apple-spacing-lg);
+  border-radius: var(--apple-radius-lg);
+  text-align: center;
+  box-shadow: var(--apple-shadow-product);
+  transition: var(--apple-transition-smooth);
+}
+
+.theme-apple-store.dark .apple-product {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.apple-product:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--apple-shadow-hero);
+}
+
+/* Centered Hero Text */
+.apple-heading {
+  font-size: clamp(32px, 5vw, 56px);
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  text-align: center;
+  color: var(--apple-dark);
+  margin-bottom: 12px;
+}
+
+.theme-apple-store.dark .apple-heading {
+  color: white;
+}
+
+/* Subheading */
+.apple-subheading {
+  font-size: clamp(18px, 2.5vw, 28px);
+  color: var(--apple-gray);
+  text-align: center;
+  margin-bottom: var(--apple-spacing-md);
+}
+
+/* Container with max-width (Apple.com style) */
+.apple-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--apple-spacing-md);
+}
+
+/* ===================================
+   Apple Store Responsive Design
+   =================================== */
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .theme-apple-store .apple-hero {
+    padding: var(--apple-spacing-lg) var(--apple-spacing-sm);
+  }
+  
+  .theme-apple-store .apple-hero-title {
+    font-size: 32px;
+  }
+  
+  .theme-apple-store .apple-hero-subtitle {
+    font-size: 18px;
+  }
+  
+  .theme-apple-store .apple-product-card {
+    padding: var(--apple-spacing-md);
+  }
+  
+  .theme-apple-store .apple-grid {
+    grid-template-columns: 1fr;
+    gap: var(--apple-spacing-sm);
+  }
+  
+  .theme-apple-store .apple-cta {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Tablet optimizations */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .theme-apple-store .apple-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktop optimizations */
+@media (min-width: 1025px) {
+  .theme-apple-store .apple-hero {
+    padding: 120px var(--apple-spacing-lg);
+  }
+  
+  .theme-apple-store .apple-product-card:hover {
+    transform: translateY(-12px);
+  }
+}
+
+/* High-resolution displays (Retina) */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .theme-apple-store {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* ===================================
+   iOS 26 Component Styles
+   =================================== */
+
+.theme-ios26 .ios-navbar {
+  background: var(--ios-glass-bg);
+  backdrop-filter: var(--ios-blur);
+  -webkit-backdrop-filter: var(--ios-blur);
+  border-bottom: 1px solid var(--ios-glass-border);
+  box-shadow: var(--ios-shadow-sm);
+}
+
+.theme-ios26 .ios-card {
+  background: var(--ios-glass-bg);
+  backdrop-filter: var(--ios-blur);
+  -webkit-backdrop-filter: var(--ios-blur);
+  border: 1px solid var(--ios-glass-border);
+  border-radius: var(--ios-radius-lg);
+  box-shadow: var(--ios-shadow-md);
+  transition: var(--ios-transition);
+}
+
+.theme-ios26 .ios-card:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: var(--ios-shadow-xl);
+}
+
+.theme-ios26 .ios-button {
+  border-radius: var(--ios-radius-md);
+  transition: var(--ios-transition);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.theme-ios26 .ios-button:active {
+  transform: scale(0.96);
+}
+
+.theme-ios26 .ios-input {
+  background: var(--ios-glass-bg);
+  backdrop-filter: var(--ios-blur);
+  -webkit-backdrop-filter: var(--ios-blur);
+  border: 1px solid var(--ios-glass-border);
+  border-radius: var(--ios-radius-md);
+  transition: var(--ios-transition);
+}
+
+.theme-ios26 .ios-input:focus {
+  border-color: var(--ios-blue);
+  box-shadow: 0 0 0 4px rgba(0, 122, 255, 0.1);
+}
+
+.theme-ios26 .ios-panel {
+  background: var(--ios-glass-bg);
+  backdrop-filter: var(--ios-blur);
+  -webkit-backdrop-filter: var(--ios-blur);
+  border: 1px solid var(--ios-glass-border);
+  border-radius: var(--ios-radius-xl);
+  box-shadow: var(--ios-shadow-lg);
+}
+
+.theme-ios26 .ios-gradient-card {
+  background: var(--ios-gradient-ocean);
+  border-radius: var(--ios-radius-lg);
+  box-shadow: var(--ios-shadow-xl);
+  transition: var(--ios-transition);
+}
+
+.theme-ios26 .ios-gradient-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 20px 60px rgba(0, 122, 255, 0.3);
+}
+
+/* ===================================
+   macOS Component Styles
+   =================================== */
+
+.theme-macos .macos-navbar {
+  background: var(--macos-glass-bg);
+  backdrop-filter: var(--macos-blur);
+  -webkit-backdrop-filter: var(--macos-blur);
+  border-bottom: 1px solid var(--macos-glass-border);
+  box-shadow: var(--macos-shadow-sm);
+}
+
+.theme-macos .macos-window {
+  background: var(--macos-glass-bg);
+  backdrop-filter: var(--macos-blur);
+  -webkit-backdrop-filter: var(--macos-blur);
+  border: 1px solid var(--macos-glass-border);
+  border-radius: var(--macos-radius-lg);
+  box-shadow: var(--macos-shadow-lg);
+}
+
+.theme-macos .macos-card {
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: var(--macos-radius-md);
+  box-shadow: var(--macos-shadow-sm);
+  transition: var(--macos-transition);
+}
+
+.theme-macos .macos-card:hover {
+  box-shadow: var(--macos-shadow-md);
+  transform: translateY(-2px);
+}
+
+.theme-macos.dark .macos-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.theme-macos .macos-button {
+  border-radius: var(--macos-radius-sm);
+  transition: var(--macos-transition);
+  font-weight: 500;
+}
+
+.theme-macos .macos-button:hover {
+  transform: translateY(-1px);
+}
+
+.theme-macos .macos-input {
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: var(--macos-radius-sm);
+  transition: var(--macos-transition);
+}
+
+.theme-macos.dark .macos-input {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.theme-macos .macos-input:focus {
+  border-color: var(--macos-blue);
+  box-shadow: 0 0 0 3px rgba(0, 113, 227, 0.1);
+}
+
+.theme-macos .macos-sidebar {
+  background: var(--macos-glass-bg);
+  backdrop-filter: var(--macos-blur);
+  -webkit-backdrop-filter: var(--macos-blur);
+  border-right: 1px solid var(--macos-glass-border);
+}
+
+/* ===================================
+   Utility Classes
+   =================================== */
+
+.glass-effect {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.theme-ios26 .glass-effect {
+  background: var(--ios-glass-bg);
+  border: 1px solid var(--ios-glass-border);
+}
+
+.theme-macos .glass-effect {
+  background: var(--macos-glass-bg);
+  border: 1px solid var(--macos-glass-border);
+}
+
+/* Smooth Animations */
+.theme-ios26 * {
+  transition: var(--ios-transition);
+}
+
+.theme-macos * {
+  transition: var(--macos-transition);
+}
+
+.theme-classic * {
+  transition: var(--classic-transition);
+}
+
+/* Active/Focus States */
+.theme-ios26 button:not(.no-scale):active,
+.theme-ios26 .interactive:active {
+  transform: scale(0.96);
+}
+
+.theme-macos button:not(.no-scale):active,
+.theme-macos .interactive:active {
+  transform: scale(0.98);
+}
+
+/* Button Enhancements */
+.theme-ios26 button[data-slot="button"] {
+  border-radius: var(--ios-radius-md);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.theme-macos button[data-slot="button"] {
+  border-radius: var(--macos-radius-sm);
+  font-weight: 500;
+}
+
+/* Card Enhancements */
+.theme-ios26 [class*="Card"]:not(.no-theme),
+.theme-ios26 div[class*="card"]:not(.no-theme) {
+  border-radius: var(--ios-radius-lg);
+  border: 1px solid var(--ios-glass-border);
+}
+
+.theme-macos [class*="Card"]:not(.no-theme),
+.theme-macos div[class*="card"]:not(.no-theme) {
+  border-radius: var(--macos-radius-md);
+}
+
+/* Input Enhancements */
+.theme-ios26 input,
+.theme-ios26 textarea,
+.theme-ios26 select {
+  border-radius: var(--ios-radius-md);
+}
+
+.theme-macos input,
+.theme-macos textarea,
+.theme-macos select {
+  border-radius: var(--macos-radius-sm);
+}
+
+/* Gradient Backgrounds for Dashboard Cards */
+.theme-ios26 .gradient-sunset {
+  background: var(--ios-gradient-sunset);
+}
+
+.theme-ios26 .gradient-ocean {
+  background: var(--ios-gradient-ocean);
+}
+
+.theme-ios26 .gradient-purple {
+  background: var(--ios-gradient-purple);
+}
+
+.theme-ios26 .gradient-green {
+  background: var(--ios-gradient-green);
+}
+
+/* Typography Enhancements */
+.theme-ios26 h1,
+.theme-ios26 h2,
+.theme-ios26 h3,
+.theme-ios26 h4 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.theme-macos h1,
+.theme-macos h2,
+.theme-macos h3,
+.theme-macos h4 {
+  font-weight: 600;
+  letter-spacing: -0.015em;
+}
+
+/* Scrollbar Styling */
+.theme-ios26 ::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.theme-ios26 ::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.theme-ios26 ::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.theme-ios26.dark ::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.theme-macos ::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.theme-macos ::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.theme-macos ::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+}
+
+.theme-macos.dark ::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Selection Colors */
+.theme-ios26 ::selection {
+  background: rgba(0, 122, 255, 0.3);
+  color: inherit;
+}
+
+.theme-macos ::selection {
+  background: rgba(0, 113, 227, 0.25);
+  color: inherit;
+}
+
+/* Loading Animations */
+@keyframes ios-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(0.98); }
+}
+
+@keyframes macos-fade {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+@keyframes ios-shimmer {
+  0% { background-position: -1000px 0; }
+  100% { background-position: 1000px 0; }
+}
+
+@keyframes ios-bounce-in {
+  0% { opacity: 0; transform: scale(0.3); }
+  50% { opacity: 1; transform: scale(1.05); }
+  70% { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
+
+@keyframes macos-slide-in {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.theme-ios26 .loading {
+  animation: ios-pulse 2s ease-in-out infinite;
+}
+
+.theme-macos .loading {
+  animation: macos-fade 1.5s ease-in-out infinite;
+}
+
+.theme-ios26 .shimmer {
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  background-size: 1000px 100%;
+  animation: ios-shimmer 2s infinite;
+}
+
+.theme-ios26 .bounce-in {
+  animation: ios-bounce-in 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.theme-macos .slide-in {
+  animation: macos-slide-in 0.3s ease-out;
+}
+
+/* ===================================
+   Modal & Dialog Enhancements
+   =================================== */
+
+.theme-ios26 [role=\"dialog\"],
+.theme-ios26 .dialog {
+  border-radius: var(--ios-radius-xl);
+  backdrop-filter: var(--ios-blur);
+  -webkit-backdrop-filter: var(--ios-blur);
+  box-shadow: var(--ios-shadow-xl);
+  border: 1px solid var(--ios-glass-border);
+}
+
+.theme-macos [role=\"dialog\"],
+.theme-macos .dialog {
+  border-radius: var(--macos-radius-lg);
+  backdrop-filter: var(--macos-blur);
+  -webkit-backdrop-filter: var(--macos-blur);
+  box-shadow: var(--macos-shadow-lg);
+  border: 1px solid var(--macos-glass-border);
+}
+
+/* ===================================
+   Badge & Tag Enhancements
+   =================================== */
+
+.theme-ios26 .badge,
+.theme-ios26 [class*=\"badge\"] {
+  border-radius: 100px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  padding: 4px 12px;
+  font-size: 12px;
+}
+
+.theme-macos .badge,
+.theme-macos [class*=\"badge\"] {
+  border-radius: 6px;
+  font-weight: 500;
+  padding: 3px 10px;
+  font-size: 11px;
+}
+
+/* ===================================
+   Dropdown & Menu Enhancements
+   =================================== */
+
+.theme-ios26 [role=\"menu\"],
+.theme-ios26 .dropdown-menu {
+  background: var(--ios-glass-bg);
+  backdrop-filter: var(--ios-blur);
+  -webkit-backdrop-filter: var(--ios-blur);
+  border: 1px solid var(--ios-glass-border);
+  border-radius: var(--ios-radius-lg);
+  box-shadow: var(--ios-shadow-xl);
+  padding: 8px;
+}
+
+.theme-macos [role=\"menu\"],
+.theme-macos .dropdown-menu {
+  background: var(--macos-glass-bg);
+  backdrop-filter: var(--macos-blur);
+  -webkit-backdrop-filter: var(--macos-blur);
+  border: 1px solid var(--macos-glass-border);
+  border-radius: var(--macos-radius-md);
+  box-shadow: var(--macos-shadow-lg);
+  padding: 6px;
+}
+
+.theme-ios26 [role=\"menuitem\"],
+.theme-ios26 .dropdown-item {
+  border-radius: var(--ios-radius-sm);
+  padding: 10px 14px;
+  transition: var(--ios-transition);
+}
+
+.theme-macos [role=\"menuitem\"],
+.theme-macos .dropdown-item {
+  border-radius: var(--macos-radius-sm);
+  padding: 8px 12px;
+  transition: var(--macos-transition);
+}
+
+/* ===================================
+   Toast & Notification Enhancements
+   =================================== */
+
+.theme-ios26 .toast,
+.theme-ios26 [role=\"status\"] {
+  background: var(--ios-glass-bg);
+  backdrop-filter: var(--ios-blur);
+  -webkit-backdrop-filter: var(--ios-blur);
+  border: 1px solid var(--ios-glass-border);
+  border-radius: var(--ios-radius-lg);
+  box-shadow: var(--ios-shadow-xl);
+}
+
+.theme-macos .toast,
+.theme-macos [role=\"status\"] {
+  background: var(--macos-glass-bg);
+  backdrop-filter: var(--macos-blur);
+  -webkit-backdrop-filter: var(--macos-blur);
+  border: 1px solid var(--macos-glass-border);
+  border-radius: var(--macos-radius-md);
+  box-shadow: var(--macos-shadow-lg);
+}
+
+/* ===================================
+   Table Enhancements
+   =================================== */
+
+.theme-ios26 table {
+  border-radius: var(--ios-radius-lg);
+  overflow: hidden;
+}
+
+.theme-macos table {
+  border-radius: var(--macos-radius-md);
+  overflow: hidden;
+}
+
+.theme-ios26 th {
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.theme-macos th {
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+/* ===================================
+   Tab Enhancements
+   =================================== */
+
+.theme-ios26 [role=\"tablist\"] button {
+  border-radius: var(--ios-radius-md);
+  font-weight: 600;
+  transition: var(--ios-transition);
+}
+
+.theme-macos [role=\"tablist\"] button {
+  border-radius: var(--macos-radius-sm);
+  font-weight: 500;
+  transition: var(--macos-transition);
+}
+
+/* ===================================
+   Progress Bar Enhancements
+   =================================== */
+
+.theme-ios26 [role=\"progressbar\"],
+.theme-ios26 .progress-bar {
+  border-radius: 100px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.theme-ios26.dark [role=\"progressbar\"],
+.theme-ios26.dark .progress-bar {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.theme-macos [role=\"progressbar\"],
+.theme-macos .progress-bar {
+  border-radius: var(--macos-radius-sm);
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.theme-macos.dark [role=\"progressbar\"],
+.theme-macos.dark .progress-bar {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* ===================================
+   Checkbox & Radio Enhancements
+   =================================== */
+
+.theme-ios26 input[type=\"checkbox\"],
+.theme-ios26 input[type=\"radio\"] {
+  border-radius: var(--ios-radius-sm);
+  transition: var(--ios-transition);
+}
+
+.theme-ios26 input[type=\"radio\"] {
+  border-radius: 50%;
+}
+
+.theme-macos input[type=\"checkbox\"],
+.theme-macos input[type=\"radio\"] {
+  border-radius: 4px;
+  transition: var(--macos-transition);
+}
+
+.theme-macos input[type=\"radio\"] {
+  border-radius: 50%;
+}
+
+/* ===================================
+   Switch/Toggle Enhancements
+   =================================== */
+
+.theme-ios26 [role=\"switch\"],
+.theme-ios26 .switch {
+  border-radius: 100px;
+  transition: var(--ios-transition);
+}
+
+.theme-macos [role=\"switch\"],
+.theme-macos .switch {
+  border-radius: 100px;
+  transition: var(--macos-transition);
+}
+
+/* ===================================
+   Tooltip Enhancements
+   =================================== */
+
+.theme-ios26 [role=\"tooltip\"],
+.theme-ios26 .tooltip {
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: var(--ios-blur);
+  -webkit-backdrop-filter: var(--ios-blur);
+  border-radius: var(--ios-radius-sm);
+  font-size: 13px;
+  font-weight: 500;
+  padding: 6px 12px;
+}
+
+.theme-macos [role=\"tooltip\"],
+.theme-macos .tooltip {
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 400;
+  padding: 5px 10px;
+}
+
+/* ===================================
+   Theme Transition Effects
+   =================================== */
+
+html {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.theme-transition * {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}

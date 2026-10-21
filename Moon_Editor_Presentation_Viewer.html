@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🌙 Moon Editor - Comprehensive BIBFRAME 2.0/3.0 Slide Deck</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Tajawal:wght@400;500;700&display=swap');
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0B132B;
+      color: #F8FAFC;
+    }
+    .arabic-font {
+      font-family: 'Tajawal', sans-serif;
+    }
+    .slide {
+      display: none;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+    .slide.active {
+      display: flex;
+      opacity: 1;
+    }
+    .glass-panel {
+      background: rgba(28, 37, 65, 0.7);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .glass-card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .glass-card:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(72, 202, 228, 0.3);
+    }
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0B132B;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1C2541;
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #0071E3;
+    }
+  </style>
+</head>
+<body class="h-screen w-screen overflow-hidden flex flex-col justify-between select-none">
+
+  <!-- Top Navigation Bar -->
+  <header class="h-14 px-6 bg-[#0B132B]/90 border-b border-slate-800 flex items-center justify-between z-50">
+    <div class="flex items-center space-x-3">
+      <span class="text-2xl">🌙</span>
+      <div>
+        <h1 class="font-bold text-sm tracking-wide text-white flex items-center gap-2">
+          MOON EDITOR <span class="text-xs px-2 py-0.5 rounded-full bg-blue-500/20 text-cyan-400 font-mono border border-cyan-500/30">v333 / TO 16</span>
+        </h1>
+        <p class="text-xs text-slate-400">Enterprise BIBFRAME 2.0/3.0 Semantic Cataloging Platform</p>
+      </div>
+    </div>
+
+    <!-- Slide Indicators & Controls -->
+    <div class="flex items-center space-x-4">
+      <div class="text-xs font-mono text-slate-300 bg-slate-800/80 px-3 py-1.5 rounded-lg border border-slate-700">
+        Slide <span id="currentSlideNum" class="text-cyan-400 font-bold">1</span> / <span id="totalSlidesNum">16</span>
+      </div>
+
+      <div class="flex items-center space-x-1 bg-slate-800/80 p-1 rounded-lg border border-slate-700">
+        <button onclick="prevSlide()" class="p-1.5 hover:bg-slate-700 text-slate-300 hover:text-white rounded transition" title="Previous (Left Arrow)">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <button onclick="nextSlide()" class="p-1.5 hover:bg-slate-700 text-slate-300 hover:text-white rounded transition" title="Next (Right Arrow / Space)">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </div>
+
+      <button onclick="toggleThumbnails()" class="px-3 py-1.5 text-xs bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-lg border border-slate-700 flex items-center gap-1.5 transition">
+        <i class="fa-solid fa-grid-2"></i> All Slides
+      </button>
+
+      <button onclick="toggleFullscreen()" class="p-2 hover:bg-slate-800 text-slate-300 hover:text-white rounded-lg transition" title="Toggle Fullscreen (F)">
+        <i class="fa-solid fa-expand"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Slide Viewport -->
+  <main class="flex-1 relative overflow-hidden flex items-center justify-center p-4 md:p-8 bg-gradient-to-b from-[#0B132B] to-[#101B3B]">
+
+    <!-- SLIDE 1: Title Slide -->
+    <div class="slide active w-full max-w-6xl h-full max-h-[720px] rounded-2xl glass-panel p-8 md:p-12 flex flex-col justify-between relative overflow-hidden border border-slate-700/60 shadow-2xl">
+      <div class="absolute -right-20 -top-20 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="absolute -left-20 -bottom-20 w-96 h-96 bg-purple-600/10 rounded-full blur-3xl pointer-events-none"></div>
+      
+      <div>
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-400/30 text-cyan-400 text-xs font-semibold uppercase tracking-wider mb-6">
+          <i class="fa-solid fa-stars"></i> Complete System Technical Overview
+        </div>
+        <h1 class="text-4xl md:text-6xl font-extrabold text-white tracking-tight mb-4 leading-tight">
+          🌙 Moon Editor
+        </h1>
+        <p class="text-xl md:text-2xl text-slate-300 max-w-3xl font-light leading-relaxed">
+          Next-Generation Semantic Cataloging, Linked Open Data & Multi-AI Orchestration Platform
+        </p>
+        <div class="h-1 w-24 bg-gradient-to-r from-blue-500 to-cyan-400 my-6 rounded-full"></div>
+      </div>
+
+      <!-- 4 Highlight Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-4 my-auto">
+        <div class="glass-card p-4 rounded-xl border-t-2 border-t-blue-500">
+          <div class="text-blue-400 text-lg mb-1"><i class="fa-solid fa-diagram-project"></i></div>
+          <h3 class="font-bold text-white text-sm mb-1">Ontology-Driven</h3>
+          <p class="text-xs text-slate-400">LOC BIBFRAME 2.0/3.0 dynamic property binding without hardcoded UI schemas</p>
+        </div>
+        <div class="glass-card p-4 rounded-xl border-t-2 border-t-purple-500">
+          <div class="text-purple-400 text-lg mb-1"><i class="fa-solid fa-robot"></i></div>
+          <h3 class="font-bold text-white text-sm mb-1">Multi-AI Router</h3>
+          <p class="text-xs text-slate-400">OpenAI GPT-4, Google Gemini 1.5, LLaMA 3.3 with health monitoring & circuit breakers</p>
+        </div>
+        <div class="glass-card p-4 rounded-xl border-t-2 border-t-emerald-500">
+          <div class="text-emerald-400 text-lg mb-1"><i class="fa-solid fa-globe"></i></div>
+          <h3 class="font-bold text-white text-sm mb-1">19 Authority Hubs</h3>
+          <p class="text-xs text-slate-400">Simultaneous federated query across LOC, VIAF, Wikidata, AFIQA, WorldCat & BnF</p>
+        </div>
+        <div class="glass-card p-4 rounded-xl border-t-2 border-t-amber-500">
+          <div class="text-amber-400 text-lg mb-1"><i class="fa-solid fa-language"></i></div>
+          <h3 class="font-bold text-white text-sm mb-1">Bilingual & RTL</h3>
+          <p class="text-xs text-slate-400">Full Arabic & English support with AFIQA authorities and ScriptShifter romanization</p>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-between text-xs text-slate-400 pt-4 border-t border-slate-800">
+        <div>Author: <span class="text-white font-medium">Isaac Faleh</span> | Edition: <span class="text-white font-medium">v333 / Moon TO 16</span></div>
+        <div>Location: <span class="text-white font-medium">Karbala</span> | Target: <span class="text-white font-medium">Production Presentation</span></div>
+      </div>
+    </div>
+
+    <!-- SLIDE 2: Executive Summary & Vision -->
+    <div class="slide w-full max-w-6xl h-full max-h-[720px] rounded-2xl glass-panel p-8 md:p-12 flex flex-col justify-between relative overflow-hidden border border-slate-700/60 shadow-2xl">
+      <div>
+        <span class="text-xs font-mono text-cyan-400 uppercase tracking-widest">Strategic Overview</span>
+        <h2 class="text-3xl font-bold text-white mt-1 mb-6">Executive Summary & Vision: The Linked Data Revolution</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-auto">
+        <div class="glass-card p-6 rounded-xl">
+          <h3 class="text-lg font-bold text-cyan-300 mb-3 flex items-center gap-2">
+            <i class="fa-solid fa-arrows-spin text-blue-400"></i> The Paradigm Shift
+          </h3>
+          <ul class="space-y-3 text-xs md:text-sm text-slate-300 leading-relaxed">
+            <li><strong class="text-white">From Text Strings to Entities:</strong> Traditional MARC21 stores isolated string labels. Moon builds web-scale RDF knowledge graphs with dereferenceable HTTP URIs.</li>
+            <li><strong class="text-white">Dynamic Runtime Ontologies:</strong> Form fields, validations, and linkages are driven directly by official Library of Congress vocabulary schemas.</li>
+            <li><strong class="text-white">Ecosystem Unification:</strong> Seamlessly combines the strengths of LOC Marva, Sinopia (LD4P), JCricket provenance, and FOLIO LSP microservices.</li>
+          </ul>
+        </div>
+
+        <div class="space-y-3">
+          <div class="glass-card p-4 rounded-xl border-l-4 border-l-blue-500">
+            <h4 class="font-bold text-white text-sm mb-1">🏛️ Complete Standards Adherence</h4>
+            <p class="text-xs text-slate-400">BIBFRAME 2.0/3.0, RDA, W3C RDF/JSON-LD, SPARQL, and complete bidirectional MARC21 crosswalks.</p>
+          </div>
+          <div class="glass-card p-4 rounded-xl border-l-4 border-l-purple-500">
+            <h4 class="font-bold text-white text-sm mb-1">🤖 AI-Augmented Cataloging</h4>
+            <p class="text-xs text-slate-400">Automates OCR parsing, subject suggestion, LC Cutter creation, and authority disambiguation across multiple LLM providers.</p>
+          </div>
+          <div class="glass-card p-4 rounded-xl border-l-4 border-l-emerald-500">
+            <h4 class="font-bold text-white text-sm mb-1">🤝 Multi-Institutional Governance</h4>
+            <p class="text-xs text-slate-400">JCricket consortium workflows, record locking, version snapshot histories, and peer approval review pipelines.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-xs text-slate-400 flex justify-between border-t border-slate-800 pt-3">
+        <span>Moon Platform | Executive Vision</span>
+        <span>Slide 2 of 16</span>
+      </div>
+    </div>
+
+    <!-- SLIDE 3: System Scale & Implementation Metrics -->
+    <div class="slide w-full max-w-6xl h-full max-h-[720px] rounded-2xl glass-panel p-8 md:p-12 flex flex-col justify-between relative overflow-hidden border border-slate-700/60 shadow-2xl">
+      <div>
+        <span class="text-xs font-mono text-cyan-400 uppercase tracking-widest">Platform Metrics</span>
+        <h2 class="text-3xl font-bold text-white mt-1 mb-6">System Scale & Implementation Footprint</h2>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-4 my-auto">
+        <div class="glass-card p-5 rounded-xl text-center border-t-2 border-t-blue-500">
+          <div class="text-3xl md:text-4xl font-extrabold text-blue-400 font-mono">35,000+</div>
+          <div class="font-bold text-white text-sm mt-2">Lines of Code</div>
+          <div class="text-xs text-slate-400 mt-1">TypeScript, React & Node.js ecosystem</div>
+        </div>
+
+        <div class="glass-card p-5 rounded-xl text-center border-t-2 border-t-purple-500">
+          <div class="text-3xl md:text-4xl font-extrabold text-purple-400 font-mono">100+</div>
+          <div class="font-bold text-white text-sm mt-2">Frontend Components</div>
+          <div class="text-xs text-slate-400 mt-1">10+ specialized cataloging templates</div>
+        </div>
+
+        <div class="glass-card p-5 rounded-xl text-center border-t-2 border-t-emerald-500">
+          <div class="text-3xl md:text-4xl font-extrabold text-emerald-400 font-mono">166+</div>
+          <div class="font-bold text-white text-sm mt-2">Backend API Routes</div>
+          <div class="text-xs text-slate-400 mt-1">Hono web framework on Supabase Edge</div>
+        </div>
+
+        <div class="glass-card p-5 rounded-xl text-center border-t-2 border-t-amber-500">
+          <div class="text-3xl md:text-4xl font-extrabold text-amber-400 font-mono">19</div>
+          <div class="font-bold text-white text-sm mt-2">Discovery Sources</div>
+          <div class="text-xs text-slate-400 mt-1">Simultaneous international federated search</div>
+        </div>
+
+        <div class="glass-card p-5 rounded-xl text-center border-t-2 border-t-rose-500">
+          <div class="text-3xl md:text-4xl font-extrabold text-rose-400 font-mono">377+</div>
+          <div class="font-bold text-white text-sm mt-2">MARC21 Mappings</div>
+          <div class="text-xs text-slate-400 mt-1">Complete field coverage & FOLIO sync</div>
+        </div>
+
+        <div class="glass-card p-5 rounded-xl text-center border-t-2 border-t-teal-500">
+          <div class="text-3xl md:text-4xl font-extrabold text-teal-400 font-mono">15</div>
+          <div class="font-bold text-white text-sm mt-2">PostgreSQL Tables</div>
+          <div class="text-xs text-slate-400 mt-1">Normalized schema + native RDF Triples</div>
+        </div>
+      </div>
+
+      <div class="text-xs text-slate-400 flex justify-between border-t border-slate-800 pt-3">
+        <span>Production Quality Metrics</span>
+        <span>Slide 3 of 16</span>
+      </div>
+    </div>
+
+    <!-- SLIDE 4: High-Level Three-Tier Architecture -->
+    <div class="slide w-full max-w-6xl h-full max-h-[720px] rounded-2xl glass-panel p-8 md:p-12 flex flex-col justify-between relative overflow-hidden border border-slate-700/60 shadow-2xl">
+      <div>
+        <span class="text-xs font-mono text-cyan-400 uppercase tracking-widest">Architecture Blueprint</span>
+        <h2 class="text-3xl font-bold text-white mt-1 mb-6">Enterprise Architecture: High-Level System Layers</h2>
+      </div>
+
+      <div class="space-y-4 my-auto">
+        <div class="glass-card p-4 rounded-xl border-l-4 border-l-blue-500">
+          <div class="flex justify-between items-center mb-1">
+            <h3 class="font-bold text-white text-sm">1. PRESENTATION LAYER (Client Browser)</h3>
+            <span class="text-xs font-mono text-blue-400">React 18.3.1 • TypeScript • Tailwind v4 • Framer Motion • Three.js</span>
+          </div>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Responsive three-pane layout (Work, Instance, Preview) with 10+ cataloging templates (BlueMoon, WolfMoon, Sonic, KAMI, Dijla). Supports Apple-inspired design languages (iOS 26 glassmorphism, macOS clean typography, Classic high-density) and full LTR/RTL bidirectional rendering.
+          </p>
+        </div>
+
+        <div class="glass-card p-4 rounded-xl border-l-4 border-l-purple-500">
+          <div class="flex justify-between items-center mb-1">
+            <h3 class="font-bold text-white text-sm">2. APPLICATION & GATEWAY LAYER (Edge Server)</h3>
+            <span class="text-xs font-mono text-purple-400">Deno Runtime • Hono Framework • Supabase Edge Functions</span>
+          </div>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Dynamic BIBFRAME ontology engine, 5-phase multi-AI orchestrator (OpenAI, Gemini 1.5, LLaMA) with circuit breaker health tracking, bidirectional Bibframe2Marc/Marc2Bibframe translation, LC Cutter engine, and automated ScriptShifter Arabic transliteration.
+          </p>
+        </div>
+
+        <div class="glass-card p-4 rounded-xl border-l-4 border-l-emerald-500">
+          <div class="flex justify-between items-center mb-1">
+            <h3 class="font-bold text-white text-sm">3. STORAGE & TRIPLE STORE LAYER (Database)</h3>
+            <span class="text-xs font-mono text-emerald-400">PostgreSQL (Supabase) • 15 Tables • Row-Level Security</span>
+          </div>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Relational storage combined with a native RDF Triple Store (<code class="text-cyan-300">triples</code>, <code class="text-cyan-300">named_graphs</code>, <code class="text-cyan-300">records</code>). Provides immutable snapshot version control, JCricket multi-tenant institutional isolation, and 24-hour cached authority lookup.
+          </p>
+        </div>
+      </div>
+
+      <div class="text-xs text-slate-400 flex justify-between border-t border-slate-800 pt-3">
+        <span>Three-Tier Technical Decoupling</span>
+        <span>Slide 4 of 16</span>
+      </div>
+    </div>
+
+    <!-- SLIDE 5: BIBFRAME Ontology Engine -->
+    <div class="slide w-full max-w-6xl h-full max-h-[720px] rounded-2xl glass-panel p-8 md:p-12 flex flex-col justify-between relative overflow-hidden border border-slate-700/60 shadow-2xl">
+      <div>
+        <span class="text-xs font-mono text-cyan-400 uppercase tracking-widest">Ontology Core</span>
+        <h2 class="text-3xl font-bold text-white mt-1 mb-6">BIBFRAME 2.0 & 3.0 Dynamic Ontology Engine</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-auto">
+        <div class="glass-card p-4 rounded-xl overflow-x-auto">
+          <h3 class="text-sm font-bold text-cyan-300 mb-2">Core Entity Classes & RDF Mappings</h3>
+          <table class="w-full text-xs text-left text-slate-300 border-collapse">
+            <thead>
+              <tr class="border-b border-slate-700 text-slate-400">
+                <th class="py-1.5 font-semibold">Class</th>
+                <th class="py-1.5 font-semibold">RDF URI</th>
+                <th class="py-1.5 font-semibold">Scope</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-800 text-[11px]">
+              <tr><td class="py-1 font-mono text-cyan-400">bf:Work</td><td>.../ontologies/bibframe/Work</td><td>Intellectual content, title, creator, subject</td></tr>
+              <tr><td class="py-1 font-mono text-cyan-400">bf:Instance</td><td>.../ontologies/bibframe/Instance</td><td>Physical publication, ISBN, edition, extent</td></tr>
+              <tr><td class="py-1 font-mono text-cyan-400">bf:Item</td><td>.../ontologies/bibframe/Item</td><td>Physical copy, barcode, shelf location</td></tr>
+              <tr><td class="py-1 font-mono text-cyan-400">bf:Agent</td><td>.../ontologies/bibframe/Agent</td><td>Person, Meeting, Organization, Family</td></tr>
+              <tr><td class="py-1 font-mono text-cyan-400">bf:Subject</td><td>.../ontologies/bibframe/Subject</td><td>Topic, Place, Temporal, LCSH terms</td></tr>
+              <tr><td class="py-1 font-mono text-cyan-400">bf:ProvisionActivity</td><td>.../ontologies/bibframe/ProvisionActivity</td><td>Publication, Production, Manufacture</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="glass-card p-5 rounded-xl">
+          <h3 class="text-sm font-bold text-cyan-300 mb-3">Dynamic Field Binding Principles</h3>
+          <ul class="space-y-2.5 text-xs text-slate-300 leading-relaxed">
+            <li><strong class="text-white">Zero Hardcoded Schemas:</strong> UI input components are assembled on the fly based on loaded RDF ontology definitions and SHACL constraints.</li>
+            <li><strong class="text-white">Strict Domain & Range Enforcement:</strong> Validates that properties only bind to legal entities (e.g. preventing <code class="text-cyan-300">bf:isbn</code> on Work).</li>
+            <li><strong class="text-white">URI vs. Literal Segregation:</strong> Automatically determines whether an input requires an authoritative URI lookup badge or a structured literal.</li>
+            <li><strong class="text-white">Round-Trip Graph Stability:</strong> Graph parsing into UI forms and re-export back into JSON-LD produces identical canonical triples.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="text-xs text-slate-400 flex justify-between border-t border-slate-800 pt-3">
+        <span>Library of Congress Ontology Integration</span>
+        <span>Slide 5 of 16</span>
+      </div>
+    </div>
+
+    <!-- SLIDE 6: Engines & Templates -->
+    <div class="slide w-full max-w-6xl h-full max-h-[720px] rounded-2xl glass-panel p-8 md:p-12 flex flex-col justify-between relative overflow-hidden border border-slate-700/60 shadow-2xl">
+      <div>
+        <span class="text-xs font-mono text-cyan-400 uppercase tracking-widest">Specialized Suites</span>
+        <h2 class="text-3xl font-bold text-white mt-1 mb-6">The Moon Suite: Specialized Engines & Templates</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 my-auto">
+        <div class="glass-card p-4 rounded-xl border-t-2 border-t-blue-500">
+          <div class="flex justify-between items-center mb-1">
+            <h3 class="font-bold text-white text-sm">🌙 Moon Classic</h3>
+            <span class="text-[10px] px-2 py-0.5 rounded bg-blue-500/20 text-blue-300">Standard</span>
+          </div>
+          <p class="text-xs text-slate-400 mt-2">The resilient three-pane layout featuring real-time synchronized previews of JSON-LD, RDF/Turtle, and MARC21.</p>
+        </div>
+
+        <div class="glass-card p-4 rounded-xl border-t-2 border-t-cyan-500">
+          <div class="flex justify-between items-center mb-1">
+            <h3 class="font-bold text-white text-sm">🌊 BlueMoon</h3>
+            <span class="text-[10px] px-2 py-0.5 rounded bg-cyan-500/20 text-cyan-300">51 Fields</span>
+          </div>
+          <p class="text-xs text-slate-400 mt-2">Advanced 51-field coverage achieving 90%+ parity with LC Marva including dissertation notes, braille, and accessibility metadata.</p>
+        </div>
+
+        <div class="glass-card p-4 rounded-xl border-t-2 border-t-purple-500">
+          <div class="flex justify-between items-center mb-1">
+            <h3 class="font-bold text-white text-sm">🐺 WolfMoon & 3D</h3>
+            <span class="text-[10px] px-2 py-0.5 rounded bg-purple-500/20 text-purple-300">Three.js</span>
+          </div>
+          <p class="text-xs text-slate-400 mt-2">Spatial 3D Solar System graph explorer that visually renders entity relations between Works, Authors, Instances, and Subjects.</p>
+        </div>
+
+        <div class="glass-card p-4 rounded-xl border-t-2 border-t-emerald-500">
+          <div class="flex justify-between items-center mb-1">
+            <h3 class="font-bold text-white text-sm">⚡ Sonic Engine</h3>
+            <span class="text-[10px] px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300">BIBFRAME 3.0</span>
+          </div>
+          <p class="text-xs text-slate-400 mt-2">Strict graph-native engine with recursive @graph resolvers, zero shortcuts, and pure W3C JSON-LD serialization.</p>
+        </div>
+
+        <div class="glass-card p-4 rounded-xl border-t-2 border-t-amber-500">
+          <div class="flex justify-between items-center mb-1">
+            <h3 class="font-bold text-white text-sm">🏛️ Moon Dijla</h3>
+            <span class="text-[10px] px-2 py-0.5 rounded bg-amber-500/20 text-amber-300">AFIQA Regional</span>
+          </div>
+          <p class="text-xs text-slate-400 mt-2">Specialized Arabic cataloging platform connected to the AFIQA authority hub with Iraqi author index and ScriptShifter romanization.</p>
+        </div>
+
+        <div class="glass-card p-4 rounded-xl border-t-2 border-t-rose-500">
+          <div class="flex justify-between items-center mb-1">
+            <h3 class="font-bold text-white text-sm">🛡️ KAMI Core</h3>
+            <span class="text-[10px] px-2 py-0.5 rounded bg-rose-500/20 text-rose-300">Enterprise</span>
+          </div>
+          <p class="text-xs text-slate-400 mt-2">Knowledge Architecture for Metadata Integration: multi-tenant security, optimistic record locking, and normalized database routing.</p>
+        </div>
+      </div>
+
+      <div class="text-xs text-slate-400 flex justify-between border-t border-slate-800 pt-3">
+        <span>Comprehensive Cataloging Template Portfolio</span>
+        <span>Slide 6 of 16</span>
+      </div>
+    </div>
+
+    <!-- SLIDE 7: Multi-AI Orchestration Engine -->
+    <div class="slide w-full max-w-6xl h-full max-h-[720px] rounded-2xl glass-panel p-8 md:p-12 flex flex-col justify-between relative overflow-hidden border border-slate-700/60 shadow-2xl">
+      <div>
+        <span class="text-xs font-mono text-cyan-400 uppercase tracking-widest">AI Orchestration</span>
+        <h2 class="text-3xl font-bold text-white mt-1 mb-6">Multi-AI Orchestrator: 5-Phase Cataloging Pipeline</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-auto">
+        <div class="space-y-2.5">
+          <div class="glass-card p-3 rounded-lg border-l-2 border-l-blue-400">
+            <div class="text-xs font-bold text-white">Phase 1: Ingestion & OCR Processing</div>
+            <div class="text-[11px] text-slate-400">Accepts raw title page OCR, scanned PDFs, MARC XML, or ISBN search input.</div>
+          </div>
+          <div class="glass-card p-3 rounded-lg border-l-2 border-l-purple-400">
+            <div class="text-xs font-bold text-white">Phase 2: Entity & Metadata Extraction</div>
+            <div class="text-[11px] text-slate-400">Dissects primary creators, uniform titles, edition statements, and publisher nodes.</div>
+          </div>
+          <div class="glass-card p-3 rounded-lg border-l-2 border-l-emerald-400">
+            <div class="text-xs font-bold text-white">Phase 3: Authority Disambiguation</div>
+            <div class="text-[11px] text-slate-400">Resolves person/place names against LCNAF, VIAF, and AFIQA to bind persistent URIs.</div>
+          </div>
+          <div class="glass-card p-3 rounded-lg border-l-2 border-l-amber-400">
+            <div class="text-xs font-bold text-white">Phase 4: Subject & Classification Suggestion</div>
+            <div class="text-[11px] text-slate-400">Predicts LCSH topical headings, DDC numbers, and auto-generates LC Cutters.</div>
+          </div>
+          <div class="glass-card p-3 rounded-lg border-l-2 border-l-rose-400">
+            <div class="text-xs font-bold text-white">Phase 5: Graph Synthesis & SHACL Validation</div>
+            <div class="text-[11px] text-slate-400">Constructs validated W3C JSON-LD graphs ready for storage and export.</div>
+          </div>
+        </div>
+
+        <div class="glass-card p-5 rounded-xl flex flex-col justify-between">
+          <div>
+            <h3 class="text-sm font-bold text-purple-300 mb-3 flex items-center gap-2">
+              <i class="fa-solid fa-microchip-ai"></i> Multi-Provider Resilience Architecture
+            </h3>
+            <p class="text-xs text-slate-300 leading-relaxed mb-4">
+              The AI Engine does not rely on a single vendor. It dynamically arbitrates requests across three top-tier intelligence providers with an active circuit breaker:
+            </p>
+            <div class="space-y-2 text-xs">
+              <div class="flex items-center justify-between p-2 rounded bg-slate-800/80 border border-slate-700">
+                <span class="font-medium text-white">OpenAI GPT-4o</span>
+                <span class="text-[10px] px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300">Complex Parsing</span>
+              </div>
+              <div class="flex items-center justify-between p-2 rounded bg-slate-800/80 border border-slate-700">
+                <span class="font-medium text-white">Google Gemini 1.5 Pro</span>
+                <span class="text-[10px] px-2 py-0.5 rounded bg-blue-500/20 text-blue-300">Long-Context Books</span>
+              </div>
+              <div class="flex items-center justify-between p-2 rounded bg-slate-800/80 border border-slate-700">
+                <span class="font-medium text-white">Meta LLaMA 3.3-70B</span>
+                <span class="text-[10px] px-2 py-0.5 rounded bg-purple-500/20 text-purple-300">Local / Cost Fallback</span>
+              </div>
+            </div>
+          </div>
+          <div class="text-[11px] text-cyan-400 bg-cyan-950/40 p-2.5 rounded-lg border border-cyan-800/50 mt-4">
+            ⚡ Circuit breaker detects quota limits, latency spikes, or network timeouts and seamlessly reroutes tasks without cataloger interruption.
+          </div>
+        </div>
+      </div>
+
+      <div class="text-xs text-slate-400 flex justify-between border-t border-slate-800 pt-3">
+        <span>Intelligent Automated Metadata Generation</span>
+        <span>Slide 7 of 16</span>
+      </div>
+    </div>
+
+    <!-- SLIDE 8: Federated Discovery & Authority Hub -->
+    <div class="slide w-full max-w-6xl h-full max-h-[720px] rounded-2xl glass-panel p-8 md:p-12 flex flex-col justify-between relative overflow-hidden border border-slate-700/60 shadow-2xl">
+      <div>
+        <span class="text-xs font-mono text-cyan-400 uppercase tracking-widest">Linked Data Hub</span>
+        <h2 class="text-3xl font-bold text-white mt-1 mb-6">Federated Discovery: 19 Global Authority Endpoints</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-auto">
+        <div class="glass-card p-4 rounded-xl overflow-x-auto">
+          <h3 class="text-sm font-bold text-cyan-300 mb-2">Federated Authority Endpoints</h3>
+          <table class="w-full text-xs text-left text-slate-300 border-collapse">
+            <thead>
+              <tr class="border-b border-slate-700 text-slate-400 text-[11px]">
+                <th class="py-1.5">Authority Source</th>
+                <th class="py-1.5">Scope & Domain</th>
+                <th class="py-1.5">Protocol</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-800 text-[11px]">
+              <tr><td class="py-1 font-semibold text-white">LCNAF / LCSH / LCGFT</td><td>Library of Congress</td><td>id.loc.gov / JSON-LD</td></tr>
+              <tr><td class="py-1 font-semibold text-white">VIAF (OCLC)</td><td>Virtual International Auth</td><td>VIAF AutoSuggest</td></tr>
+              <tr><td class="py-1 font-semibold text-white">Wikidata & FAST</td><td>Global Entity Knowledge</td><td>SPARQL / REST</td></tr>
+              <tr><td class="py-1 font-semibold text-white">AFIQA Authority File</td><td>Arabic & Islamic Scholars</td><td>afiqa.net URI Graph</td></tr>
+              <tr><td class="py-1 font-semibold text-white">WorldCat & DPLA</td><td>Union Catalogs</td><td>OpenSearch / SRU</td></tr>
+              <tr><td class="py-1 font-semibold text-white">BnF, GND & Getty</td><td>National Libraries & Art</td><td>RDF / SPARQL</td></tr>
+              <tr><td class="py-1 font-semibold text-white">ISBNdb & OpenLibrary</td><td>Commercial & Open Books</td><td>REST v2 API</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="glass-card p-5 rounded-xl">
+          <h3 class="text-sm font-bold text-emerald-300 mb-3">Linked Data Integration Features</h3>
+          <ul class="space-y-3 text-xs text-slate-300 leading-relaxed">
+            <li><strong class="text-white">Real-Time Autocomplete:</strong> As catalogers type in creator or subject fields, Moon concurrently queries all 19 endpoints and returns disambiguated entity cards with birth/death dates and variant names.</li>
+            <li><strong class="text-white">Cross-Referenced owl:sameAs:</strong> Automatically binds Library of Congress identifiers with corresponding Wikidata (Q-IDs), ISNI, and VIAF links.</li>
+            <li><strong class="text-white">24-Hour Authority Cache:</strong> High-performance local caching in PostgreSQL minimizes outbound latency and protects against external rate limits.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="text-xs text-slate-400 flex justify-between border-t border-slate-800 pt-3">
+        <span>Global Interconnected Knowledge Graphs</span>
+        <span>Slide 8 of 16</span>
+      </div>
+    </div>
+
+    <!-- SLIDE 9: Arabic & Bilingual Cataloging -->
+    <div class="slide w-full max-w-6xl h-full max-h-[720px] rounded-2xl glass-panel p-8 md:p-12 flex flex-col justify-between relative overflow-hidden border border-slate-700/60 shadow-2xl">
+      <div>
+        <span class="text-xs font-mono text-cyan-400 uppercase tracking-widest">Bilingual Support</span>
+        <h2 class="text-3xl font-bold text-white mt-1 mb-6">Arabic & Bilingual Cataloging: AFIQA & ScriptShifter</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-auto">
+        <div class="glass-card p-6 rounded-xl border-l-4 border-l-amber-500">
+          <h3 class="text-base font-bold text-amber-300 mb-2 flex items-center gap-2">
+            🌙 AFIQA Linked Authority File
+          </h3>
+          <p class="text-xs text-slate-300 leading-relaxed mb-3">
+            AFIQA (Arabic Federated Identification and Qualification of Authorities) establishes persistent URIs (<code class="text-cyan-300">https://afiqa.net/authority/{id}</code>) for Arab and Islamic authors:
+          </p>
+          <div class="space-y-1.5 text-xs text-slate-200 arabic-font bg-slate-900/60 p-3 rounded-lg border border-slate-800">
+            <div>• <strong class="text-amber-300">محمد مهدي الجواهري</strong> (1899-1997) — [URI: 24 | ISNI | Wikidata]</div>
+            <div>• <strong class="text-amber-300">الشيخ أحمد الوائلي</strong> (1928-2003) — [URI: 1421 | الأعمال الكاملة]</div>
+            <div>• <strong class="text-amber-300">د. إبراهيم السامرائي</strong> (1923-2001) — [URI: 2031 | دراسات لغوية]</div>
+            <div>• <strong class="text-amber-300">أبو الطيب المتنبي</strong> (915-965) — [URI: 15 | ديوان المتنبي]</div>
+          </div>
+        </div>
+
+        <div class="glass-card p-6 rounded-xl border-l-4 border-l-blue-500">
+          <h3 class="text-base font-bold text-blue-300 mb-2 flex items-center gap-2">
+            🔤 ScriptShifter & Bidirectional UI
+          </h3>
+          <ul class="space-y-3 text-xs text-slate-300 leading-relaxed">
+            <li><strong class="text-white">Automated Transliteration (ScriptShifter):</strong> Romanizes Arabic script into standard ALA-LC and ISO 233 Latin forms for international union catalog exchange.</li>
+            <li><strong class="text-white">Native RTL Ergonomics:</strong> Complete right-to-left layout inversion with Arabic typography optimization powered by <code class="text-cyan-300">react-i18next</code>.</li>
+            <li><strong class="text-white">Bilingual Monograph Templates:</strong> Dual-language fields allow cataloging parallel titles, translated statements, and synchronized Arabic/English subject headings.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="text-xs text-slate-400 flex justify-between border-t border-slate-800 pt-3">
+        <span>Empowering Middle Eastern & International Scholarship</span>
+        <span>Slide 9 of 16</span>
+      </div>
+    </div>
+
+    <!-- SLIDE 10: Bidirectional Format Conversion & Crosswalks -->
+    <div class="slide w-full max-w-6xl h-full max-h-[720px] rounded-2xl glass-panel p-8 md:p-12 flex flex-col justify-between relative overflow-hidden border border-slate-700/60 shadow-2xl">
+      <div>
+        <span class="text-xs font-mono text-cyan-400 uppercase tracking-widest">Conversion & Formats</span>
+        <h2 class="text-3xl font-bold text-white mt-1 mb-6">Bidirectional Crosswalks & Export Engines</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-auto">
+        <div class="glass-card p-4 rounded-xl border-t-2 border-t-blue-500">
+          <h3 class="font-bold text-white text-sm mb-1 flex items-center gap-2">
+            🔄 Bibframe2Marc Engine
+          </h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Transforms nested BIBFRAME RDF graphs into standard MARC21 records: Leader, 008, 100/700 personal names, 245 title statements, 264 publication info, 300 physical descriptions, 336/337/338 RDA types, and 650/651/655 subjects.
+          </p>
+        </div>
+
+        <div class="glass-card p-4 rounded-xl border-t-2 border-t-purple-500">
+          <h3 class="font-bold text-white text-sm mb-1 flex items-center gap-2">
+            🔁 Marc2Bibframe Engine
+          </h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Ingests legacy MARC21 and MARC XML files, decomposes them into <code class="text-cyan-300">bf:Work</code> and <code class="text-cyan-300">bf:Instance</code> entities, extracts authority strings into dereferenceable URIs, and produces valid JSON-LD and Turtle.
+          </p>
+        </div>
+
+        <div class="glass-card p-4 rounded-xl border-t-2 border-t-amber-500">
+          <h3 class="font-bold text-white text-sm mb-1 flex items-center gap-2">
+            🏷️ LC Cutter & Classification Engine
+          </h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Automates Library of Congress Classification (LCC) and Dewey Decimal (DDC) call numbers, calculating algorithmic LC Cutter numbers based on main creator entries and title work marks.
+          </p>
+        </div>
+
+        <div class="glass-card p-4 rounded-xl border-t-2 border-t-emerald-500">
+          <h3 class="font-bold text-white text-sm mb-1 flex items-center gap-2">
+            📊 6 Real-Time Live Preview Views
+          </h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Simultaneous real-time output tabs: 1. W3C JSON-LD (Graph mode), 2. RDF/Turtle (.ttl), 3. MARC21 Tagged View, 4. Patron OPAC Web View, 5. D3 Interactive Mind Map, 6. XML/SPARQL Query Terminal.
+          </p>
+        </div>
+      </div>
+
+      <div class="text-xs text-slate-400 flex justify-between border-t border-slate-800 pt-3">
+        <span>Bridging Legacy MARC and Modern Linked Open Data</span>
+        <span>Slide 10 of 16</span>
+      </div>
+    </div>
+
+    <!-- SLIDE 11: JCricket Consortium & FOLIO Integration -->
+    <div class="slide w-full max-w-6xl h-full max-h-[720px] rounded-2xl glass-panel p-8 md:p-12 flex flex-col justify-between relative overflow-hidden border border-slate-700/60 shadow-2xl">
+      <div>
+        <span class="text-xs font-mono text-cyan-400 uppercase tracking-widest">Consortium & LSP</span>
+        <h2 class="text-3xl font-bold text-white mt-1 mb-6">Consortium Governance & FOLIO LSP Integration</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-auto">
+        <div class="glass-card p-6 rounded-xl border-l-4 border-l-blue-500">
+          <h3 class="text-base font-bold text-blue-300 mb-2 flex items-center gap-2">
+            🦗 JCricket Multi-Institutional Provenance
+          </h3>
+          <ul class="space-y-2.5 text-xs text-slate-300 leading-relaxed">
+            <li><strong class="text-white">Cooperative Cataloging Model:</strong> Adheres to PCC/NACO consortium workflows, enabling shared cataloging across universities and national libraries.</li>
+            <li><strong class="text-white">Granular Provenance Tracking:</strong> Stamps institution ID, cataloger identity, and ISO timestamps on individual RDF triples and records.</li>
+            <li><strong class="text-white">Review & Peer Approval:</strong> Built-in visual diff comparison for pending pull-request-style cataloging approvals.</li>
+            <li><strong class="text-white">Optimistic Record Locking:</strong> Prevents concurrent edit collisions during collaborative sessions.</li>
+          </ul>
+        </div>
+
+        <div class="glass-card p-6 rounded-xl border-l-4 border-l-purple-500">
+          <h3 class="text-base font-bold text-purple-300 mb-2 flex items-center gap-2">
+            📚 FOLIO Library Services Platform
+          </h3>
+          <ul class="space-y-2.5 text-xs text-slate-300 leading-relaxed">
+            <li><strong class="text-white">377+ Module Explorer:</strong> Interactive catalog of all FOLIO microservices with live documentation and GitHub links.</li>
+            <li><strong class="text-white">Core Inventory Synchronization:</strong> Live connectivity with <code class="text-cyan-300">mod-inventory</code>, <code class="text-cyan-300">mod-source-record-storage</code>, and <code class="text-cyan-300">mod-data-import</code> via Okapi API Gateway.</li>
+            <li><strong class="text-white">Bidirectional Ingestion & Export:</strong> Pull existing FOLIO instances into Moon for linked data enrichment; publish BIBFRAME records back to FOLIO.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="text-xs text-slate-400 flex justify-between border-t border-slate-800 pt-3">
+        <span>Institutional Collaboration & Next-Gen LSP Interoperability</span>
+        <span>Slide 11 of 16</span>
+      </div>
+    </div>
+
+    <!-- SLIDE 12: Database & RDF Triple Store Architecture -->
+    <div class="slide w-full max-w-6xl h-full max-h-[720px] rounded-2xl glass-panel p-8 md:p-12 flex flex-col justify-between relative overflow-hidden border border-slate-700/60 shadow-2xl">
+      <div>
+        <span class="text-xs font-mono text-cyan-400 uppercase tracking-widest">Database & Persistence</span>
+        <h2 class="text-3xl font-bold text-white mt-1 mb-6">Database Architecture: Relational Schema & RDF Triples</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-auto">
+        <div class="glass-card p-4 rounded-xl overflow-x-auto">
+          <h3 class="text-sm font-bold text-cyan-300 mb-2">15-Table PostgreSQL Schema</h3>
+          <table class="w-full text-xs text-left text-slate-300 border-collapse">
+            <thead>
+              <tr class="border-b border-slate-700 text-slate-400 text-[11px]">
+                <th class="py-1.5">Table Name</th>
+                <th class="py-1.5">Role & Content</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-800 text-[11px]">
+              <tr><td class="py-1 font-mono text-cyan-400">records</td><td>Bibliographic entities (Work/Instance) with full-text search</td></tr>
+              <tr><td class="py-1 font-mono text-cyan-400">record_versions</td><td>Immutable JSON snapshot history & diff tracking</td></tr>
+              <tr><td class="py-1 font-mono text-cyan-400">triples</td><td>Native RDF triple store (Subject, Predicate, Object, Lang)</td></tr>
+              <tr><td class="py-1 font-mono text-cyan-400">named_graphs</td><td>Named graph context URI containment</td></tr>
+              <tr><td class="py-1 font-mono text-cyan-400">authorities</td><td>Local & cached external authority records (pg_trgm indexed)</td></tr>
+              <tr><td class="py-1 font-mono text-cyan-400">audit_log</td><td>Compliance, user action log, and institutional telemetry</td></tr>
+              <tr><td class="py-1 font-mono text-cyan-400">institutions & users</td><td>Multi-tenant namespaces, user accounts & RLS security</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="glass-card p-5 rounded-xl">
+          <h3 class="text-sm font-bold text-cyan-300 mb-3">Enterprise Persistence Highlights</h3>
+          <ul class="space-y-3 text-xs text-slate-300 leading-relaxed">
+            <li><strong class="text-white">KV Store to SQL Migration:</strong> Upgraded from flat key-value pairs to an ACID-compliant normalized relational schema.</li>
+            <li><strong class="text-white">High-Speed SPARQL-in-SQL:</strong> Dedicated indexes on subject, predicate, and object columns allow complex graph queries to execute in sub-millisecond SQL queries.</li>
+            <li><strong class="text-white">Row-Level Security (RLS):</strong> Ensures consortium members and institutional users only access their authorized catalog workspaces.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="text-xs text-slate-400 flex justify-between border-t border-slate-800 pt-3">
+        <span>Production-Hardened Relational & Semantic Persistence</span>
+        <span>Slide 12 of 16</span>
+      </div>
+    </div>
+
+    <!-- SLIDE 13: UI/UX & Apple Theme System -->
+    <div class="slide w-full max-w-6xl h-full max-h-[720px] rounded-2xl glass-panel p-8 md:p-12 flex flex-col justify-between relative overflow-hidden border border-slate-700/60 shadow-2xl">
+      <div>
+        <span class="text-xs font-mono text-cyan-400 uppercase tracking-widest">User Experience</span>
+        <h2 class="text-3xl font-bold text-white mt-1 mb-6">UI/UX Design: Apple-Inspired Multi-Theme System</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 my-auto">
+        <div class="glass-card p-5 rounded-xl border-t-2 border-t-blue-500 flex flex-col justify-between">
+          <div>
+            <div class="flex justify-between items-center mb-2">
+              <h3 class="font-bold text-white text-sm">🌟 iOS 26 Theme</h3>
+              <span class="text-[10px] px-2 py-0.5 rounded bg-blue-500/20 text-cyan-300">Glassmorphism</span>
+            </div>
+            <p class="text-xs text-slate-300 leading-relaxed mt-2">
+              Modern vibrant interface with dynamic frosted glass panels, spring bounce animations, 20px rounded corners, and rich visual gradients.
+            </p>
+          </div>
+          <div class="text-[10px] text-slate-400 font-mono mt-4 pt-2 border-t border-slate-800">
+            Optimal for modern touch & desktop displays
+          </div>
+        </div>
+
+        <div class="glass-card p-5 rounded-xl border-t-2 border-t-purple-500 flex flex-col justify-between">
+          <div>
+            <div class="flex justify-between items-center mb-2">
+              <h3 class="font-bold text-white text-sm">💻 macOS Theme</h3>
+              <span class="text-[10px] px-2 py-0.5 rounded bg-purple-500/20 text-purple-300">Precision</span>
+            </div>
+            <p class="text-xs text-slate-300 leading-relaxed mt-2">
+              Clean desktop-class workspace with San Francisco typography hierarchy, subtle 1px borders, high-density form layouts, and multi-layer shadows.
+            </p>
+          </div>
+          <div class="text-[10px] text-slate-400 font-mono mt-4 pt-2 border-t border-slate-800">
+            Optimal for high-productivity cataloging sessions
+          </div>
+        </div>
+
+        <div class="glass-card p-5 rounded-xl border-t-2 border-t-emerald-500 flex flex-col justify-between">
+          <div>
+            <div class="flex justify-between items-center mb-2">
+              <h3 class="font-bold text-white text-sm">📚 Classic Theme</h3>
+              <span class="text-[10px] px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300">Ergonomics</span>
+            </div>
+            <p class="text-xs text-slate-300 leading-relaxed mt-2">
+              Traditional library interface design with predictable component spacing, zero distracting animations, and strict WCAG 2.1 AA accessibility.
+            </p>
+          </div>
+          <div class="text-[10px] text-slate-400 font-mono mt-4 pt-2 border-t border-slate-800">
+            Universal compatibility & accessibility
+          </div>
+        </div>
+      </div>
+
+      <div class="text-xs text-slate-400 flex justify-between border-t border-slate-800 pt-3">
+        <span>Instant Real-Time Theme Switching with Dark/Light Persistence</span>
+        <span>Slide 13 of 16</span>
+      </div>
+    </div>
+
+    <!-- SLIDE 14: Pre-Loaded Production Examples -->
+    <div class="slide w-full max-w-6xl h-full max-h-[720px] rounded-2xl glass-panel p-8 md:p-12 flex flex-col justify-between relative overflow-hidden border border-slate-700/60 shadow-2xl">
+      <div>
+        <span class="text-xs font-mono text-cyan-400 uppercase tracking-widest">Real-World Records</span>
+        <h2 class="text-3xl font-bold text-white mt-1 mb-6">Pre-Loaded Production Examples & Real-World Validation</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 my-auto">
+        <div class="glass-card p-5 rounded-xl border-t-2 border-t-blue-500">
+          <div class="font-bold text-white text-sm mb-1">One Hundred Years of Solitude</div>
+          <div class="text-xs text-slate-400 italic mb-2">Gabriel García Márquez</div>
+          <div class="text-[10px] px-2 py-0.5 rounded bg-blue-500/20 text-cyan-300 inline-block mb-3 font-semibold">English Fiction</div>
+          <ul class="space-y-1.5 text-[11px] text-slate-300 leading-tight">
+            <li>• LCNAF author URI linkage</li>
+            <li>• LCSH: Solitude, Macondo, Colombia</li>
+            <li>• LCC: PQ8180.17.A53 | DDC: 863.64</li>
+            <li>• Full MARC 100/245/264/300/650</li>
+          </ul>
+        </div>
+
+        <div class="glass-card p-5 rounded-xl border-t-2 border-t-amber-500">
+          <div class="font-bold text-white text-sm mb-1 arabic-font">الأيام (Al-Ayyam - The Days)</div>
+          <div class="text-xs text-slate-400 italic mb-2 arabic-font">طه حسين (Taha Hussein)</div>
+          <div class="text-[10px] px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 inline-block mb-3 font-semibold">Arabic Autobiography</div>
+          <ul class="space-y-1.5 text-[11px] text-slate-300 leading-tight">
+            <li>• Linked AFIQA URI authority</li>
+            <li>• Full RTL layout & Arabic subject indexing</li>
+            <li>• ScriptShifter Romanization to "Al-Ayyām"</li>
+            <li>• Linked Wikidata Q-ID & ISNI</li>
+          </ul>
+        </div>
+
+        <div class="glass-card p-5 rounded-xl border-t-2 border-t-purple-500">
+          <div class="font-bold text-white text-sm mb-1">Introduction to Algorithms</div>
+          <div class="text-xs text-slate-400 italic mb-2">Cormen, Leiserson, Rivest, Stein</div>
+          <div class="text-[10px] px-2 py-0.5 rounded bg-purple-500/20 text-purple-300 inline-block mb-3 font-semibold">Academic Monograph</div>
+          <ul class="space-y-1.5 text-[11px] text-slate-300 leading-tight">
+            <li>• 4 Co-Authors & MIT Press authority</li>
+            <li>• Complex ISBN-13 & LCCN identifiers</li>
+            <li>• LCC: QA76.6 .C662 | DDC: 005.1</li>
+            <li>• Structured Table of Contents notes</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="text-xs text-slate-400 flex justify-between border-t border-slate-800 pt-3">
+        <span>One-Click Example Ingestion via "Load Real Example" Header Button</span>
+        <span>Slide 14 of 16</span>
+      </div>
+    </div>
+
+    <!-- SLIDE 15: Strategic Roadmap -->
+    <div class="slide w-full max-w-6xl h-full max-h-[720px] rounded-2xl glass-panel p-8 md:p-12 flex flex-col justify-between relative overflow-hidden border border-slate-700/60 shadow-2xl">
+      <div>
+        <span class="text-xs font-mono text-cyan-400 uppercase tracking-widest">Future Horizons</span>
+        <h2 class="text-3xl font-bold text-white mt-1 mb-6">Strategic Roadmap: Next Horizons & Innovations</h2>
+      </div>
+
+      <div class="space-y-3.5 my-auto">
+        <div class="glass-card p-3.5 rounded-xl border-l-4 border-l-blue-500 flex justify-between items-center">
+          <div>
+            <h3 class="font-bold text-white text-sm">Phase 1: Deep Learning Auto-Classification</h3>
+            <p class="text-xs text-slate-400 mt-0.5">Neural topic modeling for automated LCC/DDC call numbers and subject tagging from multi-page PDFs.</p>
+          </div>
+          <span class="text-xs font-mono text-cyan-400 bg-cyan-950/60 px-3 py-1 rounded border border-cyan-800/40">Q3 2026</span>
+        </div>
+
+        <div class="glass-card p-3.5 rounded-xl border-l-4 border-l-purple-500 flex justify-between items-center">
+          <div>
+            <h3 class="font-bold text-white text-sm">Phase 2: Real-Time Collaborative Editing (CRDTs)</h3>
+            <p class="text-xs text-slate-400 mt-0.5">WebSocket multi-cataloger co-editing on shared RDF graphs with live cursor presence and conflict-free merging.</p>
+          </div>
+          <span class="text-xs font-mono text-purple-400 bg-purple-950/60 px-3 py-1 rounded border border-purple-800/40">Q4 2026</span>
+        </div>
+
+        <div class="glass-card p-3.5 rounded-xl border-l-4 border-l-emerald-500 flex justify-between items-center">
+          <div>
+            <h3 class="font-bold text-white text-sm">Phase 3: Native Mobile & Tablet Cataloging</h3>
+            <p class="text-xs text-slate-400 mt-0.5">Dedicated iOS / iPadOS application with camera barcode/OCR scanner for rapid physical inventory accessioning.</p>
+          </div>
+          <span class="text-xs font-mono text-emerald-400 bg-emerald-950/60 px-3 py-1 rounded border border-emerald-800/40">Q1 2027</span>
+        </div>
+
+        <div class="glass-card p-3.5 rounded-xl border-l-4 border-l-amber-500 flex justify-between items-center">
+          <div>
+            <h3 class="font-bold text-white text-sm">Phase 4: BIBFRAME 4.0 Readiness & Pan-Arab Consortium</h3>
+            <p class="text-xs text-slate-400 mt-0.5">Continuous alignment with upcoming LC specifications and expansion of the AFIQA consortium across regional libraries.</p>
+          </div>
+          <span class="text-xs font-mono text-amber-400 bg-amber-950/60 px-3 py-1 rounded border border-amber-800/40">Q2 2027</span>
+        </div>
+      </div>
+
+      <div class="text-xs text-slate-400 flex justify-between border-t border-slate-800 pt-3">
+        <span>Continuous Evolution & Community Alignment</span>
+        <span>Slide 15 of 16</span>
+      </div>
+    </div>
+
+    <!-- SLIDE 16: Conclusion & Impact Summary -->
+    <div class="slide w-full max-w-6xl h-full max-h-[720px] rounded-2xl glass-panel p-8 md:p-12 flex flex-col justify-between relative overflow-hidden border border-slate-700/60 shadow-2xl">
+      <div class="absolute -right-20 -bottom-20 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div class="text-center">
+        <div class="text-3xl mb-2">🌙</div>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-white tracking-tight">
+          Illuminating the Future of Bibliographic Cataloging
+        </h2>
+        <p class="text-sm text-cyan-400 font-mono mt-1">Enterprise Linked Data • Multi-AI Orchestration • Bilingual Excellence</p>
+      </div>
+
+      <div class="glass-card p-6 rounded-xl my-auto text-center border border-slate-700 max-w-4xl mx-auto">
+        <p class="text-sm md:text-base text-slate-200 italic leading-relaxed">
+          "Moon brings the power of BIBFRAME, linked open data, and modern artificial intelligence to libraries worldwide. From small special collections and regional manuscript archives to international academic consortia, Moon illuminates the path to professional, standards-compliant bibliographic description."
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="glass-card p-3 rounded-lg text-center">
+          <div class="text-emerald-400 font-bold text-xs">✅ 100% Standards Compliant</div>
+          <div class="text-[11px] text-slate-400 mt-0.5">BIBFRAME 2.0/3.0, W3C RDF, RDA, MARC21</div>
+        </div>
+        <div class="glass-card p-3 rounded-lg text-center">
+          <div class="text-purple-400 font-bold text-xs">🤖 Multi-AI Orchestration</div>
+          <div class="text-[11px] text-slate-400 mt-0.5">Intelligent routing across GPT-4, Gemini & LLaMA</div>
+        </div>
+        <div class="glass-card p-3 rounded-lg text-center">
+          <div class="text-cyan-400 font-bold text-xs">🌍 Universally Bilingual</div>
+          <div class="text-[11px] text-slate-400 mt-0.5">First-class English and Arabic Linked Data</div>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-between text-xs text-slate-400 pt-4 border-t border-slate-800">
+        <div>Project: <span class="text-white font-medium">Moon Editor (74)</span> | Author: <span class="text-white font-medium">Isaac Faleh</span></div>
+        <div class="text-cyan-400 font-medium">Ready for Production Presentation & Deployment 🚀</div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Slide Thumbnails Drawer (Modal) -->
+  <div id="thumbnailsModal" class="fixed inset-0 bg-black/80 backdrop-blur-md z-50 hidden flex-col p-6 overflow-y-auto">
+    <div class="flex justify-between items-center mb-6">
+      <h2 class="text-xl font-bold text-white flex items-center gap-2">
+        <i class="fa-solid fa-grid-2 text-cyan-400"></i> All Slides Overview (16 Slides)
+      </h2>
+      <button onclick="toggleThumbnails()" class="p-2 text-slate-400 hover:text-white rounded-lg bg-slate-800">
+        <i class="fa-solid fa-xmark text-lg"></i>
+      </button>
+    </div>
+    <div id="thumbnailsGrid" class="grid grid-cols-2 md:grid-cols-4 gap-4 flex-1">
+      <!-- Generated via JS -->
+    </div>
+  </div>
+
+  <!-- Bottom Action Bar -->
+  <footer class="h-10 px-6 bg-[#0B132B] border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-400">
+    <div class="flex items-center space-x-4">
+      <span><kbd class="px-1.5 py-0.5 bg-slate-800 rounded border border-slate-700 text-slate-300">Space</kbd> / <kbd class="px-1.5 py-0.5 bg-slate-800 rounded border border-slate-700 text-slate-300">→</kbd> Next</span>
+      <span><kbd class="px-1.5 py-0.5 bg-slate-800 rounded border border-slate-700 text-slate-300">←</kbd> Prev</span>
+      <span><kbd class="px-1.5 py-0.5 bg-slate-800 rounded border border-slate-700 text-slate-300">F</kbd> Fullscreen</span>
+    </div>
+    <div class="flex items-center space-x-3">
+      <span class="text-slate-500">PowerPoint File: <strong class="text-slate-300">Moon_Editor_Comprehensive_Presentation.pptx</strong></span>
+    </div>
+  </footer>
+
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+    document.getElementById('totalSlidesNum').innerText = totalSlides;
+
+    const slideTitles = [
+      "1. Title: Moon Editor & Ecosystem",
+      "2. Executive Summary & Vision",
+      "3. Scale & Implementation Metrics",
+      "4. Three-Tier System Architecture",
+      "5. BIBFRAME 2.0/3.0 Ontology Engine",
+      "6. Moon Specialized Engines & Templates",
+      "7. Multi-AI 5-Phase Orchestrator",
+      "8. Federated Discovery (19 Sources)",
+      "9. Arabic & Bilingual Support (AFIQA)",
+      "10. Format Crosswalks & Export Views",
+      "11. JCricket Consortium & FOLIO LSP",
+      "12. Database Schema & RDF Triple Store",
+      "13. Apple Theme Design System",
+      "14. Production Real-World Examples",
+      "15. Strategic Project Roadmap",
+      "16. Conclusion & Impact Summary"
+    ];
+
+    function showSlide(index) {
+      if (index < 0) index = 0;
+      if (index >= totalSlides) index = totalSlides - 1;
+      
+      slides.forEach((s, i) => {
+        s.classList.remove('active');
+      });
+      slides[index].classList.add('active');
+      currentSlide = index;
+      document.getElementById('currentSlideNum').innerText = currentSlide + 1;
+    }
+
+    function nextSlide() {
+      if (currentSlide < totalSlides - 1) {
+        showSlide(currentSlide + 1);
+      }
+    }
+
+    function prevSlide() {
+      if (currentSlide > 0) {
+        showSlide(currentSlide - 1);
+      }
+    }
+
+    function toggleFullscreen() {
+      if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen().catch(err => {});
+      } else {
+        if (document.exitFullscreen) {
+          document.exitFullscreen();
+        }
+      }
+    }
+
+    function toggleThumbnails() {
+      const modal = document.getElementById('thumbnailsModal');
+      const isHidden = modal.classList.contains('hidden');
+      if (isHidden) {
+        renderThumbnails();
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+      } else {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+    }
+
+    function renderThumbnails() {
+      const grid = document.getElementById('thumbnailsGrid');
+      grid.innerHTML = '';
+      slideTitles.forEach((title, idx) => {
+        const thumb = document.createElement('div');
+        thumb.className = `p-4 rounded-xl cursor-pointer border transition flex flex-col justify-between h-36 ${idx === currentSlide ? 'border-cyan-400 bg-cyan-950/30' : 'border-slate-700 bg-slate-900/60 hover:border-slate-500'}`;
+        thumb.onclick = () => {
+          showSlide(idx);
+          toggleThumbnails();
+        };
+        thumb.innerHTML = `
+          <div class="text-xs font-mono text-cyan-400 font-bold">Slide ${idx + 1}</div>
+          <div class="text-sm font-semibold text-white mt-1">${title}</div>
+          <div class="text-[10px] text-slate-500 mt-2">Click to open</div>
+        `;
+        grid.appendChild(thumb);
+      });
+    }
+
+    // Keyboard Shortcuts
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') {
+        e.preventDefault();
+        nextSlide();
+      } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+        e.preventDefault();
+        prevSlide();
+      } else if (e.key === 'f' || e.key === 'F') {
+        toggleFullscreen();
+      } else if (e.key === 'Escape') {
+        const modal = document.getElementById('thumbnailsModal');
+        if (!modal.classList.contains('hidden')) {
+          toggleThumbnails();
+        }
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+  xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+  xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#"
+  xmlns:relators="http://id.loc.gov/vocabulary/relators/"
+  xmlns:languages="http://id.loc.gov/vocabulary/languages/"
+  xmlns:contentTypes="http://id.loc.gov/vocabulary/contentTypes/"
+  xmlns:mediaTypes="http://id.loc.gov/vocabulary/mediaTypes/"
+  xmlns:carriers="http://id.loc.gov/vocabulary/carriers/">
+
+  <!-- ======================================================== -->
+  <!-- 1. BIBFRAME WORK                                         -->
+  <!-- ======================================================== -->
+  <bf:Work rdf:about="http://id.loc.gov/resources/works/b125923">
+    <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Monograph"/>
+    <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Manuscript"/>
+
+    <!-- Administrative Metadata -->
+    <bf:adminMetadata>
+      <bf:AdminMetadata>
+        <bf:identifiedBy>
+          <bf:Local>
+            <rdf:value>b125923</rdf:value>
+          </bf:Local>
+        </bf:identifiedBy>
+        <bf:systemNumber>
+          <bf:Local>
+            <rdf:value>(Sirsi) a209527</rdf:value>
+          </bf:Local>
+        </bf:systemNumber>
+        <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-02-03</bf:creationDate>
+        <bf:descriptionConventions>
+          <bf:DescriptionConventions rdf:about="http://id.loc.gov/vocabulary/descriptionConventions/rda">
+            <rdfs:label>RDA</rdfs:label>
+          </bf:DescriptionConventions>
+        </bf:descriptionConventions>
+        <bf:descriptionModifier>
+          <bf:Agent rdf:about="http://id.loc.gov/vocabulary/organizations/iq-kaccs">
+            <rdfs:label>IQ-KaCCS</rdfs:label>
+          </bf:Agent>
+        </bf:descriptionModifier>
+        <bf:descriptionLanguage rdf:resource="http://id.loc.gov/vocabulary/languages/ara"/>
+      </bf:AdminMetadata>
+    </bf:adminMetadata>
+
+    <!-- Title with Non-Sort Number -->
+    <bf:title>
+      <bf:Title>
+        <bf:mainTitle xml:lang="ara">القبسات</bf:mainTitle>
+        <bflc:nonSortNum>2</bflc:nonSortNum>
+      </bf:Title>
+    </bf:title>
+
+    <!-- Primary Author Contribution -->
+    <bf:contribution>
+      <bf:PrimaryContribution>
+        <bf:agent>
+          <bf:Person rdf:about="http://id.loc.gov/authorities/names/n85043844">
+            <rdfs:label xml:lang="ara">الميرداماد، محمد باقر بن محمد، توفي 1041 هجري</rdfs:label>
+            <bflc:name00MatchKey>الميرداماد، محمد باقر بن محمد،</bflc:name00MatchKey>
+            <bflc:primaryContributorName00MatchKey>الميرداماد، محمد باقر بن محمد،</bflc:primaryContributorName00MatchKey>
+          </bf:Person>
+        </bf:agent>
+        <bf:role>
+          <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/aut">
+            <rdfs:label xml:lang="ara">مؤلف</rdfs:label>
+            <rdfs:label xml:lang="eng">author</rdfs:label>
+          </bf:Role>
+        </bf:role>
+      </bf:PrimaryContribution>
+    </bf:contribution>
+
+    <!-- Language -->
+    <bf:language>
+      <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/ara">
+        <rdfs:label xml:lang="ara">العربية</rdfs:label>
+        <rdfs:label xml:lang="eng">Arabic</rdfs:label>
+      </bf:Language>
+    </bf:language>
+
+    <!-- Classification LCC -->
+    <bf:classification>
+      <bf:ClassificationLcc>
+        <bf:classificationPortion>B753.D363</bf:classificationPortion>
+        <bf:itemPortion>Q23 1650</bf:itemPortion>
+        <rdfs:label>B753.D363 Q23 1650</rdfs:label>
+      </bf:ClassificationLcc>
+    </bf:classification>
+
+    <!-- Subject Topics -->
+    <bf:subject>
+      <bf:Topic>
+        <rdfs:label xml:lang="ara">الفلسفة الاسلامية الشيعية</rdfs:label>
+        <madsrdf:authoritativeLabel xml:lang="ara">الفلسفة الاسلامية الشيعية</madsrdf:authoritativeLabel>
+      </bf:Topic>
+    </bf:subject>
+    <bf:subject>
+      <bf:Topic>
+        <rdfs:label xml:lang="ara">الفلسفة الاسلامية الشيعية -- مخطوطات</rdfs:label>
+      </bf:Topic>
+    </bf:subject>
+
+    <!-- Genre / Form -->
+    <bf:genreForm>
+      <bf:GenreForm rdf:about="http://id.loc.gov/authorities/genreForms/gf2014026139">
+        <rdfs:label xml:lang="ara">مخطوطات</rdfs:label>
+        <rdfs:label xml:lang="eng">Manuscripts</rdfs:label>
+      </bf:GenreForm>
+    </bf:genreForm>
+
+    <!-- RDA Content Type -->
+    <bf:content>
+      <bf:Content rdf:about="http://id.loc.gov/vocabulary/contentTypes/txt">
+        <rdfs:label xml:lang="ara">نص</rdfs:label>
+        <rdfs:label xml:lang="eng">text</rdfs:label>
+        <bflc:appliesTo xml:lang="ara">مصور مخطوط</bflc:appliesTo>
+      </bf:Content>
+    </bf:content>
+
+    <!-- Incipit and Explicit Notes -->
+    <bf:note>
+      <bf:Note>
+        <rdfs:label xml:lang="ara">أوله : الحمد لله الواحد الاحد الصمد المصمود مهيمن كل وجود وجاعل كل موجود، والصلاة على من اقتفاه من زمرة الانبياء، واصطفاه من رسل الرسل فابتعثه بالذكر...</rdfs:label>
+        <bf:noteType>incipit</bf:noteType>
+      </bf:Note>
+    </bf:note>
+    <bf:note>
+      <bf:Note>
+        <rdfs:label xml:lang="ara">آخره : ولا تخلنا اللهم مع ذلك من عواطف رأفتك وسوابغ رحمتك ولطايف كفايتك وحوط عنايتك وحسن كلائتك بجودك ومنك وفضلك وطولك يا أرحم الراحمين.</rdfs:label>
+        <bf:noteType>explicit</bf:noteType>
+      </bf:Note>
+    </bf:note>
+
+    <!-- Bibliographic Citation / Reference Note (MARC 510) -->
+    <bf:supplementaryContent>
+      <bf:SupplementaryContent>
+        <rdfs:label xml:lang="ara">الذريعة الى تصانيف الشيعة، الجزء 17، الصفحه 32، الرقم 183.</rdfs:label>
+      </bf:SupplementaryContent>
+    </bf:supplementaryContent>
+
+    <!-- Expression of Hub (Collocation) -->
+    <bf:expressionOf>
+      <bf:Hub rdf:about="http://id.loc.gov/resources/hubs/mir-damad-qabasat">
+        <bf:title>
+          <bf:Title>
+            <bf:mainTitle xml:lang="ara">القبسات</bf:mainTitle>
+          </bf:Title>
+        </bf:title>
+        <bflc:aap xml:lang="ara">الميرداماد، محمد باقر بن محمد، توفي 1041 هجري. القبسات</bflc:aap>
+        <bflc:aap-normalized>الميرداماد محمد باقر بن محمد القبسات</bflc:aap-normalized>
+      </bf:Hub>
+    </bf:expressionOf>
+
+    <!-- Instance Link -->
+    <bf:hasInstance rdf:resource="http://id.loc.gov/resources/instances/b125923"/>
+  </bf:Work>
+
+  <!-- ======================================================== -->
+  <!-- 2. BIBFRAME INSTANCE                                     -->
+  <!-- ======================================================== -->
+  <bf:Instance rdf:about="http://id.loc.gov/resources/instances/b125923">
+    <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Manuscript"/>
+    <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Electronic"/>
+
+    <!-- Instance Title & Statement of Responsibility -->
+    <bf:title>
+      <bf:Title>
+        <bf:mainTitle xml:lang="ara">القبسات</bf:mainTitle>
+        <bflc:nonSortNum>2</bflc:nonSortNum>
+      </bf:Title>
+    </bf:title>
+    <bf:responsibilityStatement xml:lang="ara">للميرداماد محمد باقر الحسيني الاسترآبادي.</bf:responsibilityStatement>
+
+    <!-- Provision Activity (Manuscript Production Date) -->
+    <bf:provisionActivity>
+      <bf:Production>
+        <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">1650</bf:date>
+        <bflc:simpleDate xml:lang="ara">1061 هـ. = [1650]</bflc:simpleDate>
+      </bf:Production>
+    </bf:provisionActivity>
+
+    <!-- Extent & Physical Dimensions -->
+    <bf:extent>
+      <bf:Extent>
+        <rdfs:label xml:lang="ara">344 ورقة (18 سطرًا)</rdfs:label>
+      </bf:Extent>
+    </bf:extent>
+
+    <!-- RDA Media and Carrier -->
+    <bf:media>
+      <bf:Media rdf:about="http://id.loc.gov/vocabulary/mediaTypes/c">
+        <rdfs:label xml:lang="ara">حاسوب</rdfs:label>
+        <rdfs:label xml:lang="eng">computer</rdfs:label>
+      </bf:Media>
+    </bf:media>
+    <bf:carrier>
+      <bf:Carrier rdf:about="http://id.loc.gov/vocabulary/carriers/ck">
+        <rdfs:label xml:lang="ara">مصدر الكتروني</rdfs:label>
+        <rdfs:label xml:lang="eng">computer disc / online resource</rdfs:label>
+      </bf:Carrier>
+    </bf:carrier>
+
+    <!-- Physical Details (MARC 340) -->
+    <bf:material>
+      <bf:Material>
+        <rdfs:label xml:lang="ara">ورق</rdfs:label>
+      </bf:Material>
+    </bf:material>
+    <bf:colorContent>
+      <bf:ColorContent>
+        <rdfs:label xml:lang="ara">حبر اسود</rdfs:label>
+      </bf:ColorContent>
+    </bf:colorContent>
+    <bf:notation>
+      <bf:Script>
+        <rdfs:label xml:lang="ara">خط النستعليق.</rdfs:label>
+        <bflc:scriptCode>Arab</bflc:scriptCode>
+      </bf:Script>
+    </bf:notation>
+
+    <!-- Arrangement and System of Order (MARC 351) -->
+    <bf:arrangement>
+      <bf:Arrangement>
+        <rdfs:label xml:lang="ara">مرتبة بنظام التعقيبات.</rdfs:label>
+      </bf:Arrangement>
+    </bf:arrangement>
+
+    <!-- Copy and Version Specific Notes (MARC 562, 563) -->
+    <bf:note>
+      <bf:Note>
+        <rdfs:label xml:lang="ara">في اولها مجموعة اختام.</rdfs:label>
+        <bf:noteType>stamps</bf:noteType>
+      </bf:Note>
+    </bf:note>
+    <bf:note>
+      <bf:Note>
+        <rdfs:label xml:lang="ara">النسخة مجدولة والورقة الاولى عليها زخرفة.</rdfs:label>
+        <bf:noteType>decoration</bf:noteType>
+      </bf:Note>
+    </bf:note>
+    <bf:note>
+      <bf:Note>
+        <rdfs:label xml:lang="ara">الغلاف : جلد، احمر.</rdfs:label>
+        <bf:noteType>binding</bf:noteType>
+      </bf:Note>
+    </bf:note>
+
+    <!-- Original Repository Note (MARC 535) -->
+    <bf:custodialHistory>
+      <rdfs:label xml:lang="ara">مكتبة مجلس الشورى : 4662، طهران، ايران (ir)</rdfs:label>
+    </bf:custodialHistory>
+
+    <!-- Work Link -->
+    <bf:instanceOf rdf:resource="http://id.loc.gov/resources/works/b125923"/>
+
+    <!-- Item Link -->
+    <bf:hasItem rdf:resource="http://id.loc.gov/resources/items/b125923"/>
+  </bf:Instance>
+
+  <!-- ======================================================== -->
+  <!-- 3. BIBFRAME ITEM (Holding Copy)                          -->
+  <!-- ======================================================== -->
+  <bf:Item rdf:about="http://id.loc.gov/resources/items/b125923">
+    <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Item"/>
+    <bf:itemOf rdf:resource="http://id.loc.gov/resources/instances/b125923"/>
+
+    <!-- Holding Institution (MARC 949) -->
+    <bf:heldBy>
+      <bf:Organization rdf:about="http://id.loc.gov/vocabulary/organizations/iq-kaccs">
+        <rdfs:label xml:lang="ara">مكتبة العتبة العباسية المقدسة</rdfs:label>
+        <bflc:sublocation xml:lang="ara">قسم المخطوطات والتراث</bflc:sublocation>
+      </bf:Organization>
+    </bf:heldBy>
+
+    <!-- Shelf Location / Call Number -->
+    <bf:shelfMark>
+      <bf:ShelfMarkLcc>
+        <rdfs:label>B753.D363 Q23 1650</rdfs:label>
+      </bf:ShelfMarkLcc>
+    </bf:shelfMark>
+
+    <!-- Electronic Access -->
+    <bf:electronicLocator rdf:resource="https://alkafeel.net/library/"/>
+  </bf:Item>
+
+  <!-- ======================================================== -->
+  <!-- 4. BIBFRAME HUB (Collocation Resource)                   -->
+  <!-- ======================================================== -->
+  <bf:Hub rdf:about="http://id.loc.gov/resources/hubs/mir-damad-qabasat">
+    <bf:title>
+      <bf:Title>
+        <bf:mainTitle xml:lang="ara">القبسات</bf:mainTitle>
+      </bf:Title>
+    </bf:title>
+    <bflc:aap xml:lang="ara">الميرداماد، محمد باقر بن محمد، توفي 1041 هجري. القبسات</bflc:aap>
+    <bflc:aap-normalized>الميرداماد محمد باقر بن محمد القبسات</bflc:aap-normalized>
+  </bf:Hub>
+
+</rdf:RDF>

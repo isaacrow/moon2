@@ -1,0 +1,174 @@
+/**
+ * Neon Theme - Cyberpunk 2077 Inspired
+ * Electric cyan/magenta/pink with glow effects
+ */
+
+/* Neon Cards */
+.neon-card {
+  background: linear-gradient(135deg, rgba(6, 182, 212, 0.15) 0%, rgba(217, 70, 239, 0.15) 100%);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(6, 182, 212, 0.3);
+  box-shadow: 0 0 20px rgba(6, 182, 212, 0.3), 0 0 40px rgba(217, 70, 239, 0.2), inset 0 1px 0 rgba(6, 182, 212, 0.5);
+  border-radius: 16px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.neon-card:hover {
+  transform: translateY(-2px);
+  border: 1px solid rgba(6, 182, 212, 0.5);
+  box-shadow: 0 0 30px rgba(6, 182, 212, 0.5), 0 0 60px rgba(217, 70, 239, 0.3), inset 0 1px 0 rgba(6, 182, 212, 0.7);
+}
+
+/* Neon Panels */
+.neon-panel {
+  background: linear-gradient(135deg, rgba(6, 182, 212, 0.1) 0%, rgba(217, 70, 239, 0.1) 100%);
+  backdrop-filter: blur(15px) saturate(160%);
+  -webkit-backdrop-filter: blur(15px) saturate(160%);
+  border: 1px solid rgba(6, 182, 212, 0.25);
+  box-shadow: 0 0 15px rgba(6, 182, 212, 0.2);
+  border-radius: 12px;
+}
+
+/* Neon Buttons */
+.neon-button {
+  background: linear-gradient(135deg, rgba(6, 182, 212, 0.2) 0%, rgba(217, 70, 239, 0.2) 100%);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(6, 182, 212, 0.4);
+  box-shadow: 0 0 15px rgba(6, 182, 212, 0.4), 0 0 30px rgba(217, 70, 239, 0.2), inset 0 1px 0 rgba(6, 182, 212, 0.5);
+  border-radius: 12px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  color: rgb(6, 182, 212);
+  font-weight: 600;
+}
+
+.neon-button:hover {
+  background: linear-gradient(135deg, rgba(6, 182, 212, 0.3) 0%, rgba(217, 70, 239, 0.3) 100%);
+  border: 1px solid rgba(6, 182, 212, 0.6);
+  box-shadow: 0 0 25px rgba(6, 182, 212, 0.6), 0 0 50px rgba(217, 70, 239, 0.4), inset 0 1px 0 rgba(6, 182, 212, 0.7);
+  transform: scale(1.02);
+}
+
+.neon-button:active {
+  transform: scale(0.98);
+  box-shadow: 0 0 10px rgba(6, 182, 212, 0.5), 0 0 20px rgba(217, 70, 239, 0.3);
+}
+
+/* Neon Navbar */
+.neon-navbar {
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(88, 28, 135, 0.9) 100%);
+  backdrop-filter: blur(25px) saturate(200%);
+  -webkit-backdrop-filter: blur(25px) saturate(200%);
+  border-bottom: 1px solid rgba(6, 182, 212, 0.3);
+  box-shadow: 0 0 20px rgba(6, 182, 212, 0.2), 0 4px 16px rgba(0, 0, 0, 0.5);
+}
+
+/* Neon Tab Bar */
+.neon-tab-bar {
+  background: linear-gradient(135deg, rgba(6, 182, 212, 0.1) 0%, rgba(217, 70, 239, 0.1) 100%);
+  backdrop-filter: blur(15px) saturate(150%);
+  -webkit-backdrop-filter: blur(15px) saturate(150%);
+  border-radius: 12px;
+  padding: 4px;
+  border: 1px solid rgba(6, 182, 212, 0.2);
+  box-shadow: 0 0 10px rgba(6, 182, 212, 0.15);
+}
+
+/* Neon Tab Active State */
+.neon-tab-active {
+  background: linear-gradient(135deg, rgba(6, 182, 212, 0.25) 0%, rgba(217, 70, 239, 0.25) 100%);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(6, 182, 212, 0.5);
+  box-shadow: 0 0 15px rgba(6, 182, 212, 0.4), 0 0 30px rgba(217, 70, 239, 0.3), inset 0 1px 0 rgba(6, 182, 212, 0.6);
+  color: rgb(6, 182, 212);
+}
+
+/* Neon Input Fields */
+.neon-input {
+  background: linear-gradient(135deg, rgba(6, 182, 212, 0.1) 0%, rgba(217, 70, 239, 0.1) 100%);
+  backdrop-filter: blur(15px) saturate(160%);
+  -webkit-backdrop-filter: blur(15px) saturate(160%);
+  border: 1px solid rgba(6, 182, 212, 0.3);
+  box-shadow: 0 0 10px rgba(6, 182, 212, 0.2) inset;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  color: rgb(6, 182, 212);
+}
+
+.neon-input:focus {
+  background: linear-gradient(135deg, rgba(6, 182, 212, 0.15) 0%, rgba(217, 70, 239, 0.15) 100%);
+  border: 1px solid rgba(6, 182, 212, 0.6);
+  box-shadow: 0 0 10px rgba(6, 182, 212, 0.3) inset, 0 0 20px rgba(6, 182, 212, 0.3);
+}
+
+/* Neon Badge */
+.neon-badge {
+  background: linear-gradient(135deg, rgba(6, 182, 212, 0.25) 0%, rgba(217, 70, 239, 0.25) 100%);
+  backdrop-filter: blur(10px) saturate(150%);
+  -webkit-backdrop-filter: blur(10px) saturate(150%);
+  border: 1px solid rgba(6, 182, 212, 0.5);
+  box-shadow: 0 0 10px rgba(6, 182, 212, 0.3);
+  border-radius: 8px;
+  padding: 4px 12px;
+  color: rgb(6, 182, 212);
+  font-weight: 600;
+}
+
+/* Neon Text Glow */
+.neon-text-cyan {
+  color: rgb(6, 182, 212);
+  text-shadow: 0 0 10px rgba(6, 182, 212, 0.5), 0 0 20px rgba(6, 182, 212, 0.3);
+}
+
+.neon-text-fuchsia {
+  color: rgb(217, 70, 239);
+  text-shadow: 0 0 10px rgba(217, 70, 239, 0.5), 0 0 20px rgba(217, 70, 239, 0.3);
+}
+
+.neon-text-pink {
+  color: rgb(236, 72, 153);
+  text-shadow: 0 0 10px rgba(236, 72, 153, 0.5), 0 0 20px rgba(236, 72, 153, 0.3);
+}
+
+/* Neon Divider */
+.neon-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(6, 182, 212, 0.5) 50%, transparent 100%);
+  box-shadow: 0 0 10px rgba(6, 182, 212, 0.3);
+}
+
+/* Neon Link */
+.neon-link {
+  color: rgb(6, 182, 212);
+  text-shadow: 0 0 5px rgba(6, 182, 212, 0.3);
+  transition: all 0.3s ease;
+}
+
+.neon-link:hover {
+  color: rgb(34, 211, 238);
+  text-shadow: 0 0 10px rgba(6, 182, 212, 0.6), 0 0 20px rgba(6, 182, 212, 0.4);
+}
+
+/* Scrollbar Neon Theme */
+.neon-scrollbar::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.neon-scrollbar::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.5);
+  border-radius: 4px;
+}
+
+.neon-scrollbar::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, rgba(6, 182, 212, 0.5) 0%, rgba(217, 70, 239, 0.5) 100%);
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(6, 182, 212, 0.3);
+}
+
+.neon-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, rgba(6, 182, 212, 0.7) 0%, rgba(217, 70, 239, 0.7) 100%);
+  box-shadow: 0 0 15px rgba(6, 182, 212, 0.5);
+}

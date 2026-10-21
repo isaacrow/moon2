@@ -1,0 +1,101 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix schema: <http://schema.org/> .
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix edm: <http://www.europeana.eu/schemas/edm/> .
+@prefix ms: <https://w3id.org/manuscript-ar/ontology#> .
+@prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+
+# ==============================================================================
+# MANUSCRIPT RESOURCE: NAHJ AL-BALAGHA (نهج البلاغة)
+# ==============================================================================
+
+<https://alqami.net/manuscript/nahj_al_balagha> a schema:Manuscript, crm:E22_Human-Made_Object, edm:ProvidedCHO ;
+    # Standard Dublin Core Metadata
+    dc:title "نهج البلاغة"@ar, "Nahj al-Balagha (Peak of Eloquence)"@en ;
+    dc:creator <https://alqami.net/entity/al_sharif_al_radi> ;
+    dc:contributor "الناسخ: شمس الدين علي الشيرازي الهراس (1022 هـ)"@ar, "Scribe: Shams al-Din Ali al-Shirazi al-Harras (1022 AH)"@en ;
+    dc:subject "حديث، خطب ومواعظ، بلاغة وأدب إسلامي"@ar, "Hadith, Sermons, Islamic Eloquence & Rhetoric"@en ;
+    dc:date "1022 هـ / 1613 م" ;
+    dc:identifier "نسخة رقم 1861" ;
+    dc:language "ara" ;
+    dc:type "Illuminated Classical Arabic Manuscript Codex"@en ;
+    dc:format "Manuscript codex (477 folios)"@en ;
+    
+    # Schema.org Extended Attributes
+    schema:name "مخطوط نهج البلاغة المذهب"@ar, "Illuminated Nahj al-Balagha Manuscript"@en ;
+    schema:extent "477 ورقة"@ar, "477 folios"@en ;
+    schema:material "ورق مجدول، مذهب، خط النسخ، عناوين بالمداد الأحمر"@ar, "Illuminated ruled rag paper, shell gold, fine Naskh script, rubricated red ink"@en ;
+    schema:publisher <https://alqami.net/entity/astan_quds_library> ;
+    schema:inLanguage "Arabic (Classic Literary Arabic)"@en ;
+    
+    # Codicology & Structural Analysis
+    ms:hasScript ms:NaskhClassic ;
+    ms:hasIllumination ms:GoldUnwanIllumination ;
+    ms:hasHotspot ms:HotspotNahjCover, ms:HotspotNahjUnwan, ms:HotspotNahjColophon ;
+    
+    # Extended Transcriptions
+    ms:transcriptionArabic """أول النسخة: بسمله اما بعد حمد الله الذي جعل الحمد ثمناً لنعمائه ومعاذاً من بلائه و وسيلاً الى جنانه وسبباً لزيادة احسانه والصلوة على رسوله..
+آخر النسخة: الينا بعد الشذوذ و ما توفيقنا.. شمس الدين علي الشيرازي الهراس غفرله.
+الوصف: مجدولة، مذهبة، أولها لوحة فنية، كتبت رؤوس المطالب والعناوين بالمداد الأحمر، عليها آثار رطوبة تاريخية وقيمتها التراثية نادرة."""@ar ;
+    ms:translationEnglish """Nahj al-Balagha (Peak of Eloquence), compiled by al-Sharif al-Radi (d. 406 AH). Scribe: Shams al-Din Ali al-Shirazi al-Harras, copied in 1022 AH. Preserved at the Central Library of Astan Quds Razavi in Mashhad (Copy No. 1861). 477 folios in Naskh script, illuminated with gold rulings, chapter titles in red ink."""@en .
+
+# ==============================================================================
+# CREATOR & INSTITUTION ENTITIES
+# ==============================================================================
+
+<https://alqami.net/entity/al_sharif_al_radi> a schema:Person, crm:E21_Person ;
+    rdfs:label "Al-Sharif al-Radi (الشريف الرضي)"@en ;
+    schema:name "الشريف الرضي، محمد بن حسين بن موسى (359 - 406 هـ)"@ar ;
+    schema:jobTitle "Islamic Scholar, Poet & Compiler of Nahj al-Balagha"@en ;
+    schema:description "فقيه وأديب وشاعر بارز من أعلام القرن الرابع الهجري، جمع خطب ورسائل وحكم أمير المؤمنين علي بن أبي طالب في نهج البلاغة."@ar .
+
+<https://alqami.net/entity/astan_quds_library> a schema:Organization, crm:E39_Actor ;
+    rdfs:label "Central Library of Astan Quds Razavi (مكتبة العتبة الرضوية المقدسة)"@en ;
+    schema:name "مكتبة العتبة الرضوية المقدسة في مشهد - إيران"@ar ;
+    schema:location "Mashhad, Iran"@en ;
+    schema:description "من أقدم وأعرق خزائن المخطوطات والوثائق التاريخية في العالم الإسلامي."@ar .
+
+# ==============================================================================
+# CODICOLOGY FEATURES
+# ==============================================================================
+
+ms:NaskhClassic a ms:CalligraphicScript ;
+    rdfs:label "Classic Naskh Calligraphy (خط النسخ الكلاسيكي)"@ar ;
+    dc:description "خط نسخ عربي كلاسيكي متقن للناسخ شمس الدين علي الشيرازي، يتميز بالدقة والوضوح."@ar .
+
+ms:GoldUnwanIllumination a ms:IlluminationFeature ;
+    rdfs:label "Illuminated Gold Frontispiece (لوحة مذهبة مفتتحة)"@ar ;
+    dc:description "لوحة فنية مذهبة فاخرة تفتتح المخطوط بجداول دقيقة وألوان نباتية متقنة."@ar .
+
+# ==============================================================================
+# AR SPATIAL HOTSPOTS
+# ==============================================================================
+
+ms:HotspotNahjUnwan a ms:SpatialHotspot ;
+    rdfs:label "اللوحة الفنية الاستفتاحية (Illuminated Frontispiece)"@ar ;
+    ms:targetFolio "Folio 1b"@en ;
+    ms:normalizedX 0.70 ;
+    ms:normalizedY 0.25 ;
+    ms:elevationZ 0.05 ;
+    dc:description "ديباجة مذهبة بديعة بألوان لازوردية وماء الذهب الخالص تفتتح خطبة البيان."@ar .
+
+ms:HotspotNahjCover a ms:SpatialHotspot ;
+    rdfs:label "مقدمة الشريف الرضي (Introduction)"@ar ;
+    ms:targetFolio "Folio 2a"@en ;
+    ms:normalizedX 0.35 ;
+    ms:normalizedY 0.40 ;
+    ms:elevationZ 0.04 ;
+    dc:description "مفتتح بيان الشريف الرضي في علة تدوين واختيار خطب أمير المؤمنين عليه السلام."@ar .
+
+ms:HotspotNahjColophon a ms:SpatialHotspot ;
+    rdfs:label "قيد الفراغ والتمليك (Colophon)"@ar ;
+    ms:targetFolio "Folio 477b"@en ;
+    ms:normalizedX 0.50 ;
+    ms:normalizedY 0.75 ;
+    ms:elevationZ 0.03 ;
+    dc:description "توقيع الناسخ شمس الدين علي الشيرازي الهراس بتاريخ 1022 هـ مع دعاء المغفرة."@ar .

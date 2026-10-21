@@ -1,0 +1,34 @@
+{
+  "cc4418aa1ab402f9d374b6462c2d5b7f8f470a31ab87deca1f85e4cef0f7dcbd": {
+    "username": "admin",
+    "fullName": "مدير المنظومة المعيارية",
+    "role": "admin",
+    "roleTitle": "مدير المنظومة",
+    "permissions": [
+      "catalog:read",
+      "catalog:write",
+      "catalog:approve",
+      "catalog:export",
+      "users:manage",
+      "dashboard:view"
+    ],
+    "expiresAt": 1792911657868,
+    "createdAt": "2026-10-18T07:00:57.868Z"
+  },
+  "b86d3ad0459f289e94fa8697e930e0fd55db4578c60987b6088eae27032f1352": {
+    "username": "admin",
+    "fullName": "مدير المنظومة المعيارية",
+    "role": "admin",
+    "roleTitle": "مدير المنظومة",
+    "permissions": [
+      "catalog:read",
+      "catalog:write",
+      "catalog:approve",
+      "catalog:export",
+      "users:manage",
+      "dashboard:view"
+    ],
+    "expiresAt": 1792912177570,
+    "createdAt": "2026-10-18T07:09:37.570Z"
+  }
+}

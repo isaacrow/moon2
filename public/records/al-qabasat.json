@@ -1,0 +1,425 @@
+{
+  "@context": {
+    "bf": "http://id.loc.gov/ontologies/bibframe/",
+    "bflc": "http://id.loc.gov/ontologies/bflc/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
+  },
+  "@id": "http://id.loc.gov/resources/works/b125923",
+  "id": "al-qabasat-mir-damad",
+  "title": "القبسات — الميرداماد",
+  "work": {
+    "@type": "bf:Work",
+    "@id": "http://id.loc.gov/resources/works/b125923",
+    "rdfs:label": "القبسات — الميرداماد",
+    "bf:title": {
+      "@type": "bf:Title",
+      "bf:mainTitle": "القبسات",
+      "mainTitle": "القبسات",
+      "bflc:nonSortNum": "2",
+      "rdfs:label": "القبسات"
+    },
+    "mainTitle": "القبسات",
+    "title": "القبسات",
+    "creator": "الميرداماد، محمد باقر بن محمد، توفي 1041 هجري، مؤلف",
+    "creatorUri": "http://id.loc.gov/authorities/names/n85043844",
+    "contribution": "الميرداماد، محمد باقر بن محمد، توفي 1041 هجري (مؤلف)",
+    "bf:contribution": [
+      {
+        "@type": "bf:PrimaryContribution",
+        "bf:agent": {
+          "@id": "http://id.loc.gov/authorities/names/n85043844",
+          "@type": "bf:Person",
+          "rdfs:label": "الميرداماد، محمد باقر بن محمد، توفي 1041 هجري"
+        },
+        "bf:role": {
+          "@id": "http://id.loc.gov/vocabulary/relators/aut",
+          "@type": "bf:Role",
+          "rdfs:label": "مؤلف"
+        }
+      }
+    ],
+    "language": "ara",
+    "bf:language": {
+      "@id": "http://id.loc.gov/vocabulary/languages/ara",
+      "@type": "bf:Language",
+      "rdfs:label": "العربية"
+    },
+    "contentType": "نص (مصور مخطوط)",
+    "content": "نص (مصور مخطوط)",
+    "bf:content": {
+      "@id": "http://id.loc.gov/vocabulary/contentTypes/txt",
+      "@type": "bf:Content",
+      "rdfs:label": "نص"
+    },
+    "classification": "B753.D363 Q23 1650",
+    "shelfMark": "B753.D363 Q23 1650",
+    "bf:classification": {
+      "@type": "bf:ClassificationLcc",
+      "bf:classificationPortion": "B753.D363",
+      "bf:itemPortion": "Q23 1650",
+      "classificationPortion": "B753.D363",
+      "itemPortion": "Q23 1650",
+      "rdfs:label": "B753.D363 Q23 1650"
+    },
+    "subject": "الفلسفة الاسلامية الشيعية",
+    "bf:subject": [
+      {
+        "@id": "http://id.loc.gov/authorities/subjects/sh85068499",
+        "@type": "bf:Topic",
+        "rdfs:label": "الفلسفة الاسلامية الشيعية"
+      },
+      {
+        "@id": "http://id.loc.gov/authorities/genreForms/gf2014026139",
+        "@type": "bf:Topic",
+        "rdfs:label": "مخطوطات اسلامية"
+      }
+    ],
+    "genreForm": "مخطوطات",
+    "bf:genreForm": {
+      "@id": "http://id.loc.gov/authorities/genreForms/gf2014026139",
+      "@type": "bf:GenreForm",
+      "rdfs:label": "مخطوطات"
+    },
+    "summary": "كتاب فلسفي كلامي للميرداماد يناقش حدوث العالم وقدمه ومسألة الدهر والزمان والمصادر الوجودية وفق الحكمة المتعالية والمشائية.",
+    "bf:summary": "كتاب فلسفي كلامي للميرداماد يناقش حدوث العالم وقدمه ومسألة الدهر والزمان والمصادر الوجودية وفق الحكمة المتعالية والمشائية.",
+    "tableOfContents": "مقدمة في حدوث العالم، الومضة الأولى في الوجود والعدم، القبسة الأولى في مراتب الوجود والدهر والسرمد، القبسة الثانية في إثبات الواجب، القبسة الثالثة في الحركة والزمان والآن.",
+    "bf:tableOfContents": "مقدمة في حدوث العالم، الومضة الأولى في الوجود والعدم، القبسة الأولى في مراتب الوجود والدهر والسرمد، القبسة الثانية في إثبات الواجب، القبسة الثالثة في الحركة والزمان والآن.",
+    "originDate": "1650 [1061 هـ.]",
+    "bf:originDate": "1650 [1061 هـ.]",
+    "date": "1650",
+    "originPlace": "طهران، ايران / كربلاء المقدسة",
+    "bf:originPlace": {
+      "@id": "http://id.loc.gov/vocabulary/countries/ir",
+      "@type": "bf:Place",
+      "rdfs:label": "طهران، ايران (ir)"
+    },
+    "temporalCoverage": "1041-1061 هـ. / القرن 17 الميلادي",
+    "bf:temporalCoverage": {
+      "@type": "bflc:TemporalCoverage",
+      "start": "1041 هـ.",
+      "end": "1061 هـ. (1650 م.)",
+      "rdfs:label": "1041-1061 هـ. / القرن 17 الميلادي"
+    },
+    "note": "أوله: الحمد لله الواحد الاحد الصمد المصمود مهيمن كل وجود وجاعل كل موجود...\nآخره: ولا تخلنا اللهم مع ذلك من عواطف رأفتك وسوابغ رحمتك ولطايف كفايتك وحوط عنايتك...\nالذريعة الى تصانيف الشيعة: ج 17، ص 32، رقم 183.\nمكتبة مجلس الشورى: 4662، طهران، ايران.",
+    "bf:note": [
+      {
+        "@type": "bf:Note",
+        "rdfs:label": "أوله : الحمد لله الواحد الاحد الصمد المصمود مهيمن كل وجود وجاعل كل موجود، والصلاة على من اقتفاه من زمرة الانبياء، واصطفاه من رسل الرسل فابتعثه بالذكر..."
+      },
+      {
+        "@type": "bf:Note",
+        "rdfs:label": "آخره : ولا تخلنا اللهم مع ذلك من عواطف رأفتك وسوابغ رحمتك ولطايف كفايتك وحوط عنايتك وحسن كلائتك بجودك ومنك وفضلك وطولك يا أرحم الراحمين."
+      },
+      {
+        "@type": "bf:Note",
+        "rdfs:label": "الذريعة الى تصانيف الشيعة، الجزء 17، الصفحه 32، الرقم 183."
+      },
+      {
+        "@type": "bf:Note",
+        "rdfs:label": "مكتبة مجلس الشورى : 4662، طهران، ايران (ir)"
+      }
+    ],
+    "hasSeries": "تراث الحكمة والفلسفة الاسلامية",
+    "bf:hasSeries": {
+      "@type": "bf:Series",
+      "bf:title": "تراث الحكمة والفلسفة الاسلامية",
+      "title": "تراث الحكمة والفلسفة الاسلامية",
+      "number": "القسم الفلسفي 14"
+    },
+    "expressionOf": "الميرداماد، محمد باقر بن محمد، توفي 1041 هجري. القبسات",
+    "bf:expressionOf": {
+      "@id": "http://id.loc.gov/resources/hubs/mir-damad-qabasat",
+      "bflc:aap": "الميرداماد، محمد باقر بن محمد، توفي 1041 هجري. القبسات"
+    },
+    "supplementaryContent": "الذريعة الى تصانيف الشيعة، الجزء 17، الصفحه 32، الرقم 183.",
+    "bf:supplementaryContent": {
+      "@type": "bf:SupplementaryContent",
+      "rdfs:label": "الذريعة الى تصانيف الشيعة، الجزء 17، الصفحه 32، الرقم 183."
+    },
+    "adminMetadata": "IQ-KaCCS | ara | RDA | b125923",
+    "bf:adminMetadata": {
+      "@type": "bf:AdminMetadata",
+      "bf:source": "IQ-KaCCS",
+      "bf:descriptionConventions": "rda",
+      "bf:descriptionLanguage": "ara",
+      "rdfs:label": "IQ-KaCCS / العتبة العباسية (RDA)"
+    },
+    "governmentPublication": "غير حكومي (مخطوط تراثي أصيل)",
+    "bf:governmentPublication": {
+      "@type": "bf:GovernmentPublication",
+      "rdfs:label": "غير حكومي"
+    },
+    "accessibilityContent": "نسخة مصورة عالية الدقة متاحة رقمياً",
+    "bf:accessibilityContent": {
+      "@type": "bf:AccessibilityContent",
+      "rdfs:label": "نسخة مصورة عالية الدقة متاحة رقمياً"
+    },
+    "notation": "خط عربي (النستعليق الفارسي العربي)",
+    "bf:notation": {
+      "@type": "bf:Notation",
+      "rdfs:label": "خط عربي (نستعليق)"
+    },
+    "dissertation": "أطروحة فلسفية حكيمة في إثبات حدوث الدهر",
+    "bf:dissertation": {
+      "@type": "bf:Dissertation",
+      "name": "أطروحة فلسفية حكيمة في إثبات حدوث الدهر",
+      "degree": "رسالة حكمية كلامية"
+    },
+    "relatedTo": "الذريعة الى تصانيف الشيعة (الرقم 183)",
+    "bf:relatedTo": {
+      "@id": "http://id.loc.gov/resources/works/al-dhariah",
+      "rdfs:label": "الذريعة الى تصانيف الشيعة (الرقم 183)"
+    },
+    "partOf": "مجموعة مخطوطات الفلسفة والحكمة الإلهية",
+    "bf:partOf": {
+      "rdfs:label": "مجموعة مخطوطات الفلسفة والحكمة الإلهية"
+    },
+    "hasPart": "القبسة الأولى في مراتب الوجود والدهر",
+    "bf:hasPart": {
+      "rdfs:label": "القبسة الأولى في مراتب الوجود والدهر"
+    },
+    "hasInstance": "http://id.loc.gov/resources/instances/b125923",
+    "bf:hasInstance": {
+      "@id": "http://id.loc.gov/resources/instances/b125923",
+      "rdfs:label": "نسخة مخطوطة كاملة 1061 هـ."
+    },
+    "originalVersion": "النسخة الأصلية بخط المؤلف سنة 1041 هـ.",
+    "bf:originalVersion": {
+      "rdfs:label": "النسخة الأصلية بخط المؤلف سنة 1041 هـ."
+    },
+    "hasDerivative": "شرح القبسات للعلامة عبد الرزاق اللاهيجي",
+    "bf:hasDerivative": {
+      "rdfs:label": "شرح القبسات للعلامة عبد الرزاق اللاهيجي"
+    },
+    "translationOf": "الأصل العربي — مخطوط في دار الكتب والوثائق",
+    "bf:translationOf": {
+      "rdfs:label": "الأصل العربي — مخطوط في دار الكتب والوثائق"
+    },
+    "bf:hasExpression": {
+      "@id": "http://id.loc.gov/resources/instances/b125923",
+      "rdfs:label": "النسخة المخطوطة المحفوظة في العتبة العباسية"
+    },
+    "hasExpression": "النسخة المخطوطة المحفوظة في العتبة العباسية",
+    "copyrightDate": "1650",
+    "bf:copyrightDate": "1650",
+    "geographicCoverage": "العراق - إيران (الشرق الأوسط)",
+    "intendedAudience": "باحثو وعلماء الفلسفة الإسلامية والحكمة المتعالية",
+    "classificationLcc": "B753.D363 Q23 1650",
+    "classificationDdc": "181.07",
+    "subjectTopical": "الفلسفة الاسلامية الشيعية",
+    "subjectGeographic": "إيران -- تاريخ الفلسفة -- القرن 11 هـ",
+    "subjectName": "الميرداماد، محمد باقر بن محمد، توفي 1041 هـ",
+    "geographicAreaCode": "a-iq / a-ir",
+    "additionalContributors": "خطاط غير مصرح، ناسخ المخطوطة",
+    "descriptionAuthentication": "rda",
+    "bf:descriptionAuthentication": "rda"
+  },
+  "instance": {
+    "@type": "bf:Instance",
+    "@id": "http://id.loc.gov/resources/instances/b125923",
+    "rdfs:label": "القبسات — نسخة مخطوطة 1061 هـ.",
+    "instanceOf": "http://id.loc.gov/resources/works/b125923",
+    "bf:instanceOf": {
+      "@id": "http://id.loc.gov/resources/works/b125923",
+      "rdfs:label": "القبسات — الميرداماد"
+    },
+    "bf:title": {
+      "@type": "bf:Title",
+      "bf:mainTitle": "القبسات",
+      "mainTitle": "القبسات",
+      "rdfs:label": "القبسات"
+    },
+    "mainTitle": "القبسات",
+    "title": "القبسات",
+    "contribution": "للميرداماد محمد باقر الحسيني الاسترآبادي (مؤلف)",
+    "bf:contribution": [
+      {
+        "@type": "bf:Contribution",
+        "bf:agent": {
+          "@id": "http://id.loc.gov/authorities/names/n85043844",
+          "@type": "bf:Person",
+          "rdfs:label": "الميرداماد محمد باقر الحسيني الاسترآبادي"
+        },
+        "bf:role": {
+          "@id": "http://id.loc.gov/vocabulary/relators/aut",
+          "rdfs:label": "مؤلف"
+        }
+      }
+    ],
+    "statementOfResponsibility": "للميرداماد محمد باقر الحسيني الاسترآبادي.",
+    "responsibilityStatement": "للميرداماد محمد باقر الحسيني الاسترآبادي.",
+    "bf:responsibilityStatement": "للميرداماد محمد باقر الحسيني الاسترآبادي.",
+    "lccn": "b125923",
+    "identifier": "b125923",
+    "identifiedBy": "b125923",
+    "bf:identifiedBy": [
+      {
+        "@type": "bf:Local",
+        "rdf:value": "b125923",
+        "value": "b125923",
+        "rdfs:label": "b125923"
+      },
+      {
+        "@type": "bf:Identifier",
+        "rdf:value": "(Sirsi) a209527",
+        "value": "(Sirsi) a209527",
+        "rdfs:label": "(Sirsi) a209527"
+      }
+    ],
+    "editionStatement": "نسخة مخطوطة كاملة مجدولة ومذهبة",
+    "edition": "نسخة مخطوطة كاملة مجدولة ومذهبة",
+    "bf:editionStatement": "نسخة مخطوطة كاملة مجدولة ومذهبة",
+    "publicationDate": "1061 هـ. = [1650]",
+    "placeOfPublication": "كربلاء المقدسة / طهران",
+    "publisher": "نسخة مخطوطة بخط النستعليق",
+    "provisionActivity": "كربلاء المقدسة / طهران : خطاط غير مصرح (خط النستعليق)، 1061 هـ. = [1650]",
+    "bf:provisionActivity": {
+      "@type": "bf:Production",
+      "bflc:simpleDate": "1061 هـ. = [1650]",
+      "bf:date": "1650",
+      "date": "1061 هـ. = [1650]",
+      "bf:place": {
+        "@type": "bf:Place",
+        "rdfs:label": "كربلاء المقدسة / طهران"
+      },
+      "place": "كربلاء المقدسة / طهران",
+      "bf:agent": {
+        "@type": "bf:Agent",
+        "rdfs:label": "خطاط غير مصرح (خط النستعليق)"
+      },
+      "agent": "خطاط غير مصرح (خط النستعليق)"
+    },
+    "copyrightDate": "1650",
+    "bf:copyrightDate": "1650",
+    "projectedProvisionDate": "1650",
+    "bf:projectedProvisionDate": "1650",
+    "extent": "344 ورقة (18 سطرًا)",
+    "bf:extent": {
+      "@type": "bf:Extent",
+      "rdfs:label": "344 ورقة (18 سطرًا)",
+      "value": "344 ورقة (18 سطرًا)"
+    },
+    "dimensions": "ورق، حبر اسود، خط النستعليق (18 سطرًا في الصفحة)",
+    "bf:dimensions": "ورق، حبر اسود، خط النستعليق (18 سطرًا في الصفحة)",
+    "mediaType": "حاسوب",
+    "media": "حاسوب",
+    "bf:media": {
+      "@id": "http://id.loc.gov/vocabulary/mediaTypes/c",
+      "@type": "bf:Media",
+      "rdfs:label": "حاسوب"
+    },
+    "carrierType": "مصدر الكتروني",
+    "carrier": "مصدر الكتروني",
+    "bf:carrier": {
+      "@id": "http://id.loc.gov/vocabulary/carriers/ck",
+      "@type": "bf:Carrier",
+      "rdfs:label": "مصدر الكتروني"
+    },
+    "shelfMark": "B753.D363 Q23 1650",
+    "classification": "B753.D363 Q23 1650",
+    "bf:classification": {
+      "@type": "bf:ClassificationLcc",
+      "bf:classificationPortion": "B753.D363",
+      "bf:itemPortion": "Q23 1650",
+      "classificationPortion": "B753.D363",
+      "itemPortion": "Q23 1650",
+      "rdfs:label": "B753.D363 Q23 1650"
+    },
+    "tableOfContents": "القبسة الأولى في مراتب الوجود والدهر، القبسة الثانية في إثبات الواجب، القبسة الثالثة في الزمان والحركة",
+    "bf:tableOfContents": "القبسة الأولى في مراتب الوجود والدهر، القبسة الثانية في إثبات الواجب، القبسة الثالثة في الزمان والحركة",
+    "note": "مرتبة بنظام التعقيبات.\nفي اولها مجموعة اختام.\nالنسخة مجدولة والورقة الاولى عليها زخرفة.\nالغلاف : جلد، احمر.\nمكتبة مجلس الشورى : 4662، طهران، ايران (ir)",
+    "bf:note": [
+      {
+        "@type": "bf:Note",
+        "rdfs:label": "مرتبة بنظام التعقيبات."
+      },
+      {
+        "@type": "bf:Note",
+        "rdfs:label": "في اولها مجموعة اختام."
+      },
+      {
+        "@type": "bf:Note",
+        "rdfs:label": "النسخة مجدولة والورقة الاولى عليها زخرفة."
+      },
+      {
+        "@type": "bf:Note",
+        "rdfs:label": "الغلاف : جلد، احمر."
+      },
+      {
+        "@type": "bf:Note",
+        "rdfs:label": "مكتبة مجلس الشورى : 4662، طهران، ايران (ir)"
+      }
+    ],
+    "heldBy": "مكتبة العتبة العباسية المقدسة (IQ-KaCCS)",
+    "bf:hasItem": {
+      "@id": "http://id.loc.gov/resources/items/b125923",
+      "@type": "bf:Item",
+      "bf:heldBy": {
+        "@type": "bf:Agent",
+        "rdfs:label": "مكتبة العتبة العباسية المقدسة"
+      },
+      "bf:shelfMark": "B753.D363 Q23 1650",
+      "shelfMark": "B753.D363 Q23 1650"
+    },
+    "acquisitionSource": "مكتبة العتبة العباسية المقدسة — قسم الشؤون الفكرية والثقافية",
+    "bf:acquisitionSource": "مكتبة العتبة العباسية المقدسة — قسم الشؤون الفكرية والثقافية",
+    "immediateAcquisition": "إهداء / تصوير من أصل مخطوطة مجلس الشورى الإيراني رقم 4662",
+    "bf:immediateAcquisition": "إهداء / تصوير من أصل مخطوطة مجلس الشورى الإيراني رقم 4662",
+    "hasSeries": "تراث الحكمة والفلسفة الاسلامية",
+    "bf:hasSeries": {
+      "@type": "bf:Series",
+      "bf:title": "تراث الحكمة والفلسفة الاسلامية",
+      "number": "القسم الفلسفي 14"
+    },
+    "accessibilityContent": "نسخة مصورة عالية الدقة متاحة رقمياً",
+    "bf:accessibilityContent": {
+      "@type": "bf:AccessibilityContent",
+      "rdfs:label": "نسخة مصورة عالية الدقة متاحة رقمياً"
+    },
+    "notation": "خط عربي (النستعليق الفارسي العربي)",
+    "bf:notation": {
+      "@type": "bf:Notation",
+      "rdfs:label": "خط عربي (نستعليق)"
+    },
+    "relatedTo": "مخطوطة الخزانة الغروية رقم 1205",
+    "bf:relatedTo": {
+      "rdfs:label": "مخطوطة الخزانة الغروية رقم 1205"
+    },
+    "partOf": "خزانة المخطوطات المصورة — العتبة العباسية المقدسة",
+    "bf:partOf": {
+      "rdfs:label": "خزانة المخطوطات المصورة — العتبة العباسية المقدسة"
+    },
+    "hasPart": "الورقة 1-344 (كامل المخطوط)",
+    "bf:hasPart": {
+      "rdfs:label": "الورقة 1-344 (كامل المخطوط)"
+    },
+    "adminMetadata": "IQ-KaCCS | ara | RDA | b125923",
+    "bf:adminMetadata": {
+      "@type": "bf:AdminMetadata",
+      "bf:source": "IQ-KaCCS",
+      "bf:descriptionConventions": "rda",
+      "bf:descriptionLanguage": "ara",
+      "rdfs:label": "IQ-KaCCS / العتبة العباسية (RDA)"
+    },
+    "seriesStatement": "تراث الحكمة والفلسفة الاسلامية ؛ القسم الفلسفي 14",
+    "illustrativeContent": "زخرفة وتذهيب وتجديل في الورقة الأولى وعناوين مؤطرة",
+    "supplementaryContent": "الذريعة الى تصانيف الشيعة، ج 17، ص 32، رقم 183",
+    "issuance": "مخطوط وحيد / أحادي (Single unit)",
+    "bf:issuance": "مخطوط وحيد / أحادي (Single unit)",
+    "originDate": "1061 هـ. = [1650]",
+    "bf:originDate": "1061 هـ. = [1650]",
+    "originPlace": "كربلاء المقدسة / طهران",
+    "bf:originPlace": "كربلاء المقدسة / طهران",
+    "genreForm": "مخطوطات",
+    "bf:genreForm": "مخطوطات",
+    "governmentPublication": "غير حكومي",
+    "bf:governmentPublication": "غير حكومي",
+    "itemOf": "http://id.loc.gov/resources/instances/b125923",
+    "bf:itemOf": "http://id.loc.gov/resources/instances/b125923",
+    "translationOf": "الأصل العربي",
+    "bf:translationOf": "الأصل العربي",
+    "descriptionAuthentication": "rda",
+    "bf:descriptionAuthentication": "rda"
+  }
+}

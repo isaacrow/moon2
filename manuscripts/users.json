@@ -1,0 +1,49 @@
+{
+  "admin": {
+    "username": "admin",
+    "fullName": "مدير المنظومة المعيارية",
+    "role": "admin",
+    "roleTitle": "مدير المنظومة",
+    "hash": "43f6d6293c56d2661bac18a14a626c9896e69acf79fcc5548a70aa0fc84252aec3c149d62cb82145e2e5512b201da92022cd373fd59c1c39560746f584f62d16",
+    "salt": "532ae61f7eb02ebba23dab47efd129e4",
+    "createdAt": "2026-10-18T07:00:57.828Z",
+    "permissions": [
+      "catalog:read",
+      "catalog:write",
+      "catalog:approve",
+      "catalog:export",
+      "users:manage",
+      "dashboard:view"
+    ]
+  },
+  "cataloger": {
+    "username": "cataloger",
+    "fullName": "مفهرس معتمد MARC 21",
+    "role": "cataloger",
+    "roleTitle": "مفهرس مخطوطات",
+    "hash": "41246c83a046693ba27596dbfb2ebcd858f1a467f7b497d987df2a5424d6b63a2048153854eb9728207d812f98d37ef9d8f64c4528e19debf9fcfd12796052ee",
+    "salt": "5c4cbde98444add5e7f54ac722ac35c2",
+    "createdAt": "2026-10-18T07:00:57.829Z",
+    "permissions": [
+      "catalog:read",
+      "catalog:write",
+      "catalog:export",
+      "dashboard:view"
+    ]
+  },
+  "reviewer": {
+    "username": "reviewer",
+    "fullName": "مدقق جودة وفهرس RDA",
+    "role": "reviewer",
+    "roleTitle": "مدقق الجودة",
+    "hash": "e699ce601c08fdadf1881de4a2a41f698b459764e9f333a49c2c01b89f34b6da9431c9d0be8a988705ef3587a3641690901364899bd5a779f2b45b398e432cae",
+    "salt": "bc59a92542adaa3f7b0b65cc9640b338",
+    "createdAt": "2026-10-18T07:00:57.829Z",
+    "permissions": [
+      "catalog:read",
+      "catalog:write",
+      "catalog:approve",
+      "dashboard:view"
+    ]
+  }
+}

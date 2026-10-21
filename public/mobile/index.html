@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <meta name="theme-color" content="#1a1a1a" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <title>Moon | AR Spatial Manuscript & Vision</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Google Model Viewer component -->
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+  <script src="https://unpkg.com/meshoptimizer@0.21.0/meshopt_decoder.js"></script>
+  <script type="module" crossorigin src="./assets/index-ChC0xaef.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-DuPv17MV.css">
+</head>
+<body class="dark-theme">
+  <div id="app">
+    <!-- Background Layer (Camera or 3D Model) -->
+    <div id="bg-layer">
+      <!-- Camera WebAR Viewport Container (Scan Mode) -->
+      <div id="ar-container"></div>
+      
+      <!-- AI Object Scanner Container -->
+      <div id="ai-container" style="display: none; position: absolute; top:0; left:0; width: 100%; height: 100%;">
+        <video id="ai-video" style="width: 100%; height: 100%; object-fit: cover;" playsinline></video>
+        <canvas id="ai-canvas" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none;"></canvas>
+      </div>
+
+      <!-- Closed-Set Custom Artifact Recognition & XR AR Deployment Container -->
+      <div id="closedset-container" style="display: none; position: absolute; top:0; left:0; width: 100%; height: 100%; overflow: hidden;">
+        <video id="closedset-video" style="width: 100%; height: 100%; object-fit: cover;" playsinline></video>
+        <canvas id="closedset-canvas" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none;"></canvas>
+        <div id="closedset-xr-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: auto;"></div>
+        
+        <!-- AR Movement Action Button (Floating in AR over physical object) -->
+        <button id="btn-ar-anim-action" class="vision-glass ar-anim-action-btn" style="display: none;" title="تشغيل حركة المخطوط في الواقع المعزز">
+          <span class="anim-btn-icon"></span>
+          <span class="anim-btn-text">فتح المخطوط في الواقع المعزز (Open Book)</span>
+        </button>
+
+        <div id="closedset-hud-container" style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); z-index: 60; width: 92%; max-width: 440px;"></div>
+      </div>
+
+      <!-- 3D Model Viewer Container (3D Mode) -->
+      <div id="simulator-container" style="display: none;">
+        <model-viewer
+          id="model-3d-viewer"
+          src="nahj_al_balagha.glb"
+          alt="نهج البلاغة - Alqami 3D"
+          ar
+          ar-modes="quick-look scene-viewer webxr"
+          ar-scale="auto"
+          camera-controls
+          touch-action="pan-y"
+          auto-rotate
+          rotation-per-second="18deg"
+          shadow-intensity="1.0"
+          shadow-softness="0.9"
+          exposure="1.05"
+          environment-image="neutral"
+          style="width: 100%; height: 100%; --poster-color: transparent;"
+        >
+          <div class="progress-bar" slot="progress-bar">
+            <div class="update-bar"></div>
+          </div>
+        </model-viewer>
+        
+        <!-- 3D Movement / Animation Action Button -->
+        <button id="btn-3d-anim-action" class="vision-glass model-3d-anim-btn" style="display: none;" title="تشغيل حركة المخطوط">
+          <span class="anim-btn-icon"></span>
+          <span class="anim-btn-text">فتح المخطوط (Open Book)</span>
+        </button>
+
+        <!-- Custom AR Button placed dynamically so it doesn't overlap the dock or HUD -->
+        <button id="custom-ar-button" class="vision-glass" style="position: absolute; bottom: 42vh; left: 50%; transform: translateX(-50%); padding: 10px 20px; border: 1px solid rgba(255,255,255,0.4); border-radius: 24px; color: white; font-weight: 600; cursor: pointer; pointer-events: auto; z-index: 100; font-size: 14px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 18px; height: 18px; vertical-align: middle; margin-right: 6px;"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
+          عرض في الواقع المعزز (View in AR)
+        </button>
+      </div>
+    </div>
+
+    <!-- UI Overlay Layer (Vision Pro Style) -->
+    <div class="ui-layer">
+      
+      <!-- Left Sidebar (Mode & Actions) -->
+      <div class="sidebar vision-glass">
+        <div class="sidebar-logo">
+          <img src="logo.png" alt="Moon Logo" style="width: 44px; height: 44px; object-fit: contain;" />
+        </div>
+        <div class="sidebar-actions">
+          <button id="btn-mode-3d" class="btn-side active" title="3D Models View">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+            <span>نماذج 3D</span>
+          </button>
+          <button id="btn-mode-scan" class="btn-side" title="AR Scan Mode">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+            <span>مسح AR</span>
+          </button>
+          <button id="btn-mode-ai" class="btn-side" title="AI Object Scan">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2Zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8Z"/><path d="M12 6a6 6 0 1 0 6 6 6 6 0 0 0-6-6Zm0 10a4 4 0 1 1 4-4 4 4 0 0 1-4 4Z"/></svg>
+            <span>مسح AI</span>
+          </button>
+          <button id="btn-mode-closedset" class="btn-side" title="التعرف المغلق على القطع">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+              <circle cx="8.5" cy="8.5" r="1.5"></circle>
+              <polyline points="21 15 16 10 5 21"></polyline>
+              <line x1="12" y1="8" x2="12" y2="12"></line>
+              <line x1="10" y1="10" x2="14" y2="10"></line>
+            </svg>
+            <span>تعرف مغلق</span>
+          </button>
+          
+          <div class="sidebar-divider"></div>
+          
+          <button id="btn-audio-guide" class="btn-side" title="Audio Guide">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+          </button>
+          
+          <button id="btn-lang-toggle" class="btn-side" title="Toggle Language">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-en"><text x="50%" y="50%" text-anchor="middle" dy=".3em" font-size="12" font-weight="bold" font-family="sans-serif">EN</text></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-ar" style="display: none;"><text x="50%" y="50%" text-anchor="middle" dy=".3em" font-size="12" font-weight="bold" font-family="sans-serif">ع</text></svg>
+          </button>
+          
+          <button id="btn-theme-toggle" class="btn-side" title="Toggle Background">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-sun" style="display: none;"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          </button>
+
+          <button id="btn-snapshot" class="btn-side" title="Capture Snapshot">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="4" ry="4"></rect><circle cx="12" cy="12" r="3"></circle></svg>
+          </button>
+
+          <button id="btn-admin-manager" class="btn-side" title="إدارة المقتنيات (Artifact Manager)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+            <span>المقتنيات</span>
+          </button>
+
+          <a href="../?desktop=true" class="btn-side" id="btn-desktop-view" title="عرض نسخة سطح المكتب (Desktop View)" style="text-decoration: none; color: inherit; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+            <span>الكمبيوتر</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Top Model Dock (Only visible in 3D Mode) -->
+      <div id="model-dock" class="model-dock-container vision-glass">
+        <div class="model-dock-scroll">
+          <button class="dock-btn active" data-model="nahj_al_balagha" data-title="نهج البلاغة (Nahj al-Balagha)">نهج البلاغة</button>
+          <button class="dock-btn" data-model="model" data-title="القبسات (Al-Qabasat)">مخطوط القبسات</button>
+          <button class="dock-btn" data-model="meshy-model" data-title="تحفة القمي (Alqami 3D)">تحفة القمي 3D</button>
+          <button class="dock-btn" data-model="Zulfiqar_Sword" data-title="سيف ذو الفقار (Zulfiqar)">سيف ذو الفقار</button>
+          <button class="dock-btn" data-model="saqakhane_bowl" data-title="طاسة سقاخانة (Bowl)">طاسة سقاخانة</button>
+          <button class="dock-btn" data-model="prayer_niche_mihrab" data-title="محراب الصلاة (Mihrab)">محراب الصلاة</button>
+          <button class="dock-btn" data-model="old-babylonian_cuneiform_tablet_s264" data-title="لوح مسماري (Cuneiform)">لوح مسماري</button>
+          <button class="dock-btn" data-model="Old_Islamic_Helmet" data-title="خوذة إسلامية (Helmet)">خوذة إسلامية</button>
+          <button class="dock-btn" data-model="babylonian_map_of_the_world_tablet_-_imago_mundi" data-title="خريطة بابل (Map)">خريطة بابل</button>
+          <button class="dock-btn" data-model="stela_of_hammurabi_replica" data-title="مسلة حمورابي (Stela)">مسلة حمورابي</button>
+          <button class="dock-btn" data-model="bowl" data-title="وعاء أثري (Bowl)">وعاء أثري</button>
+        </div>
+      </div>
+
+      <!-- Main Metadata Panel (Right side) -->
+      <div class="main-panel-container" id="main-panel-container">
+        
+        <!-- Header / Title -->
+        <div class="panel-header vision-glass">
+          <div class="brand-text-group">
+            <div class="brand-title" id="top-title">Alqami</div>
+            <div class="brand-subtitle">AR Manuscript Intelligence</div>
+          </div>
+        </div>
+
+        <!-- Tracking Status (Only Scan Mode) -->
+        <div id="tracking-status" class="tracking-status-pill vision-glass" style="display: none;">
+          <span class="status-indicator-dot"></span>
+          <span id="tracking-text">Scanning for manuscript</span>
+        </div>
+
+        <!-- Data Tabs -->
+        <div class="hud-panel vision-glass">
+          <div class="tab-nav">
+            <button class="tab-btn active" data-tab="tab-meta">بيانات القطعة</button>
+            <button class="tab-btn" data-tab="tab-transcription">الوصف</button>
+            <button class="tab-btn" data-tab="tab-graph" id="tab-btn-graph">الرسم البياني</button>
+            <button class="tab-btn" data-tab="tab-editor" id="tab-btn-editor">المحرر</button>
+          </div>
+
+          <div class="tab-content-area">
+            <!-- Tab 1: Metadata -->
+            <div id="tab-meta" class="tab-pane active">
+              <div class="meta-grid">
+                <div class="meta-card">
+                  <div class="meta-label">العنوان / Title</div>
+                  <div id="meta-title" class="meta-value">Loading...</div>
+                </div>
+                <div class="meta-card">
+                  <div class="meta-label">المنشئ / Creator</div>
+                  <div id="meta-creator" class="meta-value">Loading...</div>
+                </div>
+                <div class="meta-card">
+                  <div class="meta-label">الحقبة / Period</div>
+                  <div id="meta-date" class="meta-value">Loading...</div>
+                </div>
+                <div class="meta-card">
+                  <div class="meta-label">القياسات / Extent</div>
+                  <div id="meta-extent" class="meta-value">Loading...</div>
+                </div>
+                <div class="meta-card" style="grid-column: 1 / -1;">
+                  <div class="meta-label">المادة / Material</div>
+                  <div id="meta-material" class="meta-value">Loading...</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tab 2: Transcription / Details -->
+            <div id="tab-transcription" class="tab-pane">
+              <div class="transcription-box">
+                <div class="meta-label">ملاحظات / Description</div>
+                <div id="meta-notes" class="arabic-text">
+                  Loading description...
+                </div>
+              </div>
+            </div>
+
+            <!-- Tab 3: Interactive RDF Graph Visualizer -->
+            <div id="tab-graph" class="tab-pane">
+              <div id="graph-canvas-container">
+                <canvas id="graph-canvas"></canvas>
+              </div>
+              <div class="graph-legend">
+                <div class="legend-item"><div class="legend-dot dot-resource"></div><span>Resource</span></div>
+                <div class="legend-item"><div class="legend-dot dot-entity"></div><span>Linked Entity</span></div>
+                <div class="legend-item"><div class="legend-dot dot-literal"></div><span>Literal Property</span></div>
+              </div>
+            </div>
+
+            <!-- Tab 4: Live RDF Turtle Editor -->
+            <div id="tab-editor" class="tab-pane">
+              <div class="editor-wrapper">
+                <textarea id="ttl-code-editor" class="ttl-textarea" spellcheck="false"></textarea>
+                <div class="editor-actions">
+                  <button id="btn-reset-rdf" class="btn-pill" style="color: #ff453a;">Reset</button>
+                  <button id="btn-apply-rdf" class="btn-pill" style="background: #0a84ff; color: #ffffff;">Update AR</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Scanning Reticle HUD -->
+      <div id="scanning-hud" class="scanning-hud" style="display: none;">
+        <div class="reticle-box">
+          <div class="reticle-corner tl"></div><div class="reticle-corner tr"></div>
+          <div class="reticle-corner bl"></div><div class="reticle-corner br"></div>
+        </div>
+        <div class="scan-msg"><span>Align manuscript within frame</span></div>
+      </div>
+    </div>
+
+    <!-- Modals -->
+    <div id="hotspot-modal" class="modal-backdrop">
+      <div class="modal-dialog vision-glass">
+        <div class="modal-header">
+          <div id="modal-title" class="modal-title">Feature Annotation</div>
+          <button id="btn-close-modal" class="btn-icon">
+            <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+          </button>
+        </div>
+        <div id="modal-body" class="modal-body">Annotation details.</div>
+        <div style="display: flex; justify-content: flex-end; margin-top: 15px;">
+          <button id="btn-modal-action" class="btn-pill" style="background: rgba(255,255,255,0.2);">Listen to Description</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Artifact Recognition Manager Modal -->
+    <div id="artifact-manager-modal" class="manager-modal-container"></div>
+
+    <!-- Snapshot Flash -->
+    <div id="camera-flash" class="camera-flash"></div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,186 @@
+{
+  "@context": {
+    "bf": "http://id.loc.gov/ontologies/bibframe/",
+    "bflc": "http://id.loc.gov/ontologies/bflc/",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "schema": "http://schema.org/",
+    "dcterms": "http://purl.org/dc/terms/"
+  },
+  "@graph": [
+    {
+      "@id": "https://moonlib.org/resource/work/m7qr8s9t0u",
+      "@type": "bf:Work",
+      "bf:title": {
+        "@id": "https://moonlib.org/resource/title/m7qr8s9t0u-work",
+        "@type": "bf:Title",
+        "bf:mainTitle": "Weaving the Web",
+        "bf:subtitle": "The Original Design and Ultimate Destiny of the World Wide Web"
+      },
+      "bf:contribution": [
+        {
+          "@id": "https://moonlib.org/resource/contribution/m7qr8s9t0u-0",
+          "@type": "bf:Contribution",
+          "bf:agent": {
+            "@id": "http://id.loc.gov/authorities/names/n79041487"
+          },
+          "bf:role": {
+            "@id": "http://id.loc.gov/vocabulary/relators/aut"
+          }
+        },
+        {
+          "@id": "https://moonlib.org/resource/contribution/m7qr8s9t0u-1",
+          "@type": "bf:Contribution",
+          "bf:agent": {
+            "@id": "http://id.loc.gov/authorities/names/n99036737"
+          },
+          "bf:role": {
+            "@id": "http://id.loc.gov/vocabulary/relators/aut"
+          }
+        }
+      },
+      "bf:language": {
+        "@id": "http://id.loc.gov/vocabulary/languages/eng"
+      },
+      "bf:subject": [
+        {
+          "@id": "http://id.loc.gov/authorities/subjects/sh95008857"
+        },
+        {
+          "@id": "http://id.loc.gov/authorities/subjects/sh94001524"
+        },
+        {
+          "@id": "http://id.loc.gov/authorities/subjects/sh2002000569"
+        }
+      ],
+      "bf:classification": {
+        "@type": "bf:Classification",
+        "bf:classificationPortion": "TK5105.888",
+        "bf:source": {
+          "@id": "http://id.loc.gov/authorities/classification/TK5105"
+        }
+      },
+      "bf:genreForm": {
+        "@id": "http://id.loc.gov/authorities/genreForms/gf2014026098"
+      },
+      "bf:content": {
+        "@id": "http://id.loc.gov/vocabulary/contentTypes/txt"
+      },
+      "bf:summary": {
+        "@type": "bf:Summary",
+        "rdfs:label": "Named inventor of the World Wide Web and director of the W3C, Tim Berners-Lee offers insights into the true nature of the Web, articulating its potential as well as the problems which threaten its existence. Co-author Mark Fischetti provides a context for the development of the Web and helps readers understand its significance."
+      },
+      "bf:tableOfContents": {
+        "@type": "bf:TableOfContents",
+        "rdfs:label": "Enquire within upon everything -- Tangles, links, and webs -- info.cern.ch -- Protocols -- Going global -- Browsing -- Changes -- Consortium -- Weaving the Web."
+      },
+      "bf:intendedAudience": {
+        "@id": "http://id.loc.gov/vocabulary/audiences/gen"
+      },
+      "bf:originDate": "1999",
+      "bf:hasInstance": {
+        "@id": "https://moonlib.org/resource/instance/m7qr8s9t0u"
+      },
+      "bf:adminMetadata": {
+        "@id": "https://moonlib.org/resource/admin/m7qr8s9t0u"
+      }
+    },
+    {
+      "@id": "https://moonlib.org/resource/instance/m7qr8s9t0u",
+      "@type": "bf:Instance",
+      "bf:instanceOf": {
+        "@id": "https://moonlib.org/resource/work/m7qr8s9t0u"
+      },
+      "bf:title": {
+        "@id": "https://moonlib.org/resource/title/m7qr8s9t0u-instance",
+        "@type": "bf:Title",
+        "bf:mainTitle": "Weaving the Web",
+        "bf:subtitle": "The Original Design and Ultimate Destiny of the World Wide Web"
+      },
+      "bf:responsibilityStatement": "Tim Berners-Lee with Mark Fischetti",
+      "bf:editionStatement": "1st ed",
+      "bf:identifiedBy": [
+        {
+          "@id": "https://moonlib.org/resource/identifier/m7qr8s9t0u-isbn-0",
+          "@type": "bf:Isbn",
+          "rdf:value": "9780062515865"
+        },
+        {
+          "@id": "https://moonlib.org/resource/identifier/m7qr8s9t0u-lccn-0",
+          "@type": "bf:Lccn",
+          "rdf:value": "99035140"
+        }
+      ],
+      "bf:provisionActivity": {
+        "@id": "https://moonlib.org/resource/provision/m7qr8s9t0u"
+      },
+      "bf:copyrightDate": "1999",
+      "bf:carrier": {
+        "@id": "http://id.loc.gov/vocabulary/carriers/nc"
+      },
+      "bf:media": {
+        "@id": "http://id.loc.gov/vocabulary/mediaTypes/n"
+      },
+      "bf:extent": {
+        "@type": "bf:Extent",
+        "rdfs:label": "226 pages"
+      },
+      "bf:dimensions": "24 cm",
+      "bf:hasItem": {
+        "@id": "https://moonlib.org/resource/item/m7qr8s9t0u-1"
+      }
+    },
+    {
+      "@id": "https://moonlib.org/resource/provision/m7qr8s9t0u",
+      "@type": "bf:Publication",
+      "bf:agent": {
+        "@id": "http://id.loc.gov/authorities/names/n79084796",
+        "rdfs:label": "HarperSanFrancisco"
+      },
+      "bf:place": {
+        "@id": "http://id.loc.gov/vocabulary/countries/cau"
+      },
+      "bf:date": "1999"
+    },
+    {
+      "@id": "https://moonlib.org/resource/item/m7qr8s9t0u-1",
+      "@type": "bf:Item",
+      "bf:itemOf": {
+        "@id": "https://moonlib.org/resource/instance/m7qr8s9t0u"
+      },
+      "bf:heldBy": {
+        "@id": "http://id.loc.gov/vocabulary/organizations/moonlib",
+        "rdfs:label": "MOON Library System"
+      },
+      "bf:shelfMark": {
+        "@type": "bf:ShelfMark",
+        "rdfs:label": "TK5105.888 .B47 1999"
+      },
+      "bf:subLocation": {
+        "@type": "bf:SubLocation",
+        "rdfs:label": "Main Library - 3rd Floor"
+      },
+      "bf:status": {
+        "@id": "http://id.loc.gov/vocabulary/mstatus/available"
+      }
+    },
+    {
+      "@id": "https://moonlib.org/resource/admin/m7qr8s9t0u",
+      "@type": "bf:AdminMetadata",
+      "bf:creationDate": "2026-02-24T12:00:00Z",
+      "bf:changeDate": "2026-02-24T12:00:00Z",
+      "bf:source": {
+        "@id": "http://id.loc.gov/vocabulary/organizations/moonlib",
+        "rdfs:label": "MOON Library System"
+      },
+      "bf:descriptionConventions": {
+        "@id": "http://id.loc.gov/vocabulary/descriptionConventions/rda",
+        "rdfs:label": "Resource Description and Access"
+      },
+      "bf:descriptionLanguage": {
+        "@id": "http://id.loc.gov/vocabulary/languages/eng"
+      }
+    }
+  ]
+}

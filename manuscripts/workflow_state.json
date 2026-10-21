@@ -1,0 +1,22 @@
+{
+  "0": {
+    "bookmarked": false,
+    "status": "approved"
+  },
+  "1": {
+    "bookmarked": false,
+    "status": "review"
+  },
+  "6": {
+    "bookmarked": false,
+    "status": "approved"
+  },
+  "14": {
+    "bookmarked": false,
+    "status": "none"
+  },
+  "17": {
+    "bookmarked": false,
+    "status": "review"
+  }
+}

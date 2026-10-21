@@ -1,0 +1,842 @@
+/* =========================================================================
+   LIQUID GLASS DESIGN SYSTEM — MULTI-LEVEL SPATIAL SPECIFICATION
+   Apple VisionOS & Cinematic Spatial Computing Inspired
+   
+   Architecture:
+   1. Design Tokens (Surfaces, Blurs, Refraction, Lighting, Radii)
+   2. Multi-Level Glass Materials:
+      - Level 1: Primary Glass Panel (Window / Modal / Hero)
+      - Level 2: Secondary Glass Card (Grid Tiles / Content Blocks)
+      - Level 3: Focused / Selected Surface (Active State / Elevated)
+      - Level 4: Utility Controls & Pills (Buttons / Tabs / Filters)
+      - Level 5: High-Contrast Scrim (Drawers / Menus / Overlays)
+   3. Specular Lighting & Subtle Surface Reflections
+   4. Atmospheric Cinematic Canvas Backdrops
+   5. Interaction, Focus Rings & Transitions
+   6. Accessibility, Graceful Fallbacks & prefers-reduced-motion
+   ========================================================================= */
+
+:root {
+  /* Spatial Palette */
+  --lg-bg-canvas: #f1f4f9;
+  --lg-text-primary: #0f172a;
+  --lg-text-secondary: #475569;
+  --lg-text-muted: #64748b;
+  
+  /* Glass Level 1: Primary Panel */
+  --lg-panel-bg: rgba(255, 255, 255, 0.58);
+  --lg-panel-border: rgba(255, 255, 255, 0.78);
+  --lg-panel-blur: 24px;
+  --lg-panel-shadow: 0 20px 50px -10px rgba(15, 23, 42, 0.08), 0 8px 20px -6px rgba(15, 23, 42, 0.04);
+  --lg-panel-shine: inset 0 1px 1px 0 rgba(255, 255, 255, 0.85), inset 0 -1px 1px 0 rgba(0, 0, 0, 0.03);
+
+  /* Glass Level 2: Secondary Card */
+  --lg-card-bg: rgba(255, 255, 255, 0.46);
+  --lg-card-border: rgba(255, 255, 255, 0.68);
+  --lg-card-blur: 16px;
+  --lg-card-shadow: 0 8px 30px rgba(15, 23, 42, 0.05), 0 1px 3px rgba(15, 23, 42, 0.02);
+
+  /* Glass Level 3: Focused Surface */
+  --lg-focus-bg: rgba(255, 255, 255, 0.76);
+  --lg-focus-border: rgba(255, 255, 255, 0.95);
+  --lg-focus-shadow: 0 14px 40px rgba(15, 23, 42, 0.10), 0 0 0 2px rgba(59, 130, 246, 0.35);
+
+  /* Glass Level 4: Utility Controls */
+  --lg-control-bg: rgba(255, 255, 255, 0.62);
+  --lg-control-hover: rgba(255, 255, 255, 0.88);
+  --lg-control-border: rgba(255, 255, 255, 0.85);
+
+  /* Glass Level 5: High Contrast Overlay */
+  --lg-overlay-bg: rgba(255, 255, 255, 0.85);
+  --lg-overlay-border: rgba(255, 255, 255, 0.92);
+
+  /* Radii */
+  --lg-radius-panel: 28px;
+  --lg-radius-card: 20px;
+  --lg-radius-pill: 9999px;
+  --lg-radius-input: 16px;
+
+  /* Transitions */
+  --lg-spring-transition: all 0.36s cubic-bezier(0.16, 1, 0.3, 1);
+  --lg-hover-transition: all 0.22s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.dark {
+  --lg-bg-canvas: #090d16;
+  --lg-text-primary: #f8fafc;
+  --lg-text-secondary: #cbd5e1;
+  --lg-text-muted: #94a3b8;
+
+  --lg-panel-bg: rgba(18, 24, 38, 0.65);
+  --lg-panel-border: rgba(255, 255, 255, 0.14);
+  --lg-panel-shadow: 0 24px 60px -10px rgba(0, 0, 0, 0.5), 0 8px 24px -6px rgba(0, 0, 0, 0.3);
+  --lg-panel-shine: inset 0 1px 1px 0 rgba(255, 255, 255, 0.22), inset 0 -1px 1px 0 rgba(0, 0, 0, 0.4);
+
+  --lg-card-bg: rgba(24, 32, 48, 0.52);
+  --lg-card-border: rgba(255, 255, 255, 0.10);
+  --lg-card-shadow: 0 10px 35px rgba(0, 0, 0, 0.35);
+
+  --lg-focus-bg: rgba(30, 41, 62, 0.80);
+  --lg-focus-border: rgba(255, 255, 255, 0.35);
+  --lg-focus-shadow: 0 18px 45px rgba(0, 0, 0, 0.45), 0 0 0 2px rgba(96, 165, 250, 0.45);
+
+  --lg-control-bg: rgba(30, 41, 59, 0.70);
+  --lg-control-hover: rgba(51, 65, 85, 0.85);
+  --lg-control-border: rgba(255, 255, 255, 0.18);
+
+  --lg-overlay-bg: rgba(15, 23, 42, 0.90);
+  --lg-overlay-border: rgba(255, 255, 255, 0.18);
+}
+
+/* =========================================================================
+   1. ATMOSPHERIC CINEMATIC CANVAS BACKDROP & VISIONOS ENVIRONMENT
+   ========================================================================= */
+.liquid-glass-spatial-canvas {
+  min-height: 100vh;
+  background-color: var(--lg-bg-canvas);
+  background-image: 
+    radial-gradient(at 10% 12%, rgba(210, 228, 255, 0.45) 0px, transparent 55%),
+    radial-gradient(at 88% 8%, rgba(245, 238, 222, 0.38) 0px, transparent 50%),
+    radial-gradient(at 50% 50%, rgba(241, 245, 249, 0.75) 0px, transparent 65%),
+    radial-gradient(at 92% 88%, rgba(218, 232, 255, 0.42) 0px, transparent 50%),
+    radial-gradient(at 8% 92%, rgba(228, 238, 252, 0.48) 0px, transparent 50%);
+  background-attachment: fixed;
+  color: var(--lg-text-primary);
+}
+
+.dark .liquid-glass-spatial-canvas {
+  background-color: #080c14;
+  background-image: 
+    radial-gradient(at 15% 15%, rgba(28, 54, 98, 0.38) 0px, transparent 55%),
+    radial-gradient(at 85% 12%, rgba(45, 28, 68, 0.28) 0px, transparent 50%),
+    radial-gradient(at 50% 55%, rgba(12, 17, 28, 0.85) 0px, transparent 65%),
+    radial-gradient(at 88% 88%, rgba(20, 42, 75, 0.32) 0px, transparent 55%);
+}
+
+/* =========================================================================
+   WOF MOON OPAC — LUMINOUS WHITE LIQUID GLASS & GLOSSY SPATIAL DESIGN
+   Inspired by Apple VisionOS Light Experience, Share-VDE & Libris
+   ========================================================================= */
+
+.opac-spatial-bg {
+  min-height: 100vh;
+  background-color: #f8fafc;
+  background-image: 
+    radial-gradient(ellipse 90% 60% at 20% -10%, rgba(56, 189, 248, 0.22), transparent 70%),
+    radial-gradient(ellipse 70% 60% at 85% 15%, rgba(168, 85, 247, 0.18), transparent 70%),
+    radial-gradient(ellipse 80% 70% at 50% 95%, rgba(14, 165, 233, 0.16), transparent 70%),
+    radial-gradient(circle at 10% 65%, rgba(251, 191, 36, 0.14), transparent 50%),
+    linear-gradient(to bottom, #ffffff 0%, #f6f9fc 45%, #ecf2f7 100%);
+  background-attachment: fixed;
+  color: #0f172a;
+}
+
+.opac-spatial-bg.env-architectural {
+  background-image: 
+    radial-gradient(ellipse 90% 60% at 20% -5%, rgba(99, 102, 241, 0.22), transparent 70%),
+    radial-gradient(ellipse 70% 60% at 80% 20%, rgba(216, 180, 254, 0.25), transparent 70%),
+    radial-gradient(circle at 50% 90%, rgba(125, 211, 252, 0.20), transparent 65%),
+    linear-gradient(to bottom, #ffffff 0%, #f7f9ff 55%, #ecf1fc 100%);
+}
+
+.opac-spatial-bg.env-nocturne {
+  background-image: 
+    radial-gradient(ellipse 80% 50% at 15% 10%, rgba(52, 211, 153, 0.18), transparent 65%),
+    radial-gradient(ellipse 70% 60% at 85% 15%, rgba(56, 189, 248, 0.20), transparent 70%),
+    radial-gradient(circle at 50% 85%, rgba(196, 181, 253, 0.18), transparent 70%),
+    linear-gradient(to bottom, #fcfdff 0%, #f0fdf4 55%, #f1f5f9 100%);
+}
+
+/* 1. White Liquid Glass Primary Panels */
+.opac-spatial-bg .css-glass-panel,
+.opac-spatial-bg .glass-panel-primary {
+  background: rgba(255, 255, 255, 0.74) !important;
+  backdrop-filter: blur(36px) saturate(190%) !important;
+  -webkit-backdrop-filter: blur(36px) saturate(190%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.90) !important;
+  box-shadow: 
+    0 24px 60px -12px rgba(15, 23, 42, 0.08),
+    0 8px 24px -6px rgba(15, 23, 42, 0.04),
+    inset 0 1.5px 1.5px 0 rgba(255, 255, 255, 1),
+    inset 0 -1px 1px 0 rgba(0, 0, 0, 0.02) !important;
+  color: #0f172a !important;
+}
+
+/* 2. White Glossy Liquid Glass Secondary Cards */
+.opac-spatial-bg .css-glass-card,
+.opac-spatial-bg .glass-card-secondary {
+  background: rgba(255, 255, 255, 0.62) !important;
+  backdrop-filter: blur(24px) saturate(175%) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(175%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.85) !important;
+  box-shadow: 
+    0 12px 32px -6px rgba(15, 23, 42, 0.06),
+    inset 0 1px 1.5px 0 rgba(255, 255, 255, 1),
+    inset 0 -1px 1px 0 rgba(0, 0, 0, 0.02) !important;
+  color: #0f172a !important;
+  transition: all 0.32s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.opac-spatial-bg .css-glass-card:hover,
+.opac-spatial-bg .glass-card-secondary:hover {
+  background: rgba(255, 255, 255, 0.90) !important;
+  border-color: rgba(255, 255, 255, 1) !important;
+  transform: translateY(-3px) scale(1.008);
+  box-shadow: 
+    0 22px 48px -8px rgba(15, 23, 42, 0.12),
+    inset 0 2px 2px 0 rgba(255, 255, 255, 1) !important;
+}
+
+/* 3. Luminous White Header */
+.opac-spatial-bg header {
+  background: rgba(255, 255, 255, 0.78) !important;
+  backdrop-filter: blur(36px) saturate(190%) !important;
+  -webkit-backdrop-filter: blur(36px) saturate(190%) !important;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.85) !important;
+  box-shadow: 0 4px 28px rgba(15, 23, 42, 0.04) !important;
+  color: #0f172a !important;
+}
+
+/* 4. White Glossy Control Pills */
+.opac-spatial-bg .liquid-glass-btn {
+  background: rgba(255, 255, 255, 0.75) !important;
+  color: #0f172a !important;
+  border: 1px solid rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(18px) saturate(160%) !important;
+  -webkit-backdrop-filter: blur(18px) saturate(160%) !important;
+  box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 1), 0 3px 12px rgba(15, 23, 42, 0.05) !important;
+  transition: all 0.22s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.opac-spatial-bg .liquid-glass-btn:hover {
+  background: rgba(255, 255, 255, 0.96) !important;
+  border-color: rgba(255, 255, 255, 1) !important;
+  color: #0f172a !important;
+  box-shadow: inset 0 1px 2px 0 rgba(255, 255, 255, 1), 0 6px 18px rgba(15, 23, 42, 0.08) !important;
+}
+
+/* 5. Tab Switcher Capsule */
+.opac-spatial-bg .liquid-glass-switcher {
+  background: rgba(241, 245, 249, 0.72) !important;
+  border: 1px solid rgba(255, 255, 255, 0.85) !important;
+  backdrop-filter: blur(18px) !important;
+  box-shadow: inset 0 1px 2px rgba(15, 23, 42, 0.04) !important;
+}
+
+.opac-spatial-bg .liquid-glass-tab-active {
+  background: #ffffff !important;
+  color: #0f172a !important;
+  font-weight: 800 !important;
+  border: 1px solid rgba(255, 255, 255, 1) !important;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.08), inset 0 1px 1px rgba(255, 255, 255, 1) !important;
+}
+
+/* 6. Primary Action Buttons */
+.opac-spatial-bg .liquid-glass-primary {
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.16), inset 0 1px 1px rgba(255, 255, 255, 0.3) !important;
+}
+
+.opac-spatial-bg .liquid-glass-primary:hover {
+  background: linear-gradient(135deg, #0f172a 0%, #020617 100%) !important;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.24), inset 0 1px 1.5px rgba(255, 255, 255, 0.4) !important;
+}
+
+/* =========================================================================
+   AUTHOR FINDER — LUMINOUS WHITE GLOSSY & LIQUID GLASS SPECIFICATION
+   ========================================================================= */
+
+.author-finder-spatial-bg {
+  min-height: 100vh;
+  background-color: #ffffff !important;
+  background-image: 
+    radial-gradient(ellipse 95% 65% at 20% -10%, rgba(56, 189, 248, 0.16), transparent 70%),
+    radial-gradient(ellipse 75% 65% at 85% 15%, rgba(168, 85, 247, 0.12), transparent 70%),
+    radial-gradient(ellipse 85% 75% at 50% 95%, rgba(14, 165, 233, 0.12), transparent 70%),
+    radial-gradient(circle at 10% 65%, rgba(251, 191, 36, 0.08), transparent 50%),
+    linear-gradient(to bottom, #ffffff 0%, #f8fafc 40%, #f1f5f9 100%) !important;
+  background-attachment: fixed;
+  color: #0f172a !important;
+}
+
+.author-finder-spatial-bg .css-glass-panel,
+.author-finder-spatial-bg .glass-panel-primary {
+  background: rgba(255, 255, 255, 0.80) !important;
+  backdrop-filter: blur(36px) saturate(200%) !important;
+  -webkit-backdrop-filter: blur(36px) saturate(200%) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.95) !important;
+  box-shadow: 
+    0 24px 70px -12px rgba(15, 23, 42, 0.07),
+    0 8px 24px -6px rgba(15, 23, 42, 0.03),
+    inset 0 2px 2px 0 rgba(255, 255, 255, 1),
+    inset 0 -1px 1px 0 rgba(0, 0, 0, 0.02) !important;
+  color: #0f172a !important;
+}
+
+.author-finder-spatial-bg .css-glass-card,
+.author-finder-spatial-bg .glass-card-secondary,
+.author-finder-spatial-bg .css-glass {
+  background: rgba(255, 255, 255, 0.74) !important;
+  backdrop-filter: blur(24px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.95) !important;
+  box-shadow: 
+    0 10px 32px -6px rgba(15, 23, 42, 0.04),
+    inset 0 1px 1.5px 0 rgba(255, 255, 255, 1) !important;
+  color: #0f172a !important;
+  transition: all 0.32s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.author-finder-spatial-bg .css-glass-card:hover,
+.author-finder-spatial-bg .glass-card-secondary:hover,
+.author-finder-spatial-bg .css-glass:hover {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border-color: rgba(255, 255, 255, 1) !important;
+  transform: translateY(-3px);
+  box-shadow: 
+    0 20px 48px -8px rgba(15, 23, 42, 0.09),
+    inset 0 2px 2px 0 rgba(255, 255, 255, 1) !important;
+}
+
+.author-finder-spatial-bg .liquid-glass-btn {
+  background: rgba(255, 255, 255, 0.85) !important;
+  color: #0f172a !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(20px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+  box-shadow: inset 0 1px 1.5px 0 rgba(255, 255, 255, 1), 0 4px 16px rgba(15, 23, 42, 0.04) !important;
+}
+
+.author-finder-spatial-bg .liquid-glass-btn:hover {
+  background: #ffffff !important;
+  border-color: #ffffff !important;
+  box-shadow: inset 0 1px 2px 0 rgba(255, 255, 255, 1), 0 8px 24px rgba(15, 23, 42, 0.08) !important;
+}
+
+.author-finder-spatial-bg .liquid-glass-pill {
+  background: rgba(255, 255, 255, 0.88) !important;
+  border: 1px solid rgba(255, 255, 255, 1) !important;
+  color: #0f172a !important;
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 1), 0 2px 8px rgba(15, 23, 42, 0.03) !important;
+}
+.visionos-spatial-orb {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, rgba(255, 255, 255, 0.98) 0%, rgba(219, 234, 254, 0.85) 45%, rgba(199, 210, 254, 0.55) 75%, rgba(255, 255, 255, 0.9) 100%);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  box-shadow: 
+    0 14px 36px rgba(56, 189, 248, 0.28),
+    inset 0 3px 8px rgba(255, 255, 255, 1),
+    inset 0 -3px 6px rgba(15, 23, 42, 0.05);
+  cursor: pointer;
+  animation: orbSpatialFloat 4.2s ease-in-out infinite alternate;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+}
+
+.visionos-spatial-orb:hover {
+  transform: translateY(-4px) scale(1.08);
+  box-shadow: 
+    0 20px 48px rgba(56, 189, 248, 0.42),
+    inset 0 4px 10px rgba(255, 255, 255, 1);
+}
+
+/* 8. Smart Color Adaptations for White Theme */
+.opac-spatial-bg .text-white {
+  color: #0f172a;
+}
+.opac-spatial-bg .text-white\/90,
+.opac-spatial-bg .text-white\/80 {
+  color: #334155;
+}
+.opac-spatial-bg .text-white\/70,
+.opac-spatial-bg .text-white\/60 {
+  color: #64748b;
+}
+.opac-spatial-bg .text-white\/50,
+.opac-spatial-bg .text-white\/40 {
+  color: #94a3b8;
+}
+
+/* Luminous High-Contrast Accents on White Glass */
+.opac-spatial-bg .text-sky-300,
+.opac-spatial-bg .text-sky-400 {
+  color: #2563eb !important;
+}
+.opac-spatial-bg .text-amber-300,
+.opac-spatial-bg .text-amber-400 {
+  color: #d97706 !important;
+}
+.opac-spatial-bg .text-emerald-300,
+.opac-spatial-bg .text-emerald-400 {
+  color: #059669 !important;
+}
+.opac-spatial-bg .text-purple-300,
+.opac-spatial-bg .text-purple-400 {
+  color: #7c3aed !important;
+}
+.opac-spatial-bg .text-rose-300,
+.opac-spatial-bg .text-rose-400 {
+  color: #e11d48 !important;
+}
+
+/* Hover Accent States */
+.opac-spatial-bg .hover\:text-white:hover {
+  color: #0f172a !important;
+}
+.opac-spatial-bg .hover\:text-sky-300:hover {
+  color: #1d4ed8 !important;
+}
+.opac-spatial-bg .group:hover .group-hover\:text-sky-300 {
+  color: #2563eb !important;
+}
+.opac-spatial-bg .group:hover .group-hover\:text-amber-300 {
+  color: #d97706 !important;
+}
+.opac-spatial-bg .group:hover .group-hover\:text-emerald-300 {
+  color: #059669 !important;
+}
+
+.opac-spatial-bg .hover\:bg-white\/10:hover,
+.opac-spatial-bg .hover\:bg-white\/20:hover {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+}
+
+/* Keep white text on naturally dark buttons/badges and cover overlays */
+.opac-spatial-bg .liquid-glass-primary,
+.opac-spatial-bg .liquid-glass-primary *,
+.opac-spatial-bg .bg-blue-600,
+.opac-spatial-bg .bg-blue-600 *,
+.opac-spatial-bg .bg-sky-500,
+.opac-spatial-bg .bg-sky-500 *,
+.opac-spatial-bg .bg-slate-900,
+.opac-spatial-bg .bg-slate-900 *,
+.opac-spatial-bg .bg-black\/60,
+.opac-spatial-bg .bg-black\/60 *,
+.opac-spatial-bg .bg-black\/70,
+.opac-spatial-bg .bg-black\/70 *,
+.opac-spatial-bg .bg-black\/80,
+.opac-spatial-bg .bg-black\/80 *,
+.opac-spatial-bg .bg-emerald-500\/80,
+.opac-spatial-bg .bg-emerald-500\/80 * {
+  color: #ffffff !important;
+}
+
+/* Convert dark backdrops into translucent white glossy layers */
+.opac-spatial-bg .bg-black\/40,
+.opac-spatial-bg .bg-black\/35,
+.opac-spatial-bg .bg-black\/30,
+.opac-spatial-bg .bg-black\/20 {
+  background-color: rgba(255, 255, 255, 0.70) !important;
+  border-color: rgba(226, 232, 240, 0.85) !important;
+}
+
+.opac-spatial-bg .bg-white\/10,
+.opac-spatial-bg .bg-white\/15,
+.opac-spatial-bg .bg-white\/20,
+.opac-spatial-bg .bg-white\/25 {
+  background-color: rgba(255, 255, 255, 0.72) !important;
+  border-color: rgba(226, 232, 240, 0.85) !important;
+}
+
+.opac-spatial-bg .border-white\/10,
+.opac-spatial-bg .border-white\/15,
+.opac-spatial-bg .border-white\/20,
+.opac-spatial-bg .border-white\/25,
+.opac-spatial-bg .border-white\/30,
+.opac-spatial-bg .border-white\/40 {
+  border-color: rgba(226, 232, 240, 0.85) !important;
+}
+
+.opac-spatial-bg .divide-white\/10 > :not([hidden]) ~ :not([hidden]) {
+  border-color: rgba(226, 232, 240, 0.85) !important;
+}
+
+/* Inputs and Selects on White Liquid Glass */
+.opac-spatial-bg input,
+.opac-spatial-bg select {
+  color: #0f172a !important;
+  background-color: rgba(255, 255, 255, 0.88) !important;
+  border-color: rgba(226, 232, 240, 0.95) !important;
+}
+
+.opac-spatial-bg input::placeholder {
+  color: #94a3b8 !important;
+}
+
+@keyframes orbSpatialFloat {
+  0% { transform: translateY(0px) rotate(0deg); }
+  100% { transform: translateY(-7px) rotate(6deg); }
+}
+
+/* AI Synthesis Liquid Glass Full Blur Modal Layer (Matching Banner & Reference) */
+.ai-liquid-glass-backdrop {
+  background: rgba(8, 12, 22, 0.45) !important;
+  backdrop-filter: blur(28px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(28px) saturate(180%) !important;
+}
+
+.ai-liquid-glass-panel {
+  position: relative;
+  background: rgba(18, 22, 34, 0.64) !important;
+  backdrop-filter: blur(40px) saturate(190%) !important;
+  -webkit-backdrop-filter: blur(40px) saturate(190%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.22) !important;
+  border-radius: 28px;
+  box-shadow: 
+    0 32px 80px -16px rgba(0, 0, 0, 0.72),
+    0 12px 32px -8px rgba(0, 0, 0, 0.48),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.45),
+    inset 0 -1px 1px 0 rgba(0, 0, 0, 0.3) !important;
+  color: #ffffff !important;
+}
+
+.ai-liquid-glass-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 38%);
+  opacity: 0.95;
+}
+
+/* =========================================================================
+   2. LEVEL 1: PRIMARY GLASS PANEL (Window / Floating Shell / Hero)
+   ========================================================================= */
+.glass-panel-primary,
+.css-glass-panel {
+  position: relative;
+  background: var(--lg-panel-bg) !important;
+  backdrop-filter: blur(var(--lg-panel-blur)) saturate(160%);
+  -webkit-backdrop-filter: blur(var(--lg-panel-blur)) saturate(160%);
+  border: 1px solid var(--lg-panel-border) !important;
+  border-radius: var(--lg-radius-panel);
+  box-shadow: var(--lg-panel-shadow), var(--lg-panel-shine);
+  transition: var(--lg-spring-transition);
+}
+
+/* Subtle Specular Top Sheen */
+.glass-panel-primary::before,
+.css-glass-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 40%);
+  opacity: 0.85;
+}
+
+.dark .glass-panel-primary::before,
+.dark .css-glass-panel::before {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0) 40%);
+}
+
+/* =========================================================================
+   3. LEVEL 2: SECONDARY GLASS CARD (Grid Items / Cards / Results)
+   ========================================================================= */
+.glass-card-secondary,
+.css-glass-card,
+.css-glass {
+  position: relative;
+  background: var(--lg-card-bg) !important;
+  backdrop-filter: blur(var(--lg-card-blur)) saturate(150%);
+  -webkit-backdrop-filter: blur(var(--lg-card-blur)) saturate(150%);
+  border: 1px solid var(--lg-card-border) !important;
+  border-radius: var(--lg-radius-card);
+  box-shadow: var(--lg-card-shadow);
+  transition: var(--lg-hover-transition);
+}
+
+.glass-card-secondary:hover,
+.css-glass-card:hover {
+  background: var(--lg-focus-bg) !important;
+  border-color: var(--lg-focus-border) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 36px rgba(15, 23, 42, 0.08), inset 0 1px 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+/* =========================================================================
+   4. LEVEL 3: FOCUSED / SELECTED SURFACE
+   ========================================================================= */
+.glass-surface-focused {
+  background: var(--lg-focus-bg) !important;
+  border: 1px solid var(--lg-focus-border) !important;
+  box-shadow: var(--lg-focus-shadow);
+  transform: translateY(-2px);
+}
+
+/* =========================================================================
+   5. LEVEL 4: UTILITY CONTROLS & DOCKS (Pills / Switchers / Buttons)
+   ========================================================================= */
+/* Floating Dock */
+.liquid-glass-dock {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: var(--lg-radius-pill);
+  padding: 0.55rem 0.95rem;
+  background: var(--lg-panel-bg);
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  border: 1px solid var(--lg-panel-border);
+  box-shadow: var(--lg-panel-shadow), inset 0 1px 1px 0 rgba(255, 255, 255, 0.85);
+  transition: var(--lg-spring-transition);
+}
+
+/* Refined Pill Button */
+.liquid-glass-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  border-radius: var(--lg-radius-pill);
+  padding: 0.55rem 1.25rem;
+  overflow: hidden;
+  cursor: pointer;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.88) 0%, rgba(240, 245, 255, 0.65) 100%);
+  color: var(--lg-text-primary);
+  border: 1px solid var(--lg-control-border);
+  backdrop-filter: blur(14px) saturate(180%);
+  -webkit-backdrop-filter: blur(14px) saturate(180%);
+  box-shadow: 
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.95),
+    0 4px 14px rgba(15, 23, 42, 0.06);
+  transition: var(--lg-hover-transition);
+}
+
+.liquid-glass-btn:hover {
+  transform: translateY(-1.5px) scale(1.015);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.96) 0%, rgba(245, 248, 255, 0.85) 100%);
+  box-shadow: 
+    inset 0 1px 1px 0 rgba(255, 255, 255, 1),
+    0 8px 24px rgba(15, 23, 42, 0.10);
+}
+
+.liquid-glass-btn:active {
+  transform: scale(0.98);
+}
+
+.dark .liquid-glass-btn {
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.85) 0%, rgba(15, 23, 42, 0.75) 100%);
+  color: #f8fafc;
+  border-color: rgba(255, 255, 255, 0.18);
+  box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.15), 0 4px 14px rgba(0, 0, 0, 0.3);
+}
+
+.dark .liquid-glass-btn:hover {
+  background: linear-gradient(135deg, rgba(51, 65, 85, 0.95) 0%, rgba(30, 41, 59, 0.90) 100%);
+}
+
+/* Primary Action Pill */
+.liquid-glass-primary {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  border-radius: var(--lg-radius-pill);
+  padding: 0.6rem 1.35rem;
+  overflow: hidden;
+  cursor: pointer;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.94) 0%, rgba(30, 41, 59, 0.90) 100%);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.4),
+    0 8px 24px rgba(15, 23, 42, 0.20);
+  transition: var(--lg-hover-transition);
+}
+
+.liquid-glass-primary:hover {
+  transform: translateY(-1.5px) scale(1.015);
+  background: linear-gradient(135deg, rgba(15, 23, 42, 1) 0%, rgba(30, 41, 59, 0.96) 100%);
+  box-shadow: 
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.55),
+    0 12px 30px rgba(15, 23, 42, 0.28);
+}
+
+.liquid-glass-primary:active {
+  transform: scale(0.98);
+}
+
+/* Micro Pill Badge */
+.liquid-glass-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--lg-radius-pill);
+  font-size: 0.72rem;
+  font-weight: 700;
+  background: var(--lg-control-bg);
+  color: var(--lg-text-primary);
+  border: 1px solid var(--lg-control-border);
+  backdrop-filter: blur(10px) saturate(160%);
+  -webkit-backdrop-filter: blur(10px) saturate(160%);
+  box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.7), 0 2px 6px rgba(15, 23, 42, 0.04);
+  transition: var(--lg-hover-transition);
+}
+
+.liquid-glass-pill:hover {
+  background: var(--lg-control-hover);
+  transform: translateY(-1px);
+}
+
+/* Tab Capsule Switcher */
+.liquid-glass-switcher {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 6px;
+  border-radius: var(--lg-radius-pill);
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(14px) saturate(160%);
+  -webkit-backdrop-filter: blur(14px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.03), 0 4px 16px rgba(15, 23, 42, 0.04);
+}
+
+.dark .liquid-glass-switcher {
+  background: rgba(18, 24, 38, 0.65);
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.liquid-glass-tab-active {
+  background: rgba(255, 255, 255, 0.92) !important;
+  color: var(--lg-text-primary) !important;
+  font-weight: 800 !important;
+  box-shadow: 
+    inset 0 1px 1px 0 rgba(255, 255, 255, 1),
+    0 4px 12px rgba(15, 23, 42, 0.08) !important;
+}
+
+.dark .liquid-glass-tab-active {
+  background: rgba(45, 60, 90, 0.85) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+}
+
+/* =========================================================================
+   6. LEVEL 5: HIGH CONTRAST SCRIM & OVERLAYS
+   ========================================================================= */
+.glass-high-contrast {
+  background: var(--lg-overlay-bg) !important;
+  backdrop-filter: blur(28px) saturate(180%);
+  -webkit-backdrop-filter: blur(28px) saturate(180%);
+  border: 1px solid var(--lg-overlay-border) !important;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.16);
+}
+
+/* =========================================================================
+   7. LIQUID GLASS SVG REFRACTIVE WRAPPERS
+   ========================================================================= */
+.liquidGlass-wrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  overflow: hidden;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.08), 0 0 20px rgba(0, 0, 0, 0.05);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2);
+}
+
+.liquidGlass-effect {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  filter: url(#glass-distortion);
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.liquidGlass-tint {
+  z-index: 1;
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.50);
+  pointer-events: none;
+}
+
+.liquidGlass-shine {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  overflow: hidden;
+  box-shadow: inset 2px 2px 1px 0 rgba(255, 255, 255, 0.65),
+    inset -1px -1px 1px 1px rgba(255, 255, 255, 0.45);
+  pointer-events: none;
+}
+
+.liquidGlass-text {
+  position: relative;
+  z-index: 3;
+  color: #0f172a;
+}
+
+/* =========================================================================
+   8. ACCESSIBILITY, FOCUS OUTLINES & REDUCED MOTION
+   ========================================================================= */
+/* Visible Focus Rings */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 2px solid rgba(59, 130, 246, 0.8) !important;
+  outline-offset: 2px !important;
+}
+
+/* Graceful Fallback for Browsers Without Backdrop-Filter */
+@supports not (backdrop-filter: blur(10px)) {
+  .glass-panel-primary,
+  .css-glass-panel {
+    background: #ffffff !important;
+    border-color: #cbd5e1 !important;
+  }
+  .glass-card-secondary,
+  .css-glass-card,
+  .css-glass {
+    background: #f8fafc !important;
+    border-color: #e2e8f0 !important;
+  }
+  .dark .glass-panel-primary,
+  .dark .css-glass-panel {
+    background: #0f172a !important;
+    border-color: #334155 !important;
+  }
+  .dark .glass-card-secondary,
+  .dark .css-glass-card {
+    background: #1e293b !important;
+    border-color: #334155 !important;
+  }
+}
+
+/* Respect Reduced Motion Preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .glass-card-secondary:hover,
+  .css-glass-card:hover,
+  .liquid-glass-btn:hover,
+  .liquid-glass-primary:hover {
+    transform: none !important;
+  }
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WOF MOON OPAC — Linked Data Public Discovery (Share-VDE & Libris)</title>
+    <meta name="description" content="Public Linked Data Library Discovery Interface for WOF MOON inspired by Share-VDE and Swedish Libris. Full entity linking for Works, Persons, and Subjects." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100..1000&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Liquid Glass & Chromatic Distortion SVG Filters -->
+    <svg style="position: absolute; width: 0; height: 0; pointer-events: none;" aria-hidden="true">
+      <defs>
+        <filter id="glass-distortion">
+          <feTurbulence type="fractalNoise" baseFrequency="0.02 0.04" numOctaves="3" result="noise" />
+          <feDisplacementMap in="SourceGraphic" in2="noise" scale="5" xChannelSelector="R" yChannelSelector="G" />
+        </filter>
+        <filter id="switcher">
+          <feTurbulence type="fractalNoise" baseFrequency="0.05 0.05" numOctaves="2" result="noise" />
+          <feDisplacementMap in="SourceGraphic" in2="noise" scale="3" xChannelSelector="R" yChannelSelector="B" />
+        </filter>
+      </defs>
+    </svg>
+    <div id="root"></div>
+    <script type="module" src="/js/model-viewer.min.js"></script>
+    <script type="module" src="/src/opac-main.tsx"></script>
+  </body>
+</html>

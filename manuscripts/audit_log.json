@@ -1,0 +1,90 @@
+[
+  {
+    "id": "b768de703188",
+    "username": "admin",
+    "action": "تسجيل دخول إلى النظام",
+    "recordId": null,
+    "details": "الجلسة: cc4418aa...",
+    "timestamp": "2026-10-18T07:00:57.879Z"
+  },
+  {
+    "id": "b73c23b7a8f1",
+    "username": "admin",
+    "action": "تسجيل دخول إلى النظام",
+    "recordId": null,
+    "details": "الجلسة: b86d3ad0...",
+    "timestamp": "2026-10-18T07:09:37.571Z"
+  },
+  {
+    "id": "89ce372fc6b3",
+    "username": "مدقق الجودة",
+    "action": "تحديث حالة السجل (قيد المراجعة)",
+    "recordId": "17",
+    "details": "",
+    "timestamp": "2026-10-18T07:19:39.846Z"
+  },
+  {
+    "id": "ce9d4d657212",
+    "username": "مدقق الجودة",
+    "action": "تحديث حالة السجل (قيد المراجعة)",
+    "recordId": "1",
+    "details": "",
+    "timestamp": "2026-10-18T08:26:43.839Z"
+  },
+  {
+    "id": "33359b688c0b",
+    "username": "مدقق الجودة",
+    "action": "تحديث حالة السجل (معتمد)",
+    "recordId": "6",
+    "details": "",
+    "timestamp": "2026-10-18T08:27:01.372Z"
+  },
+  {
+    "id": "5a608f2d97d1",
+    "username": "مفهرس",
+    "action": "تصدير ملف ISO 2709 (.mrc)",
+    "recordId": "254479",
+    "details": "",
+    "timestamp": "2026-10-18T08:28:53.407Z"
+  },
+  {
+    "id": "22690fe4785e",
+    "username": "مفهرس",
+    "action": "تصدير ملف ISO 2709 (.mrc)",
+    "recordId": "254479",
+    "details": "",
+    "timestamp": "2026-10-18T08:29:30.525Z"
+  },
+  {
+    "id": "dae5a2ff980f",
+    "username": "مفهرس",
+    "action": "تصدير ملف ISO 2709 (.mrc)",
+    "recordId": "183684",
+    "details": "",
+    "timestamp": "2026-10-18T08:51:40.929Z"
+  },
+  {
+    "id": "e46628589fc7",
+    "username": "مفهرس",
+    "action": "تصدير ملف ISO 2709 (.mrc)",
+    "recordId": "234529",
+    "details": "",
+    "timestamp": "2026-10-18T09:02:39.026Z"
+  },
+  {
+    "id": "eaef263953da",
+    "username": "مدقق الجودة",
+    "action": "تحديث حالة السجل (قيد المراجعة)",
+    "recordId": "0",
+    "details": "",
+    "timestamp": "2026-10-19T11:48:07.958Z"
+  },
+  {
+    "id": "5619bf377168",
+    "username": "مدقق الجودة",
+    "action": "تحديث حالة السجل (معتمد)",
+    "recordId": "0",
+    "details": "",
+    "timestamp": "2026-10-19T11:48:17.335Z"
+  }
+]

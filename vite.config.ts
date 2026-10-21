@@ -1,0 +1,60 @@
+import { defineConfig, Plugin } from 'vite'
+import path from 'path'
+import tailwindcss from '@tailwindcss/vite'
+import react from '@vitejs/plugin-react'
+
+/**
+ * Vite plugin to resolve figma:asset/* imports locally.
+ * In the Figma Make environment these are handled by their runtime,
+ * but locally we return a 1×1 transparent PNG data-URI placeholder.
+ */
+function figmaAssetPlugin(): Plugin {
+  return {
+    name: 'figma-asset-resolver',
+    resolveId(source) {
+      if (source.startsWith('figma:asset/')) {
+        return `\0${source}`;
+      }
+      return null;
+    },
+    load(id) {
+      if (id.startsWith('\0figma:asset/')) {
+        // Return a 1x1 transparent PNG as a data URI
+        return `export default "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg=="`;
+      }
+      return null;
+    },
+  };
+}
+
+export default defineConfig({
+  base: './',
+  plugins: [
+    // The React and Tailwind plugins are both required for Make, even if
+    // Tailwind is not being actively used – do not remove them
+    figmaAssetPlugin(),
+    react(),
+    tailwindcss(),
+  ],
+  resolve: {
+    alias: {
+      // Alias @ to the src directory
+      '@': path.resolve(__dirname, './src'),
+      // Alias /utils used by some components (absolute path imports)
+      '/utils': path.resolve(__dirname, './utils'),
+    },
+  },
+
+  // File types to support raw imports. Never add .css, .tsx, or .ts files to this.
+  assetsInclude: ['**/*.svg', '**/*.csv'],
+
+  build: {
+    chunkSizeWarningLimit: 3500,
+    rollupOptions: {
+      input: {
+        main: path.resolve(__dirname, 'index.html'),
+        opac: path.resolve(__dirname, 'opac.html'),
+      },
+    },
+  },
+})

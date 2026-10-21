@@ -1,0 +1,137 @@
+{
+  "work": {
+    "@type": "bf:Work",
+    "@id": "http://id.loc.gov/resources/works/b125923",
+    "bf:title": {
+      "@type": "bf:Title",
+      "bf:mainTitle": "القبسات",
+      "mainTitle": "القبسات",
+      "bflc:nonSortNum": "2"
+    },
+    "mainTitle": "القبسات",
+    "creator": "الميرداماد، محمد باقر بن محمد، توفي 1041 هجري",
+    "creatorUri": "http://id.loc.gov/authorities/names/n85043844",
+    "uniformTitle": "القبسات",
+    "language": "ara",
+    "classification": "B753.D363 Q23 1650",
+    "summary": "كتاب فلسفي كلامي للميرداماد يناقش حدوث العالم وقدمه ومسألة الدهر والزمان والمصادر الوجودية وفق الحكمة المتعالية والمشائية.",
+    "bf:contribution": [
+      {
+        "@type": "bf:PrimaryContribution",
+        "bf:agent": {
+          "@id": "http://id.loc.gov/authorities/names/n85043844",
+          "@type": "bf:Person",
+          "rdfs:label": "الميرداماد، محمد باقر بن محمد، توفي 1041 هجري"
+        },
+        "bf:role": {
+          "@id": "http://id.loc.gov/vocabulary/relators/aut",
+          "@type": "bf:Role",
+          "rdfs:label": "مؤلف"
+        }
+      }
+    ],
+    "bf:subject": [
+      {
+        "@type": "bf:Topic",
+        "rdfs:label": "الفلسفة الاسلامية الشيعية"
+      },
+      {
+        "@type": "bf:Topic",
+        "rdfs:label": "مخطوطات اسلامية"
+      }
+    ],
+    "bf:genreForm": {
+      "@id": "http://id.loc.gov/authorities/genreForms/gf2014026139",
+      "@type": "bf:GenreForm",
+      "rdfs:label": "مخطوطات"
+    },
+    "bf:language": {
+      "@id": "http://id.loc.gov/vocabulary/languages/ara",
+      "@type": "bf:Language",
+      "rdfs:label": "العربية"
+    },
+    "bf:expressionOf": {
+      "@id": "http://id.loc.gov/resources/hubs/mir-damad-qabasat",
+      "bflc:aap": "الميرداماد، محمد باقر بن محمد، توفي 1041 هجري. القبسات"
+    },
+    "bf:note": [
+      {
+        "@type": "bf:Note",
+        "rdfs:label": "أوله : الحمد لله الواحد الاحد الصمد المصمود مهيمن كل وجود وجاعل كل موجود، والصلاة على من اقتفاه من زمرة الانبياء، واصطفاه من رسل الرسل فابتعثه بالذكر..."
+      },
+      {
+        "@type": "bf:Note",
+        "rdfs:label": "آخره : ولا تخلنا اللهم مع ذلك من عواطف رأفتك وسوابغ رحمتك ولطايف كفايتك وحوط عنايتك وحسن كلائتك بجودك ومنك وفضلك وطولك يا أرحم الراحمين."
+      }
+    ],
+    "bf:supplementaryContent": {
+      "@type": "bf:SupplementaryContent",
+      "rdfs:label": "الذريعة الى تصانيف الشيعة، الجزء 17، الصفحه 32، الرقم 183."
+    }
+  },
+  "instance": {
+    "@type": "bf:Instance",
+    "@id": "http://id.loc.gov/resources/instances/b125923",
+    "bf:instanceOf": {
+      "@id": "http://id.loc.gov/resources/works/b125923"
+    },
+    "bf:title": {
+      "@type": "bf:Title",
+      "bf:mainTitle": "القبسات"
+    },
+    "statementOfResponsibility": "للميرداماد محمد باقر الحسيني الاسترآبادي.",
+    "lccn": "b125923",
+    "shelfMark": "B753.D363 Q23 1650",
+    "publicationDate": "1061 هـ. = [1650]",
+    "placeOfPublication": "كربلاء المقدسة / طهران",
+    "publisher": "مخطوط بخط النستعليق",
+    "edition": "نسخة مخطوطة كاملة مجدولة ومذهبة",
+    "extent": "344 ورقة (18 سطرًا)",
+    "dimensions": "ورق، حبر اسود، خط النستعليق",
+    "bf:provisionActivity": {
+      "@type": "bf:Production",
+      "bf:date": "1650",
+      "bflc:simpleDate": "1061 هـ. = [1650]"
+    },
+    "bf:extent": {
+      "@type": "bf:Extent",
+      "rdfs:label": "344 ورقة (18 سطرًا)"
+    },
+    "bf:media": {
+      "@id": "http://id.loc.gov/vocabulary/mediaTypes/c",
+      "rdfs:label": "حاسوب"
+    },
+    "bf:carrier": {
+      "@id": "http://id.loc.gov/vocabulary/carriers/ck",
+      "rdfs:label": "مصدر الكتروني"
+    },
+    "bf:note": [
+      {
+        "@type": "bf:Note",
+        "rdfs:label": "في اولها مجموعة اختام."
+      },
+      {
+        "@type": "bf:Note",
+        "rdfs:label": "النسخة مجدولة والورقة الاولى عليها زخرفة."
+      },
+      {
+        "@type": "bf:Note",
+        "rdfs:label": "الغلاف : جلد، احمر."
+      },
+      {
+        "@type": "bf:Note",
+        "rdfs:label": "مكتبة مجلس الشورى : 4662، طهران، ايران (ir)"
+      },
+      {
+        "@type": "bf:Note",
+        "rdfs:label": "مرتبة بنظام التعقيبات."
+      }
+    ],
+    "bf:hasItem": {
+      "@id": "http://id.loc.gov/resources/items/b125923",
+      "@type": "bf:Item",
+      "bf:heldBy": "مكتبة العتبة العباسية المقدسة",
+      "bf:shelfMark": "B753.D363 Q23 1650"
+    }
+  }
+}
