@@ -2,6 +2,8 @@ import React from 'react';
 import { Globe, Volume2, VolumeX, Database, Search, Layers, X, Smartphone } from 'lucide-react';
 
 export default function LiquidGlassHeader({ 
+  onOpenMoonStudio,
+  onOpenManuscripts, 
   lang, 
   setLang, 
   soundEnabled, 
@@ -103,6 +105,28 @@ export default function LiquidGlassHeader({
             <span className="font-medium">Moon DB</span>
             <Database className="w-3 h-3 text-white/80" />
           </div>
+
+                    {/* Link to Moon Studio Backbone */}
+          <button
+            type="button"
+            onClick={onOpenMoonStudio || (() => { window.location.href = './?view=dashboard'; })}
+            title={isAr ? "الدخول إلى استوديو الفهرسة MOON Backbone" : "Open Moon BIBFRAME Editor Backbone"}
+            className="glass-pill px-3.5 py-1.5 text-xs font-bold text-amber-200 hover:text-white bg-amber-500/20 hover:bg-amber-500/35 transition-all cursor-pointer border-amber-400/40 flex items-center gap-1.5 shadow-sm"
+          >
+            <span>🌙</span>
+            <span>{isAr ? 'Moon Backbone' : 'Moon Studio'}</span>
+          </button>
+
+          {/* Link to Manuscripts MARC 21 */}
+          <button
+            type="button"
+            onClick={onOpenManuscripts || (() => { window.location.href = './?view=moon-manuscripts'; })}
+            title={isAr ? "فهرس ومقارنة المخطوطات MARC 21 (D:\MAN)" : "Manuscripts MARC 21 Viewer"}
+            className="glass-pill px-3 py-1.5 text-xs font-bold text-emerald-200 hover:text-white bg-emerald-500/20 hover:bg-emerald-500/35 transition-all cursor-pointer border-emerald-400/40 flex items-center gap-1.5 shadow-sm"
+          >
+            <span>📜</span>
+            <span>{isAr ? 'المخطوطات MARC' : 'Manuscripts MARC'}</span>
+          </button>
 
           {/* Mobile AR View Link */}
           <a

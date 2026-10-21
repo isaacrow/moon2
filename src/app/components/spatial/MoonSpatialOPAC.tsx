@@ -19,7 +19,7 @@ interface MoonSpatialOPACProps {
   onBackToDashboard?: () => void;
 }
 
-export function MoonSpatialOPAC({ onBackToDashboard }: MoonSpatialOPACProps) {
+export function MoonSpatialOPAC({ onBackToDashboard, onOpenManuscripts }: MoonSpatialOPACProps) {
   const [lang, setLang] = useState<'ar' | 'en'>('ar');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedInstitution, setSelectedInstitution] = useState('all');

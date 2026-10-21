@@ -150,25 +150,30 @@ export function TopNavBar({
             <span className="hidden md:inline">OPAC Catalog</span>
           </motion.a>
 
-          {/* Direct Link to Alqami 3D Spatial Heritage OPAC */}
+                    {/* Direct Link to Web View (3D Spatial OPAC) */}
           <motion.button
             type="button"
-            onClick={() => {
-              const targetHost = typeof window !== 'undefined' ? window.location.hostname : 'localhost';
-              window.open(`http://${targetHost}:5174`, '_blank');
-            }}
+            onClick={onSpatialOpac || (() => { window.location.href = './?view=moon-spatial-opac'; })}
             whileHover={{ scale: 1.04 }}
             whileTap={{ scale: 0.96 }}
-            className="liquid-glass-pill py-1.5 px-3 text-xs font-bold cursor-pointer flex items-center gap-1.5 hover:border-cyan-400/50"
-            title="بوابة علقمي ثلاثية الأبعاد والواقع المعزز (Alqami 3D & AR Spatial OPAC)"
+            className="liquid-glass-pill py-1.5 px-3 text-xs font-bold cursor-pointer flex items-center gap-1.5 border-purple-400/40 text-purple-900 bg-purple-500/10"
+            title="الانتقال إلى واجهة الويب وفهرس المقتنيات ثلاثية الأبعاد (Web View)"
           >
-            <img
-              src="/alqami-logo.png"
-              alt="علقمي"
-              className="h-3.5 w-auto max-h-4 object-contain brightness-0 invert drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)]"
-            />
-            <span className="hidden md:inline font-extrabold text-slate-800">علقمي 3D</span>
-            <span className="text-[9px] font-bold px-1 py-0.2 rounded bg-cyan-500/15 text-cyan-800">AR</span>
+            <span>🪐</span>
+            <span className="hidden md:inline font-extrabold">الويب 3D OPAC</span>
+          </motion.button>
+
+          {/* Direct Link to Manuscripts MARC 21 */}
+          <motion.button
+            type="button"
+            onClick={onManuscripts || (() => { window.location.href = './?view=moon-manuscripts'; })}
+            whileHover={{ scale: 1.04 }}
+            whileTap={{ scale: 0.96 }}
+            className="liquid-glass-pill py-1.5 px-3 text-xs font-bold cursor-pointer flex items-center gap-1.5 border-emerald-400/40 text-emerald-900 bg-emerald-500/10"
+            title="فهرس ومقارنة المخطوطات MARC 21 & RDA (D:\MAN)"
+          >
+            <span>📜</span>
+            <span className="hidden md:inline font-extrabold">المخطوطات MARC</span>
           </motion.button>
 
           <motion.button

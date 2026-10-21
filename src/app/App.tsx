@@ -104,8 +104,22 @@ function CatalogApp() {
       const params = new URLSearchParams(window.location.search);
       const v = params.get('view');
       if (v) return v as ViewMode;
+
+      const path = window.location.pathname.toLowerCase();
+      const hash = window.location.hash.toLowerCase();
+
+      // alqami/moon/man -> MARC 21 & RDA manuscripts
+      if (path.includes('/moon/man') || path.endsWith('/man') || hash.includes('/moon/man') || hash.includes('/man')) {
+        return 'moon-manuscripts';
+      }
+      // alqami/moon -> Moon backbone editor
+      if (path.includes('/moon') || hash.includes('/moon') || hash.includes('editor') || hash.includes('backbone')) {
+        return 'dashboard';
+      }
+      // alqami root -> Web View (3D Spatial OPAC)
+      return 'moon-spatial-opac';
     }
-    return 'dashboard';
+    return 'moon-spatial-opac';
   });
   const [previousViewMode, setPreviousViewMode] = useState<ViewMode | null>(null);
   const [resourceType, setResourceType] = useState<ResourceType | null>(null);
@@ -576,6 +590,8 @@ function CatalogApp() {
       <div className={darkMode ? 'dark' : ''}>
         <TopNavBar
           onDashboard={() => setViewMode('dashboard')}
+        onSpatialOpac={() => setViewMode('moon-spatial-opac')}
+        onManuscripts={() => setViewMode('moon-manuscripts')}
           onNewRecord={handleNewRecord}
           darkMode={darkMode}
           onToggleDarkMode={() => setDarkMode(!darkMode)}
@@ -594,6 +610,8 @@ function CatalogApp() {
       <div className={darkMode ? 'dark' : ''}>
         <TopNavBar
           onDashboard={() => setViewMode('dashboard')}
+        onSpatialOpac={() => setViewMode('moon-spatial-opac')}
+        onManuscripts={() => setViewMode('moon-manuscripts')}
           onNewRecord={handleNewRecord}
           darkMode={darkMode}
           onToggleDarkMode={() => setDarkMode(!darkMode)}
@@ -614,6 +632,8 @@ function CatalogApp() {
       <div className={darkMode ? 'dark' : ''}>
         <TopNavBar
           onDashboard={() => setViewMode('dashboard')}
+        onSpatialOpac={() => setViewMode('moon-spatial-opac')}
+        onManuscripts={() => setViewMode('moon-manuscripts')}
           onNewRecord={handleNewRecord}
           darkMode={darkMode}
           onToggleDarkMode={() => setDarkMode(!darkMode)}
@@ -632,6 +652,8 @@ function CatalogApp() {
       <div className={darkMode ? 'dark' : ''}>
         <TopNavBar
           onDashboard={() => setViewMode('dashboard')}
+        onSpatialOpac={() => setViewMode('moon-spatial-opac')}
+        onManuscripts={() => setViewMode('moon-manuscripts')}
           onNewRecord={handleNewRecord}
           darkMode={darkMode}
           onToggleDarkMode={() => setDarkMode(!darkMode)}
@@ -660,6 +682,8 @@ function CatalogApp() {
       <div className={darkMode ? 'dark' : ''}>
         <TopNavBar
           onDashboard={() => setViewMode('dashboard')}
+        onSpatialOpac={() => setViewMode('moon-spatial-opac')}
+        onManuscripts={() => setViewMode('moon-manuscripts')}
           onNewRecord={handleNewRecord}
           darkMode={darkMode}
           onToggleDarkMode={() => setDarkMode(!darkMode)}
@@ -682,6 +706,8 @@ function CatalogApp() {
       <div className={darkMode ? 'dark' : ''}>
         <TopNavBar
           onDashboard={() => setViewMode('dashboard')}
+        onSpatialOpac={() => setViewMode('moon-spatial-opac')}
+        onManuscripts={() => setViewMode('moon-manuscripts')}
           onNewRecord={handleNewRecord}
           darkMode={darkMode}
           onToggleDarkMode={() => setDarkMode(!darkMode)}
@@ -697,6 +723,8 @@ function CatalogApp() {
       <div className={darkMode ? 'dark' : ''}>
         <TopNavBar
           onDashboard={() => setViewMode('dashboard')}
+        onSpatialOpac={() => setViewMode('moon-spatial-opac')}
+        onManuscripts={() => setViewMode('moon-manuscripts')}
           onNewRecord={handleNewRecord}
           darkMode={darkMode}
           onToggleDarkMode={() => setDarkMode(!darkMode)}
@@ -712,6 +740,8 @@ function CatalogApp() {
       <div className={darkMode ? 'dark' : ''}>
         <TopNavBar
           onDashboard={() => setViewMode('dashboard')}
+        onSpatialOpac={() => setViewMode('moon-spatial-opac')}
+        onManuscripts={() => setViewMode('moon-manuscripts')}
           onNewRecord={handleNewRecord}
           darkMode={darkMode}
           onToggleDarkMode={() => setDarkMode(!darkMode)}
@@ -727,6 +757,8 @@ function CatalogApp() {
       <div className={darkMode ? 'dark' : ''}>
         <TopNavBar
           onDashboard={() => setViewMode('dashboard')}
+        onSpatialOpac={() => setViewMode('moon-spatial-opac')}
+        onManuscripts={() => setViewMode('moon-manuscripts')}
           onNewRecord={handleNewRecord}
           darkMode={darkMode}
           onToggleDarkMode={() => setDarkMode(!darkMode)}
@@ -748,6 +780,8 @@ function CatalogApp() {
       <div className={darkMode ? 'dark' : ''}>
         <TopNavBar
           onDashboard={() => setViewMode('dashboard')}
+        onSpatialOpac={() => setViewMode('moon-spatial-opac')}
+        onManuscripts={() => setViewMode('moon-manuscripts')}
           onNewRecord={handleNewRecord}
           darkMode={darkMode}
           onToggleDarkMode={() => setDarkMode(!darkMode)}
@@ -763,6 +797,8 @@ function CatalogApp() {
       <div className={darkMode ? 'dark' : ''}>
         <TopNavBar
           onDashboard={() => setViewMode('dashboard')}
+        onSpatialOpac={() => setViewMode('moon-spatial-opac')}
+        onManuscripts={() => setViewMode('moon-manuscripts')}
           onNewRecord={handleNewRecord}
           darkMode={darkMode}
           onToggleDarkMode={() => setDarkMode(!darkMode)}
@@ -778,6 +814,8 @@ function CatalogApp() {
       <div className={darkMode ? 'dark' : ''}>
         <TopNavBar
           onDashboard={() => setViewMode('dashboard')}
+        onSpatialOpac={() => setViewMode('moon-spatial-opac')}
+        onManuscripts={() => setViewMode('moon-manuscripts')}
           onNewRecord={handleNewRecord}
           darkMode={darkMode}
           onToggleDarkMode={() => setDarkMode(!darkMode)}
@@ -793,6 +831,8 @@ function CatalogApp() {
       <div className={darkMode ? 'dark' : ''}>
         <TopNavBar
           onDashboard={() => setViewMode('dashboard')}
+        onSpatialOpac={() => setViewMode('moon-spatial-opac')}
+        onManuscripts={() => setViewMode('moon-manuscripts')}
           onNewRecord={handleNewRecord}
           darkMode={darkMode}
           onToggleDarkMode={() => setDarkMode(!darkMode)}
@@ -814,6 +854,8 @@ function CatalogApp() {
       <div className={darkMode ? 'dark' : ''}>
         <TopNavBar
           onDashboard={() => setViewMode('dashboard')}
+        onSpatialOpac={() => setViewMode('moon-spatial-opac')}
+        onManuscripts={() => setViewMode('moon-manuscripts')}
           onNewRecord={handleNewRecord}
           darkMode={darkMode}
           onToggleDarkMode={() => setDarkMode(!darkMode)}
@@ -1236,7 +1278,7 @@ function CatalogApp() {
     return (
       <ErrorBoundary fallbackTitle="Moon Spatial 3D OPAC Error" onReset={() => setViewMode('dashboard')}>
         <React.Suspense fallback={<div className="flex items-center justify-center h-screen bg-black text-white font-bold text-xl">Loading Moon 3D Spatial OPAC...</div>}>
-          <MoonSpatialOPAC onBackToDashboard={() => setViewMode('dashboard')} />
+          <MoonSpatialOPAC onBackToDashboard={() => setViewMode('dashboard')} onOpenManuscripts={() => setViewMode('moon-manuscripts')} />
         </React.Suspense>
       </ErrorBoundary>
     );
@@ -1422,6 +1464,8 @@ function CatalogApp() {
         <div className="min-h-screen bg-background">
           <TopNavBar
             onDashboard={() => setViewMode('dashboard')}
+        onSpatialOpac={() => setViewMode('moon-spatial-opac')}
+        onManuscripts={() => setViewMode('moon-manuscripts')}
             onNewRecord={handleNewRecord}
             darkMode={darkMode}
             onToggleDarkMode={() => setDarkMode(!darkMode)}
@@ -1446,6 +1490,8 @@ function CatalogApp() {
         <div className="min-h-screen bg-background">
           <TopNavBar
             onDashboard={() => setViewMode('dashboard')}
+        onSpatialOpac={() => setViewMode('moon-spatial-opac')}
+        onManuscripts={() => setViewMode('moon-manuscripts')}
             onNewRecord={handleNewRecord}
             darkMode={darkMode}
             onToggleDarkMode={() => setDarkMode(!darkMode)}
@@ -1465,6 +1511,8 @@ function CatalogApp() {
         <div className="min-h-screen bg-background">
           <TopNavBar
             onDashboard={() => setViewMode('dashboard')}
+        onSpatialOpac={() => setViewMode('moon-spatial-opac')}
+        onManuscripts={() => setViewMode('moon-manuscripts')}
             onNewRecord={handleNewRecord}
             darkMode={darkMode}
             onToggleDarkMode={() => setDarkMode(!darkMode)}
@@ -1485,6 +1533,8 @@ function CatalogApp() {
         <div className="min-h-screen bg-background">
           <TopNavBar
             onDashboard={() => setViewMode('dashboard')}
+        onSpatialOpac={() => setViewMode('moon-spatial-opac')}
+        onManuscripts={() => setViewMode('moon-manuscripts')}
             onNewRecord={handleNewRecord}
             darkMode={darkMode}
             onToggleDarkMode={() => setDarkMode(!darkMode)}
@@ -1504,6 +1554,8 @@ function CatalogApp() {
         <div className="min-h-screen bg-background">
           <TopNavBar
             onDashboard={() => setViewMode('dashboard')}
+        onSpatialOpac={() => setViewMode('moon-spatial-opac')}
+        onManuscripts={() => setViewMode('moon-manuscripts')}
             onNewRecord={handleNewRecord}
             darkMode={darkMode}
             onToggleDarkMode={() => setDarkMode(!darkMode)}
@@ -1525,6 +1577,8 @@ function CatalogApp() {
         <div className="min-h-screen bg-background">
           <TopNavBar
             onDashboard={() => setViewMode('dashboard')}
+        onSpatialOpac={() => setViewMode('moon-spatial-opac')}
+        onManuscripts={() => setViewMode('moon-manuscripts')}
             onNewRecord={handleNewRecord}
             darkMode={darkMode}
             onToggleDarkMode={() => setDarkMode(!darkMode)}
@@ -1552,6 +1606,8 @@ function CatalogApp() {
         <div className="min-h-screen bg-background">
           <TopNavBar
             onDashboard={() => setViewMode('dashboard')}
+        onSpatialOpac={() => setViewMode('moon-spatial-opac')}
+        onManuscripts={() => setViewMode('moon-manuscripts')}
             onNewRecord={handleNewRecord}
             darkMode={darkMode}
             onToggleDarkMode={() => setDarkMode(!darkMode)}
@@ -1569,6 +1625,8 @@ function CatalogApp() {
         <div className="min-h-screen bg-background">
           <TopNavBar
             onDashboard={() => setViewMode('dashboard')}
+        onSpatialOpac={() => setViewMode('moon-spatial-opac')}
+        onManuscripts={() => setViewMode('moon-manuscripts')}
             onNewRecord={handleNewRecord}
             darkMode={darkMode}
             onToggleDarkMode={() => setDarkMode(!darkMode)}
@@ -1586,6 +1644,8 @@ function CatalogApp() {
         <div className="min-h-screen bg-background">
           <TopNavBar
             onDashboard={() => setViewMode('dashboard')}
+        onSpatialOpac={() => setViewMode('moon-spatial-opac')}
+        onManuscripts={() => setViewMode('moon-manuscripts')}
             onNewRecord={handleNewRecord}
             darkMode={darkMode}
             onToggleDarkMode={() => setDarkMode(!darkMode)}
@@ -1608,6 +1668,8 @@ function CatalogApp() {
       <div className={`${darkMode ? 'dark' : ''} liquid-glass-spatial-canvas min-h-screen py-2`}>
         <TopNavBar
           onDashboard={() => setViewMode('dashboard')}
+        onSpatialOpac={() => setViewMode('moon-spatial-opac')}
+        onManuscripts={() => setViewMode('moon-manuscripts')}
           onNewRecord={handleNewRecord}
           darkMode={darkMode}
           onToggleDarkMode={() => setDarkMode(!darkMode)}
