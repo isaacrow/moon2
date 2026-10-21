@@ -1,4 +1,4 @@
-/**
+﻿/**
  * 🎯 AUTHORITY MANAGER
  * Professional authority control with search, deduplication, and merging
  */

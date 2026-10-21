@@ -1,4 +1,4 @@
-/**
+﻿/**
  * LOC Languages API Service
  * API: https://id.loc.gov/vocabulary/languages
  * Used for: Language of content (MARC 008/35-37, 041)

@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Moon Engine Glass - iOS Visual Blur Edition
  *
  * Features:

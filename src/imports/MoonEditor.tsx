@@ -1,4 +1,4 @@
-import svgPaths from "./svg-4a1owbzhq6";
+﻿import svgPaths from "./svg-4a1owbzhq6";
 import imgImg from "figma:asset/448923f9298ec547f27dd322785433298cd5ac34.png";
 
 function Section() {

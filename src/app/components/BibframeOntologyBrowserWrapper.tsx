@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import BibframeOntologyBrowser from './BibframeOntologyBrowser';
 
 class ErrorBoundary extends React.Component<

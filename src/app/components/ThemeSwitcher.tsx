@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+﻿import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Palette, Moon, Sun, Layers, Check, X } from 'lucide-react';
 import { useTheme } from '../contexts/ThemeContext';

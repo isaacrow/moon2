@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Authority Search Service
  * Integrates with LOC, VIAF, and Wikidata APIs
  * Provides unified authority search for cataloging

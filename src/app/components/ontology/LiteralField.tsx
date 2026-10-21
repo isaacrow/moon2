@@ -1,4 +1,4 @@
-/**
+﻿/**
  * LiteralField Component
  * 
  * Renders a simple text input for literal values (strings, numbers, dates)

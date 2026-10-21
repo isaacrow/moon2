@@ -1,4 +1,4 @@
-// AfIqa - Internal Authority Layer (Moon's own authority system)
+﻿// AfIqa - Internal Authority Layer (Moon's own authority system)
 import type { AuthoritySearchResult } from './types';
 
 export class AfiqaService {

@@ -1,4 +1,4 @@
-/**
+﻿/**
  * RdaVocabSelect Component
  * 
  * Provides dropdowns for RDA vocabularies (Content, Media, Carrier types)

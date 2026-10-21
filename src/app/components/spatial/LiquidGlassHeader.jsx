@@ -104,7 +104,7 @@ export default function LiquidGlassHeader({
             title={isAr ? "الدخول إلى استوديو الفهرسة MOON Backbone" : "Open Moon BIBFRAME Editor Backbone"}
             className="glass-pill px-3.5 py-1.5 text-xs font-bold text-amber-200 hover:text-white bg-amber-500/20 hover:bg-amber-500/35 transition-all cursor-pointer border-amber-400/40 flex items-center gap-1.5 shadow-sm"
           >
-            <Moon className="w-3.5 h-3.5 text-amber-300 fill-amber-300/30" />
+            <img src="./white.png" alt="Moon" className="w-4 h-3.5 object-contain" />
             <span>{isAr ? 'Moon Backbone' : 'Moon Studio'}</span>
           </button>
 

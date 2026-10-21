@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { BookOpen, Search, Sparkles } from 'lucide-react';
 import { Card } from './ui/card';
 import { Badge } from './ui/badge';

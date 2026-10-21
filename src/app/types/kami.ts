@@ -1,4 +1,4 @@
-/**
+﻿/**
  * KAMI Core Type Definitions
  * Production-grade types for the KAMI cataloging system
  */

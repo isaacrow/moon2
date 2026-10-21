@@ -1,4 +1,4 @@
-/**
+﻿/**
  * RDF Graph Builder
  * 
  * Builds proper RDF quads/triples from BIBFRAME data

@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Marva Service
  * Implements Library of Congress Marva Cataloging Tools and BIBFRAME Primer Specifications:
  * - Minimal Level Cataloging (MLC) Numbers Generator

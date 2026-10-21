@@ -1,4 +1,4 @@
-// Mock Library of Congress Authority Service
+﻿// Mock Library of Congress Authority Service
 // Simulates API calls to id.loc.gov
 
 import { AuthorityLookupResult } from '../types/bibframe';

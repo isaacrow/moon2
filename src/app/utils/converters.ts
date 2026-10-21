@@ -1,4 +1,4 @@
-import { BIBFRAMERecord } from '../types/bibframe';
+﻿import { BIBFRAMERecord } from '../types/bibframe';
 
 /**
  * Convert BIBFRAME record to XML format

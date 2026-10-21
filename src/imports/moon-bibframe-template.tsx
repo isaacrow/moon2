@@ -1,4 +1,4 @@
-/**
+﻿/**
  * MOON BIBFRAME TEMPLATE - Production-Grade Ontology-Driven Template Processor
  * 
  * Fully Linked Data BIBFRAME Engine using EVERY service in the system:

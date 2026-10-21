@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Sonic Persistence
  * 
  * Backend persistence using Supabase

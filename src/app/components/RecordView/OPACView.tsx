@@ -1,4 +1,4 @@
-/**
+﻿/**
  * OPAC View Component - Interactive Linked Data Catalog Display
  * Displays JSON-LD BIBFRAME records in a user-friendly OPAC interface
  */

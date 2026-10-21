@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Sonic Graph Builder
  * 
  * Builds valid BIBFRAME 3.0 JSON-LD @graph structures

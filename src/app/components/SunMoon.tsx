@@ -1,4 +1,4 @@
-/**
+﻿/**
  * SUN MOON - Light Theme Ontology-Driven BIBFRAME Template Processor
  * 
  * Identical functionality to Moon BIBFRAME Template but with the classic

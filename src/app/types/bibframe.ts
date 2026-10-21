@@ -1,4 +1,4 @@
-// BIBFRAME 2.0 Type Definitions
+﻿// BIBFRAME 2.0 Type Definitions
 
 export interface AuthorityLookupResult {
   uri: string;

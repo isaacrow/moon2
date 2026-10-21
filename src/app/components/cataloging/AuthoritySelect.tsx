@@ -1,4 +1,4 @@
-/**
+﻿/**
  * AuthoritySelect Component
  * Autocomplete search for LOC, VIAF, and Wikidata authorities
  */

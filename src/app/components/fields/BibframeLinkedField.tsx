@@ -1,4 +1,4 @@
-/**
+﻿/**
  * BIBFRAME Linked Field Component
  * Auto-complete field with full LOC API integration showing URIs and labels
  */

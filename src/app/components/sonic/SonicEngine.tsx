@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Sonic Engine - BIBFRAME 3.0 Strict Compliance Edition
  * 
  * A complete rebuild following official BIBFRAME 3.0 ontology

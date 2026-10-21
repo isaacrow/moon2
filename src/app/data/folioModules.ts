@@ -1,4 +1,4 @@
-export interface FOLIOModule {
+﻿export interface FOLIOModule {
   id: string;
   name: string;
   category: 'ui' | 'ui-plugin' | 'ui-handler' | 'stripes' | 'platform' | 'mod' | 'edge' | 'mgr' | 'app' | 'other';

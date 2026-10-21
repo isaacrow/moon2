@@ -1,4 +1,4 @@
-/**
+﻿/**
  * W3C-Compliant JSON-LD Builder
  * 
  * Produces JSON-LD that passes:

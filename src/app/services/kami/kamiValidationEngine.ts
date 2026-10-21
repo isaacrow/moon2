@@ -1,4 +1,4 @@
-/**
+﻿/**
  * KAMI Validation Engine
  * Production-grade validation for BIBFRAME cataloging
  */

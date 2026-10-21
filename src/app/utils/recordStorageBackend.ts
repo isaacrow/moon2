@@ -1,4 +1,4 @@
-/**
+﻿/**
  * BIBFRAME Record Storage with Supabase Backend
  * 
  * This module handles saving, loading, and managing BIBFRAME records using:

@@ -1,4 +1,4 @@
-// VIAF (Virtual International Authority File) Service
+﻿// VIAF (Virtual International Authority File) Service
 import axios from 'axios';
 import type { AuthoritySearchResult } from './types';
 import { projectId, publicAnonKey } from '../../../../utils/supabase/info';

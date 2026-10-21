@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Search, BookOpen, ExternalLink, Loader2, Moon, Sun, Languages, ChevronLeft } from 'lucide-react';
 import { Input } from './ui/input';

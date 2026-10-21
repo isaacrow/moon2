@@ -1,4 +1,4 @@
-/**
+﻿/**
  * BIBFRAME Hub Service
  * Implements BIBFRAME Primer Appendix A ("More about Hubs") and Marva Hubs:
  * - Hubs are collocation and aggregation resources (functional equivalent of MARC Title/NameTitle 1XX+$t/130/240/830)

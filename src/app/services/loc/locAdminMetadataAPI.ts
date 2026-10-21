@@ -1,4 +1,4 @@
-/**
+﻿/**
  * LOC Administrative Metadata API Service
  * Vocabularies for cataloging metadata, encoding levels, description conventions, etc.
  */

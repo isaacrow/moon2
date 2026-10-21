@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { Compass, BookOpen, Landmark, Shield, Sparkles, Box } from 'lucide-react';
 import { CATEGORIES } from './data/records';
 

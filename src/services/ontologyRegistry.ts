@@ -1,4 +1,4 @@
-/**
+﻿/**
  * 🧠 BIBFRAME Ontology Registry - Single Source of Truth
  * Fully ontology-driven property definitions
  * No templates, no hardcoded fields - pure semantic modeling

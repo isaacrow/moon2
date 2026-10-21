@@ -1,4 +1,4 @@
-// Record View Components Export
+﻿// Record View Components Export
 export * from './types';
 export { MultiViewRecord } from './MultiViewRecord';
 export { MarcView } from './MarcView';

@@ -1,4 +1,4 @@
-/**
+﻿/**
  * MOON DIJLA CORE
  * Enterprise BIBFRAME Linked Data Infrastructure
  *

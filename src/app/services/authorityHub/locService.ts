@@ -1,4 +1,4 @@
-// Library of Congress Authority Service
+﻿// Library of Congress Authority Service
 import axios from 'axios';
 import type { AuthoritySearchResult } from './types';
 

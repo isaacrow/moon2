@@ -1,4 +1,4 @@
-/**
+﻿/**
  * BIBFRAME Field Mapper
  * Maps UI fields to official BIBFRAME ontology properties
  * Ensures all cataloging is compliant with LC BIBFRAME specification

@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Solar System Mind Map
  * 
  * A modern interactive knowledge graph visualization inspired by planetary orbits.

@@ -1,4 +1,4 @@
-/**
+﻿/**
  * BIBFRAME 3.0.1 Complete Type Definitions
  * Based on Library of Congress BIBFRAME Ontology v3.0.1
  * http://id.loc.gov/ontologies/bibframe-3-0-1/

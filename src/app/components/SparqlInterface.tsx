@@ -1,4 +1,4 @@
-/**
+﻿/**
  * 🔍 SPARQL QUERY INTERFACE
  * Execute SPARQL queries against triple stores
  */

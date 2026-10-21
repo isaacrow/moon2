@@ -163,7 +163,7 @@ export function TopNavBar({
             className="liquid-glass-pill py-1.5 px-3 text-xs font-bold cursor-pointer flex items-center gap-1.5 border-purple-400/40 text-purple-900 bg-purple-500/10"
             title="الانتقال إلى واجهة الويب وفهرس المقتنيات ثلاثية الأبعاد (Web View)"
           >
-            <span>🪐</span>
+            <img src="./alqami-logo.png" alt="Alqami" className="h-3.5 w-auto object-contain" />
             <span className="hidden md:inline font-extrabold">الويب 3D OPAC</span>
           </motion.button>
 
@@ -176,7 +176,7 @@ export function TopNavBar({
             className="liquid-glass-pill py-1.5 px-3 text-xs font-bold cursor-pointer flex items-center gap-1.5 border-emerald-400/40 text-emerald-900 bg-emerald-500/10"
             title="فهرس ومقارنة المخطوطات MARC 21 & RDA (D:\MAN)"
           >
-            <span>📜</span>
+            <BookOpen className="h-3.5 w-3.5 text-emerald-700" />
             <span className="hidden md:inline font-extrabold">المخطوطات MARC</span>
           </motion.button>
 

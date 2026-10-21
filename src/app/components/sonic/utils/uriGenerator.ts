@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Stable URI Generator for Sonic Engine
  * 
  * Generates consistent, stable URIs for BIBFRAME entities

@@ -1,4 +1,4 @@
-// OPAC Viewer Dialog - Shows BIBFRAME records in library catalog style
+﻿// OPAC Viewer Dialog - Shows BIBFRAME records in library catalog style
 import { useState } from 'react';
 import { X, BookOpen } from 'lucide-react';
 import { OpacRecordView } from './OpacRecordView';

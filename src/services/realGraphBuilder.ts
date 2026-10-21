@@ -1,4 +1,4 @@
-/**
+﻿/**
  * REAL BIBFRAME GRAPH BUILDER
  * Entity-based graph construction following institutional standards
  * Compatible with LOC, national libraries, triple stores

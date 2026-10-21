@@ -1,4 +1,4 @@
-import logoBlack from '@/assets/black.png';
+﻿import logoBlack from '@/assets/black.png';
 import logoWhite from '@/assets/white.png';
 
 export { logoBlack, logoWhite };

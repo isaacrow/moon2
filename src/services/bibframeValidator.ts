@@ -1,4 +1,4 @@
-/**
+﻿/**
  * BIBFRAME Semantic Validator
  * Enforces strict BIBFRAME rules
  * Validates graph integrity before save

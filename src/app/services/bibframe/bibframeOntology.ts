@@ -1,4 +1,4 @@
-/**
+﻿/**
  * BIBFRAME Ontology Service
  * Official Library of Congress BIBFRAME 2.0 Ontology Integration
  * Source: https://github.com/lcnetdev/bibframe-ontology

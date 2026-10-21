@@ -1,4 +1,4 @@
-/**
+﻿/**
  * OntologyField Component
  * 
  * Dynamically renders a field based on its BIBFRAME ontology property definition.

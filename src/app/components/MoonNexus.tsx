@@ -1,4 +1,4 @@
-/**
+﻿/**
  * MOON NEXUS — Unified Working Cataloging Workstation
  * 
  * This is the REAL working integration of:

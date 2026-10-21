@@ -1,4 +1,4 @@
-/**
+﻿/**
  * LOC Relators API Service
  * API: https://id.loc.gov/vocabulary/relators
  * Used for: Contributor roles (MARC $e - author, editor, translator, etc.)

@@ -1,4 +1,4 @@
-/**
+﻿/**
  * BIBFRAME ONTOLOGY ENGINE - ENTERPRISE EDITION
  * =============================================
  * 

@@ -1,4 +1,4 @@
-// Wikidata Service (Primary Image Source)
+﻿// Wikidata Service (Primary Image Source)
 import axios from 'axios';
 import type { AuthoritySearchResult } from './types';
 

@@ -1,4 +1,4 @@
-/**
+﻿/**
  * ISBNdb API Integration
  * Provides access to millions of book records via ISBN lookups and searches
  */

@@ -1,4 +1,4 @@
-/**
+﻿/**
  * AFIQA (Arabic Federated Identification and Qualification of Authorities) Service
  * Linked Data implementation following W3C standards
  */

@@ -1,4 +1,4 @@
-/**
+﻿/**
  * LOOP MOON - Unified Field Grouping Engine
  * 
  * Detects fields with the same property name across both ontology sources

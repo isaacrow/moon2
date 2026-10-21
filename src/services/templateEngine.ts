@@ -1,4 +1,4 @@
-/**
+﻿/**
  * BIBFRAME Template Engine
  * Defines cataloging templates for different resource types
  * Supports dynamic form generation

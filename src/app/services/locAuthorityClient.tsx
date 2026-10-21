@@ -1,4 +1,4 @@
-// Frontend Client for LOC Authority Services
+﻿// Frontend Client for LOC Authority Services
 // Connects to backend LOC integration layer
 
 import { projectId, publicAnonKey } from '../../../utils/supabase/info';

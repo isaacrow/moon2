@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+﻿import React, { useState, useEffect, useRef } from 'react';
 import { ARTIFACT_RECORDS } from './data/records';
 
 export default function Ambient3DBackground() {

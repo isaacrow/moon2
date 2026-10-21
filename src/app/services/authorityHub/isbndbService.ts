@@ -1,4 +1,4 @@
-/**
+﻿/**
  * ISBNdb Authority Service
  * Searches ISBNdb for author and book information
  */

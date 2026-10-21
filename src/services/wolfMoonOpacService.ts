@@ -1,4 +1,4 @@
-/**
+﻿/**
  * WOF MOON Linked Data OPAC Service
  * Heavily inspired by Share-VDE (svde.org) and Libris (libris.kb.se/en).
  *

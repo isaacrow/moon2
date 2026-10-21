@@ -1,4 +1,4 @@
-/**
+﻿/**
  * 🧠 RDF Graph Store - Graph-Centric State Management
  * Replaces flat form state with true RDF graph model
  */

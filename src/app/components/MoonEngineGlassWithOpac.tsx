@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Moon Engine Glass Wrapper with OPAC Viewer
  * This wraps the existing MoonEngineGlass and adds OPAC Viewer button + dialog
  */

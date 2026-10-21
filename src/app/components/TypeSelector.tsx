@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { BookOpen, Music, FileText, Calendar, Film, Map, Image, Layers } from 'lucide-react';
 import { Card } from './ui/card';

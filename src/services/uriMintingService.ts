@@ -1,4 +1,4 @@
-/**
+﻿/**
  * URI MINTING SERVICE
  * Generates stable, persistent URIs for all BIBFRAME entities
  * Following institutional best practices (LOC, national libraries)

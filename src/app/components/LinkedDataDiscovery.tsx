@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Open Linked Data Discovery Layer
  * Enterprise-grade BIBFRAME Linked Data Discovery UI
  * 

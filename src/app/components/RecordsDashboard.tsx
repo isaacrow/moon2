@@ -1,4 +1,4 @@
-/**
+﻿/**
  * 📚 Records Dashboard
  * Browse, search, and manage BIBFRAME records
  */

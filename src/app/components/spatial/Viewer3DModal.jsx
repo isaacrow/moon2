@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+﻿import React, { useState, useRef } from 'react';
 import { 
   X, RotateCw, QrCode, Download, Copy, Check, ExternalLink, 
   Layers, Sparkles, BookOpen, Shield, Box, Sun, FileCode, Maximize2

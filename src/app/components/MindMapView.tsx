@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Mind Map View Component
  * Visualizes BIBFRAME records as an interactive mind map
  */

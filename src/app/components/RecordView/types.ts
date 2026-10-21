@@ -1,4 +1,4 @@
-// Record View Types
+﻿// Record View Types
 export type ViewMode = 'FORM' | 'GRAPH' | 'MARC' | 'RDF' | 'JSON';
 
 export interface RecordData {

@@ -1,4 +1,4 @@
-/**
+﻿/**
  * MARC 21 Viewer — Rich Interactive MARC Record Viewer
  * 
  * A glassmorphism-styled MARC 21 viewer with multiple display modes:

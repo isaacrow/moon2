@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Moon Engine Themed - Theme Switcher Wrapper
  * Allows switching between Glass and Neon themes
  */

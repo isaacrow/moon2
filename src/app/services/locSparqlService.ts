@@ -1,4 +1,4 @@
-// Production LOC SPARQL Service (Frontend)
+﻿// Production LOC SPARQL Service (Frontend)
 // Enterprise-level SPARQL query builder
 
 const SPARQL_ENDPOINT = "https://id.loc.gov/sparql";

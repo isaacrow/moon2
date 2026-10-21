@@ -1,4 +1,4 @@
-/**
+﻿/**
  * BIBFRAME Relationship Manager
  * Manages Work-to-Work and Instance-to-Instance relationships
  * Builds connected graph structures

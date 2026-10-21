@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Moon Engine Blur - iOS Visual Blur Edition
  * 
  * Features:

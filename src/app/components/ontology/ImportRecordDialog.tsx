@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Import Record Dialog
  * 
  * Allows importing BIBFRAME records from XML, RDF, JSON-LD files

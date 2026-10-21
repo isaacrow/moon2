@@ -1,4 +1,4 @@
-/**
+﻿/**
  * KAMI Ontology Engine
  * Dynamically loads and processes BIBFRAME ontology for field generation
  */

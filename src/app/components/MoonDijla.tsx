@@ -1,4 +1,4 @@
-/**
+﻿/**
  * MOON DIJLA - Ultimate Unified BIBFRAME Cataloging Engine
  * Combines: MoonSandV2 + MoonOshinPro + MoonEngineGlass + AuthoritySearchDialog
  * 

@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Subject Search Field Component
  * Auto-complete field for LOC Subject Headings (LCSH)
  * Supports topical, geographic, temporal, and name subjects

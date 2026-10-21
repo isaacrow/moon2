@@ -1,4 +1,4 @@
-/**
+﻿/**
  * MARC Generator Service
  * Generates complete MARC21 records from BIBFRAME data
  * Handles deep nested properties and edge cases

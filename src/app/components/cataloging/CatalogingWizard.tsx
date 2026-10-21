@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Cataloging Wizard - Step-by-step BIBFRAME record creation
  * Professional interface for catalogers
  */

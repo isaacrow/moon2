@@ -1,4 +1,4 @@
-/**
+﻿/**
  * RDF Graph Builder
  * Generates semantically correct BIBFRAME RDF
  * Supports Turtle and JSON-LD serialization

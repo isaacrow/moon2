@@ -1,4 +1,4 @@
-/**
+﻿/**
  * LOC RDA Vocabularies API Service
  * APIs for RDA (Resource Description and Access) controlled vocabularies
  * Content Types, Media Types, Carrier Types, etc.

@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { WolfMoonStandaloneOpac } from './app/components/WolfMoonStandaloneOpac';
 import { ErrorBoundary } from './app/components/ErrorBoundary';

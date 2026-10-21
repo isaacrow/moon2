@@ -1,4 +1,4 @@
-/**
+﻿/**
  * ISBNdb Diagnostic Tool
  * Check ISBNdb API configuration and connectivity
  */

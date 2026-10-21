@@ -1,4 +1,4 @@
-/**
+﻿/**
  * BIBFRAME Complete Property Registry
  * 100+ properties across Work, Expression, Instance, Item
  * Supports dynamic form rendering and validation

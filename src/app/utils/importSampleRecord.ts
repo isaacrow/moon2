@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Import sample record utility
  * This function imports a specific BIBFRAME record into the database
  */

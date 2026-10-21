@@ -1,4 +1,4 @@
-/**
+﻿/**
  * WOF MOON — Linked Data Public Discovery OPAC
  * Standalone Public Catalog Portal (Completely separated from cataloging editor)
  *

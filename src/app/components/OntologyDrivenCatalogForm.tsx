@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Ontology-Driven Catalog Form
  * Dynamically generates cataloging forms based on the BIBFRAME ontology
  * Core component that drives the entire Moon editor using the official BIBFRAME ontology

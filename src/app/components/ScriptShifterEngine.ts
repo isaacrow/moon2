@@ -1,4 +1,4 @@
-/**
+﻿/**
  * ScriptShifter Engine — Client-side transliteration using LC's mapping tables
  * 
  * Fetches YAML character mapping tables from the lcnetdev/scriptshifter GitHub repo

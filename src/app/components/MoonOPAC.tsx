@@ -1,4 +1,4 @@
-/**
+﻿/**
  * MOON OPAC V2 - Professional Public Discovery Interface
  * Modern library catalog with Linked Data, faceted search, and pro design
  * Supports records from Moon BIBFRAME Template, Moon Engine, Moon Dijla, Moon K

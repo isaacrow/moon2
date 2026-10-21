@@ -1,4 +1,4 @@
-// Production LOC Authority Service (Frontend)
+﻿// Production LOC Authority Service (Frontend)
 // Full LOC authority coverage with automatic normalization
 
 type AuthorityType =

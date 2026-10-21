@@ -1,4 +1,4 @@
-/**
+﻿/**
  * 🔍 SHACL-Like & Institutional Validation Panel
  * Real-time validation feedback for BIBFRAME 2.0 graphs & heritage manuscripts
  * Multi-layer standards: LOC, PCC, RDA, and W3C Linked Data

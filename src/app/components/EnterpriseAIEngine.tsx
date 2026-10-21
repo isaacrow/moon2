@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Enterprise AI Engine for BIBFRAME Union Catalog
  * 5-Phase AI augmentation system with audit logging
  * iOS frosted glassmorphism + full AR/EN i18n

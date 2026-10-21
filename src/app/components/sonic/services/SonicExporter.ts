@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Sonic Exporter
  * 
  * Exports BIBFRAME entities to valid JSON-LD

@@ -1,4 +1,4 @@
-// Marva-Level Ontology Binding System
+﻿// Marva-Level Ontology Binding System
 // Connects ontology properties to LOC authorities automatically
 
 import { locAuthorityService, type AuthorityResult } from "../services/locAuthorityService";

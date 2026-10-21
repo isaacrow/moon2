@@ -1,4 +1,4 @@
-/**
+﻿/**
  * 🌕 MOON ENGINE - Linked Data Cataloging Editor
  * Complete BIBFRAME 2.0 editor with multiple views
  */

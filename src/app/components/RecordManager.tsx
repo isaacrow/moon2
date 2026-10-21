@@ -1,4 +1,4 @@
-/**
+﻿/**
  * RECORD MANAGER
  * UI for managing saved BIBFRAME records
  * List, open, duplicate, delete, export

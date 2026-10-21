@@ -1,4 +1,4 @@
-/**
+﻿/**
  * BIBFRAME Ontology Engine
  * 
  * This engine defines the complete BIBFRAME ontology structure

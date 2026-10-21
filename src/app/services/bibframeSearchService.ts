@@ -1,4 +1,4 @@
-/**
+﻿/**
  * BIBFRAME Search Service - Enhanced
  * Complete LOC API integration for all authority-controlled fields
  * Including subjects, countries, geographic areas, etc.

@@ -1,4 +1,4 @@
-/**
+﻿/**
  * LC Cutter Number Engine
  *
  * Implements the Library of Congress Cutter Table algorithm for generating

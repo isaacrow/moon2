@@ -1,4 +1,4 @@
-/**
+﻿/**
  * MOON AI - AI-Assisted BIBFRAME Cataloging System
  * 
  * 5-Phase AI Intelligence Layer:

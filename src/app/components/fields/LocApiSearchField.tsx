@@ -1,4 +1,4 @@
-/**
+﻿/**
  * LOC API Search Field Component
  * Unified component for searching all LOC APIs with autocomplete
  */

@@ -1,4 +1,4 @@
-/**
+﻿/**
  * LOC Vocabulary Select Component
  * Select dropdown for LOC controlled vocabularies (no search needed)
  */

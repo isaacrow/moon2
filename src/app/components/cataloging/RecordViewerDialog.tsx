@@ -1,4 +1,4 @@
-/**
+﻿/**
  * 📖 Record Viewer Dialog - Multi-Format Display
  * Shows BIBFRAME records in OPAC, Mind Map, and MARC 21 views
  */

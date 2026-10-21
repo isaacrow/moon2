@@ -1,4 +1,4 @@
-/**
+﻿/**
  * 🌙 MOON DIJLA - Unified Linked Data Cataloging Suite
  * Integrates Moon Sand V2, Moon Oshin Pro, and Moon Engine Glass.
  * Features: True Graph Editor, Wizard-based Cataloging, iOS Glassmorphism, and Universal Authority Hub.

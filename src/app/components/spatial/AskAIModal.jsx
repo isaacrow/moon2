@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { X, Mic, Send, Sparkles, Box, ArrowRight, CornerDownLeft } from 'lucide-react';
 import { ARTIFACT_RECORDS } from './data/records';
 

@@ -1,4 +1,4 @@
-/**
+﻿/**
  * 🕰️ VERSION HISTORY VIEWER
  * View, compare, and rollback versions of records and authorities
  */

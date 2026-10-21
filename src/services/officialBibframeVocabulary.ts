@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Official Library of Congress BIBFRAME 3.0.1 Vocabulary & Ontology
  * Generated directly from official LOC RDF schema: D:/New foltdftrdr/bibframe.rdf
  * Specification: https://id.loc.gov/ontologies/bibframe.html

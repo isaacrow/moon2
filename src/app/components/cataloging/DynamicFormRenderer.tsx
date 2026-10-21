@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Dynamic Form Renderer
  * Renders cataloging forms based on template definitions and property registry
  */

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { EntityEventLog as EventLogEntry } from '../types/jcricket';
 import { projectId, publicAnonKey } from '../../../utils/supabase/info';
 import { useAuth } from '../contexts/AuthContext';

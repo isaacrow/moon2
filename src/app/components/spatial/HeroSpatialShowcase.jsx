@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+﻿import React, { useState, useEffect, useRef } from 'react';
 import { ChevronLeft, ChevronRight, Box, Eye, QrCode, Plus } from 'lucide-react';
 
 export default function HeroSpatialShowcase({ 

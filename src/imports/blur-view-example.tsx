@@ -1,4 +1,4 @@
-Install the package.
+﻿Install the package.
 
 npx expo install expo-ios-visual-blur
 2. Install the necessary CocoaPods dependencies.

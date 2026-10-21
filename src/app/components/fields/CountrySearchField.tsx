@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Country Search Field Component
  * Auto-complete field for LOC Countries vocabulary
  * Used for publication place and geographic coverage

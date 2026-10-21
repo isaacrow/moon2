@@ -1,4 +1,4 @@
-/**
+﻿/**
  * 🧩 Structured Blank Node Editors
  * Modal editors for complex BIBFRAME structures
  */

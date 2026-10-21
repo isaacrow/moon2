@@ -1,4 +1,4 @@
-/**
+﻿/**
  * BIBFRAME Ontology Loader & Parser
  * Dynamically loads official BIBFRAME ontology from LOC GitHub
  * Parses classes, properties, domains, ranges

@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Safe Theme Hook - Provides fallback for theme context
  * Use this instead of useTheme() directly to avoid Provider errors during HMR
  */

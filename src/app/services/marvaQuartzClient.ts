@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Marva Quartz Client
  * Integration with Library of Congress BIBFRAME Editor
  * Based on: https://github.com/lcnetdev/marva-quartz

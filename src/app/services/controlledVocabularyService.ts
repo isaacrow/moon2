@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Controlled Vocabulary Service
  * For accessing Library of Congress and other controlled vocabularies used in BIBFRAME 3.0.1
  */

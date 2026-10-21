@@ -1,4 +1,4 @@
-/**
+﻿/**
  * JSON-LD Graph Parser
  * Parses @graph structures and resolves node references
  */

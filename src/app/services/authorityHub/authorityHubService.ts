@@ -1,4 +1,4 @@
-// Authority Hub Service - Merges ALL 5 Sources
+﻿// Authority Hub Service - Merges ALL 5 Sources
 import { LocAuthorityService } from './locService';
 import { ViafService } from './viafService';
 import { WikidataService } from './wikidataService';

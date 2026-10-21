@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useEffect } from 'react';
+﻿import React, { createContext, useContext, useState, useEffect } from 'react';
 import type { MoonEngineTheme } from '../utils/themeGradients';
 
 export type ThemeStyle = 'ios26' | 'macos' | 'apple-store' | 'classic';

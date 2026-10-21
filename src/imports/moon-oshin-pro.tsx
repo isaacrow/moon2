@@ -1,4 +1,4 @@
-/**
+﻿/**
  * 🌙 MOON OSHIN PROFESSIONAL
  * National-Library-Grade Linked Data Cataloging Interface
  * Comparable to LOC Marva and Libris XL

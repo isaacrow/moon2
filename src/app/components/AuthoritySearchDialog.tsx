@@ -1,4 +1,4 @@
-// Universal Authority & Resource Search Dialog — Liquid Glass Redesign
+﻿// Universal Authority & Resource Search Dialog — Liquid Glass Redesign
 // Multi-API Search (LOC, VIAF, Wikidata, OpenAlex, CrossRef, Open Library, Wikipedia, INLA, DOAJ, ISBNdb) + AI Web Suggestion Engine
 
 import React, { useState, useEffect, useCallback } from 'react';

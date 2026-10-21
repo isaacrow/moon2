@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Complete BIBFRAME Field Definitions
  * Based on Marva Monograph Record Analysis
  * All 54+ distinct field types with full metadata

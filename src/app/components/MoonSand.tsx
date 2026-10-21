@@ -1,4 +1,4 @@
-/**
+﻿/**
  * 🏖️ MOON SAND - Complete BIBFRAME Cataloging Sandbox
  * 100+ Fields | Expression Modeling | Relationships | AdminMetadata
  * Dynamic Template-Driven Interface

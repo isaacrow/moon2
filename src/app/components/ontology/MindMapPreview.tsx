@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Mind Map Preview Component (Classic Graph View)
  * 
  * Interactive hierarchical knowledge graph of BIBFRAME WEMI entities & properties

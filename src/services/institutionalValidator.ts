@@ -1,4 +1,4 @@
-/**
+﻿/**
  * INSTITUTIONAL VALIDATOR
  * Validates BIBFRAME graphs against national library standards
  * Enforces rules from LOC, PCC, and RDA cataloging guidelines

@@ -1,4 +1,4 @@
-/**
+﻿/**
  * OPAC Preview Component
  * Professional Library Catalog & Discovery Card
  * Full BIBFRAME 2.0 & Heritage Manuscript Support

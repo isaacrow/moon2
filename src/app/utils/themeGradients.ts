@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Theme-Aware Gradient System
  * Provides consistent gradients across all components based on the current Moon Engine theme
  */

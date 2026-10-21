@@ -1,4 +1,4 @@
-/**
+﻿/**
  * ISBNdb Client
  * Uses the server proxy to securely access ISBNdb API
  */

@@ -1,4 +1,4 @@
-/**
+﻿/**
  * BIBFRAME 3.0 TypeScript Type Definitions
  * 
  * Based on official ontology:

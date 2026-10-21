@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+﻿import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { getAllRecords, deleteRecord, SavedRecord } from '../utils/recordStorageBackend';
 import { Card } from './ui/card';

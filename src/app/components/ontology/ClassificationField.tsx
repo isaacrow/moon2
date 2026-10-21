@@ -1,4 +1,4 @@
-/**
+﻿/**
  * ClassificationField Component
  * 
  * Handles both LCC and DDC classification with all subfields

@@ -1,1 +1,0 @@
-import{aa as r,j as o,R as a,a9 as e,Y as t}from"./index-CbWAnFmd.js";r.createRoot(document.getElementById("root")).render(o.jsx(a.StrictMode,{children:o.jsx(e,{fallbackTitle:"WOF MOON OPAC Error",children:o.jsx(t,{onOpenEditor:()=>{window.location.href="/"}})})}));

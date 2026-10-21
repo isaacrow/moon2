@@ -1,4 +1,4 @@
-/**
+﻿/**
  * EntityField Component
  * 
  * Renders a field for complex entity values (objects with @type and @id)

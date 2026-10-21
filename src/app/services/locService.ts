@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Library of Congress API Service
  * 
  * Provides functions to search and retrieve data from various LOC APIs:

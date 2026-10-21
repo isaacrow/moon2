@@ -1,4 +1,4 @@
-/**
+﻿/**
  * LocNameSearch Component
  * 
  * Searches the Library of Congress Name Authority File (NAF)

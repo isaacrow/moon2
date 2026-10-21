@@ -1,4 +1,4 @@
-/**
+﻿/**
  * BIBFRAME Vocabulary Select Component
  * Select field for controlled vocabularies with URI display
  */

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useAuth } from '../contexts/AuthContext';
 import { useTheme } from '../contexts/ThemeContext';
@@ -252,8 +252,9 @@ export function Dashboard({ onNavigate, onLoadRecord }: DashboardProps) {
 
   const mainActions = [
     { 
-      id: 'author-finder', 
-      label: 'AI AUTHOR FINDER 🇮🇶', 
+      id: 'author-finder',
+      label: 'ALQAMI AUTHOR FINDER 🇮🇶',
+      logo: '/alqami-logo.png', 
       description: 'Gemini AI + Multi-Page Google Deep Search • Global Authority Federation & Bio Dossiers',
       icon: Sparkles, 
       action: 'author-finder', 
@@ -261,8 +262,9 @@ export function Dashboard({ onNavigate, onLoadRecord }: DashboardProps) {
       iconBg: 'from-blue-400 to-cyan-600'
     },
     { 
-      id: 'moon-spatial-opac', 
-      label: 'MOON 3D SPATIAL OPAC', 
+      id: 'moon-spatial-opac',
+      label: 'ALQAMI 3D SPATIAL OPAC',
+      logo: '/alqami-logo.png', 
       description: 'فهرس المقتنيات ثلاثية الأبعاد • عرض النماذج 3D • تطبيق الواقع المعزز AR للهاتف • Graph Universe',
       icon: Box, 
       action: 'moon-spatial-opac', 
@@ -270,8 +272,9 @@ export function Dashboard({ onNavigate, onLoadRecord }: DashboardProps) {
       iconBg: 'from-purple-400 to-indigo-600'
     },
     { 
-      id: 'moon-manuscripts', 
-      label: 'MOON MANUSCRIPTS MARC & RDA', 
+      id: 'moon-manuscripts',
+      label: 'MOON MANUSCRIPTS MARC & RDA',
+      logo: '/white.png', 
       description: 'منظومة فهرسة ومقارنة المخطوطات المعيارية • 107,149 مخطوط • استناد kiqp.net و dromh.org (D:\\MAN)',
       icon: BookOpen, 
       action: 'moon-manuscripts', 
@@ -279,8 +282,9 @@ export function Dashboard({ onNavigate, onLoadRecord }: DashboardProps) {
       iconBg: 'from-blue-400 to-slate-700'
     },
     { 
-      id: 'moon-27', 
-      label: 'MOON 27 DASHBOARD', 
+      id: 'moon-27',
+      label: 'MOON 27 DASHBOARD',
+      logo: '/white.png', 
       description: 'Next-Gen 27 Edition UI • Dual-Layer Matte Charcoal • 3D Holographic 27 • Prismatic Controls',
       icon: Sparkles, 
       action: 'moon-27', 
@@ -288,8 +292,9 @@ export function Dashboard({ onNavigate, onLoadRecord }: DashboardProps) {
       iconBg: 'from-amber-400 to-yellow-600'
     },
     { 
-      id: 'moon-27-studio', 
-      label: 'MOON 27 STUDIO', 
+      id: 'moon-27-studio',
+      label: 'MOON 27 STUDIO',
+      logo: '/white.png', 
       description: '3D Spline Linked Data Editor • Complete WEMI Ontology Engine • 17 Formats • 27 Design',
       icon: Moon, 
       action: 'moon-27-studio', 
@@ -297,8 +302,9 @@ export function Dashboard({ onNavigate, onLoadRecord }: DashboardProps) {
       iconBg: 'from-amber-400 to-orange-600'
     },
     { 
-      id: 'wolf-moon', 
-      label: 'WOLF MOON', 
+      id: 'wolf-moon',
+      label: 'WOLF MOON',
+      logo: '/white.png', 
       description: '3D Spline Linked Data Studio • Full WEMI Ontology • Real W3C JSON-LD/Turtle • Triple Store Ready',
       icon: Moon, 
       action: 'wolf-moon', 
@@ -306,8 +312,9 @@ export function Dashboard({ onNavigate, onLoadRecord }: DashboardProps) {
       iconBg: 'from-emerald-400 to-teal-600'
     },
     { 
-      id: 'wolf-moon-opac', 
-      label: 'WOF MOON OPAC', 
+      id: 'wolf-moon-opac',
+      label: 'WOF MOON OPAC',
+      logo: '/white.png', 
       description: 'بوابة الفهرس العام المستقلة • مستوحى من Share-VDE وLibris السويدي • ربط الكيانات الكامل للأعلام والمواضيع • قاعدة بيانات موحدة ومترابطة',
       icon: Compass, 
       action: 'wolf-moon-opac', 
@@ -315,8 +322,9 @@ export function Dashboard({ onNavigate, onLoadRecord }: DashboardProps) {
       iconBg: 'from-blue-400 to-indigo-600'
     },
     { 
-      id: 'blue-moon', 
-      label: 'BLUE MOON', 
+      id: 'blue-moon',
+      label: 'BLUE MOON',
+      logo: '/white.png', 
       description: 'Premium BIBFRAME Editor • Moon Engine Theme • Full WEMI • W3C JSON-LD • Triple Store Ready',
       icon: Moon, 
       action: 'blue-moon', 
@@ -324,8 +332,9 @@ export function Dashboard({ onNavigate, onLoadRecord }: DashboardProps) {
       iconBg: 'from-blue-400 to-blue-600'
     },
     { 
-      id: 'moon-linked-data-engine', 
-      label: 'MOON Engine', 
+      id: 'moon-linked-data-engine',
+      label: 'MOON Engine',
+      logo: '/white.png', 
       description: 'Complete Linked Data Editor • JSON-LD • RDF • Turtle • Graph View',
       icon: Moon, 
       action: 'moon-linked-data-engine', 
@@ -333,8 +342,9 @@ export function Dashboard({ onNavigate, onLoadRecord }: DashboardProps) {
       iconBg: 'from-indigo-400 to-blue-600'
     },
     { 
-      id: 'wolf-moon-opac', 
-      label: 'WOF MOON OPAC', 
+      id: 'wolf-moon-opac',
+      label: 'WOF MOON OPAC',
+      logo: '/white.png', 
       description: 'VisionOS Spatial Discovery Portal • Share-VDE & Libris Linked Data • Real-Time Typeahead & Entity Nodes',
       icon: BookOpen, 
       action: 'wolf-moon-opac', 
@@ -351,8 +361,9 @@ export function Dashboard({ onNavigate, onLoadRecord }: DashboardProps) {
       iconBg: 'from-teal-400 to-cyan-600'
     },
     { 
-      id: 'blue-moon', 
-      label: 'BLUE MOON', 
+      id: 'blue-moon',
+      label: 'BLUE MOON',
+      logo: '/white.png', 
       description: 'Premium BIBFRAME Editor • Moon Engine Theme • Full WEMI • W3C JSON-LD • Triple Store Ready',
       icon: Moon, 
       action: 'blue-moon', 
@@ -360,8 +371,9 @@ export function Dashboard({ onNavigate, onLoadRecord }: DashboardProps) {
       iconBg: 'from-blue-400 to-blue-600'
     },
     { 
-      id: 'moon-oshin', 
-      label: 'MOON OSHIN PRO', 
+      id: 'moon-oshin',
+      label: 'MOON OSHIN PRO',
+      logo: '/white.png', 
       description: 'Professional Cataloging System • Authority Search • LOC/VIAF/Wikidata • ISBN Lookup',
       icon: Sparkles, 
       action: 'moon-oshin', 
@@ -369,8 +381,9 @@ export function Dashboard({ onNavigate, onLoadRecord }: DashboardProps) {
       iconBg: 'from-blue-400 to-teal-600'
     },
     { 
-      id: 'moon-faleh', 
-      label: 'MOON FALEH', 
+      id: 'moon-faleh',
+      label: 'MOON FALEH',
+      logo: '/white.png', 
       description: 'ULTIMATE SYSTEM • All Features Combined • Wizard + Ontology + Glass UI + Multi-Authority Search • Designed by Isaac Faleh',
       icon: Zap, 
       action: 'moon-faleh', 
@@ -727,8 +740,8 @@ export function Dashboard({ onNavigate, onLoadRecord }: DashboardProps) {
                 onClick={() => onNavigate?.('author-finder')}
                 className="liquid-glass-btn text-xs font-bold gap-1.5 cursor-pointer py-2 px-4"
               >
-                <Sparkles className="h-4 w-4 text-amber-500" />
-                <span>AI Author Finder</span>
+                <img src="/alqami-logo.png" alt="Alqami" className="h-4 w-auto object-contain" />
+                <span>Alqami Author Finder</span>
                 <ArrowRight className="h-3.5 w-3.5 text-slate-500" />
               </button>
 
@@ -924,11 +937,11 @@ export function Dashboard({ onNavigate, onLoadRecord }: DashboardProps) {
                       <div className="flex-1 flex items-center justify-center pt-8 pb-4">
                         <div className="relative">
                           <div className="absolute inset-0 bg-white/20 rounded-[32px] blur-2xl scale-150 opacity-0 group-hover:opacity-60 transition-all duration-700" />
-                          <div className="relative p-7 rounded-[28px] bg-white/20 backdrop-blur-md border border-white/40 shadow-2xl group-hover:scale-110 group-hover:rotate-2 transition-all duration-500">
+                          <div className="relative px-8 py-5 rounded-[28px] bg-white/20 backdrop-blur-md border border-white/40 shadow-2xl group-hover:scale-105 transition-all duration-500 min-w-[170px] min-h-[96px] flex items-center justify-center">
                             {action.logo ? (
-                              <img src={action.logo} alt={action.label} className="h-16 w-16 object-contain filter drop-shadow-2xl brightness-0 invert group-hover:scale-110 transition-transform duration-300" />
+                              <img src={action.logo} alt={action.label} className="h-16 w-auto max-w-[150px] object-contain drop-shadow-[0_8px_20px_rgba(0,0,0,0.35)] group-hover:scale-110 transition-transform duration-300" />
                             ) : (
-                              <Icon className="h-16 w-16 text-white drop-shadow-xl" />
+                              <Icon className="h-14 w-14 text-white drop-shadow-xl" />
                             )}
                           </div>
                         </div>
@@ -1056,8 +1069,12 @@ export function Dashboard({ onNavigate, onLoadRecord }: DashboardProps) {
                     {/* Content */}
                     <div className="relative z-10 flex flex-col items-center text-center space-y-4">
                       {/* Big Icon */}
-                      <div className={`p-6 rounded-3xl bg-gradient-to-br ${action.iconBg} shadow-2xl group-hover:shadow-3xl group-hover:scale-110 transition-all duration-300`}>
-                        <Icon className="h-12 w-12 text-white" />
+                      <div className={`p-5 rounded-3xl bg-gradient-to-br ${action.iconBg} shadow-2xl group-hover:shadow-3xl group-hover:scale-110 transition-all duration-300 flex items-center justify-center min-w-[100px] h-20`}>
+                        {action.logo ? (
+                          <img src={action.logo} alt={action.label} className="h-10 w-auto max-w-[90px] object-contain drop-shadow" />
+                        ) : (
+                          <Icon className="h-10 w-10 text-white" />
+                        )}
                       </div>
                       
                       {/* Text */}
@@ -1329,8 +1346,12 @@ export function Dashboard({ onNavigate, onLoadRecord }: DashboardProps) {
                     }}
                     type="button"
                   >
-                    <div className={`p-3 rounded-2xl bg-gradient-to-br ${action.iconBg} shadow-lg shrink-0`}>
-                      <Icon className="h-6 w-6 text-white" />
+                    <div className={`p-2.5 rounded-2xl bg-gradient-to-br ${action.iconBg} shadow-lg shrink-0 flex items-center justify-center w-14 h-12`}>
+                      {action.logo ? (
+                        <img src={action.logo} alt={action.label} className="h-7 w-auto max-w-[45px] object-contain drop-shadow" />
+                      ) : (
+                        <Icon className="h-6 w-6 text-white" />
+                      )}
                     </div>
 
                     <div className="flex-1 text-left min-w-0">

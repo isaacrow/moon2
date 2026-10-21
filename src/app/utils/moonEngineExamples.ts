@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Moon Engine Real BIBFRAME Examples
  * 
  * These are real-world BIBFRAME records for testing the Moon Engine

@@ -1,4 +1,4 @@
-/**
+﻿/**
  * BIBFRAME Field Examples
  * Demonstrates how to use the fully-linked BIBFRAME fields with LOC API integration
  */

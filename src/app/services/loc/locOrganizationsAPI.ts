@@ -1,4 +1,4 @@
-/**
+﻿/**
  * LOC Organizations API Service
  * API: https://id.loc.gov/vocabulary/organizations
  * Used for: Classification assigners, Cataloging sources (MARC 040, 050 $5, etc.)

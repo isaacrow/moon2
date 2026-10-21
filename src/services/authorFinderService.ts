@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Author Finder Service — High-Speed Web Search & AI Intelligence Engine
  *
  * Integrates:

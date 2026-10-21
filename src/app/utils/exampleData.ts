@@ -1,4 +1,4 @@
-// Example BIBFRAME records for testing and demonstration
+﻿// Example BIBFRAME records for testing and demonstration
 
 import { BIBFRAMEWork, BIBFRAMEInstance } from '../types/bibframe';
 

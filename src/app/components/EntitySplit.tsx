@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { EntityCluster, SplitOperation } from '../types/jcricket';
 import { useJCricket } from '../contexts/JCricketContext';
 import { projectId, publicAnonKey } from '../../../utils/supabase/info';

@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Sonic Import Handler
  * Handles importing JSON-LD with @graph resolution
  */

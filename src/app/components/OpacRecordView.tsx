@@ -1,4 +1,4 @@
-// BIBFRAME OPAC Viewer - Library Catalog Display
+﻿// BIBFRAME OPAC Viewer - Library Catalog Display
 import React, { useMemo } from 'react';
 import { Book, Globe, Users, Clock, MapPin, Layers, FileText, Tag, Hash } from 'lucide-react';
 

@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Sonic Validator
  * 
  * Ontology-aware validation based on BIBFRAME 3.0 specification

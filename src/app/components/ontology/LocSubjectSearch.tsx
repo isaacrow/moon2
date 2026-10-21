@@ -1,4 +1,4 @@
-/**
+﻿/**
  * LocSubjectSearch Component
  * 
  * Searches the Library of Congress Subject Headings (LCSH)

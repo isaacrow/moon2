@@ -1,4 +1,4 @@
-// ============================================================================
+﻿// ============================================================================
 // BIBFRAME2MARC XSLT ENGINE
 // Uses the ACTUAL Library of Congress bibframe2marc XSLT rules
 // https://github.com/lcnetdev/bibframe2marc (v3.0.0)

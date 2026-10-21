@@ -1,4 +1,4 @@
-/**
+﻿/**
  * MOON TESTING - RDF/JSON-LD Validation & Triple Store Testing Suite
  * 
  * Tests whether your output is:

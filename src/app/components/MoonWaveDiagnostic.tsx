@@ -1,4 +1,4 @@
-/**
+﻿/**
  * 🔧 MOON WAVE DIAGNOSTIC
  * Tests backend connectivity and shows EXACTLY what's working
  */

@@ -1,4 +1,4 @@
-/**
+﻿/**
  * BIBFRAME API Service
  * Full integration with Library of Congress BIBFRAME Linked Data Service
  * Provides API lookups for all BIBFRAME fields with URIs, labels, and controlled vocabularies

@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+﻿import React, { useState, useMemo } from 'react';
 import { Search, Book, Tag, FileText, Link as LinkIcon, ChevronRight, ChevronDown, Info, ExternalLink } from 'lucide-react';
 import { Input } from './ui/input';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';

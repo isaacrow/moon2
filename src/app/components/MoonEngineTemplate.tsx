@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Moon Engine Template - Ontology-Driven BIBFRAME Cataloging
  * 
  * This template is dynamically generated from the BIBFRAME ontology.

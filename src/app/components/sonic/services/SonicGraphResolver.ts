@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Sonic Graph Resolver
  * 
  * Resolves JSON-LD @graph structures back into Work and Instance entities

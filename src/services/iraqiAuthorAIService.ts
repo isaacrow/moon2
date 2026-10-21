@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Real Iraqi National & Academic Authority Service
  * 
  * Deterministic multi-source authority search across verified Iraqi cataloging registries:

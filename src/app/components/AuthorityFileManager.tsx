@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Authority File Manager Component
  * Manages AFIQA authority records for Arabic names
  */

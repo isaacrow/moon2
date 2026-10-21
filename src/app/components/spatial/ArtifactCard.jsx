@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+﻿import React, { useRef, useState } from 'react';
 import { Box, Eye, QrCode, RotateCw, Bookmark } from 'lucide-react';
 
 export default function ArtifactCard({ artifact, onSelect, onOpenAR, lang }) {

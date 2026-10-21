@@ -1,4 +1,4 @@
-/**
+﻿/**
  * BIBFRAME Ontology Core Service
  * Based on https://github.com/lcnetdev/bibframe-ontology
  * Official Library of Congress BIBFRAME 3.0.1 Ontology

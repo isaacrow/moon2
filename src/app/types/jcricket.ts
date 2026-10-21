@@ -1,4 +1,4 @@
-// JCricket Entity Management Type Definitions
+﻿// JCricket Entity Management Type Definitions
 
 import { BIBFRAMERecord } from './bibframe';
 

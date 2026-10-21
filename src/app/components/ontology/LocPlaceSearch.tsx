@@ -1,4 +1,4 @@
-/**
+﻿/**
  * LocPlaceSearch Component
  * 
  * Searches the Library of Congress Geographic Names

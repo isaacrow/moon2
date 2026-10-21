@@ -1,4 +1,4 @@
-/**
+﻿/**
  * BlueMoon AI Panel — Enterprise AI Engine integrated as a BlueMoon sub-tab
  * Inherits theme from BlueMoon (Dark Glass / Legacy Glass / Simple Classic)
  * Full AR/EN i18n, multi-source federated lookup, 5-phase AI

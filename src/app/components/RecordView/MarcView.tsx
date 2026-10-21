@@ -1,4 +1,4 @@
-// MARC View Component - Comprehensive BIBFRAME to MARC21 Converter
+﻿// MARC View Component - Comprehensive BIBFRAME to MARC21 Converter
 import type { RecordData } from './types';
 
 interface MarcViewProps {

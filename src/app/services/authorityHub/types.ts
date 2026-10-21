@@ -1,4 +1,4 @@
-// Unified Authority Types for Multi-Source Integration
+﻿// Unified Authority Types for Multi-Source Integration
 
 export interface UnifiedPerson {
   id: string;

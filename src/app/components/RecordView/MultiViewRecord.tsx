@@ -1,4 +1,4 @@
-// Multi-View Record Component - Marva-style Toggle
+﻿// Multi-View Record Component - Marva-style Toggle
 import { useState } from 'react';
 import { FileText, Network, Database, Code, Braces } from 'lucide-react';
 import type { ViewMode, RecordData } from './types';

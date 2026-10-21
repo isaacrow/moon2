@@ -1,4 +1,4 @@
-/**
+﻿/**
  * BLUE MOON — Premium Ontology-Driven BIBFRAME Linked Data Editor
  *
  * A production-grade, RDF-native cataloging platform that generates fully valid

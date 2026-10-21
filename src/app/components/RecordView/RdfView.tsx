@@ -1,4 +1,4 @@
-// RDF/Turtle View Component
+﻿// RDF/Turtle View Component
 import { useState } from 'react';
 import type { RecordData } from './types';
 

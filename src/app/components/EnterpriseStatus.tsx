@@ -1,4 +1,4 @@
-/**
+﻿/**
  * 🏛️ ENTERPRISE STATUS
  * Show all enterprise-grade features ready for institutional deployment
  */

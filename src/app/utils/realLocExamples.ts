@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Real Library of Congress Examples with Actual URIs
  * These are real bibliographic records with proper LOC authority URIs
  */

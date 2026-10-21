@@ -1,4 +1,4 @@
-/**
+﻿/**
  * 🧠 Real Working Multi-Provider AI Engine for BIBFRAME Cataloging
  * 
  * Supports:

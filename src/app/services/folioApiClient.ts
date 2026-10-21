@@ -1,4 +1,4 @@
-/**
+﻿/**
  * FOLIO API Client
  * Connects Moon to FOLIO platform for full cataloging capabilities
  * Based on FOLIO's Okapi gateway and mod-inventory modules
