@@ -20,6 +20,8 @@ import '../../styles/moon-space-theme.css';
 interface TopNavBarProps {
   onDashboard: () => void;
   onNewRecord: () => void;
+  onSpatialOpac?: () => void;
+  onManuscripts?: () => void;
   darkMode?: boolean;
   onToggleDarkMode?: () => void;
   /** Show a back button instead of dashboard button */
@@ -30,6 +32,8 @@ interface TopNavBarProps {
 export function TopNavBar({ 
   onDashboard, 
   onNewRecord, 
+  onSpatialOpac, 
+  onManuscripts, 
   darkMode: _externalDarkMode, 
   onToggleDarkMode: _externalToggle,
   showBack,
