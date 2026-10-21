@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moon - BIBFRAME Cataloging Editor</title>
+    <meta name="description" content="Professional BIBFRAME 3.0.1 cataloging editor with multi-institutional collaborative features" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100..1000&display=swap" rel="stylesheet">
+    <script type="module" crossorigin src="./assets/main-Bfda8yBA.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/index-Dc1NQMhI.js">
+    <link rel="stylesheet" crossorigin href="./assets/index-D27LOHmt.css">
+    <link rel="stylesheet" crossorigin href="./assets/main-MvkszPSc.css">
+  </head>
+  <body>
+    <!-- Liquid Glass & Chromatic Distortion SVG Filters -->
+    <svg style="position: absolute; width: 0; height: 0; pointer-events: none;" aria-hidden="true">
+      <defs>
+        <filter id="glass-distortion">
+          <feTurbulence type="fractalNoise" baseFrequency="0.02 0.04" numOctaves="3" result="noise" />
+          <feDisplacementMap in="SourceGraphic" in2="noise" scale="5" xChannelSelector="R" yChannelSelector="G" />
+        </filter>
+        <filter id="switcher">
+          <feTurbulence type="fractalNoise" baseFrequency="0.05 0.05" numOctaves="2" result="noise" />
+          <feDisplacementMap in="SourceGraphic" in2="noise" scale="3" xChannelSelector="R" yChannelSelector="B" />
+        </filter>
+      </defs>
+    </svg>
+    <div id="root"></div>
+    <script type="module" src="./js/model-viewer.min.js"></script>
+  </body>
+</html>

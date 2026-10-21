@@ -1,0 +1,1109 @@
+[
+  {
+    "id": "ALQ-MAP-001",
+    "slug": "babylonian-map-of-the-world",
+    "title": {
+      "ar": "خريطة بابل للعالم (إيماجو موندي)",
+      "en": "Babylonian Map of the World (Imago Mundi)"
+    },
+    "category": "iraq",
+    "categoryLabel": {
+      "ar": "تراث العراق القديم",
+      "en": "Ancient Iraq"
+    },
+    "period": {
+      "ar": "القرن السادس أو الخامس ق.م (بابل)",
+      "en": "6th–5th Century BCE (Babylon)"
+    },
+    "creator": {
+      "ar": "ناسخ كاهن بابلي (غير معروف)",
+      "en": "Unknown Babylonian Scribe",
+      "uri": "https://id.loc.gov/authorities/names/no2024babylonian"
+    },
+    "institution": {
+      "ar": "المتحف البريطاني (BM 92687) • مستودع علقمي الرقمي",
+      "en": "British Museum (BM 92687) • Alqami Repository"
+    },
+    "model": {
+      "glb": "./models/babylonian_map_of_the_world_tablet_-_imago_mundi.glb",
+      "poster": "./images/praha_front.jpg",
+      "scale": "1.2 1.2 1.2",
+      "cameraOrbit": "0deg 75deg 105%",
+      "fieldOfView": "30deg",
+      "hasAr": true,
+      "annotations": [
+        {
+          "position": "0.01 0.05 0.02",
+          "normal": "0 1 0",
+          "title": {
+            "ar": "مدينة بابل المركزية",
+            "en": "City of Babylon"
+          },
+          "text": {
+            "ar": "ممثلة بمستطيل في وسط الخريطة يخترقه نهر الفرات.",
+            "en": "Depicted as a central rectangle bisected by the Euphrates."
+          }
+        },
+        {
+          "position": "-0.04 0.02 0.01",
+          "normal": "0 1 0",
+          "title": {
+            "ar": "المحيط المالح (نهر المرارة)",
+            "en": "Salt Ocean (Bitter River)"
+          },
+          "text": {
+            "ar": "حلقة مائية دائرية تحيط بالعالم المعروف وتفصله عن الجزر الأسطورية.",
+            "en": "A ring of water encircling the known world with triangular mythical regions."
+          }
+        }
+      ]
+    },
+    "physical": {
+      "dimensions": "12.2 × 8.2 سم",
+      "material": {
+        "ar": "طين مفخور",
+        "en": "Clay"
+      },
+      "condition": {
+        "ar": "سليم جزئياً مع تآكل الأطراف",
+        "en": "Partially intact"
+      }
+    },
+    "bibframe": {
+      "workUri": "https://alqami.net/artifact/map/work",
+      "instanceUri": "https://alqami.net/artifact/map",
+      "itemUri": "https://britishmuseum.org/collection/object/Y_EA92687",
+      "classification": {
+        "lcc": "GA205 .B33",
+        "ddc": "912.35"
+      },
+      "genreForm": [
+        {
+          "uri": "http://id.loc.gov/authorities/genreForms/gf2011026387",
+          "label": "Cartographic materials"
+        },
+        {
+          "uri": "http://id.loc.gov/authorities/genreForms/gf2014026111",
+          "label": "Clay tablets"
+        }
+      ],
+      "subjects": [
+        {
+          "uri": "http://id.loc.gov/authorities/subjects/sh85020512",
+          "label": "Cartography -- History"
+        },
+        {
+          "uri": "http://id.loc.gov/authorities/subjects/sh85010756",
+          "label": "Babylonia -- Civilization"
+        }
+      ]
+    },
+    "backendRdfFile": "babylonian_map_of_the_world_tablet_-_imago_mundi.rdf",
+    "backendTtlFile": "babylonian_map_of_the_world_tablet_-_imago_mundi.ttl",
+    "rawBackendRdf": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<rdf:RDF xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"\n         xmlns:rdfs=\"http://www.w3.org/2000/01/rdf-schema#\"\n         xmlns:bf=\"http://id.loc.gov/ontologies/bibframe/\"\n         xmlns:schema=\"http://schema.org/\">\n  <bf:Instance rdf:about=\"https://alqami.net/artifact/map\">\n    <bf:title>\n      <bf:Title>\n        <bf:mainTitle xml:lang=\"ar\">خريطة بابل للعالم (إيماجو موندي)</bf:mainTitle>\n        <rdfs:label>Babylonian Map of the World (Imago Mundi)</rdfs:label>\n      </bf:Title>\n    </bf:title>\n    <bf:provisionActivity>\n      <bf:ProvisionActivity>\n        <bf:date>القرن السادس أو الخامس قبل الميلاد</bf:date>\n      </bf:ProvisionActivity>\n    </bf:provisionActivity>\n    <bf:extent>\n      <bf:Extent>\n        <rdfs:label xml:lang=\"ar\">12.2 × 8.2 سم</rdfs:label>\n      </bf:Extent>\n    </bf:extent>\n    <bf:material>\n      <rdfs:label xml:lang=\"ar\">طين</rdfs:label>\n      <rdfs:label xml:lang=\"en\">Clay</rdfs:label>\n    </bf:material>\n    <bf:contribution>\n      <bf:Contribution>\n        <bf:agent>\n          <bf:Agent>\n            <rdfs:label xml:lang=\"ar\">غير معروف</rdfs:label>\n          </bf:Agent>\n        </bf:agent>\n      </bf:Contribution>\n    </bf:contribution>\n    <bf:note>\n      <bf:Note>\n        <rdfs:label xml:lang=\"ar\">تعتبر من أقدم الخرائط المعروفة في العالم، تظهر بابل في المركز وتحيط بها الأهوار والمحيط \"نهر المرارة\".</rdfs:label>\n      </bf:Note>\n    </bf:note>\n  </bf:Instance>\n</rdf:RDF>",
+    "rawBackendTtl": "@prefix dc: <http://purl.org/dc/elements/1.1/> .\n@prefix dcterms: <http://purl.org/dc/terms/> .\n@prefix schema: <http://schema.org/> .\n@prefix ms: <http://example.org/manuscript/> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\n<https://alqami.net/artifact/map>\n    a schema:CreativeWork ;\n    dc:title \"خريطة بابل للعالم (إيماجو موندي)\"@ar ;\n    dc:title \"Babylonian Map of the World (Imago Mundi)\"@en ;\n    dc:creator \"غير معروف\"@ar ;\n    dc:date \"القرن السادس أو الخامس قبل الميلاد\" ;\n    schema:material \"طين\"@ar ;\n    schema:material \"Clay\"@en ;\n    ms:transcriptionArabic \"\"\"تعتبر من أقدم الخرائط المعروفة في العالم، تظهر بابل في المركز وتحيط بها الأهوار والمحيط \"نهر المرارة\".\"\"\"@ar ;\n    ms:translationEnglish \"\"\"Description loaded.\"\"\"@en ;\n    schema:extent \"12.2 × 8.2 سم\"@ar .\n",
+    "summary": {
+      "ar": "تعتبر من أقدم الخرائط المعروفة في العالم، تظهر بابل في المركز وتحيط بها الأهوار والمحيط 'نهر المرارة'. وثيقة كارتوغرافية فلكية نادرة من طين بلاد النهرين.",
+      "en": "The earliest known map of the world from ancient Mesopotamia. It represents Babylon as the central hub traversed by the Euphrates, encircled by the Bitter Ocean."
+    }
+  },
+  {
+    "id": "ALQ-SWD-002",
+    "slug": "zulfiqar-sword",
+    "title": {
+      "ar": "سيف ذو الفقار التاريخي",
+      "en": "Zulfiqar Sword Artifact"
+    },
+    "category": "ahlulbayt",
+    "categoryLabel": {
+      "ar": "تراث أهل البيت (ع)",
+      "en": "Ahl al-Bayt Heritage"
+    },
+    "period": {
+      "ar": "القرن الأول الهجري (العصر النبوي والعلوي)",
+      "en": "1st Century AH (Prophetic & Alid Era)"
+    },
+    "creator": {
+      "ar": "صناع السيوف الدمشقية التاريخية",
+      "en": "Damascene Armorer Mastercraft",
+      "uri": "https://alqami.net/agent/swordsmith"
+    },
+    "institution": {
+      "ar": "متحف الكفيل للنفائس والمخطوطات • العتبة العباسية المقدسة",
+      "en": "Al-Kafeel Museum • Al-Abbas Holy Shrine"
+    },
+    "model": {
+      "glb": "./models/Zulfiqar_Sword.glb",
+      "poster": "./images/alqami_artifact.jpg",
+      "scale": "0.85 0.85 0.85",
+      "cameraOrbit": "45deg 60deg 115%",
+      "fieldOfView": "35deg",
+      "hasAr": true,
+      "annotations": [
+        {
+          "position": "0.0 0.42 0.01",
+          "normal": "0 0 1",
+          "title": {
+            "ar": "الشفرة المزدوجة",
+            "en": "Bifurcated Blade"
+          },
+          "text": {
+            "ar": "الرأس المشقوق المميز الذي اشتهر به سيف الإمام علي (ع).",
+            "en": "Iconic bifurcated blade historically associated with Imam Ali (a.s.)."
+          }
+        }
+      ]
+    },
+    "physical": {
+      "dimensions": "98.5 × 14.2 × 4.8 سم",
+      "material": {
+        "ar": "فولاذ دمشقي، فضة، جلد",
+        "en": "Crucible Damascus Steel, Silver, Leather"
+      },
+      "condition": {
+        "ar": "حالة ممتازة ومصونة",
+        "en": "Mint condition"
+      }
+    },
+    "bibframe": {
+      "workUri": "https://alqami.net/museum/zulfiqar_sword/work",
+      "instanceUri": "https://alqami.net/museum/zulfiqar_sword",
+      "itemUri": "https://alkafeel.net/museum/item/zulfiqar-313",
+      "classification": {
+        "lcc": "U856 .I74 Z85",
+        "ddc": "739.72"
+      },
+      "genreForm": [
+        {
+          "uri": "http://id.loc.gov/authorities/genreForms/gf2014026190",
+          "label": "Weapons"
+        }
+      ],
+      "subjects": [
+        {
+          "uri": "http://id.loc.gov/authorities/subjects/sh85003507",
+          "label": "Ali ibn Abi Talib, Caliph, approximately 600-661"
+        },
+        {
+          "uri": "http://id.loc.gov/authorities/subjects/sh85131093",
+          "label": "Swords -- Islamic countries"
+        }
+      ]
+    },
+    "backendRdfFile": "Zulfiqar_Sword.ttl",
+    "backendTtlFile": "Zulfiqar_Sword.ttl",
+    "rawBackendRdf": "@prefix dc: <http://purl.org/dc/elements/1.1/> .\n@prefix schema: <http://schema.org/> .\n@prefix ms: <http://example.org/manuscript/> .\n\n<https://alqami.net/museum/zulfiqar_sword>\n    a schema:Manuscript ;\n    dc:title \"سيف ذو الفقار (Zulfiqar Sword)\"@ar ;\n    dc:title \"Zulfiqar Sword\"@en ;\n    dc:creator \"تراث إسلامي خالد\"@ar ;\n    dc:creator \"Islamic Heritage\"@en ;\n    dc:date \"صدر الإسلام / القرن الأول الهجري\" ;\n    schema:material \"فولاذ دمشقي، فضة، مقبض مزخرف\"@ar ;\n    schema:material \"Damascus Steel, Silver Inlay\"@en ;\n    schema:extent \"الطول: 98 سم\" ;\n    schema:publisher \"مجموعة المتحف التراثية\"@ar ;\n    ms:transcriptionArabic \"\"\"نموذج ثلاثي الأبعاد مجسم لسيف ذي الفقار الشهير، ذي النصلين المشقوقين، رمز الشجاعة والعدالة والفروسية الإسلامية للإمام علي بن أبي طالب (عليه السلام).\"\"\"@ar ;\n    ms:translationEnglish \"\"\"A 3D model of the legendary double-bladed sword 'Zulfiqar', the timeless symbol of bravery, justice, and chivalry associated with Imam Ali ibn Abi Talib (AS).\"\"\"@en .\n",
+    "rawBackendTtl": "@prefix dc: <http://purl.org/dc/elements/1.1/> .\n@prefix schema: <http://schema.org/> .\n@prefix ms: <http://example.org/manuscript/> .\n\n<https://alqami.net/museum/zulfiqar_sword>\n    a schema:Manuscript ;\n    dc:title \"سيف ذو الفقار (Zulfiqar Sword)\"@ar ;\n    dc:title \"Zulfiqar Sword\"@en ;\n    dc:creator \"تراث إسلامي خالد\"@ar ;\n    dc:creator \"Islamic Heritage\"@en ;\n    dc:date \"صدر الإسلام / القرن الأول الهجري\" ;\n    schema:material \"فولاذ دمشقي، فضة، مقبض مزخرف\"@ar ;\n    schema:material \"Damascus Steel, Silver Inlay\"@en ;\n    schema:extent \"الطول: 98 سم\" ;\n    schema:publisher \"مجموعة المتحف التراثية\"@ar ;\n    ms:transcriptionArabic \"\"\"نموذج ثلاثي الأبعاد مجسم لسيف ذي الفقار الشهير، ذي النصلين المشقوقين، رمز الشجاعة والعدالة والفروسية الإسلامية للإمام علي بن أبي طالب (عليه السلام).\"\"\"@ar ;\n    ms:translationEnglish \"\"\"A 3D model of the legendary double-bladed sword 'Zulfiqar', the timeless symbol of bravery, justice, and chivalry associated with Imam Ali ibn Abi Talib (AS).\"\"\"@en .\n",
+    "summary": {
+      "ar": "سيف ذو الفقار التاريخي رمز العدالة والشجاعة في التراث الإسلامي، اشتهر بنداء 'لا فتى إلا علي ولا سيف إلا ذو الفقار'.",
+      "en": "The historic Zulfiqar sword, emblem of valor in Islamic civilization, wielded by Imam Ali (a.s.)."
+    }
+  },
+  {
+    "id": "ALQ-MS-003",
+    "slug": "al-qabasat-mir-damad",
+    "title": {
+      "ar": "مخطوط القبسات — الميرداماد (1650 م)",
+      "en": "Al-Qabasat Manuscript — Mir Damad (1650 CE)"
+    },
+    "category": "manuscripts",
+    "categoryLabel": {
+      "ar": "المخطوطات والنوادر",
+      "en": "Rare Manuscripts"
+    },
+    "period": {
+      "ar": "1061 هـ / 1650 م (العصر الصفوي)",
+      "en": "1061 AH / 1650 CE"
+    },
+    "creator": {
+      "ar": "الميرداماد، محمد باقر بن محمد الحسيني الاسترآبادي (توفي 1041 هـ)",
+      "en": "Mir Damad (d. 1041 AH)",
+      "uri": "http://id.loc.gov/authorities/names/n85043844",
+      "role": "http://id.loc.gov/vocabulary/relators/aut"
+    },
+    "institution": {
+      "ar": "مكتبة مجلس الشورى (4662) • نظام مكتبات مون (Moon Woolf OPAC)",
+      "en": "Majlis Library (4662) • Moon Woolf OPAC"
+    },
+    "edition": {
+      "ar": "نسخة مخطوطة كاملة مجدولة ومذهبة",
+      "en": "Complete illuminated and gold-ruled manuscript codex"
+    },
+    "responsibilityStatement": {
+      "ar": "للميرداماد محمد باقر الحسيني الاسترآبادي.",
+      "en": "By Mir Damad Muhammad Baqir al-Husayni al-Astarabadi."
+    },
+    "model": {
+      "glb": "./models/model.glb",
+      "poster": "./images/manuscript.jpg",
+      "scale": "0.95 0.95 0.95",
+      "cameraOrbit": "25deg 70deg 110%",
+      "fieldOfView": "32deg",
+      "hasAr": true,
+      "annotations": [
+        {
+          "position": "0.0 0.12 0.05",
+          "normal": "0 0 1",
+          "title": {
+            "ar": "ديباجة المخطوط المذهبة (أوله)",
+            "en": "Illuminated Incipit"
+          },
+          "text": {
+            "ar": "الحمد لله الواحد الاحد الصمد المصمود مهيمن كل وجود وجاعل كل موجود...",
+            "en": "Opening lines in fine Nastaliq script."
+          }
+        },
+        {
+          "position": "0.05 0.02 -0.05",
+          "normal": "0 1 0",
+          "title": {
+            "ar": "خاتمة المخطوط (آخره)",
+            "en": "Explicit Colophon"
+          },
+          "text": {
+            "ar": "ولا تخلنا اللهم مع ذلك من عواطف رأفتك وسوابغ رحمتك ولطايف كفايتك...",
+            "en": "Concluding supplication and prayer."
+          }
+        }
+      ]
+    },
+    "physical": {
+      "dimensions": "ورق، حبر اسود، خط النستعليق (18 سطرًا في الصفحة)",
+      "extent": "344 ورقة (18 سطرًا)",
+      "material": {
+        "ar": "ورق، حبر اسود، خط النستعليق، جلد احمر",
+        "en": "Paper, black ink, Nastaliq script, red leather"
+      },
+      "condition": {
+        "ar": "سليمة ونادرة، مجدولة ومذهبة والغلاف جلد أحمر",
+        "en": "Intact, gold-ruled margins, red leather binding"
+      },
+      "binding": "الغلاف : جلد، احمر.",
+      "decoration": "النسخة مجدولة والورقة الاولى عليها زخرفة وتذهيب دقيق.",
+      "seals": "في اولها مجموعة اختام تملكية تاريخية.",
+      "catchwords": "مرتبة بنظام التعقيبات في أسفل الصفحات."
+    },
+    "production": {
+      "place": "كربلاء المقدسة / طهران",
+      "placeUri": "https://moonlib.org/resource/place/85k16m",
+      "scribe": "خطاط غير مصرح (خط النستعليق)",
+      "scribeUri": "https://moonlib.org/resource/agent/4cc5xf",
+      "date": "1650 [1061 هـ.]",
+      "series": "تراث الحكمة والفلسفة الاسلامية ؛ القسم الفلسفي 14"
+    },
+    "notes": {
+      "incipit": "الحمد لله الواحد الاحد الصمد المصمود مهيمن كل وجود وجاعل كل موجود، والصلاة على من اقتفاه من زمرة الانبياء، واصطفاه من رسل الرسل فابتعثه بالذكر...",
+      "explicit": "ولا تخلنا اللهم مع ذلك من عواطف رأفتك وسوابغ رحمتك ولطايف كفايتك وحوط عنايتك وحسن كلائتك بجودك ومنك وفضلك وطولك يا أرحم الراحمين.",
+      "dhariahCitation": "الذريعة الى تصانيف الشيعة، الجزء 17، الصفحه 32، الرقم 183.",
+      "holdingNote": "مكتبة مجلس الشورى : 4662، طهران، ايران (ir)",
+      "systemIdentifiers": [
+        "b125923",
+        "(Sirsi) a209527"
+      ]
+    },
+    "adminMetadata": {
+      "adminUri": "https://moonlib.org/resource/admin/mv2pnk8uy76l4",
+      "source": "Moon Library System — Blue Moon",
+      "generator": "Blue Moon v1.0 (Monograph (Complete))",
+      "creationDate": "2026-10-10",
+      "descriptionConventions": "RDA (Resource Description and Access)",
+      "catalogingLanguage": "eng",
+      "resourceLanguage": "ara"
+    },
+    "bibframe": {
+      "workUri": "http://example.org/work/1789642441889",
+      "expressionUri": "https://moonlib.org/resource/expression/mv2pnk8uy76l4-1",
+      "instanceUri": "http://example.org/instance/1789642441889",
+      "itemUri": "https://moonlib.org/resource/item/mv2pnk8uy76l4-1",
+      "classification": {
+        "lcc": "B753.D363",
+        "ddc": "181.07"
+      },
+      "genreForm": [
+        {
+          "uri": "http://id.loc.gov/authorities/genreForms/gf2014026139",
+          "label": "مخطوطات (Manuscripts)"
+        }
+      ],
+      "subjects": [
+        {
+          "uri": "http://id.loc.gov/authorities/subjects/sh85068499",
+          "label": "الفلسفة الاسلامية الشيعية (Islamic Shia Philosophy)"
+        },
+        {
+          "uri": "http://id.loc.gov/authorities/genreForms/gf2014026139",
+          "label": "مخطوطات اسلامية (Islamic manuscripts)"
+        }
+      ]
+    },
+    "backendRdfFile": "mv2pnk8uy76l4.rdf",
+    "backendTtlFile": "alqabasat.ttl",
+    "rawBackendRdf": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<rdf:RDF\n  xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"\n  xmlns:rdfs=\"http://www.w3.org/2000/01/rdf-schema#\"\n  xmlns:bf=\"http://id.loc.gov/ontologies/bibframe/\"\n  xmlns:bflc=\"http://id.loc.gov/ontologies/bflc/\"\n  xmlns:madsrdf=\"http://www.loc.gov/mads/rdf/v1#\"\n  xmlns:xsd=\"http://www.w3.org/2001/XMLSchema#\">\n\n  <bf:Work rdf:about=\"http://example.org/work/1789642441889\">\n    <bf:hasInstance rdf:resource=\"http://example.org/instance/1789642441889\"/>\n    <bf:title>\n      <bf:Title>\n        <bf:mainTitle>القبسات</bf:mainTitle>\n      </bf:Title>\n    </bf:title>\n    <bf:contribution>\n      <bf:bf:Contribution,bflc:PrimaryContribution>\n        <bf:agent>\n          <bf:Person rdf:about=\"http://id.loc.gov/authorities/names/n85043844\">\n            <rdfs:label>الميرداماد، محمد باقر بن محمد، توفي 1041 هجري</rdfs:label>\n          </bf:Person>\n        </bf:agent>\n        <bf:role rdf:resource=\"http://id.loc.gov/vocabulary/relators/aut\"/>\n      </bf:bf:Contribution,bflc:PrimaryContribution>\n    </bf:contribution>\n    <bf:language rdf:resource=\"http://id.loc.gov/vocabulary/languages/ara\"/>\n    <bf:subject>\n      <bf:Topic rdf:about=\"http://id.loc.gov/authorities/subjects/sh85068499\">\n        <rdfs:label>الفلسفة الاسلامية الشيعية</rdfs:label>\n      </bf:Topic>\n    </bf:subject>\n    <bf:subject>\n      <bf:Topic rdf:about=\"http://id.loc.gov/authorities/genreForms/gf2014026139\">\n        <rdfs:label>مخطوطات اسلامية</rdfs:label>\n      </bf:Topic>\n    </bf:subject>\n    <bf:genreForm>\n      <bf:GenreForm rdf:about=\"http://id.loc.gov/authorities/genreForms/gf2014026139\">\n        <rdfs:label>مخطوطات</rdfs:label>\n      </bf:GenreForm>\n    </bf:genreForm>\n    <bf:classification>\n      <bf:ClassificationLcc>\n        <bf:classificationPortion>B753.D363</bf:classificationPortion>\n      </bf:ClassificationLcc>\n    </bf:classification>\n    <bf:summary>\n      <bf:Summary>\n        <rdfs:label>كتاب فلسفي كلامي للميرداماد يناقش حدوث العالم وقدمه ومسألة الدهر والزمان والمصادر الوجودية وفق الحكمة المتعالية والمشائية.</rdfs:label>\n      </bf:Summary>\n    </bf:summary>\n    <bf:content rdf:resource=\"http://id.loc.gov/vocabulary/contentTypes/txt\"/>\n    <bf:originDate rdf:datatype=\"xsd:gYear\">1650 [1061 هـ.]</bf:originDate>\n    <bf:note>\n      <bf:Note>\n        <rdfs:label>أوله : الحمد لله الواحد الاحد الصمد المصمود مهيمن كل وجود وجاعل كل موجود، والصلاة على من اقتفاه من زمرة الانبياء، واصطفاه من رسل الرسل فابتعثه بالذكر...</rdfs:label>\n      </bf:Note>\n    </bf:note>\n    <bf:note>\n      <bf:Note>\n        <rdfs:label>آخره : ولا تخلنا اللهم مع ذلك من عواطف رأفتك وسوابغ رحمتك ولطايف كفايتك وحوط عنايتك وحسن كلائتك بجودك ومنك وفضلك وطولك يا أرحم الراحمين.</rdfs:label>\n      </bf:Note>\n    </bf:note>\n    <bf:note>\n      <bf:Note>\n        <rdfs:label>الذريعة الى تصانيف الشيعة، الجزء 17، الصفحه 32، الرقم 183.</rdfs:label>\n      </bf:Note>\n    </bf:note>\n    <bf:note>\n      <bf:Note>\n        <rdfs:label>مكتبة مجلس الشورى : 4662، طهران، ايران (ir)</rdfs:label>\n      </bf:Note>\n    </bf:note>\n    <bf:adminMetadata rdf:resource=\"https://moonlib.org/resource/admin/mv2pnk8uy76l4\"/>\n  </bf:Work>\n\n  <bf:Expression rdf:about=\"https://moonlib.org/resource/expression/mv2pnk8uy76l4-1\">\n    <bf:expressionOf rdf:resource=\"http://example.org/work/1789642441889\"/>\n    <bf:hasInstance rdf:resource=\"http://example.org/instance/1789642441889\"/>\n  </bf:Expression>\n\n  <bf:Instance rdf:about=\"http://example.org/instance/1789642441889\">\n    <bf:instanceOf rdf:resource=\"https://moonlib.org/resource/expression/mv2pnk8uy76l4-1\"/>\n    <bf:hasItem rdf:resource=\"https://moonlib.org/resource/item/mv2pnk8uy76l4-1\"/>\n    <bf:title>\n      <bf:Title>\n        <bf:mainTitle>القبسات</bf:mainTitle>\n      </bf:Title>\n    </bf:title>\n    <bf:editionStatement>نسخة مخطوطة كاملة مجدولة ومذهبة</bf:editionStatement>\n    <bf:responsibilityStatement>للميرداماد محمد باقر الحسيني الاسترآبادي.</bf:responsibilityStatement>\n    <bf:identifiedBy>\n      <bf:Local>\n        <rdf:value>b125923</rdf:value>\n      </bf:Local>\n    </bf:identifiedBy>\n    <bf:identifiedBy>\n      <bf:Identifier>\n        <rdf:value>(Sirsi) a209527</rdf:value>\n      </bf:Identifier>\n    </bf:identifiedBy>\n    <bf:provisionActivity>\n      <bf:Production>\n        <bf:agent>\n          <bf:Agent rdf:about=\"https://moonlib.org/resource/agent/4cc5xf\">\n            <rdfs:label>خطاط غير مصرح (خط النستعليق)</rdfs:label>\n          </bf:Agent>\n        </bf:agent>\n        <bf:place>\n          <bf:Place rdf:about=\"https://moonlib.org/resource/place/85k16m\">\n            <rdfs:label>كربلاء المقدسة / طهران</rdfs:label>\n          </bf:Place>\n        </bf:place>\n        <bf:date rdf:datatype=\"xsd:gYear\">1650</bf:date>\n      </bf:Production>\n    </bf:provisionActivity>\n    <bf:extent>\n      <bf:Extent>\n        <rdfs:label>344 ورقة (18 سطرًا)</rdfs:label>\n      </bf:Extent>\n    </bf:extent>\n    <bf:dimensions>ورق، حبر اسود، خط النستعليق (18 سطرًا في الصفحة)</bf:dimensions>\n    <bf:carrier rdf:resource=\"http://id.loc.gov/vocabulary/carriers/ck\"/>\n    <bf:media rdf:resource=\"http://id.loc.gov/vocabulary/mediaTypes/c\"/>\n    <bf:issuance rdf:resource=\"http://id.loc.gov/vocabulary/issuance/مخطوط وحيد / أحادي (Single unit)\"/>\n    <bf:seriesStatement>تراث الحكمة والفلسفة الاسلامية ؛ القسم الفلسفي 14</bf:seriesStatement>\n    <bf:copyrightDate rdf:datatype=\"xsd:gYear\">1650</bf:copyrightDate>\n    <bf:note>\n      <bf:Note>\n        <rdfs:label>مرتبة بنظام التعقيبات.</rdfs:label>\n      </bf:Note>\n    </bf:note>\n    <bf:note>\n      <bf:Note>\n        <rdfs:label>في اولها مجموعة اختام.</rdfs:label>\n      </bf:Note>\n    </bf:note>\n    <bf:note>\n      <bf:Note>\n        <rdfs:label>النسخة مجدولة والورقة الاولى عليها زخرفة.</rdfs:label>\n      </bf:Note>\n    </bf:note>\n    <bf:note>\n      <bf:Note>\n        <rdfs:label>الغلاف : جلد، احمر.</rdfs:label>\n      </bf:Note>\n    </bf:note>\n    <bf:note>\n      <bf:Note>\n        <rdfs:label>مكتبة مجلس الشورى : 4662، طهران، ايران (ir)</rdfs:label>\n      </bf:Note>\n    </bf:note>\n  </bf:Instance>\n\n  <bf:Item rdf:about=\"https://moonlib.org/resource/item/mv2pnk8uy76l4-1\">\n    <bf:itemOf rdf:resource=\"http://example.org/instance/1789642441889\"/>\n  </bf:Item>\n\n  <bf:AdminMetadata rdf:about=\"https://moonlib.org/resource/admin/mv2pnk8uy76l4\">\n    <bf:creationDate rdf:datatype=\"xsd:date\">2026-10-10</bf:creationDate>\n    <bf:changeDate rdf:datatype=\"xsd:date\">2026-10-10</bf:changeDate>\n    <bf:descriptionConventions rdf:resource=\"http://id.loc.gov/vocabulary/descriptionConventions/rda\"/>\n    <bf:descriptionLanguage rdf:resource=\"http://id.loc.gov/vocabulary/languages/eng\"/>\n    <bf:source>\n      <bf:source rdf:about=\"https://moonlib.org\">\n        <rdfs:label>Moon Library System — Blue Moon</rdfs:label>\n      </bf:source>\n    </bf:source>\n    <bf:generationProcess>\n      <bf:GenerationProcess>\n        <rdfs:label>Blue Moon v1.0 (Monograph (Complete))</rdfs:label>\n      </bf:GenerationProcess>\n    </bf:generationProcess>\n  </bf:AdminMetadata>\n\n</rdf:RDF>\n",
+    "rawBackendTtl": "@prefix dc: <http://purl.org/dc/elements/1.1/> .\n@prefix dcterms: <http://purl.org/dc/terms/> .\n@prefix schema: <http://schema.org/> .\n@prefix ms: <https://w3id.org/manuscript-ar/ontology#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix bf: <http://id.loc.gov/ontologies/bibframe/> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n<http://example.org/instance/1789642441889>\n    a schema:Manuscript, <http://www.cidoc-crm.org/cidoc-crm/E22_Human-Made_Object> ;\n    dc:title \"القبسات\"@ar, \"Al-Qabasat (Kitāb al-Qabasāt)\"@en ;\n    dc:creator \"الميرداماد، محمد باقر بن محمد الحسيني الاسترآبادي (توفي 1041 هـ)\"@ar ;\n    dc:date \"1650 [1061 هـ.]\" ;\n    dc:format \"مخطوط وحيد / أحادي (Single unit)\"@ar ;\n    dc:identifier \"b125923 / (Sirsi) a209527\" ;\n    schema:extent \"344 ورقة (18 سطرًا في الصفحة)\"@ar ;\n    schema:material \"ورق، حبر اسود، خط النستعليق، جلد احمر\"@ar ;\n    schema:publisher \"مكتبة مجلس الشورى : 4662، طهران، ايران (ir) • Moon Library System\"@ar ;\n    ms:transcriptionArabic \"كتاب فلسفي كلامي للميرداماد يناقش حدوث العالم وقدمه ومسألة الدهر والزمان والمصادر الوجودية وفق الحكمة المتعالية والمشائية. أوله: الحمد لله الواحد الاحد الصمد المصمود مهيمن كل وجود وجاعل كل موجود... آخره: ولا تخلنا اللهم مع ذلك من عواطف رأفتك وسوابغ رحمتك ولطايف كفايتك وحوط عنايتك وحسن كلائتك بجودك ومنك وفضلك وطولك يا أرحم الراحمين. النسخة مجدولة ومذهبة والغلاف جلد أحمر.\"@ar ;\n    ms:translationEnglish \"Philosophical and theological masterpiece by Mir Damad discussing the origination and eternity of the cosmos, time and eternal duration (Dahr). Single illuminated manuscript codex held at Majlis Library (4662).\"@en .\n",
+    "summary": {
+      "ar": "كتاب فلسفي كلامي للميرداماد يناقش حدوث العالم وقدمه ومسألة الدهر والزمان والمصادر الوجودية وفق الحكمة المتعالية والمشائية. أوله: 'الحمد لله الواحد الاحد الصمد المصمود...' وآخره: 'ولا تخلنا اللهم مع ذلك من عواطف رأفتك...'. النسخة مجدولة ومذهبة وغلافها جلد أحمر مرتبة بنظام التعقيبات.",
+      "en": "Philosophical and theological masterpiece by Mir Damad discussing the origination and eternity of the cosmos, time and eternal duration (Dahr). Single illuminated manuscript codex held at Majlis Library (4662), bound in red leather."
+    }
+  },
+  {
+    "id": "ALQ-MSS-006",
+    "slug": "nahj-al-balagha",
+    "title": {
+      "ar": "مخطوط نهج البلاغة — الشريف الرضي (1022 هـ)",
+      "en": "Nahj al-Balagha Manuscript — Al-Sharif al-Radi (1613 CE)"
+    },
+    "category": "manuscripts",
+    "categoryLabel": {
+      "ar": "المخطوطات والنوادر",
+      "en": "Manuscripts & Rare Books"
+    },
+    "period": {
+      "ar": "1022 هـ / 1613 م (العصر الصفوي)",
+      "en": "1022 AH / 1613 CE (Safavid Era)"
+    },
+    "creator": {
+      "ar": "الشريف الرضي (ت 406 هـ) • الناسخ: شمس الدين علي الشيرازي الهراس",
+      "en": "Al-Sharif al-Radi (d. 406 AH) • Scribe: Shams al-Din Ali al-Shirazi al-Harras",
+      "uri": "https://alqami.net/agent/al-sharif-al-radi"
+    },
+    "institution": {
+      "ar": "مكتبة العتبة الرضوية المقدسة (1861) • مستودع علقمي الرقمي",
+      "en": "Central Library of Astan Quds Razavi (1861) • Alqami Repository"
+    },
+    "edition": {
+      "ar": "نسخة نادرة مجدولة ومذهبة بالكامل أولها لوحة فنية بديعة",
+      "en": "Rare fully illuminated and gold-ruled codex with decorative incipit"
+    },
+    "responsibilityStatement": {
+      "ar": "جمعه الشريف الرضي محمد بن الحسين الموسوي، نسخه شمس الدين علي الشيرازي الهراس.",
+      "en": "Compiled by Al-Sharif al-Radi, transcribed by Shams al-Din Ali al-Shirazi."
+    },
+    "model": {
+      "glb": "./models/nahj_al_balagha.glb",
+      "poster": "./images/manuscript.jpg",
+      "scale": "1.0 1.0 1.0",
+      "cameraOrbit": "25deg 70deg 110%",
+      "fieldOfView": "32deg",
+      "hasAr": true,
+      "annotations": [
+        {
+          "position": "0.0 0.12 0.05",
+          "normal": "0 0 1",
+          "title": {
+            "ar": "اللوحة الاستفتاحية المذهبة (أول النسخة)",
+            "en": "Illuminated Frontispiece"
+          },
+          "text": {
+            "ar": "بسمله اما بعد حمد الله الذي جعل الحمد ثمناً لنعمائه ومعاذاً من بلائه ووسيلاً الى جنانه...",
+            "en": "Opening invocation and praise in elegant Naskh script."
+          }
+        },
+        {
+          "position": "0.05 0.02 -0.05",
+          "normal": "0 1 0",
+          "title": {
+            "ar": "خاتمة الناسخ والتقييد (آخر النسخة)",
+            "en": "Colophon & Scribe Note"
+          },
+          "text": {
+            "ar": "الينا بعد الشذوذ وما توفيقنا.. شمس الدين علي الشيرازي الهراس غفر له (سنة 1022 هـ).",
+            "en": "Scribe colophon dated 1022 AH."
+          }
+        }
+      ]
+    },
+    "physical": {
+      "dimensions": "ورق مجدول، مذهب، خط النسخ، عناوين بالمداد الأحمر (477 ورقة)",
+      "extent": "477 ورقة",
+      "material": {
+        "ar": "ورق مجدول، مذهب، حبر أسود، مداد أحمر، خط النسخ",
+        "en": "Illuminated gold-ruled paper, black ink, red ink, Naskh script"
+      },
+      "condition": {
+        "ar": "نادرة جداً، مجدولة ومذهبة، عليها آثار رطوبة تاريخية مع حفظ كامل النصوص",
+        "en": "Extremely rare, illuminated, historic moisture marks with full text integrity"
+      },
+      "binding": "الغلاف : تجليد إسلامي أصيل مزخرف ومحكم.",
+      "decoration": "النسخة مجدولة بالذهب، وأولها لوحة فنية مذهبة بديعة، وعناوين الفصول بالمداد الأحمر.",
+      "seals": "تحتوي على قيود تملكية وأختام مكتبة العتبة الرضوية المقدسة برقم 1861.",
+      "catchwords": "مرتبة بنظام التعقيبات لضمان تسلسل الأوراق."
+    },
+    "production": {
+      "place": "مشهد المقدسة / إيران",
+      "placeUri": "https://alqami.net/resource/place/mashhad",
+      "scribe": "شمس الدين علي الشيرازي الهراس (1022 هـ)",
+      "scribeUri": "https://alqami.net/resource/agent/al-shirazi",
+      "date": "1022 هـ / 1613 م",
+      "series": "تراث أهل البيت (ع) والحديث النبوي الشريف ؛ نوادر المخطوطات الرضوية"
+    },
+    "notes": {
+      "incipit": "بسمله اما بعد حمد الله الذي جعل الحمد ثمناً لنعمائه ومعاذاً من بلائه ووسيلاً الى جنانه وسبباً لزيادة احسانه والصلوة على رسوله..",
+      "explicit": "الينا بعد الشذوذ وما توفيقنا.. شمس الدين علي الشيرازي الهراس غفرله.",
+      "dhariahCitation": "الذريعة إلى تصانيف الشيعة، الجزء 24، نهج البلاغة وشروحه ومخطوطاته.",
+      "holdingNote": "مكتبة العتبة الرضوية المقدسة، مشهد، إيران، نسخة رقم 1861.",
+      "systemIdentifiers": [
+        "MS-1861-NAHJ",
+        "ART-006"
+      ]
+    },
+    "adminMetadata": {
+      "adminUri": "https://alqami.net/admin/nahj_al_balagha",
+      "source": "مكتبة العتبة الرضوية المقدسة • مستودع علقمي",
+      "generator": "Alqami Linked Data Cataloging Engine v2.0",
+      "creationDate": "2026-10-13",
+      "descriptionConventions": "RDA / BIBFRAME 2.0",
+      "catalogingLanguage": "ara",
+      "resourceLanguage": "ara"
+    },
+    "bibframe": {
+      "workUri": "https://alqami.net/work/nahj_al_balagha",
+      "expressionUri": "https://alqami.net/expression/nahj_al_balagha_1022",
+      "instanceUri": "https://alqami.net/instance/nahj_al_balagha",
+      "itemUri": "https://alqami.net/item/nahj_al_balagha_ms1861",
+      "classification": {
+        "lcc": "BP193.1.A2 A4 1613",
+        "ddc": "297.124"
+      },
+      "genreForm": [
+        {
+          "uri": "http://id.loc.gov/authorities/genreForms/gf2014026139",
+          "label": "مخطوطات إسلامية (Manuscripts)"
+        }
+      ],
+      "subjects": [
+        {
+          "uri": "http://id.loc.gov/authorities/subjects/sh85068499",
+          "label": "أهل البيت (ع) والحديث النبوي (Ahl al-Bayt)"
+        },
+        {
+          "uri": "http://id.loc.gov/authorities/subjects/sh85068470",
+          "label": "خطب ومواعظ وبلاغة (Sermons & Islamic Eloquence)"
+        }
+      ]
+    },
+    "backendRdfFile": "nahj_al_balagha.ttl",
+    "backendTtlFile": "nahj_al_balagha.ttl",
+    "rawBackendRdf": "@prefix dc: <http://purl.org/dc/elements/1.1/> .\n@prefix dcterms: <http://purl.org/dc/terms/> .\n@prefix schema: <http://schema.org/> .\n@prefix ms: <https://w3id.org/manuscript-ar/ontology#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix bf: <http://id.loc.gov/ontologies/bibframe/> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n<https://alqami.net/manuscript/nahj_al_balagha>\n    a schema:Manuscript, <http://www.cidoc-crm.org/cidoc-crm/E22_Human-Made_Object> ;\n    dc:title \"نهج البلاغة\"@ar, \"Nahj al-Balagha (Peak of Eloquence)\"@en ;\n    dc:creator \"الشريف الرضي، محمد بن حسين (ت 406 هـ)\"@ar, \"Al-Sharif al-Radi (d. 406 AH)\"@en ;\n    dc:contributor \"الناسخ: شمس الدين علي الشيرازي الهراس (1022 هـ)\"@ar ;\n    dc:subject \"حديث، خطب ومواعظ، بلاغة وأدب إسلامي\"@ar ;\n    dc:date \"1022 هـ / 1613 م\" ;\n    dc:identifier \"نسخة رقم 1861\" ;\n    dc:language \"ara\" ;\n    schema:extent \"477 ورقة\"@ar ;\n    schema:material \"ورق مجدول، مذهب، خط النسخ، عناوين بالمداد الأحمر\"@ar ;\n    schema:publisher \"مكتبة العتبة الرضوية المقدسة في مشهد - إيران\"@ar, \"Central Library of Astan Quds Razavi, Mashhad\"@en ;\n    ms:transcriptionArabic \"\"\"أول النسخة: بسمله اما بعد حمد الله الذي جعل الحمد ثمناً لنعمائه ومعاذاً من بلائه و وسيلاً الى جنانه وسبباً لزيادة احسانه والصلوة على رسوله..\nآخر النسخة: الينا بعد الشذوذ و ما توفيقنا.. شمس الدين علي الشيرازي الهراس غفرله.\nالوصف: مجدولة، مذهبة، أولها لوحة فنية، كتبت رؤوس المطالب والعناوين بالمداد الأحمر، عليها آثار رطوبة تاريخية وقيمتها التراثية نادرة.\"\"\"@ar ;\n    ms:translationEnglish \"\"\"Nahj al-Balagha (Peak of Eloquence), compiled by al-Sharif al-Radi (d. 406 AH). Scribe: Shams al-Din Ali al-Shirazi al-Harras, copied in 1022 AH. Preserved at the Central Library of Astan Quds Razavi in Mashhad (Copy No. 1861). 477 folios in Naskh script, illuminated with gold rulings, chapter titles in red ink.\"\"\"@en .\n",
+    "rawBackendTtl": "@prefix dc: <http://purl.org/dc/elements/1.1/> .\n@prefix dcterms: <http://purl.org/dc/terms/> .\n@prefix schema: <http://schema.org/> .\n@prefix ms: <https://w3id.org/manuscript-ar/ontology#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix bf: <http://id.loc.gov/ontologies/bibframe/> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n<https://alqami.net/manuscript/nahj_al_balagha>\n    a schema:Manuscript, <http://www.cidoc-crm.org/cidoc-crm/E22_Human-Made_Object> ;\n    dc:title \"نهج البلاغة\"@ar, \"Nahj al-Balagha (Peak of Eloquence)\"@en ;\n    dc:creator \"الشريف الرضي، محمد بن حسين (ت 406 هـ)\"@ar, \"Al-Sharif al-Radi (d. 406 AH)\"@en ;\n    dc:contributor \"الناسخ: شمس الدين علي الشيرازي الهراس (1022 هـ)\"@ar ;\n    dc:subject \"حديث، خطب ومواعظ، بلاغة وأدب إسلامي\"@ar ;\n    dc:date \"1022 هـ / 1613 م\" ;\n    dc:identifier \"نسخة رقم 1861\" ;\n    dc:language \"ara\" ;\n    schema:extent \"477 ورقة\"@ar ;\n    schema:material \"ورق مجدول، مذهب، خط النسخ، عناوين بالمداد الأحمر\"@ar ;\n    schema:publisher \"مكتبة العتبة الرضوية المقدسة في مشهد - إيران\"@ar, \"Central Library of Astan Quds Razavi, Mashhad\"@en ;\n    ms:transcriptionArabic \"\"\"أول النسخة: بسمله اما بعد حمد الله الذي جعل الحمد ثمناً لنعمائه ومعاذاً من بلائه و وسيلاً الى جنانه وسبباً لزيادة احسانه والصلوة على رسوله..\nآخر النسخة: الينا بعد الشذوذ و ما توفيقنا.. شمس الدين علي الشيرازي الهراس غفرله.\nالوصف: مجدولة، مذهبة، أولها لوحة فنية، كتبت رؤوس المطالب والعناوين بالمداد الأحمر، عليها آثار رطوبة تاريخية وقيمتها التراثية نادرة.\"\"\"@ar ;\n    ms:translationEnglish \"\"\"Nahj al-Balagha (Peak of Eloquence), compiled by al-Sharif al-Radi (d. 406 AH). Scribe: Shams al-Din Ali al-Shirazi al-Harras, copied in 1022 AH. Preserved at the Central Library of Astan Quds Razavi in Mashhad (Copy No. 1861). 477 folios in Naskh script, illuminated with gold rulings, chapter titles in red ink.\"\"\"@en .\n",
+    "summary": {
+      "ar": "نسخة مجدولة ومذهبة نادرة من كتاب نهج البلاغة للشريف الرضي بخط شمس الدين علي الشيرازي الهراس (1022 هـ / 1613 م)، أولها لوحة استفتاحية فنية بديعة، محفوظة في مكتبة العتبة الرضوية المقدسة برقم 1861 في 477 ورقة.",
+      "en": "Rare fully illuminated and gold-ruled manuscript of Nahj al-Balagha (Peak of Eloquence), compiled by al-Sharif al-Radi. Transcribed in Naskh script by Shams al-Din Ali al-Shirazi al-Harras in 1022 AH (1613 CE). 477 folios held at Astan Quds Razavi Library (MS 1861)."
+    }
+  },
+  {
+    "id": "ALQ-HLM-004",
+    "slug": "old-islamic-helmet",
+    "title": {
+      "ar": "خوذة إسلامية قديمة (خوذة حربية)",
+      "en": "Old Islamic Helmet (Khula Khud)"
+    },
+    "category": "islamic",
+    "categoryLabel": {
+      "ar": "التراث الإسلامي",
+      "en": "Islamic Heritage"
+    },
+    "period": {
+      "ar": "القرون الوسطى الإسلامية",
+      "en": "Medieval Islamic Period"
+    },
+    "creator": {
+      "ar": "صانع دروع إسلامي غير معروف",
+      "en": "Unknown Islamic Armorer",
+      "uri": "https://alqami.net/agent/armorer"
+    },
+    "institution": {
+      "ar": "متحف الفن الإسلامي • المستودع الرقمي علقمي",
+      "en": "Museum of Islamic Art • Alqami Spatial Vault"
+    },
+    "model": {
+      "glb": "./models/Old_Islamic_Helmet.glb",
+      "poster": "./images/praha_side2.jpg",
+      "scale": "0.75 0.75 0.75",
+      "cameraOrbit": "-30deg 70deg 110%",
+      "fieldOfView": "30deg",
+      "hasAr": true,
+      "annotations": [
+        {
+          "position": "0.0 0.18 0.0",
+          "normal": "0 1 0",
+          "title": {
+            "ar": "السنان العلوي والنقوش",
+            "en": "Top Spike & Engravings"
+          },
+          "text": {
+            "ar": "نقوش هندسية وكتابات لحماية الفارس في المعركة.",
+            "en": "Protective inscriptions and calligraphic panels."
+          }
+        }
+      ]
+    },
+    "physical": {
+      "dimensions": "حجم قياسي للرأس (34 × 22 سم)",
+      "material": {
+        "ar": "حديد مطروق، برونز، نقوش ذهبية أو فضية",
+        "en": "Forged Iron, Bronze, Gold/Silver inlay"
+      },
+      "condition": {
+        "ar": "حالة ممتازة مصقولة",
+        "en": "Excellent preservation"
+      }
+    },
+    "bibframe": {
+      "workUri": "https://alqami.net/artifact/helmet/work",
+      "instanceUri": "https://alqami.net/artifact/helmet",
+      "itemUri": "https://alqami.net/item/HLM-313",
+      "classification": {
+        "lcc": "NK6608.5 .I85",
+        "ddc": "739.75"
+      },
+      "genreForm": [
+        {
+          "uri": "http://id.loc.gov/authorities/genreForms/gf2014026190",
+          "label": "Armor"
+        }
+      ],
+      "subjects": [
+        {
+          "uri": "http://id.loc.gov/authorities/subjects/sh85060416",
+          "label": "Helmets -- Islamic countries"
+        }
+      ]
+    },
+    "backendRdfFile": "Old_Islamic_Helmet.ttl",
+    "backendTtlFile": "Old_Islamic_Helmet.ttl",
+    "rawBackendRdf": "@prefix dc: <http://purl.org/dc/elements/1.1/> .\n@prefix dcterms: <http://purl.org/dc/terms/> .\n@prefix schema: <http://schema.org/> .\n@prefix ms: <http://example.org/manuscript/> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\n<https://alqami.net/artifact/helmet>\n    a schema:CreativeWork ;\n    dc:title \"خوذة إسلامية قديمة\"@ar ;\n    dc:title \"Old Islamic Helmet\"@en ;\n    dc:creator \"صانع دروع غير معروف\"@ar ;\n    dc:date \"القرون الوسطى الإسلامية\" ;\n    schema:material \"حديد مطروق، برونز، نقوش ذهبية أو فضية\"@ar ;\n    schema:material \"Forged Iron, Bronze, Gold/Silver inlay\"@en ;\n    ms:transcriptionArabic \"\"\"خوذة قتالية إسلامية تاريخية (خُوذة) مصممة لحماية الرأس. تتميز بنقوش وزخارف هندسية تعكس براعة صناعة الدروع في العصر الإسلامي القديم.\"\"\"@ar ;\n    ms:translationEnglish \"\"\"Description loaded.\"\"\"@en ;\n    schema:extent \"حجم قياسي للرأس\"@ar .\n",
+    "rawBackendTtl": "@prefix dc: <http://purl.org/dc/elements/1.1/> .\n@prefix dcterms: <http://purl.org/dc/terms/> .\n@prefix schema: <http://schema.org/> .\n@prefix ms: <http://example.org/manuscript/> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\n<https://alqami.net/artifact/helmet>\n    a schema:CreativeWork ;\n    dc:title \"خوذة إسلامية قديمة\"@ar ;\n    dc:title \"Old Islamic Helmet\"@en ;\n    dc:creator \"صانع دروع غير معروف\"@ar ;\n    dc:date \"القرون الوسطى الإسلامية\" ;\n    schema:material \"حديد مطروق، برونز، نقوش ذهبية أو فضية\"@ar ;\n    schema:material \"Forged Iron, Bronze, Gold/Silver inlay\"@en ;\n    ms:transcriptionArabic \"\"\"خوذة قتالية إسلامية تاريخية (خُوذة) مصممة لحماية الرأس. تتميز بنقوش وزخارف هندسية تعكس براعة صناعة الدروع في العصر الإسلامي القديم.\"\"\"@ar ;\n    ms:translationEnglish \"\"\"Description loaded.\"\"\"@en ;\n    schema:extent \"حجم قياسي للرأس\"@ar .\n",
+    "summary": {
+      "ar": "خوذة قتالية إسلامية تاريخية (خُوذة) مصممة لحماية الرأس. تتميز بنقوش وزخارف هندسية تعكس براعة صناعة الدروع في العصر الإسلامي القديم.",
+      "en": "Historic Islamic combat helmet designed for warrior head protection, featuring intricate engravings and calligraphic inlays."
+    }
+  },
+  {
+    "id": "ALQ-TAB-005",
+    "slug": "old-babylonian-cuneiform-tablet",
+    "title": {
+      "ar": "لوح مسماري بابلي قديم (S264)",
+      "en": "Old Babylonian Cuneiform Tablet (S264)"
+    },
+    "category": "iraq",
+    "categoryLabel": {
+      "ar": "تراث العراق القديم",
+      "en": "Ancient Iraq"
+    },
+    "period": {
+      "ar": "العصر البابلي القديم (حوالي 1900-1600 ق.م)",
+      "en": "Old Babylonian Period (ca. 1900-1600 BCE)"
+    },
+    "creator": {
+      "ar": "كاتب بابلي قديم",
+      "en": "Babylonian Scribe",
+      "uri": "https://alqami.net/agent/cuneiform-scribe"
+    },
+    "institution": {
+      "ar": "المتحف العراقي، بغداد • المستودع الرقمي علقمي",
+      "en": "The Iraq Museum, Baghdad • Alqami Vault"
+    },
+    "model": {
+      "glb": "./models/old-babylonian_cuneiform_tablet_s264.glb",
+      "poster": "./images/praha_side1.jpg",
+      "scale": "1.1 1.1 1.1",
+      "cameraOrbit": "10deg 75deg 105%",
+      "fieldOfView": "28deg",
+      "hasAr": true,
+      "annotations": [
+        {
+          "position": "0.0 0.04 0.02",
+          "normal": "0 1 0",
+          "title": {
+            "ar": "السطور المسمارية",
+            "en": "Cuneiform Lines"
+          },
+          "text": {
+            "ar": "نقوش مسمارية دقيقة بالقلم القصبي توثق سجلاً إدارياً قديماً.",
+            "en": "Fine wedge impressions made with reed stylus."
+          }
+        }
+      ]
+    },
+    "physical": {
+      "dimensions": "لوح طيني صغير (9.5 × 6.1 × 2.4 سم)",
+      "material": {
+        "ar": "طين مشوي",
+        "en": "Baked Clay"
+      },
+      "condition": {
+        "ar": "واضح العلامات والنقوش",
+        "en": "Crisp cuneiform legibility"
+      }
+    },
+    "bibframe": {
+      "workUri": "https://alqami.net/artifact/cuneiform/work",
+      "instanceUri": "https://alqami.net/artifact/cuneiform",
+      "itemUri": "https://iraqimuseum.gov.iq/artifacts/s264",
+      "classification": {
+        "lcc": "PJ3721 .B33",
+        "ddc": "492.1"
+      },
+      "genreForm": [
+        {
+          "uri": "http://id.loc.gov/authorities/genreForms/gf2014026111",
+          "label": "Clay tablets"
+        }
+      ],
+      "subjects": [
+        {
+          "uri": "http://id.loc.gov/authorities/subjects/sh85034789",
+          "label": "Cuneiform inscriptions, Akkadian"
+        }
+      ]
+    },
+    "backendRdfFile": "old-babylonian_cuneiform_tablet_s264.rdf",
+    "backendTtlFile": "old-babylonian_cuneiform_tablet_s264.ttl",
+    "rawBackendRdf": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<rdf:RDF xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"\n         xmlns:rdfs=\"http://www.w3.org/2000/01/rdf-schema#\"\n         xmlns:bf=\"http://id.loc.gov/ontologies/bibframe/\"\n         xmlns:schema=\"http://schema.org/\">\n  <bf:Instance rdf:about=\"https://alqami.net/artifact/cuneiform\">\n    <bf:title>\n      <bf:Title>\n        <bf:mainTitle xml:lang=\"ar\">لوح مسماري بابلي قديم</bf:mainTitle>\n        <rdfs:label>Old Babylonian Cuneiform Tablet</rdfs:label>\n      </bf:Title>\n    </bf:title>\n    <bf:provisionActivity>\n      <bf:ProvisionActivity>\n        <bf:date>العهد البابلي القديم (حوالي 1900-1600 ق.م)</bf:date>\n      </bf:ProvisionActivity>\n    </bf:provisionActivity>\n    <bf:extent>\n      <bf:Extent>\n        <rdfs:label xml:lang=\"ar\">لوح طيني صغير</rdfs:label>\n      </bf:Extent>\n    </bf:extent>\n    <bf:material>\n      <rdfs:label xml:lang=\"ar\">طين مشوي</rdfs:label>\n      <rdfs:label xml:lang=\"en\">Baked Clay</rdfs:label>\n    </bf:material>\n    <bf:contribution>\n      <bf:Contribution>\n        <bf:agent>\n          <bf:Agent>\n            <rdfs:label xml:lang=\"ar\">كاتب بابلي</rdfs:label>\n          </bf:Agent>\n        </bf:agent>\n      </bf:Contribution>\n    </bf:contribution>\n    <bf:note>\n      <bf:Note>\n        <rdfs:label xml:lang=\"ar\">لوح يحتوي على كتابات مسمارية توثق معاملات إدارية أو نصوص أدبية من الحضارة البابلية.</rdfs:label>\n      </bf:Note>\n    </bf:note>\n  </bf:Instance>\n</rdf:RDF>",
+    "rawBackendTtl": "@prefix dc: <http://purl.org/dc/elements/1.1/> .\n@prefix dcterms: <http://purl.org/dc/terms/> .\n@prefix schema: <http://schema.org/> .\n@prefix ms: <http://example.org/manuscript/> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\n<https://alqami.net/artifact/cuneiform>\n    a schema:CreativeWork ;\n    dc:title \"لوح مسماري بابلي قديم\"@ar ;\n    dc:title \"Old Babylonian Cuneiform Tablet\"@en ;\n    dc:creator \"كاتب بابلي\"@ar ;\n    dc:date \"العهد البابلي القديم (حوالي 1900-1600 ق.م)\" ;\n    schema:material \"طين مشوي\"@ar ;\n    schema:material \"Baked Clay\"@en ;\n    ms:transcriptionArabic \"\"\"لوح يحتوي على كتابات مسمارية توثق معاملات إدارية أو نصوص أدبية من الحضارة البابلية.\"\"\"@ar ;\n    ms:translationEnglish \"\"\"Description loaded.\"\"\"@en ;\n    schema:extent \"لوح طيني صغير\"@ar .\n",
+    "summary": {
+      "ar": "لوح مسماري أصيل من العصر البابلي القديم يوثق المعاملات الإدارية والاقتصادية في بلاد الرافدين بأقدم أبجدية مسمارية.",
+      "en": "Authentic Old Babylonian clay tablet inscribed with cuneiform script from ancient Mesopotamia."
+    }
+  },
+  {
+    "id": "ALQ-BWL-006",
+    "slug": "saqakhane-sacred-bowl",
+    "title": {
+      "ar": "طاسة سقاخانة برونزية (وعاء الشرب)",
+      "en": "Saqakhane Drinking Bowl"
+    },
+    "category": "ahlulbayt",
+    "categoryLabel": {
+      "ar": "تراث أهل البيت (ع)",
+      "en": "Ahl al-Bayt Heritage"
+    },
+    "period": {
+      "ar": "القرن 18–19 م (العصر الصفوي / القاجاري)",
+      "en": "18th–19th Century CE"
+    },
+    "creator": {
+      "ar": "نقاش وصانع نحاس إسلامي",
+      "en": "Islamic Metal Engraver",
+      "uri": "https://alqami.net/agent/coppersmith"
+    },
+    "institution": {
+      "ar": "متحف العتبة العباسية المقدسة • كربلاء المقدسة",
+      "en": "Al-Abbas Holy Shrine Museum • Karbala"
+    },
+    "model": {
+      "glb": "./models/saqakhane_bowl.glb",
+      "poster": "./images/praha_top.jpg",
+      "scale": "0.9 0.9 0.9",
+      "cameraOrbit": "45deg 55deg 105%",
+      "fieldOfView": "30deg",
+      "hasAr": true,
+      "annotations": [
+        {
+          "position": "0.0 0.08 0.0",
+          "normal": "0 1 0",
+          "title": {
+            "ar": "شريط الآيات والأدعية",
+            "en": "Sacred Inscription Band"
+          },
+          "text": {
+            "ar": "حفر دقيق لآيات الشفاء ورمزية السقاية في كربلاء.",
+            "en": "Fine engraving with Quranic verses and Karbala water remembrance."
+          }
+        }
+      ]
+    },
+    "physical": {
+      "dimensions": "18.5 سم (قطر) × 6.2 سم (ارتفاع)",
+      "material": {
+        "ar": "برونز مصبوب ومحفور يدويًا",
+        "en": "Cast Bronze"
+      },
+      "condition": {
+        "ar": "سليمة مع بتينا تراثية",
+        "en": "Historic patina"
+      }
+    },
+    "bibframe": {
+      "workUri": "https://alqami.net/museum/saqakhane_bowl/work",
+      "instanceUri": "https://alqami.net/museum/saqakhane_bowl",
+      "itemUri": "https://alkafeel.net/museum/item/saqakhane-bowl-313",
+      "classification": {
+        "lcc": "NK7908.9 .S27",
+        "ddc": "739.512"
+      },
+      "genreForm": [
+        {
+          "uri": "http://id.loc.gov/authorities/genreForms/gf2014026078",
+          "label": "Bowls (Tableware)"
+        }
+      ],
+      "subjects": [
+        {
+          "uri": "http://id.loc.gov/authorities/subjects/sh85068468",
+          "label": "Islamic art"
+        }
+      ]
+    },
+    "backendRdfFile": "saqakhane_bowl.ttl",
+    "backendTtlFile": "saqakhane_bowl.ttl",
+    "rawBackendRdf": "@prefix dc: <http://purl.org/dc/elements/1.1/> .\n@prefix schema: <http://schema.org/> .\n@prefix ms: <http://example.org/manuscript/> .\n\n<https://alqami.net/museum/saqakhane_bowl>\n    a schema:Manuscript ;\n    dc:title \"طاسة سقاخانة (وعاء الشرب)\"@ar ;\n    dc:title \"Saqakhane Drinking Bowl\"@en ;\n    dc:creator \"صانع مجهول (العصر القاجاري/الصفوي)\"@ar ;\n    dc:creator \"Unknown Maker\"@en ;\n    dc:date \"القرن 18-19 م\" ;\n    schema:material \"نحاس منقوش، برونز\"@ar ;\n    schema:material \"Engraved Copper, Bronze\"@en ;\n    schema:extent \"نموذج ثلاثي الأبعاد لوعاء تاريخي\" ;\n    schema:publisher \"مجموعة المتحف الخاصة\"@ar ;\n    ms:transcriptionArabic \"\"\"وعاء شرب تاريخي يُعرف بـ (طاسة سقاخانة)، كان يُستخدم في السقايات والأماكن المقدسة لتقديم الماء للزائرين تبركاً. يتميز بنقوش كتابية وزخرفية دقيقة.\"\"\"@ar ;\n    ms:translationEnglish \"\"\"A historical drinking bowl known as (Saqakhane Bowl), historically used in shrines and public drinking fountains to offer water to pilgrims. Features exquisite engraved calligraphy and motifs.\"\"\"@en .\n",
+    "rawBackendTtl": "@prefix dc: <http://purl.org/dc/elements/1.1/> .\n@prefix schema: <http://schema.org/> .\n@prefix ms: <http://example.org/manuscript/> .\n\n<https://alqami.net/museum/saqakhane_bowl>\n    a schema:Manuscript ;\n    dc:title \"طاسة سقاخانة (وعاء الشرب)\"@ar ;\n    dc:title \"Saqakhane Drinking Bowl\"@en ;\n    dc:creator \"صانع مجهول (العصر القاجاري/الصفوي)\"@ar ;\n    dc:creator \"Unknown Maker\"@en ;\n    dc:date \"القرن 18-19 م\" ;\n    schema:material \"نحاس منقوش، برونز\"@ar ;\n    schema:material \"Engraved Copper, Bronze\"@en ;\n    schema:extent \"نموذج ثلاثي الأبعاد لوعاء تاريخي\" ;\n    schema:publisher \"مجموعة المتحف الخاصة\"@ar ;\n    ms:transcriptionArabic \"\"\"وعاء شرب تاريخي يُعرف بـ (طاسة سقاخانة)، كان يُستخدم في السقايات والأماكن المقدسة لتقديم الماء للزائرين تبركاً. يتميز بنقوش كتابية وزخرفية دقيقة.\"\"\"@ar ;\n    ms:translationEnglish \"\"\"A historical drinking bowl known as (Saqakhane Bowl), historically used in shrines and public drinking fountains to offer water to pilgrims. Features exquisite engraved calligraphy and motifs.\"\"\"@en .\n",
+    "summary": {
+      "ar": "وعاء برونزي مقدس كان يوضع في أسبلة المياه (السقاخانة) تيمناً بذكرى ساقي عطاشى كربلاء أبي الفضل العباس (ع).",
+      "en": "Traditional Islamic votive water vessel placed in Karbala water shrines in homage to Abu al-Fadl al-Abbas (a.s.)."
+    }
+  },
+  {
+    "id": "ALQ-MHR-007",
+    "slug": "prayer-niche-mihrab",
+    "title": {
+      "ar": "محراب الصلاة الإسلامي المقرنص",
+      "en": "Islamic Prayer Niche (Mihrab)"
+    },
+    "category": "islamic",
+    "categoryLabel": {
+      "ar": "التراث الإسلامي",
+      "en": "Islamic Heritage"
+    },
+    "period": {
+      "ar": "القرن الثالث عشر الميلادي",
+      "en": "13th Century CE"
+    },
+    "creator": {
+      "ar": "صناع الخزف الكاشاني",
+      "en": "Kashan Ceramic Masters",
+      "uri": "https://alqami.net/agent/kashani-masters"
+    },
+    "institution": {
+      "ar": "المتحف الوطني العراقي • المستودع الرقمي علقمي",
+      "en": "National Museum of Iraq • Alqami Vault"
+    },
+    "model": {
+      "glb": "./models/prayer_niche_mihrab.glb",
+      "poster": "./images/kufic.jpg",
+      "scale": "0.45 0.45 0.45",
+      "cameraOrbit": "0deg 80deg 110%",
+      "fieldOfView": "35deg",
+      "hasAr": true,
+      "annotations": [
+        {
+          "position": "0.0 0.45 0.1",
+          "normal": "0 0 1",
+          "title": {
+            "ar": "المقرنصات الخزفية",
+            "en": "Muqarnas Corbeling"
+          },
+          "text": {
+            "ar": "تكوين هندسي ثلاثي الأبعاد يعكس انتقال الفراغ من القوس إلى الحنية.",
+            "en": "Geometric 3D muqarnas arch transition."
+          }
+        }
+      ]
+    },
+    "physical": {
+      "dimensions": "قطعة معمارية كبيرة (240 × 160 سم)",
+      "material": {
+        "ar": "خزف مزجج (كاشاني)، جص",
+        "en": "Glazed Ceramic (Kashani), Stucco"
+      },
+      "condition": {
+        "ar": "محفوظ ومجمع بعناية",
+        "en": "Museum assemblage"
+      }
+    },
+    "bibframe": {
+      "workUri": "https://alqami.net/artifact/mihrab/work",
+      "instanceUri": "https://alqami.net/artifact/mihrab",
+      "itemUri": "https://alqami.net/item/MHR-ILK-1300",
+      "classification": {
+        "lcc": "NA4670 .M54",
+        "ddc": "726.2"
+      },
+      "genreForm": [
+        {
+          "uri": "http://id.loc.gov/authorities/genreForms/gf2014026066",
+          "label": "Architectural elements"
+        }
+      ],
+      "subjects": [
+        {
+          "uri": "http://id.loc.gov/authorities/subjects/sh85085189",
+          "label": "Mihrabs -- History"
+        }
+      ]
+    },
+    "backendRdfFile": "prayer_niche_mihrab.rdf",
+    "backendTtlFile": "prayer_niche_mihrab.ttl",
+    "rawBackendRdf": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<rdf:RDF xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"\n         xmlns:rdfs=\"http://www.w3.org/2000/01/rdf-schema#\"\n         xmlns:bf=\"http://id.loc.gov/ontologies/bibframe/\"\n         xmlns:schema=\"http://schema.org/\">\n  <bf:Instance rdf:about=\"https://alqami.net/artifact/mihrab\">\n    <bf:title>\n      <bf:Title>\n        <bf:mainTitle xml:lang=\"ar\">محراب الصلاة</bf:mainTitle>\n        <rdfs:label>Prayer Niche (Mihrab)</rdfs:label>\n      </bf:Title>\n    </bf:title>\n    <bf:provisionActivity>\n      <bf:ProvisionActivity>\n        <bf:date>القرن الثالث عشر الميلادي</bf:date>\n      </bf:ProvisionActivity>\n    </bf:provisionActivity>\n    <bf:extent>\n      <bf:Extent>\n        <rdfs:label xml:lang=\"ar\">قطعة معمارية كبيرة</rdfs:label>\n      </bf:Extent>\n    </bf:extent>\n    <bf:material>\n      <rdfs:label xml:lang=\"ar\">خزف مزجج (قاشاني)</rdfs:label>\n      <rdfs:label xml:lang=\"en\">Glazed Ceramic (Kashani)</rdfs:label>\n    </bf:material>\n    <bf:contribution>\n      <bf:Contribution>\n        <bf:agent>\n          <bf:Agent>\n            <rdfs:label xml:lang=\"ar\">فنان إسلامي غير معروف</rdfs:label>\n          </bf:Agent>\n        </bf:agent>\n      </bf:Contribution>\n    </bf:contribution>\n    <bf:note>\n      <bf:Note>\n        <rdfs:label xml:lang=\"ar\">محراب مزين بالزخارف الهندسية والنباتية والآيات القرآنية بالخط الكوفي والثلث. يستخدم لتحديد القبلة في المساجد.</rdfs:label>\n      </bf:Note>\n    </bf:note>\n  </bf:Instance>\n</rdf:RDF>",
+    "rawBackendTtl": "@prefix dc: <http://purl.org/dc/elements/1.1/> .\n@prefix dcterms: <http://purl.org/dc/terms/> .\n@prefix schema: <http://schema.org/> .\n@prefix ms: <http://example.org/manuscript/> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\n<https://alqami.net/artifact/mihrab>\n    a schema:CreativeWork ;\n    dc:title \"محراب الصلاة\"@ar ;\n    dc:title \"Prayer Niche (Mihrab)\"@en ;\n    dc:creator \"فنان إسلامي غير معروف\"@ar ;\n    dc:date \"القرن الثالث عشر الميلادي\" ;\n    schema:material \"خزف مزجج (قاشاني)\"@ar ;\n    schema:material \"Glazed Ceramic (Kashani)\"@en ;\n    ms:transcriptionArabic \"\"\"محراب مزين بالزخارف الهندسية والنباتية والآيات القرآنية بالخط الكوفي والثلث. يستخدم لتحديد القبلة في المساجد.\"\"\"@ar ;\n    ms:translationEnglish \"\"\"Description loaded.\"\"\"@en ;\n    schema:extent \"قطعة معمارية كبيرة\"@ar .\n",
+    "summary": {
+      "ar": "محراب صلاة إسلامي أثري من الخزف المزجج الملون، يحدد اتجاه القبلة نحو مكة المكرمة بمقرنصات ونقوش كوفية.",
+      "en": "Architectural luster-glazed ceramic prayer niche directing worship toward Mecca, demonstrating intricate geometry."
+    }
+  },
+  {
+    "id": "ALQ-STL-008",
+    "slug": "stela-of-hammurabi",
+    "title": {
+      "ar": "مسلة شريعة حمورابي البابلية",
+      "en": "Stela of Hammurabi"
+    },
+    "category": "iraq",
+    "categoryLabel": {
+      "ar": "تراث العراق القديم",
+      "en": "Ancient Iraq"
+    },
+    "period": {
+      "ar": "حوالي 1750 ق.م",
+      "en": "ca. 1750 BCE"
+    },
+    "creator": {
+      "ar": "الملك حمورابي ونحاتو البلاط البابلي",
+      "en": "King Hammurabi & Royal Sculptors",
+      "uri": "https://id.loc.gov/authorities/names/n50019979"
+    },
+    "institution": {
+      "ar": "متحف اللوفر (المسلة الأصلية) • نموذج المستودع الرقمي علقمي",
+      "en": "Louvre Museum (Original) • Alqami Spatial Vault"
+    },
+    "model": {
+      "glb": "./models/stela_of_hammurabi_replica.glb",
+      "poster": "./images/praha_back.jpg",
+      "scale": "0.55 0.55 0.55",
+      "cameraOrbit": "0deg 85deg 110%",
+      "fieldOfView": "30deg",
+      "hasAr": true,
+      "annotations": [
+        {
+          "position": "0.0 0.85 0.08",
+          "normal": "0 0 1",
+          "title": {
+            "ar": "مشهد استلام الشريعة",
+            "en": "Investiture Scene"
+          },
+          "text": {
+            "ar": "حمورابي يتسلم خاتم وقضيب العدالة من إله الشمس شمش.",
+            "en": "Hammurabi receiving laws from Shamash."
+          }
+        }
+      ]
+    },
+    "physical": {
+      "dimensions": "طول 2.25 متر",
+      "material": {
+        "ar": "حجر الديوريت الأسود",
+        "en": "Black Diorite"
+      },
+      "condition": {
+        "ar": "منحوتة بالكامل مع نصوص أكدية",
+        "en": "Pristine basalt preservation"
+      }
+    },
+    "bibframe": {
+      "workUri": "https://alqami.net/artifact/stela/work",
+      "instanceUri": "https://alqami.net/artifact/stela",
+      "itemUri": "https://louvre.fr/en/explore/the-palace/code-of-hammurabi",
+      "classification": {
+        "lcc": "KL2212 .A313",
+        "ddc": "340.54"
+      },
+      "genreForm": [
+        {
+          "uri": "http://id.loc.gov/authorities/genreForms/gf2014026131",
+          "label": "Legal instruments"
+        }
+      ],
+      "subjects": [
+        {
+          "uri": "http://id.loc.gov/authorities/subjects/sh85075775",
+          "label": "Law, Ancient"
+        }
+      ]
+    },
+    "backendRdfFile": "stela_of_hammurabi_replica.rdf",
+    "backendTtlFile": "stela_of_hammurabi_replica.ttl",
+    "rawBackendRdf": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<rdf:RDF xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"\n         xmlns:rdfs=\"http://www.w3.org/2000/01/rdf-schema#\"\n         xmlns:bf=\"http://id.loc.gov/ontologies/bibframe/\"\n         xmlns:schema=\"http://schema.org/\">\n  <bf:Instance rdf:about=\"https://alqami.net/artifact/stela\">\n    <bf:title>\n      <bf:Title>\n        <bf:mainTitle xml:lang=\"ar\">مسلة حمورابي</bf:mainTitle>\n        <rdfs:label>Stela of Hammurabi</rdfs:label>\n      </bf:Title>\n    </bf:title>\n    <bf:provisionActivity>\n      <bf:ProvisionActivity>\n        <bf:date>حوالي 1750 ق.م</bf:date>\n      </bf:ProvisionActivity>\n    </bf:provisionActivity>\n    <bf:extent>\n      <bf:Extent>\n        <rdfs:label xml:lang=\"ar\">طول 2.25 متر</rdfs:label>\n      </bf:Extent>\n    </bf:extent>\n    <bf:material>\n      <rdfs:label xml:lang=\"ar\">حجر الديوريت الأسود</rdfs:label>\n      <rdfs:label xml:lang=\"en\">Black Diorite</rdfs:label>\n    </bf:material>\n    <bf:contribution>\n      <bf:Contribution>\n        <bf:agent>\n          <bf:Agent>\n            <rdfs:label xml:lang=\"ar\">الإمبراطورية البابلية</rdfs:label>\n          </bf:Agent>\n        </bf:agent>\n      </bf:Contribution>\n    </bf:contribution>\n    <bf:note>\n      <bf:Note>\n        <rdfs:label xml:lang=\"ar\">تحتوي على واحدة من أقدم وأكمل القوانين التشريعية المكتوبة في التاريخ البشري، منقوشة باللغة الأكادية.</rdfs:label>\n      </bf:Note>\n    </bf:note>\n  </bf:Instance>\n</rdf:RDF>",
+    "rawBackendTtl": "@prefix dc: <http://purl.org/dc/elements/1.1/> .\n@prefix dcterms: <http://purl.org/dc/terms/> .\n@prefix schema: <http://schema.org/> .\n@prefix ms: <http://example.org/manuscript/> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\n<https://alqami.net/artifact/stela>\n    a schema:CreativeWork ;\n    dc:title \"مسلة حمورابي\"@ar ;\n    dc:title \"Stela of Hammurabi\"@en ;\n    dc:creator \"الإمبراطورية البابلية\"@ar ;\n    dc:date \"حوالي 1750 ق.م\" ;\n    schema:material \"حجر الديوريت الأسود\"@ar ;\n    schema:material \"Black Diorite\"@en ;\n    ms:transcriptionArabic \"\"\"تحتوي على واحدة من أقدم وأكمل القوانين التشريعية المكتوبة في التاريخ البشري، منقوشة باللغة الأكادية.\"\"\"@ar ;\n    ms:translationEnglish \"\"\"Description loaded.\"\"\"@en ;\n    schema:extent \"طول 2.25 متر\"@ar .\n",
+    "summary": {
+      "ar": "مسلة شريعة حمورابي البابلية الشهيرة المحفورة في حجر الديوريت الأسود والتي تضم 282 مادة قانونية تنظم العدالة.",
+      "en": "The historic legal monument of Mesopotamia, featuring the 282 laws of King Hammurabi engraved in Akkadian cuneiform."
+    }
+  },
+  {
+    "id": "ALQ-BWL-009",
+    "slug": "ancient-ceramic-bowl",
+    "title": {
+      "ar": "وعاء أثري قديم",
+      "en": "Ancient Bowl"
+    },
+    "category": "museum",
+    "categoryLabel": {
+      "ar": "المواد والقطع المتحفية",
+      "en": "Museum Objects"
+    },
+    "period": {
+      "ar": "عصر قديم غير محدد",
+      "en": "Ancient Era"
+    },
+    "creator": {
+      "ar": "صانع فخار أثري",
+      "en": "Ancient Potter",
+      "uri": "https://alqami.net/agent/potter"
+    },
+    "institution": {
+      "ar": "المتحف العراقي • مستودع علقمي",
+      "en": "The Iraq Museum • Alqami Vault"
+    },
+    "model": {
+      "glb": "./models/bowl.glb",
+      "poster": "./images/praha_top.jpg",
+      "scale": "1.0 1.0 1.0",
+      "cameraOrbit": "30deg 65deg 105%",
+      "fieldOfView": "30deg",
+      "hasAr": true,
+      "annotations": [
+        {
+          "position": "0.0 0.05 0.0",
+          "normal": "0 1 0",
+          "title": {
+            "ar": "شكل الوعاء",
+            "en": "Vessel Form"
+          },
+          "text": {
+            "ar": "وعاء فخاري أثري متوسط الحجم.",
+            "en": "Medium sized ancient ceramic vessel."
+          }
+        }
+      ]
+    },
+    "physical": {
+      "dimensions": "متوسط الحجم",
+      "material": {
+        "ar": "فخار / خزف",
+        "en": "Pottery / Ceramic"
+      },
+      "condition": {
+        "ar": "سليم",
+        "en": "Intact"
+      }
+    },
+    "bibframe": {
+      "workUri": "https://alqami.net/artifact/bowl/work",
+      "instanceUri": "https://alqami.net/artifact/bowl",
+      "itemUri": "https://alqami.net/item/BWL-001",
+      "classification": {
+        "lcc": "NK4143 .B69",
+        "ddc": "738.3"
+      },
+      "genreForm": [
+        {
+          "uri": "http://id.loc.gov/authorities/genreForms/gf2014026078",
+          "label": "Bowls (Tableware)"
+        }
+      ],
+      "subjects": [
+        {
+          "uri": "http://id.loc.gov/authorities/subjects/sh85105824",
+          "label": "Pottery, Ancient"
+        }
+      ]
+    },
+    "backendRdfFile": "bowl.rdf",
+    "backendTtlFile": "bowl.ttl",
+    "rawBackendRdf": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<rdf:RDF xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"\n         xmlns:rdfs=\"http://www.w3.org/2000/01/rdf-schema#\"\n         xmlns:bf=\"http://id.loc.gov/ontologies/bibframe/\"\n         xmlns:schema=\"http://schema.org/\">\n  <bf:Instance rdf:about=\"https://alqami.net/artifact/bowl\">\n    <bf:title>\n      <bf:Title>\n        <bf:mainTitle xml:lang=\"ar\">وعاء أثري</bf:mainTitle>\n        <rdfs:label>Ancient Bowl</rdfs:label>\n      </bf:Title>\n    </bf:title>\n    <bf:provisionActivity>\n      <bf:ProvisionActivity>\n        <bf:date>غير محدد</bf:date>\n      </bf:ProvisionActivity>\n    </bf:provisionActivity>\n    <bf:extent>\n      <bf:Extent>\n        <rdfs:label xml:lang=\"ar\">متوسط الحجم</rdfs:label>\n      </bf:Extent>\n    </bf:extent>\n    <bf:material>\n      <rdfs:label xml:lang=\"ar\">فخار</rdfs:label>\n      <rdfs:label xml:lang=\"en\">Pottery / Ceramic</rdfs:label>\n    </bf:material>\n    <bf:contribution>\n      <bf:Contribution>\n        <bf:agent>\n          <bf:Agent>\n            <rdfs:label xml:lang=\"ar\">حرفي غير معروف</rdfs:label>\n          </bf:Agent>\n        </bf:agent>\n      </bf:Contribution>\n    </bf:contribution>\n    <bf:note>\n      <bf:Note>\n        <rdfs:label xml:lang=\"ar\">وعاء تاريخي يستخدم للأغراض اليومية، يعكس أسلوب صناعة الفخار في تلك الحقبة.</rdfs:label>\n      </bf:Note>\n    </bf:note>\n  </bf:Instance>\n</rdf:RDF>",
+    "rawBackendTtl": "@prefix dc: <http://purl.org/dc/elements/1.1/> .\n@prefix dcterms: <http://purl.org/dc/terms/> .\n@prefix schema: <http://schema.org/> .\n@prefix ms: <http://example.org/manuscript/> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\n<https://alqami.net/artifact/bowl>\n    a schema:CreativeWork ;\n    dc:title \"وعاء أثري\"@ar ;\n    dc:title \"Ancient Bowl\"@en ;\n    dc:creator \"حرفي غير معروف\"@ar ;\n    dc:date \"غير محدد\" ;\n    schema:material \"فخار\"@ar ;\n    schema:material \"Pottery / Ceramic\"@en ;\n    ms:transcriptionArabic \"\"\"وعاء تاريخي يستخدم للأغراض اليومية، يعكس أسلوب صناعة الفخار في تلك الحقبة.\"\"\"@ar ;\n    ms:translationEnglish \"\"\"Description loaded.\"\"\"@en ;\n    schema:extent \"متوسط الحجم\"@ar .\n",
+    "summary": {
+      "ar": "وعاء فخاري أثري قديم يعكس بساطة وفنون صناعة الخزف والأواني الفخارية في الشرق الأدنى القديم.",
+      "en": "Ancient pottery bowl reflecting traditional ceramic craft of the ancient Near East."
+    }
+  },
+  {
+    "id": "ALQ-MSH-010",
+    "slug": "alqami-3d-heritage-sculpture",
+    "title": {
+      "ar": "مجسم تحفة علقمي التراثي ثلاثي الأبعاد",
+      "en": "Alqami 3D Heritage Artifact"
+    },
+    "category": "museum",
+    "categoryLabel": {
+      "ar": "المواد والقطع المتحفية",
+      "en": "Museum Objects"
+    },
+    "period": {
+      "ar": "مقتنيات علقمي المعاصرة",
+      "en": "Alqami Contemporary Collection"
+    },
+    "creator": {
+      "ar": "فريق علقمي للرقمنة التراثية",
+      "en": "Alqami Digitization Team",
+      "uri": "https://alqami.net/agent/team"
+    },
+    "institution": {
+      "ar": "مؤسسة علقمي للتراث المعرفي",
+      "en": "Alqami Heritage Foundation"
+    },
+    "model": {
+      "glb": "./models/meshy-model.glb",
+      "poster": "./images/quran.jpg",
+      "scale": "0.8 0.8 0.8",
+      "cameraOrbit": "0deg 75deg 105%",
+      "fieldOfView": "30deg",
+      "hasAr": true,
+      "annotations": [
+        {
+          "position": "0.0 0.1 0.0",
+          "normal": "0 1 0",
+          "title": {
+            "ar": "المسح الضوئي ثلاثي الأبعاد",
+            "en": "High-Res 3D Mesh"
+          },
+          "text": {
+            "ar": "تمت رقمنة هذا النموذج بتقنيات المسح التصويري المتقدمة.",
+            "en": "Digitized using advanced heritage photogrammetry."
+          }
+        }
+      ]
+    },
+    "physical": {
+      "dimensions": "أبعاد متعددة",
+      "material": {
+        "ar": "خزف، مادة مركبة",
+        "en": "Ceramic / Composite"
+      },
+      "condition": {
+        "ar": "ممتاز",
+        "en": "Mint"
+      }
+    },
+    "bibframe": {
+      "workUri": "https://alqami.net/museum/meshy-model/work",
+      "instanceUri": "https://alqami.net/museum/meshy-model",
+      "itemUri": "https://alqami.net/item/MESHY-001",
+      "classification": {
+        "lcc": "NK4600 .A47",
+        "ddc": "730.9"
+      },
+      "genreForm": [
+        {
+          "uri": "http://id.loc.gov/authorities/genreForms/gf2014026168",
+          "label": "Sculpture"
+        }
+      ],
+      "subjects": [
+        {
+          "uri": "http://id.loc.gov/authorities/subjects/sh85038006",
+          "label": "Digital preservation"
+        }
+      ]
+    },
+    "backendRdfFile": "meshy-model.ttl",
+    "backendTtlFile": "meshy-model.ttl",
+    "rawBackendRdf": "﻿@prefix dc: <http://purl.org/dc/elements/1.1/> .\n@prefix schema: <http://schema.org/> .\n@prefix ms: <http://example.org/manuscript/> .\n\n<https://alqami.net/museum/meshy-model>\n    a schema:VisualArtwork ;\n    dc:title \"مجسم تحفة القمي ثلاثي الأبعاد (Alqami 3D Model)\"@ar ;\n    dc:title \"Alqami 3D Artifact Model\"@en ;\n    dc:creator \"ورشة القمي للرقمنة التراثية ثلاثية الأبعاد\"@ar ;\n    dc:creator \"Alqami 3D Cultural Digitization Guild\"@en ;\n    dc:date \"القرن 18-19 م (توثيق رقمي ثلاثي الأبعاد)\" ;\n    schema:material \"خزف إسلامي مزجج / مجسم ثلاثي الأبعاد PBR\"@ar ;\n    schema:material \"Glazed Islamic Ceramic / High-Fidelity 3D Model\"@en ;\n    schema:extent \"نموذج مجسم متكامل 360 درجة\" ;\n    schema:publisher \"متحف القمي الرقمي\"@ar ;\n    ms:transcriptionArabic \"\"\"النموذج المجسم ثلاثي الأبعاد لتحفة القمي التراثية، يجسد تفاصيل الزخارف والنقوش والتاج العلوي للتحفة، مع إمكانية المعاينة التفاعلية والتكبير وتدوير المجسم في فضاء الواقع المعزز (WebXR AR).\"\"\"@ar ;\n    ms:translationEnglish \"\"\"High-fidelity 3D digital model of the Alqami Ceramic Artifact. Features full 360-degree surface texturing, arabesque motifs, and realistic PBR material rendering for immersive AR inspection.\"\"\"@en .\n",
+    "rawBackendTtl": "﻿@prefix dc: <http://purl.org/dc/elements/1.1/> .\n@prefix schema: <http://schema.org/> .\n@prefix ms: <http://example.org/manuscript/> .\n\n<https://alqami.net/museum/meshy-model>\n    a schema:VisualArtwork ;\n    dc:title \"مجسم تحفة القمي ثلاثي الأبعاد (Alqami 3D Model)\"@ar ;\n    dc:title \"Alqami 3D Artifact Model\"@en ;\n    dc:creator \"ورشة القمي للرقمنة التراثية ثلاثية الأبعاد\"@ar ;\n    dc:creator \"Alqami 3D Cultural Digitization Guild\"@en ;\n    dc:date \"القرن 18-19 م (توثيق رقمي ثلاثي الأبعاد)\" ;\n    schema:material \"خزف إسلامي مزجج / مجسم ثلاثي الأبعاد PBR\"@ar ;\n    schema:material \"Glazed Islamic Ceramic / High-Fidelity 3D Model\"@en ;\n    schema:extent \"نموذج مجسم متكامل 360 درجة\" ;\n    schema:publisher \"متحف القمي الرقمي\"@ar ;\n    ms:transcriptionArabic \"\"\"النموذج المجسم ثلاثي الأبعاد لتحفة القمي التراثية، يجسد تفاصيل الزخارف والنقوش والتاج العلوي للتحفة، مع إمكانية المعاينة التفاعلية والتكبير وتدوير المجسم في فضاء الواقع المعزز (WebXR AR).\"\"\"@ar ;\n    ms:translationEnglish \"\"\"High-fidelity 3D digital model of the Alqami Ceramic Artifact. Features full 360-degree surface texturing, arabesque motifs, and realistic PBR material rendering for immersive AR inspection.\"\"\"@en .\n",
+    "summary": {
+      "ar": "مجسم تحفة علقمي الرقمية عالية الدقة، تمثل التكامل بين تقنيات المسح ثلاثي الأبعاد وفهرسة البيانات المترابطة BIBFRAME 2.0.",
+      "en": "High-definition 3D heritage model combining photogrammetric scanning and linked data cataloging."
+    }
+  }
+]

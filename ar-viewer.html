@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>Moon | عارض الواقع المعزز وسجل الميتاداتا 3D AR</title>
+  
+  <!-- Google Fonts: Amiri & Cairo & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cairo:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Model Viewer Web Component -->
+  <script type="module" src="./js/model-viewer.min.js"></script>
+
+  <style>
+    :root {
+      --bg-black: #000000;
+      --card-bg: rgba(12, 12, 14, 0.95);
+      --card-border: rgba(255, 255, 255, 0.12);
+      --text-main: #ffffff;
+      --text-muted: rgba(255, 255, 255, 0.65);
+      --accent-gold: #f59e0b;
+      --accent-blue: #38bdf8;
+      --accent-emerald: #34d399;
+      --font-arabic: 'Amiri', serif;
+      --font-body: 'Cairo', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow-x: hidden;
+      background-color: var(--bg-black);
+      color: var(--text-main);
+      font-family: var(--font-body);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ══════════════════════════════════════════════════════════════
+       CONTAINER & HEADER
+       ══════════════════════════════════════════════════════════════ */
+    #app-container {
+      position: relative;
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background-color: #000000;
+    }
+
+    /* Top Sticky Brand Bar */
+    .top-navbar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      padding: 10px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      background: rgba(0, 0, 0, 0.88);
+      backdrop-filter: blur(25px);
+      -webkit-backdrop-filter: blur(25px);
+      border-bottom: 1px solid var(--card-border);
+    }
+
+    .brand-section {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 0;
+    }
+
+    .brand-logo {
+      height: 32px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .header-details {
+      min-width: 0;
+    }
+
+    .header-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: #ffffff;
+      font-family: var(--font-arabic);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 220px;
+    }
+
+    .header-badges {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .badge-pill {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 600;
+      padding: 1px 8px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      color: rgba(255, 255, 255, 0.9);
+      font-family: var(--font-body);
+    }
+
+    .badge-id {
+      font-family: var(--font-mono);
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 9px;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-circle {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      border: 1px solid var(--card-border);
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(16px);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .btn-circle:active {
+      transform: scale(0.92);
+      background: rgba(255, 255, 255, 0.25);
+    }
+
+    .btn-circle svg {
+      width: 17px;
+      height: 17px;
+    }
+
+    /* ══════════════════════════════════════════════════════════════
+       3D MODEL VIEWPORT (Centered & Pitch Black)
+       ══════════════════════════════════════════════════════════════ */
+    .viewport-3d-stage {
+      position: relative;
+      width: 100%;
+      height: 48vh;
+      min-height: 340px;
+      background-color: #000000 !important;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      border-bottom: 1px solid var(--card-border);
+    }
+
+    model-viewer {
+      width: 100%;
+      height: 100%;
+      display: block;
+      outline: none;
+      --poster-color: #000000;
+      background-color: #000000;
+      direction: ltr !important;
+      --progress-bar-color: transparent !important;
+      --progress-bar-height: 0px !important;
+      --progress-mask: transparent !important;
+    }
+
+    model-viewer::part(default-progress-bar),
+    model-viewer::part(default-progress-mask) {
+      display: none !important;
+      opacity: 0 !important;
+      visibility: hidden !important;
+      height: 0px !important;
+    }
+
+    /* AR Floating Launch Button */
+    .ar-button-floating-container {
+      position: absolute;
+      bottom: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 20;
+      width: calc(100% - 32px);
+      max-width: 360px;
+    }
+
+    .btn-launch-ar {
+      width: 100%;
+      padding: 13px 20px;
+      border-radius: 999px;
+      background: #ffffff;
+      color: #000000;
+      font-size: 14px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      cursor: pointer;
+      border: none;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), inset 0 1px 1px #ffffff;
+      transition: transform 0.2s, background-color 0.2s;
+    }
+
+    .btn-launch-ar:active {
+      transform: scale(0.97);
+      background-color: #e2e8f0;
+    }
+
+    .btn-launch-ar svg {
+      width: 19px;
+      height: 19px;
+    }
+
+    /* Viewport Floating Info Hint */
+    .viewport-hint {
+      position: absolute;
+      top: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 10;
+      padding: 5px 14px;
+      border-radius: 999px;
+      font-size: 11px;
+      color: rgba(255, 255, 255, 0.8);
+      background: rgba(0, 0, 0, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(12px);
+      pointer-events: none;
+    }
+
+    /* ══════════════════════════════════════════════════════════════
+       METADATA CONTEXT PANEL & TABS (Identical to Viewer3DModal)
+       ══════════════════════════════════════════════════════════════ */
+    .meta-panel {
+      position: relative;
+      flex: 1;
+      width: 100%;
+      background: #000000;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    /* Tab Switcher */
+    .tab-nav {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px;
+      border-radius: 18px;
+      background: rgba(20, 20, 24, 0.9);
+      border: 1px solid var(--card-border);
+    }
+
+    .tab-btn {
+      flex: 1;
+      padding: 9px 6px;
+      border-radius: 14px;
+      border: none;
+      background: transparent;
+      color: var(--text-muted);
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      text-align: center;
+      transition: all 0.2s;
+      font-family: var(--font-body);
+    }
+
+    .tab-btn.active {
+      background: rgba(255, 255, 255, 0.18);
+      color: #ffffff;
+      font-weight: 700;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+    }
+
+    /* Tab Content Panels */
+    .tab-section {
+      display: none;
+    }
+
+    .tab-section.active {
+      display: block;
+      animation: fadeIn 0.3s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Section Cards */
+    .info-card {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--card-border);
+      border-radius: 18px;
+      padding: 14px;
+      margin-bottom: 12px;
+    }
+
+    .card-heading {
+      font-size: 12px;
+      font-weight: 700;
+      color: #ffffff;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .card-heading svg {
+      width: 15px;
+      height: 15px;
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    .card-body-text {
+      font-size: 13px;
+      line-height: 1.65;
+      color: rgba(255, 255, 255, 0.85);
+      font-weight: 300;
+    }
+
+    /* Quote Box for Incipit & Explicit */
+    .quote-box {
+      background: rgba(0, 0, 0, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 14px;
+      padding: 11px;
+      margin-top: 8px;
+    }
+
+    .quote-label {
+      font-size: 10px;
+      font-weight: 700;
+      margin-bottom: 4px;
+      display: block;
+    }
+
+    .quote-label.gold { color: #fcd34d; }
+    .quote-label.cyan { color: #67e8f9; }
+
+    .quote-content {
+      font-family: var(--font-arabic);
+      font-size: 13px;
+      line-height: 1.6;
+      color: rgba(255, 255, 255, 0.9);
+      font-style: italic;
+    }
+
+    /* 2-Column Meta Grid */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .grid-box {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 12px;
+    }
+
+    .grid-label {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-bottom: 3px;
+    }
+
+    .grid-val {
+      font-size: 12px;
+      font-weight: 600;
+      color: #ffffff;
+      line-height: 1.4;
+    }
+
+    /* Codicology List */
+    .codicology-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 7px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      font-size: 12px;
+    }
+
+    .codicology-row:last-child {
+      border-bottom: none;
+    }
+
+    .codicology-label {
+      color: var(--text-muted);
+    }
+
+    .codicology-val {
+      color: #ffffff;
+      font-weight: 600;
+    }
+
+    /* BIBFRAME URIs & Classes */
+    .uri-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      margin-bottom: 8px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+    }
+
+    .uri-label {
+      color: #ffffff;
+      font-weight: 700;
+    }
+
+    .uri-link {
+      color: #38bdf8;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      max-width: 220px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .uri-link:hover {
+      text-decoration: underline;
+    }
+
+    .tags-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 6px;
+    }
+
+    .tag-badge {
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      font-size: 11px;
+      color: #ffffff;
+    }
+
+    /* Tab 3: RDF Live Editor / Viewer */
+    .rdf-actions-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      gap: 8px;
+    }
+
+    .rdf-filename {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: #7dd3fc;
+      background: rgba(56, 189, 248, 0.12);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      padding: 4px 10px;
+      border-radius: 8px;
+    }
+
+    .btn-action-small {
+      padding: 6px 12px;
+      border-radius: 10px;
+      border: 1px solid var(--card-border);
+      background: rgba(255, 255, 255, 0.1);
+      color: #ffffff;
+      font-size: 11px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .btn-action-small:active {
+      transform: scale(0.95);
+      background: rgba(255, 255, 255, 0.25);
+    }
+
+    .rdf-code-view {
+      width: 100%;
+      height: 280px;
+      background: #09090b;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 14px;
+      color: #93c5fd;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      line-height: 1.5;
+      padding: 12px;
+      direction: ltr;
+      text-align: left;
+      overflow: auto;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+
+    /* Flash snapshot overlay */
+    #flash {
+      position: fixed;
+      inset: 0;
+      background: #ffffff;
+      opacity: 0;
+      pointer-events: none;
+      z-index: 100;
+      transition: opacity 0.3s;
+    }
+    #flash.active { opacity: 0.9; }
+  </style>
+</head>
+<body>
+  <div id="flash"></div>
+
+  <div id="app-container">
+    
+    <!-- ══════════════════════════════════════════════════════════════
+         TOP BAR: BRAND & ARTIFACT HEADER
+         ══════════════════════════════════════════════════════════════ -->
+    <header class="top-navbar">
+      <div class="brand-section">
+        <img src="/white.png" alt="Moon Logo" class="brand-logo" />
+        <div class="header-details">
+          <div class="header-title" id="title-text">مخطوط القبسات — الميرداماد</div>
+          <div class="header-badges">
+            <span class="badge-pill" id="cat-badge">المخطوطات والنوادر</span>
+            <span class="badge-id" id="id-badge">ALQ-MS-003</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav-actions">
+        <!-- Audio Guide -->
+        <button class="btn-circle" id="btn-audio" title="الدليل الصوتي">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+        </button>
+
+        <!-- Language Toggle -->
+        <button class="btn-circle" id="btn-lang" title="تبديل اللغة">
+          <span style="font-size: 11px; font-weight: bold;" id="lang-label">EN</span>
+        </button>
+
+        <!-- Close / Back -->
+        <button class="btn-circle" onclick="window.history.back()" title="إغلاق">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- ══════════════════════════════════════════════════════════════
+         3D MODEL STAGE: SOLID BLACK, CENTERED, WITH AR BUTTON
+         ══════════════════════════════════════════════════════════════ -->
+    <div class="viewport-3d-stage">
+      <model-viewer
+        id="main-model-viewer"
+        src="./models/model.glb"
+        alt="Moon 3D Asset"
+        camera-controls
+        touch-action="pan-y"
+        camera-target="auto auto auto"
+        bounds="tight"
+        loading="eager"
+        reveal="auto"
+        auto-rotate
+        rotation-per-second="10deg"
+        draco-decoder-location="./draco/"
+        exposure="1.25"
+        shadow-intensity="1.5"
+        shadow-softness="0.8"
+        camera-orbit="0deg 75deg 115%"
+        field-of-view="35deg"
+        ar
+        ar-modes="webxr scene-viewer quick-look"
+      >
+        <div slot="progress-bar" style="display: none;"></div>
+      </model-viewer>
+
+      <!-- Centered Hint -->
+      <div class="viewport-hint" id="viewport-hint">اسحب للتدوير 360°</div>
+
+      <!-- Floating Launch AR Button -->
+      <div class="ar-button-floating-container">
+        <button id="btn-activate-ar" class="btn-launch-ar">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+          <span id="ar-btn-text">عرض في غرفتك الآن (AR)</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════════════════════════════
+         ALQAMI METADATA & RDF CONTEXT PANEL (TABS FROM IMAGE 2)
+         ══════════════════════════════════════════════════════════════ -->
+    <main class="meta-panel">
+      
+      <!-- Tab Navigation -->
+      <nav class="tab-nav">
+        <button class="tab-btn active" data-tab="tab-overview" id="nav-overview">البطاقة الوصفية</button>
+        <button class="tab-btn" data-tab="tab-bibframe" id="nav-bibframe">تصنيف وفهارس</button>
+        <button class="tab-btn" data-tab="tab-rdf" id="nav-rdf">سجل الباك إند (RDF)</button>
+      </nav>
+
+      <!-- ═══════════════════════════════════════════════════════════
+           TAB 1: OVERVIEW (البطاقة الوصفية)
+           ═══════════════════════════════════════════════════════════ -->
+      <section id="tab-overview" class="tab-section active">
+        
+        <!-- Historical Summary -->
+        <div class="info-card">
+          <h4 class="card-heading">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+            <span id="heading-summary">النبذة التاريخية والوصف الببليوجرافي</span>
+          </h4>
+          <p class="card-body-text" id="val-summary">—</p>
+        </div>
+
+        <!-- Incipit & Explicit Inscriptions -->
+        <div class="info-card" id="incipit-card">
+          <h4 class="card-heading">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <span id="heading-inscriptions">نصوص المخطوط والتوثيق (Incipit & Explicit)</span>
+          </h4>
+          <div class="quote-box" id="incipit-box">
+            <span class="quote-label gold" id="label-incipit">أول المخطوط (Incipit):</span>
+            <p class="quote-content" id="val-incipit">—</p>
+          </div>
+          <div class="quote-box" id="explicit-box" style="margin-top: 8px;">
+            <span class="quote-label cyan" id="label-explicit">آخر المخطوط (Explicit):</span>
+            <p class="quote-content" id="val-explicit">—</p>
+          </div>
+        </div>
+
+        <!-- Physical & Provenance Grid -->
+        <div class="grid-2">
+          <div class="grid-box">
+            <div class="grid-label" id="label-period">العصر / تاريخ النسخ</div>
+            <div class="grid-val" id="val-period">—</div>
+          </div>
+          <div class="grid-box">
+            <div class="grid-label" id="label-material">المادة والصناعة</div>
+            <div class="grid-val" id="val-material">—</div>
+          </div>
+          <div class="grid-box">
+            <div class="grid-label" id="label-extent">عدد الأوراق والأسطر</div>
+            <div class="grid-val" id="val-extent">—</div>
+          </div>
+          <div class="grid-box">
+            <div class="grid-label" id="label-preservation">حالة الحفظ</div>
+            <div class="grid-val" style="color: var(--accent-emerald);" id="val-condition">—</div>
+          </div>
+        </div>
+
+        <!-- Codicology -->
+        <div class="info-card" id="codicology-card">
+          <h4 class="card-heading">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+            <span id="heading-codicology">معلومات الكوديكولوجيا والصناعة (Codicology)</span>
+          </h4>
+          <div class="codicology-row" id="row-scribe">
+            <span class="codicology-label" id="label-scribe">الخطاط ونوع الخط:</span>
+            <span class="codicology-val" id="val-scribe">—</span>
+          </div>
+          <div class="codicology-row" id="row-place">
+            <span class="codicology-label" id="label-place">مكان النسخ:</span>
+            <span class="codicology-val" id="val-place">—</span>
+          </div>
+          <div class="codicology-row" id="row-binding">
+            <span class="codicology-label" id="label-binding">التجليد / الغلاف:</span>
+            <span class="codicology-val" id="val-binding">—</span>
+          </div>
+          <div class="codicology-row" id="row-decoration">
+            <span class="codicology-label" id="label-decoration">الزخرفة والتذهيب:</span>
+            <span class="codicology-val" id="val-decoration">—</span>
+          </div>
+          <div class="codicology-row" id="row-catchwords">
+            <span class="codicology-label" id="label-catchwords">الترتيب والتعقيبات:</span>
+            <span class="codicology-val" id="val-catchwords">—</span>
+          </div>
+        </div>
+
+        <!-- Bibliography Citation -->
+        <div class="info-card" id="biblio-card">
+          <h4 class="card-heading">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+            <span id="heading-biblio">المراجع وفهارس التراث (Bibliography)</span>
+          </h4>
+          <p class="card-body-text" style="font-weight: 600; color: #fef08a;" id="val-citation">—</p>
+          <p class="card-body-text" style="margin-top: 4px;" id="val-holding-note">—</p>
+        </div>
+
+        <!-- Holding Institution -->
+        <div class="info-card">
+          <h4 class="card-heading">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            <span id="heading-institution">المؤسسة الحافظة (Item Holding)</span>
+          </h4>
+          <p class="card-body-text" id="val-institution">—</p>
+        </div>
+
+      </section>
+
+      <!-- ═══════════════════════════════════════════════════════════
+           TAB 2: BIBFRAME & CLASSIFICATION (تصنيف وفهارس)
+           ═══════════════════════════════════════════════════════════ -->
+      <section id="tab-bibframe" class="tab-section">
+        
+        <!-- URIs Triad -->
+        <div class="info-card">
+          <h4 class="card-heading">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
+            <span>هيكلية كيانات بيبفرام 2.0 (BIBFRAME Triad)</span>
+          </h4>
+          
+          <div class="uri-item">
+            <span class="uri-label">bf:Work</span>
+            <a href="#" target="_blank" class="uri-link" id="link-work">—</a>
+          </div>
+          <div class="uri-item" id="row-expr">
+            <span class="uri-label">bf:Expression</span>
+            <a href="#" target="_blank" class="uri-link" id="link-expr">—</a>
+          </div>
+          <div class="uri-item">
+            <span class="uri-label">bf:Instance</span>
+            <a href="#" target="_blank" class="uri-link" id="link-inst">—</a>
+          </div>
+          <div class="uri-item">
+            <span class="uri-label">bf:Item</span>
+            <a href="#" target="_blank" class="uri-link" id="link-item">—</a>
+          </div>
+        </div>
+
+        <!-- Classifications Grid -->
+        <div class="grid-2">
+          <div class="grid-box">
+            <div class="grid-label">تصنيف الكونغرس (LCC)</div>
+            <div class="grid-val font-mono" id="val-lcc">—</div>
+          </div>
+          <div class="grid-box">
+            <div class="grid-label">تصنيف ديوي (DDC)</div>
+            <div class="grid-val font-mono" id="val-ddc">—</div>
+          </div>
+        </div>
+
+        <!-- Subject Headings -->
+        <div class="info-card">
+          <h4 class="card-heading">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+            <span id="heading-subjects">رؤوس الموضوعات المقننة (LCSH)</span>
+          </h4>
+          <div class="tags-container" id="subjects-container"></div>
+        </div>
+
+        <!-- Genre / Form -->
+        <div class="info-card">
+          <h4 class="card-heading">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+            <span id="heading-genres">النوع والوعاء (Genre / Form)</span>
+          </h4>
+          <div class="tags-container" id="genres-container"></div>
+        </div>
+
+      </section>
+
+      <!-- ═══════════════════════════════════════════════════════════
+           TAB 3: BACKEND RDF RECORD (سجل الباك إند)
+           ═══════════════════════════════════════════════════════════ -->
+      <section id="tab-rdf" class="tab-section">
+        
+        <div class="rdf-actions-bar">
+          <span class="rdf-filename" id="rdf-filename">record.ttl</span>
+          
+          <div style="display: flex; gap: 6px;">
+            <button class="btn-action-small" id="btn-copy-rdf">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              <span id="copy-text">نسخ الكود</span>
+            </button>
+            <button class="btn-action-small" id="btn-download-rdf">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+              <span id="dl-text">تحميل الملف</span>
+            </button>
+          </div>
+        </div>
+
+        <pre class="rdf-code-view" id="rdf-content"># Loading backend RDF record...</pre>
+
+      </section>
+
+    </main>
+
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════════
+       DATA HYDRATION & INTERACTIVITY SCRIPT
+       ══════════════════════════════════════════════════════════════ -->
+  <script>
+    let currentLang = 'ar';
+    let currentArtifact = null;
+    let isSpeaking = false;
+
+    // Parse URL Query Parameters
+    const urlParams = new URLSearchParams(window.location.search);
+    const targetId = urlParams.get('id');
+    const targetModel = urlParams.get('model');
+
+    // Fetch records data
+    fetch('./records-data.json')
+      .then(res => res.json())
+      .then(records => {
+        if (targetId) {
+          currentArtifact = records.find(r => r.id === targetId || r.slug === targetId);
+        } else if (targetModel) {
+          currentArtifact = records.find(r => r.model.glb.includes(targetModel) || targetModel.includes(r.model.glb));
+        }
+        
+        // Default to Al-Qabasat manuscript (ALQ-MS-003) if not found or matched
+        if (!currentArtifact) {
+          currentArtifact = records.find(r => r.id === 'ALQ-MS-003') || records[2] || records[0];
+        }
+
+        initViewer();
+      })
+      .catch(err => {
+        console.warn("Falling back to local records:", err);
+      });
+
+    function initViewer() {
+      const viewer = document.getElementById('main-model-viewer');
+      if (currentArtifact) {
+        const cleanGlb = currentArtifact.model.glb.startsWith("/") ? "." + currentArtifact.model.glb : currentArtifact.model.glb;
+        viewer.src = cleanGlb;
+        viewer.setAttribute('alt', currentArtifact.title[currentLang]);
+        renderData();
+      }
+
+      // WebXR AR Activation Button
+      document.getElementById('btn-activate-ar').addEventListener('click', () => {
+        if (viewer.canActivateAR) {
+          viewer.activateAR();
+        } else {
+          alert(currentLang === 'ar' ? 'الواقع المعزز غير مدعوم على هذا المتصفح مباشرة، يرجى فتح الرابط على Safari (iOS) أو Chrome (Android).' : 'WebXR AR not directly available in this browser. Please open on Safari (iOS) or Chrome (Android).');
+        }
+      });
+    }
+
+    function renderData() {
+      if (!currentArtifact) return;
+      const isAr = currentLang === 'ar';
+
+      // Header Info
+      document.getElementById('title-text').innerText = currentArtifact.title[currentLang];
+      document.getElementById('cat-badge').innerText = `${currentArtifact.categoryLabel[currentLang]}`;
+      document.getElementById('id-badge').innerText = currentArtifact.id;
+
+      // Summary
+      document.getElementById('val-summary').innerText = currentArtifact.summary[currentLang];
+
+      // Incipit & Explicit
+      if (currentArtifact.notes && currentArtifact.notes.incipit) {
+        document.getElementById('incipit-card').style.display = 'block';
+        document.getElementById('val-incipit').innerText = '« ' + currentArtifact.notes.incipit + ' »';
+        if (currentArtifact.notes.explicit) {
+          document.getElementById('explicit-box').style.display = 'block';
+          document.getElementById('val-explicit').innerText = '« ' + currentArtifact.notes.explicit + ' »';
+        } else {
+          document.getElementById('explicit-box').style.display = 'none';
+        }
+      } else {
+        document.getElementById('incipit-card').style.display = 'none';
+      }
+
+      // Physical Grid
+      document.getElementById('val-period').innerText = currentArtifact.period[currentLang];
+      document.getElementById('val-material').innerText = currentArtifact.physical.material[currentLang];
+      document.getElementById('val-extent').innerText = currentArtifact.physical.extent || currentArtifact.physical.dimensions || '—';
+      document.getElementById('val-condition').innerText = currentArtifact.physical.condition[currentLang];
+
+      // Codicology
+      const prod = currentArtifact.production;
+      const phys = currentArtifact.physical;
+      if (phys.binding || (prod && prod.scribe)) {
+        document.getElementById('codicology-card').style.display = 'block';
+        
+        setRowVal('row-scribe', 'val-scribe', prod && prod.scribe);
+        setRowVal('row-place', 'val-place', prod && prod.place);
+        setRowVal('row-binding', 'val-binding', phys.binding);
+        setRowVal('row-decoration', 'val-decoration', phys.decoration);
+        setRowVal('row-catchwords', 'val-catchwords', phys.catchwords);
+      } else {
+        document.getElementById('codicology-card').style.display = 'none';
+      }
+
+      // Bibliography
+      if (currentArtifact.notes && currentArtifact.notes.dhariahCitation) {
+        document.getElementById('biblio-card').style.display = 'block';
+        document.getElementById('val-citation').innerText = currentArtifact.notes.dhariahCitation;
+        document.getElementById('val-holding-note').innerText = currentArtifact.notes.holdingNote || '';
+      } else {
+        document.getElementById('biblio-card').style.display = 'none';
+      }
+
+      // Institution
+      document.getElementById('val-institution').innerText = currentArtifact.institution[currentLang];
+
+      // BIBFRAME Triad
+      setUriLink('link-work', currentArtifact.bibframe.workUri);
+      if (currentArtifact.bibframe.expressionUri) {
+        document.getElementById('row-expr').style.display = 'flex';
+        setUriLink('link-expr', currentArtifact.bibframe.expressionUri);
+      } else {
+        document.getElementById('row-expr').style.display = 'none';
+      }
+      setUriLink('link-inst', currentArtifact.bibframe.instanceUri);
+      setUriLink('link-item', currentArtifact.bibframe.itemUri);
+
+      // Classifications
+      document.getElementById('val-lcc').innerText = currentArtifact.bibframe.classification.lcc || '—';
+      document.getElementById('val-ddc').innerText = currentArtifact.bibframe.classification.ddc || '—';
+
+      // Subjects
+      const subjCont = document.getElementById('subjects-container');
+      subjCont.innerHTML = '';
+      (currentArtifact.bibframe.subjects || []).forEach(s => {
+        const span = document.createElement('span');
+        span.className = 'tag-badge';
+        span.innerText = s.label;
+        subjCont.appendChild(span);
+      });
+
+      // Genres
+      const genreCont = document.getElementById('genres-container');
+      genreCont.innerHTML = '';
+      (currentArtifact.bibframe.genreForm || []).forEach(g => {
+        const span = document.createElement('span');
+        span.className = 'tag-badge';
+        span.innerText = g.label;
+        genreCont.appendChild(span);
+      });
+
+      // RDF Record
+      const ttlContent = currentArtifact.rawBackendRdf || currentArtifact.rawBackendTtl || `# Record for ${currentArtifact.id}\n<${currentArtifact.bibframe.workUri}> a bf:Work ;\n  bf:title "${currentArtifact.title.ar}" .`;
+      document.getElementById('rdf-content').innerText = ttlContent;
+      document.getElementById('rdf-filename').innerText = currentArtifact.backendRdfFile || currentArtifact.backendTtlFile || `${currentArtifact.slug}.ttl`;
+
+      // Labels Language Translations
+      document.getElementById('nav-overview').innerText = isAr ? 'البطاقة الوصفية' : 'Overview';
+      document.getElementById('nav-bibframe').innerText = isAr ? 'تصنيف وفهارس' : 'BIBFRAME';
+      document.getElementById('nav-rdf').innerText = isAr ? 'سجل الباك إند (RDF)' : 'Backend RDF';
+      document.getElementById('ar-btn-text').innerText = isAr ? 'عرض في غرفتك الآن (AR)' : 'Launch in Your Room (AR)';
+      document.getElementById('viewport-hint').innerText = isAr ? 'اسحب للتدوير 360°' : 'Drag to Orbit 360°';
+      document.getElementById('lang-label').innerText = isAr ? 'EN' : 'عر';
+
+      document.getElementById('heading-summary').innerText = isAr ? 'النبذة التاريخية والوصف الببليوجرافي' : 'Historical & Bibliographic Summary';
+      document.getElementById('heading-inscriptions').innerText = isAr ? 'نصوص المخطوط والتوثيق (Incipit & Explicit)' : 'Manuscript Inscriptions';
+      document.getElementById('label-incipit').innerText = isAr ? 'أول المخطوط (Incipit):' : 'Opening (Incipit):';
+      document.getElementById('label-explicit').innerText = isAr ? 'آخر المخطوط (Explicit):' : 'Closing (Explicit):';
+      document.getElementById('label-period').innerText = isAr ? 'العصر / تاريخ النسخ' : 'Period / Date';
+      document.getElementById('label-material').innerText = isAr ? 'المادة والصناعة' : 'Material';
+      document.getElementById('label-extent').innerText = isAr ? 'عدد الأوراق والأسطر' : 'Extent & Foliation';
+      document.getElementById('label-preservation').innerText = isAr ? 'حالة الحفظ' : 'Preservation';
+      document.getElementById('heading-codicology').innerText = isAr ? 'معلومات الكوديكولوجيا والصناعة (Codicology)' : 'Codicological Features';
+      document.getElementById('heading-biblio').innerText = isAr ? 'المراجع وفهارس التراث (Bibliography)' : 'Bibliographical Source';
+      document.getElementById('heading-institution').innerText = isAr ? 'المؤسسة الحافظة (Item Holding)' : 'Custodial Institution';
+      document.getElementById('copy-text').innerText = isAr ? 'نسخ الكود' : 'Copy RDF';
+      document.getElementById('dl-text').innerText = isAr ? 'تحميل الملف' : 'Download';
+    }
+
+    function setRowVal(rowId, valId, val) {
+      const row = document.getElementById(rowId);
+      const valEl = document.getElementById(valId);
+      if (val) {
+        row.style.display = 'flex';
+        valEl.innerText = val;
+      } else {
+        row.style.display = 'none';
+      }
+    }
+
+    function setUriLink(id, url) {
+      const a = document.getElementById(id);
+      if (a) {
+        a.href = url || '#';
+        a.innerText = url || '—';
+      }
+    }
+
+    // Tab Navigation
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.tab-section').forEach(s => s.classList.remove('active'));
+        btn.classList.add('active');
+        const target = document.getElementById(btn.dataset.tab);
+        if (target) target.classList.add('active');
+      });
+    });
+
+    // Language Toggle
+    document.getElementById('btn-lang').addEventListener('click', () => {
+      currentLang = currentLang === 'ar' ? 'en' : 'ar';
+      document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
+      renderData();
+    });
+
+    // Copy RDF Button
+    document.getElementById('btn-copy-rdf').addEventListener('click', () => {
+      const text = document.getElementById('rdf-content').innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        const copySpan = document.getElementById('copy-text');
+        const orig = copySpan.innerText;
+        copySpan.innerText = currentLang === 'ar' ? 'تم النسخ!' : 'Copied!';
+        setTimeout(() => { copySpan.innerText = orig; }, 2000);
+      });
+    });
+
+    // Download RDF File
+    document.getElementById('btn-download-rdf').addEventListener('click', () => {
+      const text = document.getElementById('rdf-content').innerText;
+      const filename = document.getElementById('rdf-filename').innerText || 'record.ttl';
+      const blob = new Blob([text], { type: 'text/turtle;charset=utf-8' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = filename;
+      a.click();
+      URL.revokeObjectURL(url);
+    });
+
+    // Audio Guide (TTS)
+    document.getElementById('btn-audio').addEventListener('click', () => {
+      if ('speechSynthesis' in window) {
+        if (isSpeaking) {
+          window.speechSynthesis.cancel();
+          isSpeaking = false;
+          return;
+        }
+        const text = `${currentArtifact.title[currentLang]}. ${currentArtifact.summary[currentLang]}`;
+        const utter = new SpeechSynthesisUtterance(text);
+        utter.lang = currentLang === 'ar' ? 'ar-SA' : 'en-US';
+        utter.rate = 0.95;
+        utter.onend = () => { isSpeaking = false; };
+        isSpeaking = true;
+        window.speechSynthesis.speak(utter);
+      }
+    });
+  </script>
+</body>
+</html>
