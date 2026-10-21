@@ -70,7 +70,7 @@ export default function ArtifactCard({ artifact, onSelect, onOpenAR, lang }) {
           exposure="1.25"
           camera-orbit={artifact.model.cameraOrbit || "0deg 75deg auto"}
           field-of-view={artifact.model.fieldOfView || "30deg"}
-          className="w-full h-full block"
+          className="w-full h-full block" style={{ width: "100%", height: "260px", minHeight: "260px", display: "block", direction: "ltr" }}
         >
           <div slot="progress-bar" style={{ display: 'none' }}></div>
         </model-viewer>

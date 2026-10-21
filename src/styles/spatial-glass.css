@@ -1,5 +1,45 @@
+
+
+
+
+
+:root {
+  --glass-bg-primary: rgba(10, 10, 10, 0.85);
+  --glass-bg-secondary: rgba(16, 16, 16, 0.75);
+  --glass-border-subtle: rgba(255, 255, 255, 0.12);
+  --glass-border-highlight: rgba(255, 255, 255, 0.45);
+  --spatial-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.95);
+}
+
+body {
+  font-family: 'Tajawal', sans-serif;
+  color: #f1f5f9;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: #000000 !important;
+}
+
 /* ═════════════════════════════════════════════════════════════════════
-   PURE BLACK GLOSSY GLASS SURFACES FOR MOON SPATIAL 3D OPAC
+   PURE BLACK SPACE ENVIRONMENT (No background image, pure pitch black)
+   ═════════════════════════════════════════════════════════════════════ */
+
+.spatial-environment {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-color: #000000 !important;
+}
+
+.spatial-environment-bg {
+  position: absolute;
+  inset: 0;
+  background: #000000 !important;
+}
+
+/* ═════════════════════════════════════════════════════════════════════
+   PURE BLACK GLOSSY GLASS SURFACES (Jet Black + Glossy Specular Highlights)
+   High gloss reflection, liquid edge sheen, deep black translucency
    ═════════════════════════════════════════════════════════════════════ */
 
 .glass-card {
@@ -26,48 +66,218 @@
     inset 0 0 30px 6px rgba(255, 255, 255, 0.06);
 }
 
-.glass-dock {
-  background: rgba(10, 10, 10, 0.85);
-  backdrop-filter: blur(30px) saturate(190%);
-  -webkit-backdrop-filter: blur(30px) saturate(190%);
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  box-shadow: 
-    0 20px 45px rgba(0, 0, 0, 0.9),
-    inset 0 1px 1px 0 rgba(255, 255, 255, 0.4);
+.glass-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.85),
+    transparent
+  );
+  pointer-events: none;
+  z-index: 10;
 }
 
-.glass-pill {
-  background: rgba(20, 20, 20, 0.75);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.14);
+.glass-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.85),
+    transparent,
+    rgba(255, 255, 255, 0.2)
+  );
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* Level 1: Primary Stage & Modal Windows */
+.glass-panel-primary {
+  background: rgba(6, 6, 6, 0.94);
+  backdrop-filter: blur(40px) saturate(200%);
+  -webkit-backdrop-filter: blur(40px) saturate(200%);
+  border: 1px solid rgba(255, 255, 255, 0.16);
   box-shadow: 
-    0 4px 12px rgba(0, 0, 0, 0.4),
-    inset 0 1px 0.5px rgba(255, 255, 255, 0.3);
+    0 40px 90px -15px rgba(0, 0, 0, 0.98),
+    0 8px 32px rgba(0, 0, 0, 0.7),
+    inset 0 1.5px 1px rgba(255, 255, 255, 0.6),
+    inset 0 -1px 1px rgba(255, 255, 255, 0.05);
+  position: relative;
+}
+
+.glass-panel-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.9), transparent);
+  pointer-events: none;
+  z-index: 20;
+}
+
+.glass-panel-primary::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), transparent, rgba(255, 255, 255, 0.2));
+  pointer-events: none;
+  z-index: 20;
+}
+
+/* Level 3: Vision Navigation & Filter Docks */
+.glass-dock {
+  background: rgba(8, 8, 8, 0.84);
+  backdrop-filter: blur(35px) saturate(200%);
+  -webkit-backdrop-filter: blur(35px) saturate(200%);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 
+    0 24px 50px rgba(0, 0, 0, 0.9),
+    0 1px 2px rgba(255, 255, 255, 0.15),
+    inset 0 1.5px 1px rgba(255, 255, 255, 0.5);
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-dock::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.7), transparent);
+  pointer-events: none;
+}
+
+/* Level 4: Glossy Glass Pill Controls */
+.glass-pill {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 9999px;
-  transition: all 0.25s ease;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  box-shadow: 
+    0 4px 14px rgba(0, 0, 0, 0.4),
+    inset 0 1.5px 1px rgba(255, 255, 255, 0.45);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .glass-pill:hover {
-  background: rgba(40, 40, 40, 0.85);
-  border-color: rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-1px) scale(1.02);
   box-shadow: 
-    0 6px 18px rgba(0, 0, 0, 0.55),
-    inset 0 1px 1px rgba(255, 255, 255, 0.5);
+    0 8px 24px rgba(0, 0, 0, 0.5),
+    inset 0 1.5px 1px rgba(255, 255, 255, 0.7);
 }
 
-.glass-modal {
-  background: rgba(10, 10, 12, 0.94);
-  backdrop-filter: blur(40px) saturate(210%);
-  -webkit-backdrop-filter: blur(40px) saturate(210%);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+.glass-pill.active {
+  background: rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.7);
+  font-weight: 700;
   box-shadow: 
-    0 30px 70px rgba(0, 0, 0, 0.95),
-    inset 0 1.5px 1px 0 rgba(255, 255, 255, 0.55);
+    0 8px 24px rgba(0, 0, 0, 0.4),
+    inset 0 1.5px 2px rgba(255, 255, 255, 0.8);
 }
+
+/* Level 5: Dark Technical Surfaces */
+.glass-surface-dark {
+  background: rgba(5, 5, 5, 0.95);
+  backdrop-filter: blur(28px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.9);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   MODEL VIEWER CARD & VIEWPORT STYLES (Fixed Display & Sizing)
+   ═══════════════════════════════════════════════════════════════ */
 
 model-viewer {
   --poster-color: transparent;
+  --progress-bar-color: transparent !important;
+  --progress-bar-height: 0px !important;
+  --progress-mask: transparent !important;
+  display: block;
   width: 100%;
   height: 100%;
+  outline: none;
+  background-color: transparent;
+  /* Critical: the page is RTL. model-viewer's internal canvas is sized to the
+     largest viewer on the page and relies on LTR overflow to show its top-left
+     region. Without this, the rendered model is clipped out of view. */
+  direction: ltr;
+}
+
+model-viewer::part(default-ar-button) {
+  display: none;
+}
+
+/* Remove loading progress bar line completely */
+model-viewer::part(default-progress-bar) {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  height: 0px !important;
+  background-color: transparent !important;
+}
+
+model-viewer::part(default-progress-mask) {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  background-color: transparent !important;
+}
+
+/* Interactive 3D Model Card Canvas */
+.card-3d-viewport {
+  position: relative;
+  width: 100%;
+  height: 260px;
+  min-height: 260px;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  background: radial-gradient(circle at 50% 50%, rgba(22, 22, 22, 0.7) 0%, rgba(4, 4, 4, 0.98) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: inset 0 1px 1.5px rgba(255, 255, 255, 0.18), inset 0 -1px 1px rgba(0, 0, 0, 0.9);
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+.card-3d-viewport:hover {
+  border-color: rgba(255, 255, 255, 0.35);
+  background: radial-gradient(circle at 50% 50%, rgba(32, 32, 32, 0.8) 0%, rgba(6, 6, 6, 0.98) 100%);
+}
+
+/* Custom Scrollbar for Linked Data Traces */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.8);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
 }
