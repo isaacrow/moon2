@@ -1,5 +1,5 @@
 import React from 'react';
-import { Globe, Volume2, VolumeX, Database, Search, Layers, X, Smartphone } from 'lucide-react';
+import { Globe, Volume2, VolumeX, Search, Layers, X, Smartphone, Moon, BookOpen } from 'lucide-react';
 
 export default function LiquidGlassHeader({ 
   onOpenMoonStudio,
@@ -40,7 +40,6 @@ export default function LiquidGlassHeader({
             <div className="text-right rtl:text-right ltr:text-left">
               <div className="flex items-center gap-2">
                 <h1 className="text-lg sm:text-xl font-bold tracking-tight text-white font-amiri flex items-center gap-1.5">
-                  <span>🌕</span>
                   <span>{isAr ? 'علقمي 3D' : 'ALQAMI 3D'}</span>
                 </h1>
               </div>
@@ -96,15 +95,7 @@ export default function LiquidGlassHeader({
             <span>{isAr ? 'English' : 'عربي'}</span>
           </button>
 
-          {/* Moon DB Supabase Live Badge */}
-          <div 
-            title="Moon Woolf DB (Supabase Connected) • Full RDF/BIBFRAME Sync"
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/10 border border-white/20 text-[11px] text-white backdrop-blur-md shadow-sm"
-          >
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-            <span className="font-medium">Moon DB</span>
-            <Database className="w-3 h-3 text-white/80" />
-          </div>
+          
 
                     {/* Link to Moon Studio Backbone */}
           <button
@@ -113,7 +104,7 @@ export default function LiquidGlassHeader({
             title={isAr ? "الدخول إلى استوديو الفهرسة MOON Backbone" : "Open Moon BIBFRAME Editor Backbone"}
             className="glass-pill px-3.5 py-1.5 text-xs font-bold text-amber-200 hover:text-white bg-amber-500/20 hover:bg-amber-500/35 transition-all cursor-pointer border-amber-400/40 flex items-center gap-1.5 shadow-sm"
           >
-            <span>🌙</span>
+            <Moon className="w-3.5 h-3.5 text-amber-300 fill-amber-300/30" />
             <span>{isAr ? 'Moon Backbone' : 'Moon Studio'}</span>
           </button>
 
@@ -124,7 +115,7 @@ export default function LiquidGlassHeader({
             title={isAr ? "فهرس ومقارنة المخطوطات MARC 21 (D:\MAN)" : "Manuscripts MARC 21 Viewer"}
             className="glass-pill px-3 py-1.5 text-xs font-bold text-emerald-200 hover:text-white bg-emerald-500/20 hover:bg-emerald-500/35 transition-all cursor-pointer border-emerald-400/40 flex items-center gap-1.5 shadow-sm"
           >
-            <span>📜</span>
+            <BookOpen className="w-3.5 h-3.5 text-emerald-300" />
             <span>{isAr ? 'المخطوطات MARC' : 'Manuscripts MARC'}</span>
           </button>
 

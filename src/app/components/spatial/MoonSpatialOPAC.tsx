@@ -113,31 +113,6 @@ export function MoonSpatialOPAC({ onBackToDashboard, onOpenManuscripts }: MoonSp
       {/* FOREGROUND SPATIAL GLASS LAYOUT */}
       <div className="relative z-10 flex-1 flex flex-col">
         
-        {/* Navigation Bar with Back Button */}
-        <div className="max-w-[1550px] mx-auto w-full px-4 pt-3 flex items-center justify-between">
-          {onBackToDashboard ? (
-            <button
-              onClick={onBackToDashboard}
-              className="glass-pill px-4 py-1.5 text-xs font-bold text-white flex items-center gap-2 hover:scale-105 transition-all shadow-lg"
-            >
-              {isAr ? <ArrowRight className="w-3.5 h-3.5" /> : <ArrowLeft className="w-3.5 h-3.5" />}
-              <span>{isAr ? 'العودة إلى لوحة تحكم Moon' : 'Back to Moon Dashboard'}</span>
-            </button>
-          ) : <div />}
-
-          <div className="flex items-center gap-2">
-            <a
-              href="/mobile/"
-              target="_blank"
-              rel="noreferrer"
-              className="glass-pill px-3.5 py-1.5 text-xs text-blue-300 hover:text-white flex items-center gap-1.5"
-            >
-              <QrCode className="w-3.5 h-3.5" />
-              <span>{isAr ? 'فتح تطبيق الهاتف (Mobile AR)' : 'Launch Mobile AR'}</span>
-            </a>
-          </div>
-        </div>
-
         {/* Liquid Glass Header */}
         <LiquidGlassHeader
           lang={lang}
